@@ -1,5 +1,5 @@
-#set page(paper: "a4", flipped: true, margin: 6mm)
-#set text(font: "Arial", size: 6.8pt)
+#set page(paper: "a4", margin: 5mm)
+#set text(font: "Arial", size: 6.2pt)
 #set par(leading: 0.38em, spacing: 0.28em)
 
 #let ink = rgb("#171717")
@@ -30,6 +30,10 @@
     #v(2pt)
     #body
   ]
+}
+
+#let group(body) = {
+  rect(width: 100%, stroke: 1.8pt + accent, inset: 3pt, radius: 0pt)[#body]
 }
 
 #let rule(name, body) = {
@@ -86,24 +90,7 @@
   [9], [Twist of Fate], [Enemy within 24\" visible: TS/Scintillating attacks improve AP by 1; on 12+ improve AP by 2.],
 )
 
-#rect(width: 100%, stroke: 1pt + ink, inset: 5pt)[
-  #grid(columns: (1fr, auto), gutter: 8pt, align: horizon)[
-    #text(size: 15pt, weight: "bold")[Thousand Sons - Grand Coven]
-    #linebreak()
-    #text(size: 7pt, fill: muted)[2000pts, 15 units. Warlord: Magnus the Red. Leaders: Terminator Sorcerer with Scarab Occult; each Rubric unit has one Sorcerer attached.]
-  ][
-    #grid(columns: (auto, auto, auto, auto), gutter: 3pt,
-      rect(fill: soft, stroke: 0.35pt + ruleline, inset: 2pt)[*Kindred Sorcery*],
-      rect(fill: soft, stroke: 0.35pt + ruleline, inset: 2pt)[*6 Characters*],
-      rect(fill: soft, stroke: 0.35pt + ruleline, inset: 2pt)[*Bring It Down 10*],
-      rect(fill: soft, stroke: 0.35pt + ruleline, inset: 2pt)[*Assassination 6*],
-    )
-  ]
-]
-
-#v(4pt)
-
-#grid(columns: (1fr, 1fr, 1fr), gutter: 5pt, align: top)[
+#grid(columns: (1fr, 1fr), gutter: 5pt, align: top)[
   #card("Army Rules")[
     #rule("Cabal of Sorcerers")[Start of your Shooting phase, eligible models can attempt Rituals. Roll 2D6; optionally Channel the Warp with +1D6. If you Channel and roll any doubles or triples, that model's unit suffers D3 mortal wounds. Magnus can attempt 2 Rituals per turn and gets +2 to tests.]
     #rule("Pact of Sorcery")[When mustering your army, unless specifically stated otherwise, you cannot select Scintillating Legions as your Army Faction.]
@@ -151,26 +138,39 @@
 
   #v(4pt)
 
-  #card("3x Rubric Marines + Sorcerer", pts: "540", note: "Each led unit: 5 Rubrics plus one attached Sorcerer. Weapon counts are per led unit.")[
-    #stats((
-      [Rubric Marine], [6\"], [4], [3+/5++], [2], [7+], [2],
-      [Aspiring Sorcerer], [6\"], [4], [3+/5++], [3], [6+], [2],
-      [Attached Sorcerer], [6\"], [4], [3+/5++], [4], [6+], [1],
-    ))
-    #v(2pt)
-    #weapons((
-      [x3 Warpflamer], [12\"], [D6], [N/A], [4 #r("RR1W/RRW obj")], [-1], [1], [Ignores Cover, Torrent, #r("LH Sor")],
-      [x1 Soulreaper cannon], [24\"], [6], [3+], [6 #r("RR1W/RRW obj")], [-2], [1], [Dev Wounds; Icon adds Ignores Cover, #r("LH Sor")],
-      [x2 Inferno bolt pistol], [12\"], [1], [3+], [4 #r("RR1W/RRW obj")], [-1], [1], [Pistol, #r("LH Sor")],
-      [x1 Aspiring Malefic Curse], [24\"], [3], [3+], [4 #r("RR1W/RRW obj")], [-3], [1], [Anti-Inf 4+, Dev Wounds, Psychic, #r("LH Sor")],
-      [x1 Sorcerer Pandaemonic Delusion], [24\"], [6 #r("+3A once")], [3+], [5 #r("+3S once RR1W/RRW obj")], [-1], [1], [Psychic, Sustained Hits 3, #r("LH Sor")],
-      [x1 Aspiring force weapon], [Melee], [3], [3+], [6], [-1], [D3], [Psychic, #r("LH Sor")],
-      [x1 Sorcerer force weapon], [Melee], [4 #r("+3A once")], [3+], [6 #r("+3S once")], [-1], [D3], [Psychic, #r("LH Sor")],
-      [x4 Close combat weapon], [Melee], [2], [3+], [4], [0], [1], [#r("LH Sor")],
-    ))
-    - *Leader adjacency:* each Sorcerer is attached to one Rubric unit. *Empyric Guidance:* while Sorcerer leads, unit weapons have Lethal Hits.
-    - *Bringers of Change:* ranged attacks re-roll Wound 1; if target is within range of an objective you do not control, re-roll Wound roll.
-    - *Twisted Sorceries:* once per battle in Shooting or Fight, Sorcerer's Psychic weapons get +3 Strength and +3 Attacks until end of phase.
+  #group[
+    #grid(columns: (1fr, 1fr), gutter: 3pt, align: top)[
+      #card("3x Rubric Marines", pts: "300", note: "Bodyguard. Per 5-model unit; each has one attached Sorcerer.")[
+        #stats((
+          [Rubric Marine], [6\"], [4], [3+/5++], [2], [7+], [2],
+          [Aspiring Sorcerer], [6\"], [4], [3+/5++], [3], [6+], [2],
+        ))
+        #v(2pt)
+        #weapons((
+          [x3 Warpflamer], [12\"], [D6], [N/A], [4 #r("RR1W/RRW obj")], [-1], [1], [Ignores Cover, Torrent, #r("LH Sor")],
+          [x1 Soulreaper cannon], [24\"], [6], [3+], [6 #r("RR1W/RRW obj")], [-2], [1], [Dev Wounds; Icon adds Ignores Cover, #r("LH Sor")],
+          [x1 Inferno bolt pistol], [12\"], [1], [3+], [4 #r("RR1W/RRW obj")], [-1], [1], [Pistol, #r("LH Sor")],
+          [x1 Malefic Curse], [24\"], [3], [3+], [4 #r("RR1W/RRW obj")], [-3], [1], [Anti-Inf 4+, Dev Wounds, Psychic, #r("LH Sor")],
+          [x1 Force weapon], [Melee], [3], [3+], [6], [-1], [D3], [Psychic, #r("LH Sor")],
+          [x4 Close combat weapon], [Melee], [2], [3+], [4], [0], [1], [#r("LH Sor")],
+        ))
+        - *Bringers of Change:* ranged attacks re-roll Wound 1; if target is within range of an objective you do not control, re-roll Wound roll.
+      ]
+    ][
+      #card("3x Sorcerer", pts: "240", note: "Leader. One Sorcerer attached to each Rubric unit.")[
+        #stats((
+          [Sorcerer], [6\"], [4], [3+/5++], [4], [6+], [1],
+        ))
+        #v(2pt)
+        #weapons((
+          [x1 Inferno bolt pistol], [12\"], [1], [3+], [4 #r("RR1W/RRW obj")], [-1], [1], [Pistol, #r("LH Sor")],
+          [x1 Pandaemonic Delusion], [24\"], [6 #r("+3A once")], [3+], [5 #r("+3S once RR1W/RRW obj")], [-1], [1], [Psychic, Sustained Hits 3, #r("LH Sor")],
+          [x1 Force weapon], [Melee], [4 #r("+3A once")], [3+], [6 #r("+3S once")], [-1], [D3], [Psychic, #r("LH Sor")],
+        ))
+        - *Empyric Guidance:* while leading, weapons in this Rubric unit have #r("LH Sor").
+        - *Twisted Sorceries:* once per battle in Shooting or Fight, Sorcerer's Psychic weapons get +3 Strength and +3 Attacks until end of phase.
+      ]
+    ]
   ]
 
   #v(4pt)
@@ -189,26 +189,39 @@
     - Infiltrators, Stealth. Once per battle round, target this unit with Fire Overwatch or Heroic Intervention for 0CP.
   ]
 ][
-  #card("Scarab Occult + Terminator Sorcerer", pts: "465", note: "10 Terminators led by Sorcerer in Terminator Armour with Umbralefic Crystal.")[
-    #stats((
-      [Scarab Occult], [5\"], [5], [2+/4++], [3], [7+], [1],
-      [Scarab Sorcerer], [5\"], [5], [2+/4++], [4], [6+], [1],
-      [Terminator Sorcerer], [5\"], [5], [2+/4++], [5], [6+], [1],
-    ))
-    #v(2pt)
-    #weapons((
-      [x9 Inferno combi-bolter], [24\"], [2], [3+ #r("+1H SinT")], [4], [-2], [1], [Rapid Fire 2, #r("LH SinT")],
-      [x2 Soulreaper cannon], [24\"], [6], [3+ #r("+1H SinT")], [6], [-2], [1], [Dev Wounds, #r("LH SinT")],
-      [x2 Hellfyre missile rack], [36\"], [2], [3+ #r("+1H SinT")], [10], [-2], [3], [#r("LH SinT")],
-      [x1 Scarab Malefic Curse], [24\"], [3], [3+ #r("+1H SinT")], [4], [-3], [1], [Anti-Inf 4+, Dev Wounds, Psychic, #r("LH SinT")],
-      [x1 Terminator Gaze of Hate], [18\"], [3], [3+ #r("+1H SinT")], [4], [-3], [2], [Anti-Monster/Vehicle 4+, Dev Wounds, Psychic, #r("LH SinT")],
-      [x1 Scarab force weapon], [Melee], [4], [3+ #r("+1H SinT")], [6], [-1], [D3], [Psychic, #r("LH SinT")],
-      [x1 Terminator force weapon], [Melee], [5], [3+ #r("+1H SinT")], [6], [-1], [D3], [Psychic, #r("LH SinT")],
-      [x9 Prosperine khopesh], [Melee], [3], [3+ #r("+1H SinT")], [5], [-2], [2], [#r("LH SinT")],
-    ))
-    - *Leader adjacency:* Terminator Sorcerer is attached to this unit. Deep Strike. *Rites of Coalescence:* while this unit contains a Psyker, attacks targeting this unit are #r("-1W vs incoming").
-    - *Marked by Fate (SinT):* start of Shooting, select visible enemy; this unit gets #r("+1H") against it until end of phase.
-    - *Umbralefic Crystal:* once per battle in Command phase, if not engaged, remove bearer's unit to Strategic Reserves; return next Movement Reinforcements step more than 9\" away.
+  #group[
+    #grid(columns: (1fr, 1fr), gutter: 3pt, align: top)[
+      #card("Scarab Occult Terminators", pts: "360", note: "Bodyguard. Led by Terminator Sorcerer.")[
+        #stats((
+          [Scarab Occult], [5\"], [5], [2+/4++], [3], [7+], [1],
+          [Scarab Sorcerer], [5\"], [5], [2+/4++], [4], [6+], [1],
+        ))
+        #v(2pt)
+        #weapons((
+          [x9 Inferno combi-bolter], [24\"], [2], [3+ #r("+1H SinT")], [4], [-2], [1], [Rapid Fire 2, #r("LH SinT")],
+          [x2 Soulreaper cannon], [24\"], [6], [3+ #r("+1H SinT")], [6], [-2], [1], [Dev Wounds, #r("LH SinT")],
+          [x2 Hellfyre missile rack], [36\"], [2], [3+ #r("+1H SinT")], [10], [-2], [3], [#r("LH SinT")],
+          [x1 Malefic Curse], [24\"], [3], [3+ #r("+1H SinT")], [4], [-3], [1], [Anti-Inf 4+, Dev Wounds, Psychic, #r("LH SinT")],
+          [x1 Force weapon], [Melee], [4], [3+ #r("+1H SinT")], [6], [-1], [D3], [Psychic, #r("LH SinT")],
+          [x9 Prosperine khopesh], [Melee], [3], [3+ #r("+1H SinT")], [5], [-2], [2], [#r("LH SinT")],
+        ))
+        - Deep Strike. *Rites of Coalescence:* while this unit contains a Psyker, attacks targeting this unit are #r("-1W vs incoming").
+      ]
+    ][
+      #card("Sorcerer in Terminator Armour", pts: "105", note: "Leader with Umbralefic Crystal.")[
+        #stats((
+          [Terminator Sorcerer], [5\"], [5], [2+/4++], [5], [6+], [1],
+        ))
+        #v(2pt)
+        #weapons((
+          [x1 Inferno combi-bolter], [24\"], [2], [3+ #r("+1H SinT")], [4], [-2], [1], [Rapid Fire 2, #r("LH SinT")],
+          [x1 Gaze of Hate], [18\"], [3], [3+ #r("+1H SinT")], [4], [-3], [2], [Anti-Monster/Vehicle 4+, Dev Wounds, Psychic, #r("LH SinT")],
+          [x1 Force weapon], [Melee], [5], [3+ #r("+1H SinT")], [6], [-1], [D3], [Psychic, #r("LH SinT")],
+        ))
+        - *Marked by Fate (SinT):* start of Shooting, select visible enemy; this led unit gets #r("+1H") against it until end of phase.
+        - *Empyric Guidance:* while leading, weapons in this unit have #r("LH SinT"). *Umbralefic Crystal:* once per battle redeploy via Strategic Reserves.
+      ]
+    ]
   ]
 
   #v(4pt)
@@ -239,31 +252,13 @@
     - *Brayhorn:* re-roll Advance and Charge rolls. *Herd banner:* while on an objective you control, improve Leadership by 1.
   ]
 
-  #v(3pt)
-
-  #card("Common Keywords")[
-    #set text(size: 5.8pt)
-    *Deep Strike:* >9\" away. *Infiltrators:* deploy >9\" from enemy deployment zone and models. *Stealth:* -1 to be hit by ranged attacks. *Torrent:* auto-hits. *Precision:* allocate successful wounds to visible Character in attached unit. *Sustained Hits X:* Critical Hit scores X extra hits. *Lethal Hits:* Critical Hit auto-wounds. *Devastating Wounds:* Critical Wound gets no saves and inflicts mortals equal to Damage.
-  ]
 ]
 
 #pagebreak()
 
 #set text(font: "Arial", size: 7pt)
 
-#rect(width: 100%, stroke: 1pt + ink, inset: 5pt)[
-  #grid(columns: (1fr, auto), gutter: 8pt, align: horizon)[
-    #text(size: 15pt, weight: "bold")[Grand Coven Army Rules]
-    #linebreak()
-    #text(size: 7pt, fill: muted)[Current Wahapedia Thousand Sons Grand Coven and Cabal of Sorcerers reference.]
-  ][
-    #rect(fill: soft, stroke: 0.35pt + ruleline, inset: 2pt)[*Cabal Rituals + 6 Stratagems*]
-  ]
-]
-
-#v(4pt)
-
-#grid(columns: (1fr, 1fr), gutter: 6pt, align: top)[
+#grid(columns: (1fr), gutter: 6pt, align: top)[
   #card("Cabal of Sorcerers")[
     If your Army Faction is Thousand Sons, at the start of your Shooting phase, models with this ability can attempt Rituals. Choose a model that has not attempted a Ritual this turn and a Ritual no model has attempted this turn, then take a Psychic test.
 
@@ -287,7 +282,7 @@
 #v(5pt)
 
 #card("Grand Coven Stratagems")[
-  #grid(columns: (1fr, 1fr, 1fr), gutter: 4pt, align: top)[
+  #grid(columns: (1fr, 1fr), gutter: 4pt, align: top)[
     #strat(
       "PSYCHIC DOMINION",
       "1CP",
@@ -306,7 +301,9 @@
       "Change the Damage characteristic of one failed-save attack to 0.",
       redname: true,
     )
-  ][
+  ]
+  #v(4pt)
+  #grid(columns: (1fr, 1fr), gutter: 4pt, align: top)[
     #strat(
       "EGOTISTICAL POWER",
       "1CP",
@@ -315,11 +312,7 @@
       "One Thousand Sons Psyker unit from your army.",
       "Choose Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium. Until your next Command phase, that ability applies to this unit instead of any other Kindred Sorcery ability, even if already selected this battle.",
     )
-  ]
-
-  #v(4pt)
-
-  #grid(columns: (1fr, 1fr, 1fr), gutter: 4pt, align: top)[
+  ][
     #strat(
       "DESECRATION OF WORLDS",
       "1CP",
@@ -328,7 +321,11 @@
       "One Thousand Sons Psyker unit within range of an objective marker you control.",
       "That objective remains yours until your opponent's Level of Control over it is greater than yours at the end of a phase.",
     )
-  ][
+  ]
+
+  #v(4pt)
+
+  #grid(columns: (1fr, 1fr), gutter: 4pt, align: top)[
     #strat(
       "ARCANE FOCUS",
       "1CP",
