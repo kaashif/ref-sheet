@@ -57,6 +57,34 @@
 
 #let twocol(items) = grid(columns: (1fr, 1fr), gutter: 4pt, ..items)
 
+#let strat(name, cost, kind, when, target, effect, redname: false) = {
+  rect(width: 100%, stroke: 0.45pt + ruleline, inset: 3pt)[
+    #grid(columns: (1fr, auto), gutter: 4pt)[
+      #text(size: 8pt, weight: "bold", fill: if redname { red } else { ink })[#name]
+      #text(size: 8pt, weight: "bold")[#cost]
+    ]
+    #text(size: 5.9pt, fill: muted)[Grand Coven - #kind]
+    #v(1pt)
+    #text(size: 6.2pt)[*When:* #when]
+    #linebreak()
+    #text(size: 6.2pt)[*Target:* #target]
+    #linebreak()
+    #text(size: 6.2pt)[*Effect:* #effect]
+  ]
+}
+
+#let ritual_table() = table(
+  columns: (.55fr, 1.5fr, 4.2fr),
+  inset: cellpad,
+  stroke: 0.35pt + ruleline,
+  fill: (x, y) => if y == 0 { soft },
+  table.header[*WC*][*Ritual*][*Effect*],
+  [5], [Destiny's Ruin], [Enemy within 24\" visible: TS/Scintillating attacks re-roll Hit 1; on 10+ re-roll Hits.],
+  [6], [Temporal Surge], [Friendly TS/Scintillating unit within 24\" visible and not engaged makes a Normal move up to D6\"; on 10+ move up to 6\". Cannot charge this turn.],
+  [7], [Doombolt], [Enemy within 24\" visible suffers D3 mortals; on 11+ suffers D3+3. Lone Operative exclusion outside 12\".],
+  [9], [Twist of Fate], [Enemy within 24\" visible: TS/Scintillating attacks improve AP by 1; on 12+ improve AP by 2.],
+)
+
 #rect(width: 100%, stroke: 1pt + ink, inset: 5pt)[
   #grid(columns: (1fr, auto), gutter: 8pt, align: horizon)[
     #text(size: 15pt, weight: "bold")[Thousand Sons - Grand Coven]
@@ -85,21 +113,7 @@
   #v(4pt)
 
   #card("Rituals")[
-    #table(
-      columns: (.55fr, 1.5fr, 4.2fr),
-      inset: cellpad,
-      stroke: 0.35pt + ruleline,
-      fill: (x, y) => if y == 0 { soft },
-      table.header[*WC*][*Ritual*][*Effect*],
-      [5], [Destiny's Ruin], [Enemy within 24\" visible: TS/Scintillating attacks re-roll Hit 1; on 10+ re-roll Hit roll.],
-      [6], [Temporal Surge], [Friendly TS/Scintillating unit within 24\" visible, not engaged: Normal move D6\"; on 10+ move 6\". Cannot charge.],
-      [6], [Sorcerous Facade], [Friendly TS Infantry/Mounted within 24\" visible: remove to Strategic Reserves; on 10+ set up immediately using Deep Strike.],
-      [7], [Doombolt], [Enemy within 24\" visible suffers D3 mortals; on 11+ D3+3. Lone Operative restriction outside 12\".],
-      [7], [Warp Reality], [Area terrain within 24\" visible: roll per enemy model inside; each 6 causes 1 mortal, max 6. On 11+, triggers on 5+.],
-      [8], [Shadow Puppeteer], [Enemy within 24\" visible: -1 Hit until next Shooting phase; on 12+, also -1 Wound.],
-      [8], [Divine the Future], [Gain 1CP; on 11+, manifesting model gains 1 Lore point.],
-      [9], [Twist of Fate], [Enemy within 24\" visible: TS/Scintillating attacks improve AP by 1; on 12+, improve AP by 2.],
-    )
+    #ritual_table()
   ]
 
   #v(4pt)
@@ -226,5 +240,109 @@
   #card("Common Keywords")[
     #set text(size: 5.8pt)
     *Deep Strike:* >9\" away. *Infiltrators:* deploy >9\" from enemy deployment zone and models. *Stealth:* -1 to be hit by ranged attacks. *Torrent:* auto-hits. *Precision:* allocate successful wounds to visible Character in attached unit. *Sustained Hits X:* Critical Hit scores X extra hits. *Lethal Hits:* Critical Hit auto-wounds. *Devastating Wounds:* Critical Wound gets no saves and inflicts mortals equal to Damage.
+  ]
+]
+
+#pagebreak()
+
+#set text(font: "Arial", size: 7pt)
+
+#rect(width: 100%, stroke: 1pt + ink, inset: 5pt)[
+  #grid(columns: (1fr, auto), gutter: 8pt, align: horizon)[
+    #text(size: 15pt, weight: "bold")[Grand Coven Army Rules]
+    #linebreak()
+    #text(size: 7pt, fill: muted)[Current Wahapedia Thousand Sons Grand Coven and Cabal of Sorcerers reference.]
+  ][
+    #rect(fill: soft, stroke: 0.35pt + ruleline, inset: 2pt)[*Cabal Rituals + 6 Stratagems*]
+  ]
+]
+
+#v(4pt)
+
+#grid(columns: (1fr, 1fr), gutter: 6pt, align: top)[
+  #card("Cabal of Sorcerers")[
+    If your Army Faction is Thousand Sons, at the start of your Shooting phase, models with this ability can attempt Rituals. Choose a model that has not attempted a Ritual this turn and a Ritual no model has attempted this turn, then take a Psychic test.
+
+    #v(2pt)
+    *Psychic test:* roll 2D6. You may Channel the Warp by rolling one extra D6. If you Channel and roll any doubles or triples, the model's unit suffers D3 mortal wounds. If the model survives, total the dice; if the result meets or beats the Warp Charge, manifest the Ritual.
+
+    #v(4pt)
+    #ritual_table()
+  ]
+
+  #card("Kindred Sorcery")[
+    In your Command phase, choose one of these abilities to last until the start of your next Command phase. Each can only be selected once per battle.
+
+    #v(3pt)
+    #rule("Imbued Manifestation")[Add 6\" to the Range characteristic of ranged Psychic weapons equipped by Thousand Sons models from your army.]
+    #rule("Psychic Maelstrom")[Each time a Thousand Sons model from your army attacks with a Psychic weapon, add 1 to the Wound roll.]
+    #rule("Wrath of the Immaterium")[Psychic weapons equipped by Thousand Sons models from your army have Devastating Wounds.]
+  ]
+]
+
+#v(5pt)
+
+#card("Grand Coven Stratagems")[
+  #grid(columns: (1fr, 1fr, 1fr), gutter: 4pt, align: top)[
+    #strat(
+      "PSYCHIC DOMINION",
+      "1CP",
+      "Epic Deed Stratagem",
+      "Any phase, just after an enemy unit has selected its targets.",
+      "One Thousand Sons unit selected as a target by that attacking unit.",
+      "Until end of phase, Psychic weapons in the attacking unit gain Hazardous, and your unit has Feel No Pain 4+ against Psychic Attacks.",
+    )
+  ][
+    #strat(
+      "DESTINED BY FATE",
+      "1CP",
+      "Epic Deed Stratagem",
+      "Any phase, just after a saving throw is failed for a Thousand Sons Psyker model. Can be used after fast-rolling multiple saves.",
+      "That Psyker model.",
+      "Change the Damage characteristic of one failed-save attack to 0.",
+      redname: true,
+    )
+  ][
+    #strat(
+      "EGOTISTICAL POWER",
+      "1CP",
+      "Strategic Ploy Stratagem",
+      "Your Command phase.",
+      "One Thousand Sons Psyker unit from your army.",
+      "Choose Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium. Until your next Command phase, that ability applies to this unit instead of any other Kindred Sorcery ability, even if already selected this battle.",
+    )
+  ]
+
+  #v(4pt)
+
+  #grid(columns: (1fr, 1fr, 1fr), gutter: 4pt, align: top)[
+    #strat(
+      "DESECRATION OF WORLDS",
+      "1CP",
+      "Epic Deed Stratagem",
+      "Your Command phase.",
+      "One Thousand Sons Psyker unit within range of an objective marker you control.",
+      "That objective remains yours until your opponent's Level of Control over it is greater than yours at the end of a phase.",
+    )
+  ][
+    #strat(
+      "ARCANE FOCUS",
+      "1CP",
+      "Epic Deed Stratagem",
+      "Your Shooting phase, just after taking a Psychic test for a Thousand Sons model that Channelled the Warp, before resolving the Ritual.",
+      "That Thousand Sons model.",
+      "Re-roll all D6 rolled for that Psychic test, including the additional Channel the Warp D6.",
+      redname: true,
+    )
+  ][
+    #strat(
+      "DEVASTATING SORCERY",
+      "2CP",
+      "Battle Tactic Stratagem",
+      "Your Shooting phase.",
+      "One Thousand Sons Psyker unit that has not been selected to shoot this phase.",
+      "Until end of phase, add 9\" to the Range characteristic of Psychic weapons in the unit, and Psychic weapon attacks can re-roll Hit rolls and Wound rolls.",
+      redname: true,
+    )
   ]
 ]
