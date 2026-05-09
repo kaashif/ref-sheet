@@ -11,6 +11,13 @@
 
 #let cellpad = (x: 2pt, y: 1.4pt)
 #let r(body) = text(fill: red, weight: "bold", body)
+#let datasheet-cols(body) = {
+  block(width: 100%, height: 831.8898pt)[
+    #set text(size: 4.65pt)
+    #set par(leading: 0.18em, spacing: 0.12em)
+    #body
+  ]
+}
 
 #let head(title, pts: none, note: none) = {
   grid(
@@ -97,7 +104,8 @@
   [9/12], [Twist of Fate], [Enemy within 24\" visible: TS/Scintillating attacks improve AP by 1; on 12+ improve AP by 2.],
 )
 
-#grid(columns: (1fr, 1fr), gutter: 5pt, align: top)[
+#datasheet-cols[
+#columns(2, gutter: 5pt)[
   #plaincard[
     #rule("Cabal of Sorcerers")[Start of your Shooting phase, eligible models can attempt Rituals. Roll 2D6; optionally Channel the Warp with +1D6. If you Channel and roll any doubles or triples, that model's unit suffers D3 mortal wounds. Magnus can attempt 2 Rituals per turn and gets +2 to tests.]
     #rule("Kindred Sorcery, Command phase")[Choose one, once per battle each, until your next Command phase: +6\" range to ranged Psychic weapons; +1 to Wound for Psychic weapons; or Psychic weapons gain Devs.]
@@ -125,7 +133,7 @@
     - Damaged 1-6W: -1 to Hit for Magnus's attacks.
     - *Unearthly Power:* start of battle round choose Impossible Form (-1 Damage vs non-Psychic attacks), Treason of Tzeentch (enemy ranged weapons within 24\" gain Hazardous for their Shooting phase), or Time Flux aura (+2\" Move for friendly TS within 6\").
   ]
-][
+
   #card("Daemon Prince with Wings", note: r("Deep Strike. Deadly Demise D3."))[
     #stats((
       [Prince], [13\"], [9], [2+/4++], [10], [6+], [3],
@@ -191,7 +199,7 @@
     ))
     - Infiltrators, Stealth. Once per battle round, target this unit with Fire Overwatch or Heroic Intervention for 0CP.
   ]
-][
+
   #group[
     #card("Sorcerer in Terminator Armour")[
         #stats((
@@ -255,8 +263,7 @@
   ]
 
 ]
-
-#pagebreak()
+]
 
 #set text(font: "Arial", size: 7pt)
 
