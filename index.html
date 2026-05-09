@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thousand Sons 2000pt Reference Sheet</title>
+  <style>
+    :root {
+      --ink: #171717;
+      --muted: #5a5a5a;
+      --line: #cfc8ba;
+      --soft: #f4f0e8;
+      --panel: #fffdf8;
+      --accent: #006b78;
+      --accent-2: #8a2634;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #e8e1d3;
+      font: 10px/1.32 "Aptos", "Arial", sans-serif;
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: start;
+      border: 2px solid var(--ink);
+      background: var(--panel);
+      padding: 10px 12px;
+      margin-bottom: 10px;
+    }
+
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: 20px; line-height: 1; letter-spacing: 0; }
+    h2 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 2px;
+      margin-bottom: 5px;
+    }
+    h3 { font-size: 11px; margin-bottom: 3px; }
+
+    .subhead {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+      gap: 5px;
+      justify-content: end;
+      align-items: start;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      background: var(--soft);
+      padding: 3px 6px;
+      white-space: nowrap;
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .stack { display: grid; gap: 10px; }
+
+    section, article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 8px;
+      break-inside: avoid;
+    }
+
+    .unit {
+      border-top: 4px solid var(--accent);
+    }
+
+    .unit:nth-of-type(even) {
+      border-top-color: var(--accent-2);
+    }
+
+    .unit-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: start;
+      margin-bottom: 5px;
+    }
+
+    .pts {
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 9px;
+      margin-top: 2px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+      margin-top: 4px;
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      background: var(--soft);
+      padding: 1px 4px;
+      font-size: 8px;
+      font-weight: 700;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 4px;
+      table-layout: fixed;
+    }
+
+    th, td {
+      border: 1px solid var(--line);
+      padding: 2px 3px;
+      vertical-align: top;
+      overflow-wrap: anywhere;
+    }
+
+    th {
+      background: var(--soft);
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .stats th, .stats td { text-align: center; }
+    .stats th:first-child, .stats td:first-child { text-align: left; width: 34%; }
+    .weapons th:first-child, .weapons td:first-child { width: 30%; }
+    .weapons th:last-child, .weapons td:last-child { width: 31%; }
+    .qty { color: var(--accent); font-weight: 800; }
+
+    ul {
+      margin: 4px 0 0;
+      padding-left: 13px;
+    }
+
+    li { margin: 2px 0; }
+    strong { font-weight: 800; }
+
+    .phase-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+    }
+
+    .rule {
+      border-left: 3px solid var(--accent);
+      padding-left: 5px;
+      margin-top: 5px;
+    }
+
+    .small { font-size: 9px; }
+
+    .print {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      border: 0;
+      background: var(--accent);
+      color: white;
+      font-weight: 800;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    @media print {
+      @page { size: A4 landscape; margin: 7mm; }
+      body { background: white; font-size: 8.5px; }
+      main { max-width: none; padding: 0; }
+      header { padding: 6px 8px; margin-bottom: 6px; }
+      h1 { font-size: 17px; }
+      h2 { font-size: 10px; }
+      h3 { font-size: 9.5px; }
+      section, article { padding: 5px; }
+      .grid { gap: 6px; }
+      .stack { gap: 6px; }
+      .print { display: none; }
+      th, td { padding: 1.5px 2px; }
+      .page-break { break-before: page; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Thousand Sons - Grand Coven</h1>
+        <p class="subhead">2000pts, 15 units. Warlord: Magnus the Red. Leaders: Terminator Sorcerer with Scarab Occult; each Rubric unit has one Sorcerer attached.</p>
+      </div>
+      <div class="summary">
+        <div class="pill">Kindred Sorcery</div>
+        <div class="pill">6 Characters</div>
+        <div class="pill">Bring It Down 10</div>
+        <div class="pill">Assassination 6</div>
+        <div class="pill">Print A4 landscape</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div class="stack">
+        <section>
+          <h2>Army Rules</h2>
+          <div class="rule"><strong>Flow of Magic:</strong> Your deployment zone is always in Flow. At the start of any phase, No Man's Land is in Flow if you control at least half its objectives; the enemy deployment zone is in Flow if you control at least half its objectives. Psychic Attacks re-roll Wound rolls of 1; if wholly within Flow, add 1 to Wound instead.</div>
+          <div class="rule"><strong>Kindred Sorcery, Command phase:</strong> choose one, once per battle each, until your next Command phase: +6" range to ranged Psychic weapons; +1 to Wound for Psychic weapons; or Psychic weapons gain Devastating Wounds.</div>
+          <div class="rule"><strong>Cabal of Sorcerers:</strong> start of Shooting phase, each eligible model can attempt one Ritual not already attempted this turn. Roll 2D6, optionally Channel the Warp with +1D6; doubles/triples cause D3 mortal wounds to that unit. Magnus can attempt 2 Rituals per turn and gets +2 to tests.</div>
+          <div class="rule"><strong>Mortal Sorcery Aura:</strong> friendly Scintillating Legions Psyker units within 6" and visible to this unit have Cabal of Sorcerers.</div>
+        </section>
+
+        <section>
+          <h2>Rituals</h2>
+          <table>
+            <thead><tr><th>WC</th><th>Ritual</th><th>Effect</th></tr></thead>
+            <tbody>
+              <tr><td>5</td><td>Destiny's Ruin</td><td>Enemy within 24" visible: TS/Scintillating attacks re-roll Hit 1; on 10+ re-roll Hit roll.</td></tr>
+              <tr><td>6</td><td>Temporal Surge</td><td>Friendly TS/Scintillating unit within 24" visible, not engaged: Normal move D6"; on 10+ move 6". Cannot charge.</td></tr>
+              <tr><td>6</td><td>Sorcerous Facade</td><td>Friendly TS Infantry/Mounted within 24" visible: remove to Strategic Reserves; on 10+ set up immediately using Deep Strike.</td></tr>
+              <tr><td>7</td><td>Doombolt</td><td>Enemy within 24" visible suffers D3 mortals; on 11+ D3+3. Lone Operative restriction applies outside 12".</td></tr>
+              <tr><td>7</td><td>Warp Reality</td><td>Area terrain within 24" visible: roll per enemy model inside; each 6 causes 1 mortal, max 6. On 11+, triggers on 5+.</td></tr>
+              <tr><td>8</td><td>Shadow Puppeteer</td><td>Enemy within 24" visible: -1 Hit until next Shooting phase; on 12+, also -1 Wound.</td></tr>
+              <tr><td>8</td><td>Divine the Future</td><td>Gain 1CP; on 11+, manifesting model gains 1 Lore point.</td></tr>
+              <tr><td>9</td><td>Twist of Fate</td><td>Enemy within 24" visible: TS/Scintillating attacks improve AP by 1; on 12+, improve AP by 2.</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <article class="unit">
+          <div class="unit-head"><div><h2>Magnus the Red</h2><p class="note">Warlord. Deep Strike. Deadly Demise D6.</p></div><div class="pts">435</div></div>
+          <table class="stats"><tr><th>Model</th><th>M</th><th>T</th><th>SV</th><th>W</th><th>LD</th><th>OC</th></tr><tr><td>Magnus</td><td>14"</td><td>11</td><td>2+</td><td>16</td><td>5+</td><td>6</td></tr></table>
+          <table class="weapons"><thead><tr><th>Weapon</th><th>Rng</th><th>A</th><th>Hit</th><th>S</th><th>AP</th><th>D</th><th>Key</th></tr></thead><tbody>
+            <tr><td>Gaze of Magnus</td><td>24"</td><td>3D3</td><td>2+</td><td>11</td><td>-2</td><td>3</td><td>Dev Wounds, Psychic</td></tr>
+            <tr><td>Tzeentch's Firestorm</td><td>24"</td><td>D6+3</td><td>2+</td><td>6</td><td>-1</td><td>2</td><td>Blast, Ignores Cover, Psychic</td></tr>
+            <tr><td>Blade strike</td><td>Melee</td><td>7</td><td>2+</td><td>16</td><td>-3</td><td>3</td><td>Dev Wounds, Psychic</td></tr>
+            <tr><td>Blade sweep</td><td>Melee</td><td>14</td><td>2+</td><td>8</td><td>-1</td><td>2</td><td>Psychic</td></tr>
+          </tbody></table>
+          <ul>
+            <li><strong>4++.</strong> Damaged 1-6W: -1 to Hit for Magnus's attacks.</li>
+            <li><strong>Unearthly Power:</strong> start of battle round choose Impossible Form (-1 Damage vs non-Psychic attacks), Treason of Tzeentch (enemy ranged weapons within 24" gain Hazardous for their Shooting phase), or Time Flux aura (+2" Move for friendly TS within 6").</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="stack">
+        <article class="unit">
+          <div class="unit-head"><div><h2>Daemon Prince with Wings</h2><p class="note">Eldritch Vortex of E'taph applied below. Deep Strike. Deadly Demise.</p></div><div class="pts">205</div></div>
+          <table class="stats"><tr><th>Model</th><th>M</th><th>T</th><th>SV</th><th>W</th><th>LD</th><th>OC</th></tr><tr><td>Prince</td><td>13"</td><td>9</td><td>2+</td><td>10</td><td>6+</td><td>3</td></tr></table>
+          <table class="weapons"><thead><tr><th>Weapon</th><th>Rng</th><th>A</th><th>Hit</th><th>S</th><th>AP</th><th>D</th><th>Key</th></tr></thead><tbody>
+            <tr><td>Dark Blessing</td><td>24"</td><td>9</td><td>2+</td><td>5</td><td>-1</td><td>2</td><td>Ignores Cover, Psychic, Sustained Hits 1</td></tr>
+            <tr><td>Infernal cannon</td><td>24"</td><td>3</td><td>2+</td><td>5</td><td>-2</td><td>2</td><td>-</td></tr>
+            <tr><td>Hellforged strike</td><td>Melee</td><td>6</td><td>2+</td><td>9</td><td>-2</td><td>4</td><td>Dev Wounds, Psychic</td></tr>
+            <tr><td>Hellforged sweep</td><td>Melee</td><td>12</td><td>2+</td><td>7</td><td>-1</td><td>2</td><td>Dev Wounds, Psychic</td></tr>
+          </tbody></table>
+          <ul>
+            <li><strong>4++.</strong> <strong>Eldritch Vortex:</strong> +1 Strength and Damage to bearer's Psychic weapons.</li>
+            <li><strong>Aetherstride:</strong> when set up with Deep Strike in Movement phase, can arrive more than 6" away; Dark Blessing gains Sustained Hits D3; cannot charge.</li>
+            <li><strong>Hunter of Souls:</strong> into Character units, re-roll Hit 1 and Wound 1; into Psyker Character, re-roll Hits and Wounds. Destroy Character: heal D3, or 3 if Psyker.</li>
+          </ul>
+        </article>
+
+        <article class="unit">
+          <div class="unit-head"><div><h2>3x Rubric Marines + Sorcerer</h2><p class="note">Each unit: 5 Rubrics plus one attached Sorcerer. Each block costs 180.</p></div><div class="pts">540</div></div>
+          <table class="stats"><tr><th>Model</th><th>M</th><th>T</th><th>SV</th><th>W</th><th>LD</th><th>OC</th></tr><tr><td>Rubric Marine</td><td>6"</td><td>4</td><td>3+</td><td>2</td><td>7+</td><td>2</td></tr><tr><td>Aspiring Sorcerer</td><td>6"</td><td>4</td><td>3+</td><td>3</td><td>6+</td><td>2</td></tr><tr><td>Attached Sorcerer</td><td>6"</td><td>4</td><td>3+</td><td>4</td><td>6+</td><td>1</td></tr></table>
+          <table class="weapons"><thead><tr><th>Weapon</th><th>Rng</th><th>A</th><th>Hit</th><th>S</th><th>AP</th><th>D</th><th>Key</th></tr></thead><tbody>
+            <tr><td><span class="qty">3x</span> Warpflamer</td><td>12"</td><td>D6</td><td>N/A</td><td>4</td><td>-1</td><td>1</td><td>Ignores Cover, Torrent</td></tr>
+            <tr><td><span class="qty">1x</span> Soulreaper cannon</td><td>24"</td><td>6</td><td>3+</td><td>6</td><td>-2</td><td>1</td><td>Dev Wounds; Icon adds Ignores Cover</td></tr>
+            <tr><td>Aspiring Malefic Curse</td><td>24"</td><td>3</td><td>3+</td><td>4</td><td>-3</td><td>1</td><td>Anti-Inf 4+, Dev Wounds, Psychic</td></tr>
+            <tr><td>Sorcerer Pandaemonic Delusion</td><td>24"</td><td>6</td><td>3+</td><td>5</td><td>-1</td><td>1</td><td>Psychic, Sustained Hits 3</td></tr>
+            <tr><td>Sorcerer force weapon</td><td>Melee</td><td>4</td><td>3+</td><td>6</td><td>-1</td><td>D3</td><td>Psychic</td></tr>
+          </tbody></table>
+          <ul>
+            <li><strong>5++.</strong> <strong>Empyric Guidance:</strong> while Sorcerer leads, unit weapons have Lethal Hits.</li>
+            <li><strong>Bringers of Change:</strong> ranged attacks re-roll Wound 1; if target is within range of an objective you do not control, re-roll Wound roll.</li>
+            <li><strong>Twisted Sorceries:</strong> once per battle in Shooting or Fight, Sorcerer's Psychic weapons get +3 Strength and +3 Attacks until end of phase.</li>
+          </ul>
+        </article>
+
+        <article class="unit">
+          <div class="unit-head"><div><h2>2x Sekhetar Robots</h2><p class="note">Two identical units of 2 robots.</p></div><div class="pts">160</div></div>
+          <table class="stats"><tr><th>Model</th><th>M</th><th>T</th><th>SV</th><th>W</th><th>LD</th><th>OC</th></tr><tr><td>Sekhetar Robot</td><td>8"</td><td>6</td><td>3+</td><td>4</td><td>7+</td><td>1</td></tr></table>
+          <table class="weapons"><thead><tr><th>Weapon</th><th>Rng</th><th>A</th><th>Hit</th><th>S</th><th>AP</th><th>D</th><th>Key</th></tr></thead><tbody>
+            <tr><td>Pyreflux meltagun</td><td>12"</td><td>1</td><td>4+</td><td>10</td><td>-4</td><td>D6</td><td>Melta 2</td></tr>
+            <tr><td>Heavy warpflamer</td><td>12"</td><td>D6</td><td>N/A</td><td>5</td><td>-2</td><td>1</td><td>Ignores Cover, Torrent</td></tr>
+            <tr><td>Hellfyre missile rack</td><td>36"</td><td>2</td><td>4+</td><td>10</td><td>-2</td><td>3</td><td>-</td></tr>
+            <tr><td>Close combat weapon</td><td>Melee</td><td>3</td><td>4+</td><td>5</td><td>0</td><td>1</td><td>-</td></tr>
+          </tbody></table>
+          <ul><li><strong>5++.</strong> Infiltrators, Stealth. Once per battle round, target this unit with Fire Overwatch or Heroic Intervention for 0CP.</li></ul>
+        </article>
+      </div>
+
+      <div class="stack">
+        <article class="unit">
+          <div class="unit-head"><div><h2>Scarab Occult + Terminator Sorcerer</h2><p class="note">10 Terminators led by Sorcerer in Terminator Armour with Umbralefic Crystal.</p></div><div class="pts">465</div></div>
+          <table class="stats"><tr><th>Model</th><th>M</th><th>T</th><th>SV</th><th>W</th><th>LD</th><th>OC</th></tr><tr><td>Scarab Occult</td><td>5"</td><td>5</td><td>2+</td><td>3</td><td>7+</td><td>1</td></tr><tr><td>Scarab Sorcerer</td><td>5"</td><td>5</td><td>2+</td><td>4</td><td>6+</td><td>1</td></tr><tr><td>Terminator Sorcerer</td><td>5"</td><td>5</td><td>2+</td><td>5</td><td>6+</td><td>1</td></tr></table>
+          <table class="weapons"><thead><tr><th>Weapon</th><th>Rng</th><th>A</th><th>Hit</th><th>S</th><th>AP</th><th>D</th><th>Key</th></tr></thead><tbody>
+            <tr><td><span class="qty">8x</span> Inferno combi-bolter</td><td>24"</td><td>2</td><td>3+</td><td>4</td><td>-2</td><td>1</td><td>Rapid Fire 2, Lethal Hits</td></tr>
+            <tr><td><span class="qty">2x</span> Soulreaper cannon</td><td>24"</td><td>6</td><td>3+</td><td>6</td><td>-2</td><td>1</td><td>Dev Wounds, Lethal Hits</td></tr>
+            <tr><td><span class="qty">2x</span> Hellfyre missile rack</td><td>36"</td><td>2</td><td>3+</td><td>10</td><td>-2</td><td>3</td><td>Lethal Hits</td></tr>
+            <tr><td>Scarab Malefic Curse</td><td>24"</td><td>3</td><td>3+</td><td>4</td><td>-3</td><td>1</td><td>Anti-Inf 4+, Dev Wounds, Psychic, Lethal Hits</td></tr>
+            <tr><td>Terminator Gaze of Hate</td><td>18"</td><td>3</td><td>3+</td><td>4</td><td>-3</td><td>2</td><td>Anti-Monster/Vehicle 4+, Dev Wounds, Psychic, Lethal Hits</td></tr>
+            <tr><td>Force weapon</td><td>Melee</td><td>4</td><td>3+</td><td>6</td><td>-1</td><td>D3</td><td>Psychic, Lethal Hits</td></tr>
+            <tr><td>Prosperine khopesh</td><td>Melee</td><td>3</td><td>3+</td><td>5</td><td>-2</td><td>2</td><td>Lethal Hits</td></tr>
+          </tbody></table>
+          <ul>
+            <li><strong>4++.</strong> Deep Strike. Rites of Coalescence: while unit contains a Psyker, attacks targeting this unit are -1 to Wound.</li>
+            <li><strong>Marked by Fate:</strong> start of Shooting, select visible enemy; this unit gets +1 to Hit against it until end of phase.</li>
+            <li><strong>Umbralefic Crystal:</strong> once per battle in Command phase, if not engaged, remove bearer's unit to Strategic Reserves; return next Movement Reinforcements step more than 9" away.</li>
+          </ul>
+        </article>
+
+        <article class="unit">
+          <div class="unit-head"><div><h2>Tzaangor Enlightened</h2><p class="note">3 with Fatecaster greatbows.</p></div><div class="pts">55</div></div>
+          <table class="stats"><tr><th>Model</th><th>M</th><th>T</th><th>SV</th><th>W</th><th>LD</th><th>OC</th></tr><tr><td>Enlightened</td><td>10"</td><td>4</td><td>5+</td><td>2</td><td>7+</td><td>2</td></tr></table>
+          <table class="weapons"><thead><tr><th>Weapon</th><th>Rng</th><th>A</th><th>Hit</th><th>S</th><th>AP</th><th>D</th><th>Key</th></tr></thead><tbody>
+            <tr><td>Fatecaster greatbow</td><td>30"</td><td>2</td><td>4+</td><td>5</td><td>-2</td><td>2</td><td>Ignores Cover, Lethal Hits, Precision</td></tr>
+            <tr><td>Close combat weapon</td><td>Melee</td><td>2</td><td>4+</td><td>4</td><td>0</td><td>1</td><td>-</td></tr>
+          </tbody></table>
+          <ul><li><strong>5++.</strong> Malign Trickery: once per turn, when enemy ends Normal/Advance/Fall Back within 9", if not engaged, make Normal move up to D6".</li></ul>
+        </article>
+
+        <article class="unit">
+          <div class="unit-head"><div><h2>2x Tzaangors</h2><p class="note">Two units of 10, each with Brayhorn and Herd banner.</p></div><div class="pts">140</div></div>
+          <table class="stats"><tr><th>Model</th><th>M</th><th>T</th><th>SV</th><th>W</th><th>LD</th><th>OC</th></tr><tr><td>Tzaangor</td><td>6"</td><td>4</td><td>6+</td><td>1</td><td>7+</td><td>1</td></tr></table>
+          <table class="weapons"><thead><tr><th>Weapon</th><th>Rng</th><th>A</th><th>Hit</th><th>S</th><th>AP</th><th>D</th><th>Key</th></tr></thead><tbody>
+            <tr><td>Tzaangor blades</td><td>Melee</td><td>2</td><td>4+</td><td>5</td><td>0</td><td>1</td><td>-</td></tr>
+          </tbody></table>
+          <ul>
+            <li><strong>6++.</strong> Scouts 6". Ambushing Hunters: end of opponent's turn, if more than 6" away from all enemies, remove to Strategic Reserves.</li>
+            <li><strong>Brayhorn:</strong> re-roll Advance and Charge rolls. <strong>Herd banner:</strong> while on an objective you control, improve Leadership by 1.</li>
+          </ul>
+        </article>
+
+        <section>
+          <h2>Common Keywords</h2>
+          <div class="phase-grid small">
+            <p><strong>Deep Strike:</strong> arrive in Reinforcements more than 9" away unless a rule says otherwise.</p>
+            <p><strong>Infiltrators:</strong> deploy outside your deployment zone more than 9" from enemies and enemy deployment zone.</p>
+            <p><strong>Stealth:</strong> -1 to Hit for ranged attacks targeting this unit.</p>
+            <p><strong>Torrent:</strong> automatically hits.</p>
+            <p><strong>Precision:</strong> successful wounds can be allocated to visible Character in attached unit.</p>
+            <p><strong>Sustained Hits X:</strong> Critical Hit scores X extra hits.</p>
+            <p><strong>Lethal Hits:</strong> Critical Hit automatically wounds.</p>
+            <p><strong>Devastating Wounds:</strong> Critical Wound gets no saves and inflicts mortal wounds equal to Damage.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <button class="print" onclick="window.print()">Print</button>
+</body>
+</html>
