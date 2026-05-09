@@ -14,11 +14,10 @@
 
 #let head(title, pts: none, note: none) = {
   grid(
-    columns: (1fr, auto),
+    columns: (1fr,),
     gutter: 4pt,
     align: horizon,
     text(size: 9pt, weight: "bold", upper(title)),
-    if pts != none { text(size: 8.5pt, weight: "bold", pts) },
   )
   if note != none { text(size: 6.1pt, fill: muted, note) }
   line(length: 100%, stroke: 0.45pt + ink)
@@ -105,7 +104,7 @@
 
   #v(4pt)
 
-  #card("Magnus the Red", pts: "435", note: "Warlord. Deep Strike. Deadly Demise D6.")[
+  #card("Magnus the Red", note: "Warlord. Deep Strike. Deadly Demise D6.")[
     #stats((
       [Magnus], [14\"], [11], [2+/4++], [16], [5+], [6],
     ))
@@ -120,7 +119,7 @@
     - *Unearthly Power:* start of battle round choose Impossible Form (-1 Damage vs non-Psychic attacks), Treason of Tzeentch (enemy ranged weapons within 24\" gain Hazardous for their Shooting phase), or Time Flux aura (+2\" Move for friendly TS within 6\").
   ]
 ][
-  #card("Daemon Prince with Wings", pts: "205", note: "Eldritch Vortex of E'taph applied below. Deep Strike. Deadly Demise D3.")[
+  #card("Daemon Prince with Wings", note: "Eldritch Vortex of E'taph applied below. Deep Strike. Deadly Demise D3.")[
     #stats((
       [Prince], [13\"], [9], [2+/4++], [10], [6+], [3],
     ))
@@ -139,8 +138,7 @@
   #v(4pt)
 
   #group[
-    #grid(columns: (1fr, 1fr), gutter: 3pt, align: top)[
-      #card("3x Rubric Marines", pts: "300", note: "Bodyguard. Per 5-model unit; each has one attached Sorcerer.")[
+    #card("Rubric Marines", note: "Bodyguard. Per 5-model unit; each has one attached Sorcerer.")[
         #stats((
           [Rubric Marine], [6\"], [4], [3+/5++], [2], [7+], [2],
           [Aspiring Sorcerer], [6\"], [4], [3+/5++], [3], [6+], [2],
@@ -156,8 +154,8 @@
         ))
         - *Bringers of Change:* ranged attacks re-roll Wound 1; if target is within range of an objective you do not control, re-roll Wound roll.
       ]
-    ][
-      #card("3x Sorcerer", pts: "240", note: "Leader. One Sorcerer attached to each Rubric unit.")[
+    #v(3pt)
+    #card("Sorcerer", note: "Leader. One Sorcerer attached to each Rubric unit.")[
         #stats((
           [Sorcerer], [6\"], [4], [3+/5++], [4], [6+], [1],
         ))
@@ -170,12 +168,11 @@
         - *Empyric Guidance:* while leading, weapons in this Rubric unit have #r("LH Sor").
         - *Twisted Sorceries:* once per battle in Shooting or Fight, Sorcerer's Psychic weapons get +3 Strength and +3 Attacks until end of phase.
       ]
-    ]
   ]
 
   #v(4pt)
 
-  #card("2x Sekhetar Robots", pts: "160", note: "Two identical units of 2 robots. Weapon counts are per 2-model unit.")[
+  #card("Sekhetar Robots", note: "Two identical units of 2 robots. Weapon counts are per 2-model unit.")[
     #stats((
       [Sekhetar Robot], [8\"], [6], [3+/5++], [4], [7+], [1],
     ))
@@ -190,8 +187,7 @@
   ]
 ][
   #group[
-    #grid(columns: (1fr, 1fr), gutter: 3pt, align: top)[
-      #card("Scarab Occult Terminators", pts: "360", note: "Bodyguard. Led by Terminator Sorcerer.")[
+    #card("Scarab Occult Terminators", note: "Bodyguard. Led by Terminator Sorcerer.")[
         #stats((
           [Scarab Occult], [5\"], [5], [2+/4++], [3], [7+], [1],
           [Scarab Sorcerer], [5\"], [5], [2+/4++], [4], [6+], [1],
@@ -207,8 +203,8 @@
         ))
         - Deep Strike. *Rites of Coalescence:* while this unit contains a Psyker, attacks targeting this unit are #r("-1W vs incoming").
       ]
-    ][
-      #card("Sorcerer in Terminator Armour", pts: "105", note: "Leader with Umbralefic Crystal.")[
+    #v(3pt)
+    #card("Sorcerer in Terminator Armour", note: "Leader with Umbralefic Crystal.")[
         #stats((
           [Terminator Sorcerer], [5\"], [5], [2+/4++], [5], [6+], [1],
         ))
@@ -221,12 +217,11 @@
         - *Marked by Fate (SinT):* start of Shooting, select visible enemy; this led unit gets #r("+1H") against it until end of phase.
         - *Empyric Guidance:* while leading, weapons in this unit have #r("LH SinT"). *Umbralefic Crystal:* once per battle redeploy via Strategic Reserves.
       ]
-    ]
   ]
 
   #v(4pt)
 
-  #card("Tzaangor Enlightened", pts: "55", note: "3 with Fatecaster greatbows.")[
+  #card("Tzaangor Enlightened", note: "Fatecaster greatbows.")[
     #stats((
       [Enlightened], [10\"], [4], [5+/5++], [2], [7+], [2],
     ))
@@ -240,7 +235,7 @@
 
   #v(4pt)
 
-  #card("2x Tzaangors", pts: "140", note: "Two units of 10, each with Brayhorn and Herd banner.")[
+  #card("Tzaangors", note: "Two units of 10, each with Brayhorn and Herd banner.")[
     #stats((
       [Tzaangor], [6\"], [4], [6+/6++], [1], [7+], [1],
     ))
