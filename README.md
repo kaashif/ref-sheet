@@ -2,7 +2,7 @@
 
 Printable Warhammer 40,000 10th edition reference sheet for a 2000 point Thousand Sons Grand Coven list.
 
-The canonical printable artifact is the two-page `thousand-sons-reference.pdf`, generated from `sheet.typ`.
+The canonical printable artifact is `thousand-sons-reference.pdf`, generated from `sheet.typ`.
 
 To rebuild it:
 

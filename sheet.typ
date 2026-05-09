@@ -10,6 +10,7 @@
 #let red = rgb("#8a2634")
 
 #let cellpad = (x: 2pt, y: 1.4pt)
+#let r(body) = text(fill: red, weight: "bold", body)
 
 #let head(title, pts: none, note: none) = {
   grid(
@@ -104,10 +105,9 @@
 
 #grid(columns: (1fr, 1fr, 1fr), gutter: 5pt, align: top)[
   #card("Army Rules")[
-    #rule("Flow of Magic")[Your deployment zone is always in Flow. At the start of any phase, No Man's Land is in Flow if you control at least half its objectives; the enemy deployment zone is in Flow if you control at least half its objectives. Psychic Attacks re-roll Wound rolls of 1; if wholly within Flow, add 1 to Wound instead.]
+    #rule("Cabal of Sorcerers")[Start of your Shooting phase, eligible models can attempt Rituals. Roll 2D6; optionally Channel the Warp with +1D6. If you Channel and roll any doubles or triples, that model's unit suffers D3 mortal wounds. Magnus can attempt 2 Rituals per turn and gets +2 to tests.]
+    #rule("Pact of Sorcery")[When mustering your army, unless specifically stated otherwise, you cannot select Scintillating Legions as your Army Faction.]
     #rule("Kindred Sorcery, Command phase")[Choose one, once per battle each, until your next Command phase: +6\" range to ranged Psychic weapons; +1 to Wound for Psychic weapons; or Psychic weapons gain Devastating Wounds.]
-    #rule("Cabal of Sorcerers")[Start of Shooting phase, each eligible model can attempt one Ritual not already attempted this turn. Roll 2D6, optionally Channel the Warp with +1D6; doubles/triples cause D3 mortal wounds to that unit. Magnus can attempt 2 Rituals per turn and gets +2 to tests.]
-    #rule("Mortal Sorcery Aura")[Friendly Scintillating Legions Psyker units within 6\" and visible to this unit have Cabal of Sorcerers.]
   ]
 
   #v(4pt)
@@ -120,90 +120,94 @@
 
   #card("Magnus the Red", pts: "435", note: "Warlord. Deep Strike. Deadly Demise D6.")[
     #stats((
-      [Magnus], [14\"], [11], [2+], [16], [5+], [6],
+      [Magnus], [14\"], [11], [2+/4++], [16], [5+], [6],
     ))
     #v(2pt)
     #weapons((
-      [Gaze of Magnus], [24\"], [3D3], [2+], [11], [-2], [3], [Dev Wounds, Psychic],
-      [Tzeentch's Firestorm], [24\"], [D6+3], [2+], [6], [-1], [2], [Blast, Ignores Cover, Psychic],
-      [Blade strike], [Melee], [7], [2+], [16], [-3], [3], [Dev Wounds, Psychic],
-      [Blade sweep], [Melee], [14], [2+], [8], [-1], [2], [Psychic],
+      [x1 Gaze of Magnus], [24\"], [3D3], [2+], [11], [-2], [3], [Dev Wounds, Psychic],
+      [x1 Tzeentch's Firestorm], [24\"], [D6+3], [2+], [6], [-1], [2], [Blast, Ignores Cover, Psychic],
+      [x1 Blade strike], [Melee], [7], [2+], [16], [-3], [3], [Dev Wounds, Psychic],
+      [x1 Blade sweep], [Melee], [14], [2+], [8], [-1], [2], [Psychic],
     ))
-    - *4++.* Damaged 1-6W: -1 to Hit for Magnus's attacks.
+    - Damaged 1-6W: -1 to Hit for Magnus's attacks.
     - *Unearthly Power:* start of battle round choose Impossible Form (-1 Damage vs non-Psychic attacks), Treason of Tzeentch (enemy ranged weapons within 24\" gain Hazardous for their Shooting phase), or Time Flux aura (+2\" Move for friendly TS within 6\").
   ]
 ][
-  #card("Daemon Prince with Wings", pts: "205", note: "Eldritch Vortex of E'taph applied below. Deep Strike. Deadly Demise.")[
+  #card("Daemon Prince with Wings", pts: "205", note: "Eldritch Vortex of E'taph applied below. Deep Strike. Deadly Demise D3.")[
     #stats((
-      [Prince], [13\"], [9], [2+], [10], [6+], [3],
+      [Prince], [13\"], [9], [2+/4++], [10], [6+], [3],
     ))
     #v(2pt)
     #weapons((
-      [Dark Blessing], [24\"], [9], [2+], [5], [-1], [2], [Ignores Cover, Psychic, Sustained Hits 1],
-      [Infernal cannon], [24\"], [3], [2+], [5], [-2], [2], [-],
-      [Hellforged strike], [Melee], [6], [2+], [9], [-2], [4], [Dev Wounds, Psychic],
-      [Hellforged sweep], [Melee], [12], [2+], [7], [-1], [2], [Dev Wounds, Psychic],
+      [x1 Dark Blessing], [24\"], [9], [2+ #r("RR1H chr/RRH psyC")], [5 #r("RR1W chr/RRW psyC")], [-1], [2], [Ignores Cover, Psychic, Sustained Hits 1, #r("EV")],
+      [x1 Infernal cannon], [24\"], [3], [2+ #r("RR1H chr/RRH psyC")], [5 #r("RR1W chr/RRW psyC")], [-2], [2], [-],
+      [x1 Hellforged strike], [Melee], [6], [2+ #r("RR1H chr/RRH psyC")], [9 #r("RR1W chr/RRW psyC")], [-2], [4], [Dev Wounds, Psychic, #r("EV")],
+      [x1 Hellforged sweep], [Melee], [12], [2+ #r("RR1H chr/RRH psyC")], [7 #r("RR1W chr/RRW psyC")], [-1], [2], [Dev Wounds, Psychic, #r("EV")],
     ))
-    - *4++.* *Eldritch Vortex:* +1 Strength and Damage to bearer's Psychic weapons.
+    - *Eldritch Vortex:* +1 Strength and Damage to bearer's Psychic weapons; modified profiles shown.
     - *Aetherstride:* when set up with Deep Strike in Movement phase, can arrive more than 6\" away; Dark Blessing gains Sustained Hits D3; cannot charge.
     - *Hunter of Souls:* into Character units, re-roll Hit 1 and Wound 1; into Psyker Character, re-roll Hits and Wounds. Destroy Character: heal D3, or 3 if Psyker.
   ]
 
   #v(4pt)
 
-  #card("3x Rubric Marines + Sorcerer", pts: "540", note: "Each unit: 5 Rubrics plus one attached Sorcerer. Each block costs 180.")[
+  #card("3x Rubric Marines + Sorcerer", pts: "540", note: "Each led unit: 5 Rubrics plus one attached Sorcerer. Weapon counts are per led unit.")[
     #stats((
-      [Rubric Marine], [6\"], [4], [3+], [2], [7+], [2],
-      [Aspiring Sorcerer], [6\"], [4], [3+], [3], [6+], [2],
-      [Attached Sorcerer], [6\"], [4], [3+], [4], [6+], [1],
+      [Rubric Marine], [6\"], [4], [3+/5++], [2], [7+], [2],
+      [Aspiring Sorcerer], [6\"], [4], [3+/5++], [3], [6+], [2],
+      [Attached Sorcerer], [6\"], [4], [3+/5++], [4], [6+], [1],
     ))
     #v(2pt)
     #weapons((
-      [3x Warpflamer], [12\"], [D6], [N/A], [4], [-1], [1], [Ignores Cover, Torrent],
-      [1x Soulreaper cannon], [24\"], [6], [3+], [6], [-2], [1], [Dev Wounds; Icon adds Ignores Cover],
-      [Aspiring Malefic Curse], [24\"], [3], [3+], [4], [-3], [1], [Anti-Inf 4+, Dev Wounds, Psychic],
-      [Sorcerer Pandaemonic Delusion], [24\"], [6], [3+], [5], [-1], [1], [Psychic, Sustained Hits 3],
-      [Sorcerer force weapon], [Melee], [4], [3+], [6], [-1], [D3], [Psychic],
+      [x3 Warpflamer], [12\"], [D6], [N/A], [4 #r("RR1W/RRW obj")], [-1], [1], [Ignores Cover, Torrent, #r("LH Sor")],
+      [x1 Soulreaper cannon], [24\"], [6], [3+], [6 #r("RR1W/RRW obj")], [-2], [1], [Dev Wounds; Icon adds Ignores Cover, #r("LH Sor")],
+      [x2 Inferno bolt pistol], [12\"], [1], [3+], [4 #r("RR1W/RRW obj")], [-1], [1], [Pistol, #r("LH Sor")],
+      [x1 Aspiring Malefic Curse], [24\"], [3], [3+], [4 #r("RR1W/RRW obj")], [-3], [1], [Anti-Inf 4+, Dev Wounds, Psychic, #r("LH Sor")],
+      [x1 Sorcerer Pandaemonic Delusion], [24\"], [6 #r("+3A once")], [3+], [5 #r("+3S once RR1W/RRW obj")], [-1], [1], [Psychic, Sustained Hits 3, #r("LH Sor")],
+      [x1 Aspiring force weapon], [Melee], [3], [3+], [6], [-1], [D3], [Psychic, #r("LH Sor")],
+      [x1 Sorcerer force weapon], [Melee], [4 #r("+3A once")], [3+], [6 #r("+3S once")], [-1], [D3], [Psychic, #r("LH Sor")],
+      [x4 Close combat weapon], [Melee], [2], [3+], [4], [0], [1], [#r("LH Sor")],
     ))
-    - *5++.* *Empyric Guidance:* while Sorcerer leads, unit weapons have Lethal Hits.
+    - *Leader adjacency:* each Sorcerer is attached to one Rubric unit. *Empyric Guidance:* while Sorcerer leads, unit weapons have Lethal Hits.
     - *Bringers of Change:* ranged attacks re-roll Wound 1; if target is within range of an objective you do not control, re-roll Wound roll.
     - *Twisted Sorceries:* once per battle in Shooting or Fight, Sorcerer's Psychic weapons get +3 Strength and +3 Attacks until end of phase.
   ]
 
   #v(4pt)
 
-  #card("2x Sekhetar Robots", pts: "160", note: "Two identical units of 2 robots.")[
+  #card("2x Sekhetar Robots", pts: "160", note: "Two identical units of 2 robots. Weapon counts are per 2-model unit.")[
     #stats((
-      [Sekhetar Robot], [8\"], [6], [3+], [4], [7+], [1],
+      [Sekhetar Robot], [8\"], [6], [3+/5++], [4], [7+], [1],
     ))
     #v(2pt)
     #weapons((
-      [Pyreflux meltagun], [12\"], [1], [4+], [10], [-4], [D6], [Melta 2],
-      [Heavy warpflamer], [12\"], [D6], [N/A], [5], [-2], [1], [Ignores Cover, Torrent],
-      [Hellfyre missile rack], [36\"], [2], [4+], [10], [-2], [3], [-],
-      [Close combat weapon], [Melee], [3], [4+], [5], [0], [1], [-],
+      [x2 Pyreflux meltagun], [12\"], [1], [4+], [10], [-4], [D6], [Melta 2],
+      [x2 Heavy warpflamer], [12\"], [D6], [N/A], [5], [-2], [1], [Ignores Cover, Torrent],
+      [x2 Hellfyre missile rack], [36\"], [2], [4+], [10], [-2], [3], [-],
+      [x2 Close combat weapon], [Melee], [3], [4+], [5], [0], [1], [-],
     ))
-    - *5++.* Infiltrators, Stealth. Once per battle round, target this unit with Fire Overwatch or Heroic Intervention for 0CP.
+    - Infiltrators, Stealth. Once per battle round, target this unit with Fire Overwatch or Heroic Intervention for 0CP.
   ]
 ][
   #card("Scarab Occult + Terminator Sorcerer", pts: "465", note: "10 Terminators led by Sorcerer in Terminator Armour with Umbralefic Crystal.")[
     #stats((
-      [Scarab Occult], [5\"], [5], [2+], [3], [7+], [1],
-      [Scarab Sorcerer], [5\"], [5], [2+], [4], [6+], [1],
-      [Terminator Sorcerer], [5\"], [5], [2+], [5], [6+], [1],
+      [Scarab Occult], [5\"], [5], [2+/4++], [3], [7+], [1],
+      [Scarab Sorcerer], [5\"], [5], [2+/4++], [4], [6+], [1],
+      [Terminator Sorcerer], [5\"], [5], [2+/4++], [5], [6+], [1],
     ))
     #v(2pt)
     #weapons((
-      [8x Inferno combi-bolter], [24\"], [2], [3+], [4], [-2], [1], [Rapid Fire 2, Lethal Hits],
-      [2x Soulreaper cannon], [24\"], [6], [3+], [6], [-2], [1], [Dev Wounds, Lethal Hits],
-      [2x Hellfyre missile rack], [36\"], [2], [3+], [10], [-2], [3], [Lethal Hits],
-      [Scarab Malefic Curse], [24\"], [3], [3+], [4], [-3], [1], [Anti-Inf 4+, Dev Wounds, Psychic, Lethal Hits],
-      [Terminator Gaze of Hate], [18\"], [3], [3+], [4], [-3], [2], [Anti-Monster/Vehicle 4+, Dev Wounds, Psychic, Lethal Hits],
-      [Force weapon], [Melee], [4], [3+], [6], [-1], [D3], [Psychic, Lethal Hits],
-      [Prosperine khopesh], [Melee], [3], [3+], [5], [-2], [2], [Lethal Hits],
+      [x9 Inferno combi-bolter], [24\"], [2], [3+ #r("+1H SinT")], [4], [-2], [1], [Rapid Fire 2, #r("LH SinT")],
+      [x2 Soulreaper cannon], [24\"], [6], [3+ #r("+1H SinT")], [6], [-2], [1], [Dev Wounds, #r("LH SinT")],
+      [x2 Hellfyre missile rack], [36\"], [2], [3+ #r("+1H SinT")], [10], [-2], [3], [#r("LH SinT")],
+      [x1 Scarab Malefic Curse], [24\"], [3], [3+ #r("+1H SinT")], [4], [-3], [1], [Anti-Inf 4+, Dev Wounds, Psychic, #r("LH SinT")],
+      [x1 Terminator Gaze of Hate], [18\"], [3], [3+ #r("+1H SinT")], [4], [-3], [2], [Anti-Monster/Vehicle 4+, Dev Wounds, Psychic, #r("LH SinT")],
+      [x1 Scarab force weapon], [Melee], [4], [3+ #r("+1H SinT")], [6], [-1], [D3], [Psychic, #r("LH SinT")],
+      [x1 Terminator force weapon], [Melee], [5], [3+ #r("+1H SinT")], [6], [-1], [D3], [Psychic, #r("LH SinT")],
+      [x9 Prosperine khopesh], [Melee], [3], [3+ #r("+1H SinT")], [5], [-2], [2], [#r("LH SinT")],
     ))
-    - *4++.* Deep Strike. Rites of Coalescence: while unit contains a Psyker, attacks targeting this unit are -1 to Wound.
-    - *Marked by Fate:* start of Shooting, select visible enemy; this unit gets +1 to Hit against it until end of phase.
+    - *Leader adjacency:* Terminator Sorcerer is attached to this unit. Deep Strike. *Rites of Coalescence:* while this unit contains a Psyker, attacks targeting this unit are #r("-1W vs incoming").
+    - *Marked by Fate (SinT):* start of Shooting, select visible enemy; this unit gets #r("+1H") against it until end of phase.
     - *Umbralefic Crystal:* once per battle in Command phase, if not engaged, remove bearer's unit to Strategic Reserves; return next Movement Reinforcements step more than 9\" away.
   ]
 
@@ -211,27 +215,27 @@
 
   #card("Tzaangor Enlightened", pts: "55", note: "3 with Fatecaster greatbows.")[
     #stats((
-      [Enlightened], [10\"], [4], [5+], [2], [7+], [2],
+      [Enlightened], [10\"], [4], [5+/5++], [2], [7+], [2],
     ))
     #v(2pt)
     #weapons((
-      [Fatecaster greatbow], [30\"], [2], [4+], [5], [-2], [2], [Ignores Cover, Lethal Hits, Precision],
-      [Close combat weapon], [Melee], [2], [4+], [4], [0], [1], [-],
+      [x3 Fatecaster greatbow], [30\"], [2], [4+], [5], [-2], [2], [Ignores Cover, Lethal Hits, Precision],
+      [x3 Close combat weapon], [Melee], [2], [4+], [4], [0], [1], [-],
     ))
-    - *5++.* Malign Trickery: once per turn, when enemy ends Normal/Advance/Fall Back within 9\", if not engaged, make Normal move up to D6\".
+    - Malign Trickery: once per turn, when enemy ends Normal/Advance/Fall Back within 9\", if not engaged, make Normal move up to D6\".
   ]
 
   #v(4pt)
 
   #card("2x Tzaangors", pts: "140", note: "Two units of 10, each with Brayhorn and Herd banner.")[
     #stats((
-      [Tzaangor], [6\"], [4], [6+], [1], [7+], [1],
+      [Tzaangor], [6\"], [4], [6+/6++], [1], [7+], [1],
     ))
     #v(2pt)
     #weapons((
-      [Tzaangor blades], [Melee], [2], [4+], [5], [0], [1], [-],
+      [x10 Tzaangor blades], [Melee], [2], [4+], [5], [0], [1], [-],
     ))
-    - *6++.* Scouts 6\". Ambushing Hunters: end of opponent's turn, if more than 6\" away from all enemies, remove to Strategic Reserves.
+    - Weapon counts are per unit. Scouts 6\". Ambushing Hunters: end of opponent's turn, if more than 6\" away from all enemies, remove to Strategic Reserves.
     - *Brayhorn:* re-roll Advance and Charge rolls. *Herd banner:* while on an objective you control, improve Leadership by 1.
   ]
 
