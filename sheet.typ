@@ -165,10 +165,10 @@
         ))
         #v(2pt)
         #weapons((
-          [x3 Warpflamer], [12\"], [D6], [N/A], [4 #r("RR1W/RRW obj")], [-1], [1], [Ignores Cover, Torrent, #r("Lethals")],
-          [x1 Soulreaper cannon], [24\"], [6], [3+], [6 #r("RR1W/RRW obj")], [-2], [1], [Devs; Icon adds Ignores Cover, #r("Lethals")],
-          [x1 Inferno bolt pistol], [12\"], [1], [3+], [4 #r("RR1W/RRW obj")], [-1], [1], [Pistol, #r("Lethals")],
-          [x1 Malefic Curse], [24\"], [3], [3+], [4 #r("RR1W/RRW obj")], [-3], [1], [Anti-Inf 4+, Devs, Psychic, #r("Lethals")],
+          [x3 Warpflamer], [12\"], [D6], [N/A], [4 #r("RR1W/RRW obj")], [-1], [1], [Torrent, #r("Ignores Cover"), #r("Lethals")],
+          [x1 Soulreaper cannon], [24\"], [6], [3+], [6 #r("RR1W/RRW obj")], [-2], [1], [Devs, #r("Ignores Cover"), #r("Lethals")],
+          [x1 Inferno bolt pistol], [12\"], [1], [3+], [4 #r("RR1W/RRW obj")], [-1], [1], [Pistol, #r("Ignores Cover"), #r("Lethals")],
+          [x1 Malefic Curse], [24\"], [3], [3+], [4 #r("RR1W/RRW obj")], [-3], [1], [Anti-Inf 4+, Devs, Psychic, #r("Ignores Cover"), #r("Lethals")],
           [x1 Force weapon], [Melee], [3], [3+], [6], [-1], [D3], [Psychic, #r("Lethals")],
           [x4 Close combat weapon], [Melee], [2], [3+], [4], [0], [1], [#r("Lethals")],
         ))
