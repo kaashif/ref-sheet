@@ -13,8 +13,8 @@
 #let r(body) = text(fill: red, weight: "bold", body)
 #let datasheet-cols(body) = {
   block(width: 100%, height: 831.8898pt)[
-    #set text(size: 4.65pt)
-    #set par(leading: 0.18em, spacing: 0.12em)
+    #set text(size: 5.25pt)
+    #set par(leading: 0.22em, spacing: 0.14em)
     #body
   ]
 }
@@ -184,7 +184,7 @@
       ]
   ]
 
-  #v(4pt)
+  #colbreak()
 
   #card("Sekhetar Robots", note: "Two identical units of 2 robots. Weapon counts are per 2-model unit.")[
     #stats((
@@ -203,13 +203,13 @@
   #group[
     #card("Sorcerer in Terminator Armour")[
         #stats((
-          [Terminator Sorcerer], [5\"], [5], [2+/4++], [5], [6+], [1],
+          [Terminator Sorcerer], [5\"], [5 #r("-1W inc")], [2+/4++], [5], [6+], [1],
         ))
         #v(2pt)
         #weapons((
-          [x1 Inferno combi-bolter], [24\"], [2], [3+ #r("+1H")], [4 #r("-1W inc")], [-2], [1], [Rapid Fire 2, #r("Lethals")],
-          [x1 Gaze of Hate], [18\"], [3], [3+ #r("+1H")], [4 #r("-1W inc")], [-3], [2], [Anti-Monster/Vehicle 4+, Devs, Psychic, #r("Lethals")],
-          [x1 Force weapon], [Melee], [5], [3+ #r("+1H")], [6 #r("-1W inc")], [-1], [D3], [Psychic, #r("Lethals")],
+          [x1 Inferno combi-bolter], [24\"], [2], [3+ #r("+1H")], [4], [-2], [1], [Rapid Fire 2, #r("Lethals")],
+          [x1 Gaze of Hate], [18\"], [3], [3+ #r("+1H")], [4], [-3], [2], [Anti-Monster/Vehicle 4+, Devs, Psychic, #r("Lethals")],
+          [x1 Force weapon], [Melee], [5], [3+ #r("+1H")], [6], [-1], [D3], [Psychic, #r("Lethals")],
         ))
         - *Marked by Fate:* start of Shooting, select visible enemy; this led unit gets #r("+1H") against it until end of phase.
         - *Empyric Guidance:* while leading, weapons in this unit have #r("Lethals").
@@ -218,17 +218,17 @@
     #v(3pt)
     #card("Scarab Occult Terminators")[
         #stats((
-          [Scarab Occult], [5\"], [5], [2+/4++], [3], [7+], [1],
-          [Scarab Sorcerer], [5\"], [5], [2+/4++], [4], [6+], [1],
+          [Scarab Occult], [5\"], [5 #r("-1W inc")], [2+/4++], [3], [7+], [1],
+          [Scarab Sorcerer], [5\"], [5 #r("-1W inc")], [2+/4++], [4], [6+], [1],
         ))
         #v(2pt)
         #weapons((
-          [x9 Inferno combi-bolter], [24\"], [2], [3+ #r("+1H")], [4 #r("-1W inc")], [-2], [1], [Rapid Fire 2, #r("Lethals")],
-          [x2 Soulreaper cannon], [24\"], [6], [3+ #r("+1H")], [6 #r("-1W inc")], [-2], [1], [Devs, #r("Lethals")],
-          [x2 Hellfyre missile rack], [36\"], [2], [3+ #r("+1H")], [10 #r("-1W inc")], [-2], [3], [#r("Lethals")],
-          [x1 Malefic Curse], [24\"], [3], [3+ #r("+1H")], [4 #r("-1W inc")], [-3], [1], [Anti-Inf 4+, Devs, Psychic, #r("Lethals")],
-          [x1 Force weapon], [Melee], [4], [3+ #r("+1H")], [6 #r("-1W inc")], [-1], [D3], [Psychic, #r("Lethals")],
-          [x9 Prosperine khopesh], [Melee], [3], [3+ #r("+1H")], [5 #r("-1W inc")], [-2], [2], [#r("Lethals")],
+          [x9 Inferno combi-bolter], [24\"], [2], [3+ #r("+1H")], [4], [-2], [1], [Rapid Fire 2, #r("Lethals")],
+          [x2 Soulreaper cannon], [24\"], [6], [3+ #r("+1H")], [6], [-2], [1], [Devs, #r("Lethals")],
+          [x2 Hellfyre missile rack], [36\"], [2], [3+ #r("+1H")], [10], [-2], [3], [#r("Lethals")],
+          [x1 Malefic Curse], [24\"], [3], [3+ #r("+1H")], [4], [-3], [1], [Anti-Inf 4+, Devs, Psychic, #r("Lethals")],
+          [x1 Force weapon], [Melee], [4], [3+ #r("+1H")], [6], [-1], [D3], [Psychic, #r("Lethals")],
+          [x9 Prosperine khopesh], [Melee], [3], [3+ #r("+1H")], [5], [-2], [2], [#r("Lethals")],
         ))
         - #r("Deep Strike. Rites of Coalescence:") while this unit contains a Psyker, attacks targeting this unit are -1 to Wound.
       ]
