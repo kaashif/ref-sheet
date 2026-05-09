@@ -92,6 +92,29 @@
   ]
 }
 
+#let effect-card(title, tag, effect, footer: none) = {
+  rect(
+    width: 90mm,
+    height: 58mm,
+    stroke: (paint: ink, thickness: 0.8pt, dash: "dashed"),
+    inset: 4mm,
+  )[
+    #grid(columns: (1fr, auto), align: horizon)[
+      #text(size: 13pt, weight: "bold", fill: red)[#title]
+    ][
+      #text(size: 25pt, weight: "bold", fill: red)[=>]
+    ]
+    #v(2mm)
+    #text(size: 8pt, weight: "bold", fill: muted)[#tag]
+    #v(4mm)
+    #text(size: 17pt, weight: "bold")[#effect]
+    #if footer != none {
+      v(3mm)
+      text(size: 7.5pt, fill: muted)[#footer]
+    }
+  ]
+}
+
 #let ritual_table() = table(
   columns: (.55fr, 1.5fr, 4.2fr),
   inset: cellpad,
@@ -355,4 +378,97 @@
       "That objective remains yours until your opponent's Level of Control over it is greater than yours at the end of a phase.",
     )
   ]
+]
+
+#pagebreak()
+#set text(font: "Arial", size: 8pt)
+
+#grid(columns: (1fr, 1fr), gutter: 7mm, row-gutter: 7mm, align: top)[
+  #effect-card(
+    "HIT REROLL 1S",
+    "Destiny's Ruin 5+",
+    "Hit RR1",
+    footer: "TS/Scintillating attacks into selected visible enemy within 24\".",
+  )
+][
+  #effect-card(
+    "FULL HIT REROLL",
+    "Destiny's Ruin 10+",
+    "Hit RR",
+    footer: "TS/Scintillating attacks into selected visible enemy within 24\".",
+  )
+][
+  #effect-card(
+    "AP BOOST",
+    "Twist of Fate 9+",
+    "AP -1",
+    footer: "Improve AP by 1 for TS/Scintillating attacks into selected visible enemy within 24\".",
+  )
+][
+  #effect-card(
+    "AP BOOST",
+    "Twist of Fate 12+",
+    "AP -2",
+    footer: "Improve AP by 2 for TS/Scintillating attacks into selected visible enemy within 24\".",
+  )
+][
+  #effect-card(
+    "DEV SORCERY",
+    "2CP Stratagem",
+    "+9\" Range",
+    footer: "Psychic weapons re-roll Hit rolls and Wound rolls until end of phase.",
+  )
+][
+  #effect-card(
+    "FULL REROLLS",
+    "Devastating Sorcery",
+    "Hit RR + Wound RR",
+    footer: "One Thousand Sons Psyker unit, Psychic weapons only.",
+  )
+]
+
+#pagebreak()
+
+#grid(columns: (1fr, 1fr), gutter: 7mm, row-gutter: 7mm, align: top)[
+  #effect-card(
+    "DEVASTATING SORCERY",
+    "2CP - Your Shooting phase",
+    "+9\" Range",
+    footer: "Psychic weapons re-roll Hit rolls and Wound rolls until end of phase.",
+  )
+][
+  #effect-card(
+    "DEVASTATING SORCERY",
+    "2CP - Your Shooting phase",
+    "Hit RR + Wound RR",
+    footer: "One Thousand Sons Psyker unit that has not been selected to shoot.",
+  )
+][
+  #effect-card(
+    "DESTINY'S RUIN",
+    "Ritual 5+",
+    "Hit RR1",
+    footer: "Enemy within 24\" visible. TS/Scintillating attacks into that target.",
+  )
+][
+  #effect-card(
+    "DESTINY'S RUIN",
+    "Ritual 10+",
+    "Hit RR",
+    footer: "Enhanced result. Enemy within 24\" visible. Applies into that target.",
+  )
+][
+  #effect-card(
+    "TWIST OF FATE",
+    "Ritual 9+",
+    "AP -1",
+    footer: "Enemy within 24\" visible. TS/Scintillating attacks improve AP by 1.",
+  )
+][
+  #effect-card(
+    "TWIST OF FATE",
+    "Ritual 12+",
+    "AP -2",
+    footer: "Enhanced result. TS/Scintillating attacks improve AP by 2.",
+  )
 ]
