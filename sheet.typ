@@ -66,10 +66,14 @@
 #let twocol(items) = grid(columns: (1fr, 1fr), gutter: 4pt, ..items)
 
 #let strat(name, cost, kind, when, target, effect, redname: false) = {
-  rect(width: 100%, stroke: 0.45pt + ruleline, inset: 3pt)[
+  rect(
+    width: 100%,
+    stroke: if redname { 1.4pt + red } else { 0.45pt + ruleline },
+    inset: if redname { 3.8pt } else { 3pt },
+  )[
     #grid(columns: (1fr, auto), gutter: 4pt)[
-      #text(size: 8pt, weight: "bold", fill: if redname { red } else { ink })[#name]
-      #text(size: 8pt, weight: "bold")[#cost]
+      #text(size: if redname { 8.8pt } else { 8pt }, weight: "bold", fill: if redname { red } else { ink })[#name]
+      #text(size: if redname { 8.8pt } else { 8pt }, weight: "bold", fill: if redname { red } else { ink })[#cost]
     ]
     #text(size: 5.9pt, fill: muted)[Grand Coven - #kind]
     #v(1pt)
@@ -282,15 +286,6 @@
 #card("Grand Coven Stratagems")[
   #grid(columns: (1fr, 1fr), gutter: 4pt, align: top)[
     #strat(
-      "PSYCHIC DOMINION",
-      "1CP",
-      "Epic Deed Stratagem",
-      "Any phase, just after an enemy unit has selected its targets.",
-      "One Thousand Sons unit selected as a target by that attacking unit.",
-      "Until end of phase, Psychic weapons in the attacking unit gain Hazardous, and your unit has Feel No Pain 4+ against Psychic Attacks.",
-    )
-  ][
-    #strat(
       "DESTINED BY FATE",
       "1CP",
       "Epic Deed Stratagem",
@@ -299,8 +294,41 @@
       "Change the Damage characteristic of one failed-save attack to 0.",
       redname: true,
     )
+  ][
+    #strat(
+      "ARCANE FOCUS",
+      "1CP",
+      "Epic Deed Stratagem",
+      "Your Shooting phase, just after taking a Psychic test for a Thousand Sons model that Channelled the Warp, before resolving the Ritual.",
+      "That Thousand Sons model.",
+      "Re-roll all D6 rolled for that Psychic test, including the additional Channel the Warp D6.",
+      redname: true,
+    )
   ]
   #v(4pt)
+  #grid(columns: (1fr, 1fr), gutter: 4pt, align: top)[
+    #strat(
+      "DEVASTATING SORCERY",
+      "2CP",
+      "Battle Tactic Stratagem",
+      "Your Shooting phase.",
+      "One Thousand Sons Psyker unit that has not been selected to shoot this phase.",
+      "Until end of phase, add 9\" to the Range characteristic of Psychic weapons in the unit, and Psychic weapon attacks can re-roll Hit rolls and Wound rolls.",
+      redname: true,
+    )
+  ][
+    #strat(
+      "PSYCHIC DOMINION",
+      "1CP",
+      "Epic Deed Stratagem",
+      "Any phase, just after an enemy unit has selected its targets.",
+      "One Thousand Sons unit selected as a target by that attacking unit.",
+      "Until end of phase, Psychic weapons in the attacking unit gain Hazardous, and your unit has Feel No Pain 4+ against Psychic Attacks.",
+    )
+  ]
+
+  #v(4pt)
+
   #grid(columns: (1fr, 1fr), gutter: 4pt, align: top)[
     #strat(
       "EGOTISTICAL POWER",
@@ -318,30 +346,6 @@
       "Your Command phase.",
       "One Thousand Sons Psyker unit within range of an objective marker you control.",
       "That objective remains yours until your opponent's Level of Control over it is greater than yours at the end of a phase.",
-    )
-  ]
-
-  #v(4pt)
-
-  #grid(columns: (1fr, 1fr), gutter: 4pt, align: top)[
-    #strat(
-      "ARCANE FOCUS",
-      "1CP",
-      "Epic Deed Stratagem",
-      "Your Shooting phase, just after taking a Psychic test for a Thousand Sons model that Channelled the Warp, before resolving the Ritual.",
-      "That Thousand Sons model.",
-      "Re-roll all D6 rolled for that Psychic test, including the additional Channel the Warp D6.",
-      redname: true,
-    )
-  ][
-    #strat(
-      "DEVASTATING SORCERY",
-      "2CP",
-      "Battle Tactic Stratagem",
-      "Your Shooting phase.",
-      "One Thousand Sons Psyker unit that has not been selected to shoot this phase.",
-      "Until end of phase, add 9\" to the Range characteristic of Psychic weapons in the unit, and Psychic weapon attacks can re-roll Hit rolls and Wound rolls.",
-      redname: true,
     )
   ]
 ]
