@@ -8,9 +8,14 @@
 #let soft = rgb("#f3efe6")
 #let accent = rgb("#006b78")
 #let red = rgb("#8a2634")
+#let psychic-blue = rgb("#00a9ff")
 
 #let cellpad = (x: 2pt, y: 1.4pt)
 #let r(body) = text(fill: red, weight: "bold", body)
+#let p(body) = text(fill: psychic-blue, stroke: 0.12pt + rgb("#004b8f"), weight: "bold", body)
+#show "Psychic": p("Psychic")
+#show "Psyker": p("Psyker")
+#show "psyC": p("psyC")
 #let datasheet-cols(body) = {
   block(width: 100%, height: 831.8898pt)[
     #set text(size: 5.25pt)
