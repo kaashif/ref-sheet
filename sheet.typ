@@ -100,23 +100,15 @@
 #let effect-card(title, tag, effect, footer: none) = {
   rect(
     width: 90mm,
-    height: 58mm,
+    height: 28mm,
     stroke: (paint: ink, thickness: 0.8pt, dash: "dashed"),
-    inset: 4mm,
+    inset: 3.5mm,
   )[
-    #grid(columns: (1fr, auto), align: horizon)[
-      #text(size: 13pt, weight: "bold", fill: red)[#title]
+    #grid(columns: (1fr, auto), gutter: 4mm, align: horizon)[
+      #text(size: 23pt, weight: "bold", fill: red)[#effect]
     ][
-      #text(size: 25pt, weight: "bold", fill: red)[=>]
+      #text(size: 26pt, weight: "bold", fill: red)[=>]
     ]
-    #v(2mm)
-    #text(size: 8pt, weight: "bold", fill: muted)[#tag]
-    #v(4mm)
-    #text(size: 17pt, weight: "bold")[#effect]
-    #if footer != none {
-      v(3mm)
-      text(size: 7.5pt, fill: muted)[#footer]
-    }
   ]
 }
 
