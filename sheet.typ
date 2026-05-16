@@ -206,7 +206,7 @@
 
   #colbreak()
 
-  #card("Sekhetar Robots", note: "Two identical units of 2 robots. Weapon counts are per 2-model unit.")[
+  #card("Sekhetar Robots")[
     #stats((
       [Sekhetar Robot], [8\"], [6], [3+/5++], [4], [7+], [1],
     ))
@@ -220,43 +220,39 @@
     - Infiltrators, Stealth. Once per battle round, target this unit with Fire Overwatch or Heroic Intervention for 0CP.
   ]
 
-  #group[
-    #card("Sorcerer in Terminator Armour")[
-        #stats((
-          [Terminator Sorcerer], [5\"], [5 #r("-1W inc")], [2+/4++], [5], [6+], [1],
-        ))
-        #v(2pt)
-        #weapons((
-          [x1 Inferno combi-bolter], [24\"], [2], [3+ #r("+1H")], [4], [-2], [1], [Rapid Fire 2, #r("Lethals")],
-          [x1 Gaze of Hate], [18\"], [3], [3+ #r("+1H")], [4], [-3], [2], [Anti-Monster/Vehicle 4+, Devs, Psychic, #r("Lethals")],
-          [x1 Force weapon], [Melee], [5], [3+ #r("+1H")], [6], [-1], [D3], [Psychic, #r("Lethals")],
-        ))
-        - *Marked by Fate:* start of Shooting, select visible enemy; this led unit gets #r("+1H") against it until end of phase.
-        - *Empyric Guidance:* while leading, weapons in this unit have #r("Lethals").
-        - *Umbralefic Crystal:* once per battle in Command phase, if bearer's unit is not within Engagement Range, remove it and place it into Strategic Reserves; in your next Movement phase Reinforcements step, set it up more than 9\" from all enemy units.
-      ]
-    #v(3pt)
-    #card("Scarab Occult Terminators")[
-        #stats((
-          [Scarab Occult], [5\"], [5 #r("-1W inc")], [2+/4++], [3], [7+], [1],
-          [Scarab Sorcerer], [5\"], [5 #r("-1W inc")], [2+/4++], [4], [6+], [1],
-        ))
-        #v(2pt)
-        #weapons((
-          [x9 Inferno combi-bolter], [24\"], [2], [3+ #r("+1H")], [4], [-2], [1], [Rapid Fire 2, #r("Lethals")],
-          [x2 Soulreaper cannon], [24\"], [6], [3+ #r("+1H")], [6], [-2], [1], [Devs, #r("Lethals")],
-          [x2 Hellfyre missile rack], [36\"], [2], [3+ #r("+1H")], [10], [-2], [3], [#r("Lethals")],
-          [x1 Malefic Curse], [24\"], [3], [3+ #r("+1H")], [4], [-3], [1], [Anti-Inf 4+, Devs, Psychic, #r("Lethals")],
-          [x1 Force weapon], [Melee], [4], [3+ #r("+1H")], [6], [-1], [D3], [Psychic, #r("Lethals")],
-          [x9 Prosperine khopesh], [Melee], [3], [3+ #r("+1H")], [5], [-2], [2], [#r("Lethals")],
-        ))
-        - #r("Deep Strike. Rites of Coalescence:") while this unit contains a Psyker, attacks targeting this unit are -1 to Wound.
-      ]
+  #card("Defiler")[
+    #stats((
+      [Defiler], [12\"], [11], [3+/5++], [18], [6+], [5],
+    ))
+    #v(2pt)
+    #weapons((
+      [x1 Hades battle cannon], [48\"], [D6+3], [3+], [10], [-1], [3], [Blast],
+      [x2 Excruciator cannon], [36\"], [12], [3+], [6], [-2], [2], [-],
+      [x2 Heavy reaper autocannon], [48\"], [8], [3+], [9], [-2], [3], [Devs, Sustained Hits 1],
+      [x1 Shearing claws strike], [Melee], [5], [3+], [16], [-3], [D6+1], [-],
+      [x1 Shearing claws sweep], [Melee], [10], [3+], [6], [-2], [1], [-],
+    ))
+    - *Scuttling Walker:* Normal, Advance and Fall Back moves can pass through models and terrain; can move within Engagement Range during the move but cannot end there; automatically passes Desperate Escape tests.
+    - *Destroyer of Futures:* Fire Overwatch hits on unmodified 5+; against targets within 9\" of a friendly Thousand Sons Psyker, hits on 4+ instead.
+    - Deadly Demise D6. Feel No Pain 6+. Damaged 1-6W: -1 to Hit.
   ]
 
   #v(4pt)
 
-  #card("Tzaangor Enlightened", note: "Fatecaster greatbows.")[
+  #card("Tzaangor Enlightened")[
+    #stats((
+      [Enlightened], [10\"], [4], [5+/5++], [2], [7+], [2],
+    ))
+    #v(2pt)
+    #weapons((
+      [x3 Divining spear], [Melee], [3], [4+], [5], [-1], [2], [Lance, Precision],
+    ))
+    - Prophesied Doom: after this unit ends a Charge move, select an enemy unit in Engagement Range. Roll one D6 for each model in this unit within Engagement Range of it; each 4+ deals 1 mortal wound.
+  ]
+
+  #v(4pt)
+
+  #card("Tzaangor Enlightened")[
     #stats((
       [Enlightened], [10\"], [4], [5+/5++], [2], [7+], [2],
     ))
@@ -270,7 +266,7 @@
 
   #v(4pt)
 
-  #card("Tzaangors", note: "Two units of 10, each with Brayhorn and Herd banner.")[
+  #card("Tzaangors")[
     #stats((
       [Tzaangor], [6\"], [4], [6+/6++], [1], [7+], [1],
     ))
