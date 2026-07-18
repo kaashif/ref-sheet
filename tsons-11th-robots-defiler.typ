@@ -114,10 +114,10 @@
     #stats(([Magnus], [14\"], [11], [2+/4++], [16], [5+], [6]))
     #v(1.5pt)
     #weapons((
-      [Gaze of Magnus], [24\"], [3D3], [2+], [11], [-2], [3], [Dev Wounds, Psychic],
-      [Tzeentch's Firestorm], [24\"], [D6+3], [2+], [6], [-1], [2], [Blast, Ignores Cover, Psychic],
-      [Blade - strike], [Melee], [7], [2+], [16], [-3], [3], [Dev Wounds, Psychic],
-      [Blade - sweep], [Melee], [14], [2+], [8], [-1], [2], [Psychic],
+      [Gaze of Magnus], [24\"], [3D3], [2+], [11 #r("RR1W/+1W FoM")], [-2], [3], [Dev Wounds, Psychic],
+      [Tzeentch's Firestorm], [24\"], [D6+3], [2+], [6 #r("RR1W/+1W FoM")], [-1], [2], [Blast, #r("[Ignores Cover]"), Psychic],
+      [Blade - strike], [Melee], [7], [2+], [16 #r("RR1W/+1W FoM")], [-3], [3], [Dev Wounds, Psychic],
+      [Blade - sweep], [Melee], [14], [2+], [8 #r("RR1W/+1W FoM")], [-1], [2], [Psychic],
     ))
     - Damaged 1-6W: -1 to Hit. Start of battle round choose defensive, anti-shooting Hazardous aura, or +2\" Move aura.
   ]
@@ -129,11 +129,11 @@
     ))
     #v(1.5pt)
     #weapons((
-      [Pandaemonic Delusion], [24\"], [6], [3+], [5], [-1], [1], [Psychic, Sustained 3],
-      [Malefic Curse], [24\"], [3], [3+], [4], [-3], [1], [Anti-Inf 4+, Devs, Psychic],
-      [Warpflamers x3], [12\"], [D6], [N/A], [4], [-1], [1], [Torrent, Ignores Cover],
-      [Soulreaper], [24\"], [6], [3+], [6], [-2], [1], [Dev Wounds, Ignores Cover],
-      [Force weapon], [Melee], [3/4], [3+], [6], [-1], [D3], [Psychic],
+      [Pandaemonic Delusion], [24\"], [6], [3+], [5 #r("RR1W/+1W FoM RR1W/RRWobj")], [-1], [1], [Psychic, Sustained 3, #r("[Lethal]")],
+      [Malefic Curse], [24\"], [3], [3+], [4 #r("RR1W/+1W FoM RR1W/RRWobj")], [-3], [1], [Anti-Inf 4+, Devs, Psychic, #r("[Lethal]"), #r("[Ignores Cover]")],
+      [Warpflamers x3], [12\"], [D6], [N/A], [4 #r("RR1W/RRWobj")], [-1], [1], [Torrent, #r("[Lethal]"), #r("[Ignores Cover]")],
+      [Soulreaper], [24\"], [6], [3+], [6 #r("RR1W/RRWobj")], [-2], [1], [Dev Wounds, #r("[Lethal]"), #r("[Ignores Cover]")],
+      [Force weapon], [Melee], [3/4], [3+], [6 #r("RR1W/+1W FoM")], [-1], [D3], [Psychic, #r("[Lethal]")],
     ))
     - Sorcerer gives led Rubrics Lethal Hits. Rubrics re-roll Wound 1; full Wound re-roll into targets on objectives you do not control.
   ]
@@ -145,7 +145,7 @@
     ))
     #v(1.5pt)
     #weapons((
-      [Gaze of Hate], [18\"], [D6], [3+], [6], [-2], [2], [Dev Wounds, Psychic],
+      [Gaze of Hate], [18\"], [D6], [3+], [6 #r("RR1W/+1W FoM")], [-2], [2], [Dev Wounds, Psychic],
       [Inferno combi-bolters], [24\"], [2], [3+], [4], [-1], [1], [Rapid Fire 2],
       [Soulreaper x2], [24\"], [6], [3+], [6], [-2], [1], [Dev Wounds],
       [Hellfyre rack x2], [36\"], [2], [3+], [10], [-2], [3], [-],
@@ -160,10 +160,10 @@
     #stats(([Sekhetar Robot], [8\"], [6], [3+/5++], [4], [7+], [1]))
     #v(1.5pt)
     #weapons((
-      [Heavy warpflamer x4], [12\"], [D6], [N/A], [5], [-2], [1], [Ignores Cover, Torrent, Psychic],
-      [Hellfyre rack x4], [36\"], [2], [4+], [10], [-2], [3], [Psychic],
-      [Warpflame projector x4], [12\"], [D6], [N/A], [5], [-1], [1], [Torrent, Psychic],
-      [Power claw x4], [Melee], [3], [4+], [10], [-2], [3], [Psychic],
+      [Heavy warpflamer x4], [12\"], [D6], [N/A], [5 #r("RR1W/+1W FoM")], [-2], [1], [#r("[Ignores Cover]"), Torrent, Psychic],
+      [Hellfyre rack x4], [36\"], [2], [4+], [10 #r("RR1W/+1W FoM")], [-2], [3], [Psychic],
+      [Warpflame projector x4], [12\"], [D6], [N/A], [5 #r("RR1W/+1W FoM")], [-1], [1], [Torrent, Psychic],
+      [Power claw x4], [Melee], [3], [4+], [10 #r("RR1W/+1W FoM")], [-2], [3], [Psychic],
     ))
     - Infiltrators, Stealth. Prophetic Sentinels: once per turn, Fire Overwatch / Heroic Intervention use is -1CP.
   ]
@@ -172,10 +172,10 @@
     #stats(([Sekhetar Robot], [8\"], [6], [3+/5++], [4], [7+], [1]))
     #v(1.5pt)
     #weapons((
-      [Pyreflux meltagun x4], [12\"], [1], [4+], [10], [-4], [D6], [Melta 2, Psychic],
-      [Heavy warpflamer x4], [12\"], [D6], [N/A], [5], [-2], [1], [Ignores Cover, Torrent, Psychic],
-      [Hellfyre rack x4], [36\"], [2], [4+], [10], [-2], [3], [Psychic],
-      [Close combat weapon x4], [Melee], [3], [4+], [5], [0], [1], [Psychic],
+      [Pyreflux meltagun x4], [12\"], [1], [4+], [10 #r("RR1W/+1W FoM")], [-4], [D6], [Melta 2, Psychic],
+      [Heavy warpflamer x4], [12\"], [D6], [N/A], [5 #r("RR1W/+1W FoM")], [-2], [1], [#r("[Ignores Cover]"), Torrent, Psychic],
+      [Hellfyre rack x4], [36\"], [2], [4+], [10 #r("RR1W/+1W FoM")], [-2], [3], [Psychic],
+      [Close combat weapon x4], [Melee], [3], [4+], [5 #r("RR1W/+1W FoM")], [0], [1], [Psychic],
     ))
     - Keep near a Psyker to access Infusion and Sekhetar Cohort stratagem targeting clauses.
   ]
@@ -197,7 +197,7 @@
     #stats(([Enlightened], [10\"], [4], [5+/5++], [2], [7+], [2]))
     #v(1.5pt)
     #weapons((
-      [Fatecaster greatbow x3], [30\"], [2], [4+], [5], [-2], [2], [Ignores Cover, Lethal Hits, Precision],
+      [Fatecaster greatbow x3], [30\"], [2], [4+], [5], [-2], [2], [#r("[Ignores Cover]"), #r("[Lethal]"), Precision],
       [Close combat weapon x3], [Melee], [2], [4+], [4], [0], [1], [-],
     ))
     - Malign Trickery: in opponent's Movement phase, if enemy ends a move within 8\" and this unit is not engaged, it can make a Normal move up to D6\".
