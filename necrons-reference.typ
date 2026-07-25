@@ -44,23 +44,29 @@
   width: 100%,
 )[*#name:* #body]
 
-#let stats(rows) = table(
-  columns: (2.2fr, .7fr, .7fr, .9fr, .7fr, .7fr, .7fr),
-  inset: cellpad,
-  stroke: 0.3pt + linec,
-  fill: (x, y) => if y == 0 { soft },
-  table.header[*Model*][*M*][*T*][*SV*][*W*][*LD*][*OC*],
-  ..rows,
-)
+#let stats(rows) = {
+  set text(size: 8.3pt)
+  table(
+    columns: (1.9fr, .7fr, .7fr, 1.25fr, .7fr, .7fr, .7fr),
+    inset: cellpad,
+    stroke: 0.3pt + linec,
+    fill: (x, y) => if y == 0 { soft },
+    table.header[*Model*][*M*][*T*][*SV*][*W*][*LD*][*OC*],
+    ..rows,
+  )
+}
 
-#let weapons(rows) = table(
-  columns: (2.35fr, .72fr, .66fr, .68fr, .62fr, .62fr, .72fr, 2.35fr),
-  inset: cellpad,
-  stroke: 0.3pt + linec,
-  fill: (x, y) => if y == 0 { soft },
-  table.header[*Weapon*][*Rng*][*A*][*Hit*][*S*][*AP*][*D*][*Key*],
-  ..rows,
-)
+#let weapons(rows) = {
+  set text(size: 8pt)
+  table(
+    columns: (2.1fr, .82fr, .62fr, 1.15fr, .58fr, .58fr, .78fr, 2.1fr),
+    inset: (x: 1.35pt, y: 0.9pt),
+    stroke: 0.3pt + linec,
+    fill: (x, y) => if y == 0 { soft },
+    table.header[*Weapon*][*Rng*][*A*][*Hit*][*S*][*AP*][*D*][*Key*],
+    ..rows,
+  )
+}
 
 #let strat(name, cost, when, target, effect, hot: false) = {
   rect(
@@ -127,13 +133,13 @@
   ]
   #v(3pt)
 
-  #card("Imotekh the Stormlord", outline: warrior-group, note: text(fill: warrior-group, weight: "bold")[WARRIOR ATTACHMENT - LEADER. \* COMMAND PROTOCOLS APPLIED.])[
+  #card("Imotekh the Stormlord", outline: warrior-group, note: text(fill: warrior-group, weight: "bold")[WARRIOR ATTACHMENT - LEADER. COMMAND PROTOCOLS APPLIED.])[
     #stats(([Imotekh], [5\"], [5], [2+/4++], [6], [6+], [1]))
     #v(1.4pt)
     #weapons((
       [Gauntlet of Fire], [12\"], [D6], [N/A], [5], [-1], [1], [Torrent, Ignores Cover],
-      [Staff Destroyer], [18\"], [3], [#r("2+*")], [6], [-3], [2], [-],
-      [Staff Destroyer], [Melee], [4], [#r("2+*")], [6], [-3], [2], [Dev Wounds],
+      [Staff Destroyer], [18\"], [3], [#r("2+ (2+)")], [6], [-3], [2], [-],
+      [Staff Destroyer], [Melee], [4], [#r("2+ (2+)")], [6], [-3], [2], [Dev Wounds],
     ))
     - *Grand Strategist:* start of your Command phase, gain 1CP (July cap: max 1 extra CP/round).
     - *Lord of the Storm:* once/battle, end of Command, each enemy within 12\": D3 mortals on 2-5; D3+3 on 6.
@@ -143,27 +149,27 @@
   #card("Orikan the Diviner", outline: warrior-group, note: text(fill: warrior-group, weight: "bold")[WARRIOR ATTACHMENT - SUPPORT. ORIKAN GRANTS THE UNIT 4++.])[
     #stats(([Orikan], [5\"], [4], [4+/4++], [4], [6+], [1]))
     #v(1.4pt)
-    #weapons(([Staff Tomorrow], [Melee], [2], [#r("2+*")], [4], [-3], [D3], [Dev Wounds]))
+    #weapons(([Staff Tomorrow], [Melee], [2], [#r("2+ (3+)")], [4], [-3], [D3], [Dev Wounds]))
     - *Master Chronomancer:* models in attached unit have 4++.
     - *Stars Are Right:* once/battle, start of Fight: triple Orikan staff A/S and successful wounds are Critical.
   ]
   #v(1.5pt)
 
-  #card("20 Necron Warriors", outline: warrior-group, note: text(fill: warrior-group, weight: "bold")[WARRIOR ATTACHMENT - BODYGUARD. 4++ FROM ORIKAN. \* COMMAND PROTOCOLS APPLIED.])[
-    #stats(([Warrior], [5\"], [4], [4+/#r("4++ ORIKAN")], [1], [7+], [2]))
+  #card("20 Necron Warriors", outline: warrior-group, note: text(fill: warrior-group, weight: "bold")[WARRIOR ATTACHMENT - BODYGUARD. 4++ FROM ORIKAN. COMMAND PROTOCOLS APPLIED.])[
+    #stats(([Warrior], [5\"], [4], [4+/#r("4++")], [1], [7+], [2]))
     #v(1.4pt)
-    #weapons(([Gauss reaper x20], [12\"], [2], [#r("3+*")], [4], [-1], [1], [Lethal Hits]))
+    #weapons(([Gauss reaper x20], [12\"], [2], [#r("3+ (4+)")], [4], [-1], [1], [Lethal Hits]))
     - *Their Number Is Legion:* re-roll the Reanimation Protocols die.
   ]
 
   #colbreak()
 
-  #card("Technomancer", outline: wraith-group, note: text(fill: wraith-group, weight: "bold")[WRAITH ATTACHMENT - SUPPORT. CASKET; UNIT GAINS STEALTH AND 5+++.])[
+  #card("Technomancer", outline: wraith-group, note: text(fill: wraith-group, weight: "bold")[WRAITH ATTACHMENT - SUPPORT. CASKET; STEALTH AND 5+++. COMMAND PROTOCOLS APPLIED.])[
     #stats(([Technomancer], [10\"], [4], [4+/#r("5+++")], [4], [6+], [1]))
     #v(1.4pt)
     #weapons((
-      [Staff of light], [18\"], [3], [#r("3+*")], [5], [-2], [1], [-],
-      [Staff of light], [Melee], [2], [#r("3+*")], [5], [-2], [1], [-],
+      [Staff of light], [18\"], [3], [#r("3+ (4+)")], [5], [-2], [1], [-],
+      [Staff of light], [Melee], [2], [#r("3+ (4+)")], [5], [-2], [1], [-],
     ))
     - *Rites of Reanimation:* every model in the attached unit has #r("Feel No Pain 5+ (5+++)").
     - *Technomancer:* end of Movement, one friendly Necrons model within 6\" regains D3 wounds (once/model/turn).
@@ -171,12 +177,12 @@
   ]
   #v(1.5pt)
 
-  #card("6 Canoptek Wraiths", outline: wraith-group, note: text(fill: wraith-group, weight: "bold")[WRAITH ATTACHMENT - BODYGUARD. 5+++ FROM TECHNOMANCER. \* COMMAND PROTOCOLS APPLIED.])[
-    #stats(([Wraith], [10\"], [6], [3+/4++/#r("5+++ TECHNO")], [4], [8+], [2]))
+  #card("6 Canoptek Wraiths", outline: wraith-group, note: text(fill: wraith-group, weight: "bold")[WRAITH ATTACHMENT - BODYGUARD. 5+++ FROM TECHNOMANCER. COMMAND PROTOCOLS APPLIED.])[
+    #stats(([Wraith], [10\"], [6], [3+/4++/#r("5+++")], [4], [8+], [2]))
     #v(1.4pt)
     #weapons((
-      [Beamer x6], [12\"], [1], [#r("3+*")], [4], [-2], [3], [-],
-      [Vicious claws x6], [Melee], [4], [#r("3+*")], [6], [-1], [2], [-],
+      [Beamer x6], [12\"], [1], [#r("3+ (4+)")], [4], [-2], [3], [-],
+      [Vicious claws x6], [Melee], [4], [#r("3+ (4+)")], [6], [-1], [2], [-],
     ))
     - *Wraith Form:* after a Normal move, choose one unit moved over; roll per Wraith, each 4+ inflicts 1 mortal.
   ]
@@ -236,7 +242,7 @@
   #card("Detachment Rule", tag: "Awakened Dynasty")[
     #rule("Command Protocols")[While a Necrons Character model is leading this unit, add 1 to Hit rolls for attacks made by models in that unit.]
     #v(2pt)
-    #text(fill: red, weight: "bold")[Applied to every non-Torrent weapon in both attached-unit cards on page 1. A red asterisk marks the adjusted Hit value: 3+* is base 4+ improved to 3+; 2+* is base 3+ improved to 2+. Imotekh's base 2+ remains 2+, with the +1 available to offset a penalty.]
+    #text(fill: red, weight: "bold")[Applied to every non-Torrent weapon in the attached-unit cards on page 1. Red values show final Hit first, then the original characteristic in parentheses: 3+ (4+) and 2+ (3+). Imotekh shows 2+ (2+): the +1 offsets a penalty.]
   ]
   #v(3pt)
 
