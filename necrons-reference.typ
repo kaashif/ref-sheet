@@ -10,6 +10,8 @@
 #let bright = rgb("#00a86b")
 #let red = rgb("#9b2638")
 #let gold = rgb("#8b681d")
+#let warrior-group = rgb("#7542a8")
+#let wraith-group = rgb("#007f83")
 #let cellpad = (x: 1.7pt, y: 1.05pt)
 
 #let r(body) = text(fill: red, weight: "bold", body)
@@ -28,8 +30,8 @@
   line(length: 100%, stroke: 0.45pt + ink)
 }
 
-#let card(title, body, tag: none, note: none) = {
-  rect(width: 100%, stroke: 0.55pt + linec, inset: 2.6pt, radius: 1pt)[
+#let card(title, body, tag: none, note: none, outline: linec) = {
+  rect(width: 100%, stroke: 0.65pt + outline, inset: 2.6pt, radius: 1pt)[
     #head(title, tag: tag, note: note)
     #v(1.4pt)
     #body
@@ -81,11 +83,11 @@
 
 #text(size: 14pt, weight: "bold")[Necrons - Triple C'tan Awakened Dynasty]
 #h(6pt)
-#text(size: 8.6pt, fill: muted)[2000 points (MFM v1.1, 22 July 2026) | Take and Hold | 3DP | 12 units]
+#text(size: 8.6pt, fill: muted)[MFM v1.1, 22 July 2026 | Take and Hold | 3DP | 12 units]
 #v(3pt)
 
 #columns(2, gutter: 4pt)[
-  #card("C'tan Shard of the Deceiver", tag: "330 pts", note: r("Deep Strike. FNP 5+. Stealth. Deadly Demise D6."))[
+  #card("C'tan Shard of the Deceiver", note: r("Deep Strike. FNP 5+. Stealth. Deadly Demise D6."))[
     #stats(([Deceiver], [8\"], [11], [3+/4++], [16], [6+], [4]))
     #v(1.4pt)
     #weapons((
@@ -97,7 +99,7 @@
   ]
   #v(3pt)
 
-  #card("C'tan Shard of the Nightbringer", tag: "360 pts", note: r("Deep Strike. FNP 5+. Deadly Demise D6."))[
+  #card("C'tan Shard of the Nightbringer", note: r("Deep Strike. FNP 5+. Deadly Demise D6."))[
     #stats(([Nightbringer], [10\"], [11], [3+/4++], [16], [6+], [4]))
     #v(1.4pt)
     #weapons((
@@ -110,7 +112,7 @@
   ]
   #v(3pt)
 
-  #card("C'tan Shard of the Void Dragon", tag: "345 pts", note: r("Deep Strike. FNP 5+. Deadly Demise D6."))[
+  #card("C'tan Shard of the Void Dragon", note: r("Deep Strike. FNP 5+. Deadly Demise D6."))[
     #stats(([Void Dragon], [10\"], [11], [3+/4++], [16], [6+], [4]))
     #v(1.4pt)
     #weapons((
@@ -125,49 +127,62 @@
   ]
   #v(3pt)
 
-  #card("Imotekh + Orikan + 20 Warriors", tag: "380 pts", note: r("ATTACHED UNIT. * COMMAND PROTOCOLS +1 TO HIT ALREADY APPLIED."))[
-    #stats((
-      [Imotekh], [5\"], [5], [2+/4++], [6], [6+], [1],
-      [Orikan], [5\"], [4], [4+/4++], [4], [6+], [1],
-      [Warrior], [5\"], [4], [4+/#r("4++ ORI")], [1], [7+], [2],
-    ))
+  #card("Imotekh the Stormlord", outline: warrior-group, note: text(fill: warrior-group, weight: "bold")[WARRIOR ATTACHMENT - LEADER. \* COMMAND PROTOCOLS APPLIED.])[
+    #stats(([Imotekh], [5\"], [5], [2+/4++], [6], [6+], [1]))
     #v(1.4pt)
     #weapons((
       [Gauntlet of Fire], [12\"], [D6], [N/A], [5], [-1], [1], [Torrent, Ignores Cover],
       [Staff Destroyer], [18\"], [3], [#r("2+*")], [6], [-3], [2], [-],
       [Staff Destroyer], [Melee], [4], [#r("2+*")], [6], [-3], [2], [Dev Wounds],
-      [Staff Tomorrow], [Melee], [2], [#r("2+*")], [4], [-3], [D3], [Dev Wounds],
-      [Gauss reaper x20], [12\"], [2], [#r("3+*")], [4], [-1], [1], [Lethal Hits],
     ))
     - *Grand Strategist:* start of your Command phase, gain 1CP (July cap: max 1 extra CP/round).
     - *Lord of the Storm:* once/battle, end of Command, each enemy within 12\": D3 mortals on 2-5; D3+3 on 6.
+  ]
+  #v(1.5pt)
+
+  #card("Orikan the Diviner", outline: warrior-group, note: text(fill: warrior-group, weight: "bold")[WARRIOR ATTACHMENT - SUPPORT. ORIKAN GRANTS THE UNIT 4++.])[
+    #stats(([Orikan], [5\"], [4], [4+/4++], [4], [6+], [1]))
+    #v(1.4pt)
+    #weapons(([Staff Tomorrow], [Melee], [2], [#r("2+*")], [4], [-3], [D3], [Dev Wounds]))
     - *Master Chronomancer:* models in attached unit have 4++.
     - *Stars Are Right:* once/battle, start of Fight: triple Orikan staff A/S and successful wounds are Critical.
+  ]
+  #v(1.5pt)
+
+  #card("20 Necron Warriors", outline: warrior-group, note: text(fill: warrior-group, weight: "bold")[WARRIOR ATTACHMENT - BODYGUARD. 4++ FROM ORIKAN. \* COMMAND PROTOCOLS APPLIED.])[
+    #stats(([Warrior], [5\"], [4], [4+/#r("4++ ORIKAN")], [1], [7+], [2]))
+    #v(1.4pt)
+    #weapons(([Gauss reaper x20], [12\"], [2], [#r("3+*")], [4], [-1], [1], [Lethal Hits]))
     - *Their Number Is Legion:* re-roll the Reanimation Protocols die.
   ]
 
   #colbreak()
 
-  #card("Technomancer + 6 Wraiths", tag: "320 pts", note: r("ATTACHED UNIT. * COMMAND PROTOCOLS +1 TO HIT ALREADY APPLIED."))[
-    #stats((
-      [Technomancer], [10\"], [4], [4+/#r("5+++")], [4], [6+], [1],
-      [Wraith], [10\"], [6], [3+/4++/#r("5+++")], [4], [8+], [2],
-    ))
+  #card("Technomancer", outline: wraith-group, note: text(fill: wraith-group, weight: "bold")[WRAITH ATTACHMENT - SUPPORT. CASKET; UNIT GAINS STEALTH AND 5+++.])[
+    #stats(([Technomancer], [10\"], [4], [4+/#r("5+++")], [4], [6+], [1]))
     #v(1.4pt)
     #weapons((
       [Staff of light], [18\"], [3], [#r("3+*")], [5], [-2], [1], [-],
       [Staff of light], [Melee], [2], [#r("3+*")], [5], [-2], [1], [-],
-      [Beamer x6], [12\"], [1], [#r("3+*")], [4], [-2], [3], [-],
-      [Vicious claws x6], [Melee], [4], [#r("3+*")], [6], [-1], [2], [-],
     ))
     - *Rites of Reanimation:* every model in the attached unit has #r("Feel No Pain 5+ (5+++)").
     - *Technomancer:* end of Movement, one friendly Necrons model within 6\" regains D3 wounds (once/model/turn).
     - *Casket:* while attached, unit has Stealth.
+  ]
+  #v(1.5pt)
+
+  #card("6 Canoptek Wraiths", outline: wraith-group, note: text(fill: wraith-group, weight: "bold")[WRAITH ATTACHMENT - BODYGUARD. 5+++ FROM TECHNOMANCER. \* COMMAND PROTOCOLS APPLIED.])[
+    #stats(([Wraith], [10\"], [6], [3+/4++/#r("5+++ TECHNO")], [4], [8+], [2]))
+    #v(1.4pt)
+    #weapons((
+      [Beamer x6], [12\"], [1], [#r("3+*")], [4], [-2], [3], [-],
+      [Vicious claws x6], [Melee], [4], [#r("3+*")], [6], [-1], [2], [-],
+    ))
     - *Wraith Form:* after a Normal move, choose one unit moved over; roll per Wraith, each 4+ inflicts 1 mortal.
   ]
   #v(3pt)
 
-  #card("Canoptek Reanimator", tag: "75 pts", note: r("July +5 pts. FNP 4+."))[
+  #card("Canoptek Reanimator", note: r("FNP 4+."))[
     #stats(([Reanimator], [8\"], [6], [3+], [6], [7+], [3]))
     #v(1.4pt)
     #weapons((
@@ -178,7 +193,7 @@
   ]
   #v(3pt)
 
-  #card("6 Canoptek Scarab Swarms", tag: "80 pts")[
+  #card("6 Canoptek Scarab Swarms")[
     #stats(([Scarab], [10\"], [2], [6+], [4], [8+], [0]))
     #v(1.4pt)
     #weapons(([Feeder mandibles], [Melee], [6], [5+], [2], [0], [1], [Lethal Hits]))
@@ -187,7 +202,7 @@
   ]
   #v(3pt)
 
-  #card("Flayed Ones x2", tag: "2 x 55 pts", note: r("Two separate 5-model units. Infiltrators. Stealth."))[
+  #card("Flayed Ones x2", note: r("Two separate 5-model units. Infiltrators. Stealth."))[
     #stats(([Flayed One], [5\"], [4], [4+], [1], [7+], [1]))
     #v(1.4pt)
     #weapons(([Flayer claws], [Melee], [4], [3+], [4], [-1], [1], [Sustained 1, Twin-linked]))
@@ -199,7 +214,7 @@
     - *Likely attachments:* Imotekh leads Warriors; Orikan supports that unit. Technomancer supports Wraiths.
     - *Infiltrate:* deploy both Flayed Ones more than 9\" from enemy zone/models.
     - *Grand Illusion:* redeploy up to 3 units after both armies deploy.
-    - *Secondaries:* Bring It Down 14 pts potential; Assassination 6 Characters; Cull the Horde applies to Warriors before attachments.
+    - *Secondaries:* Bring It Down; Assassination (6 Characters); Cull the Horde applies to Warriors before attachments.
   ]
 ]
 
@@ -225,7 +240,7 @@
   ]
   #v(3pt)
 
-  #card("Enhancement in list", tag: "20 pts")[
+  #card("Enhancement in list")[
     #rule("Nether-realm Casket")[Necrons model only. While the bearer is attached to a unit, models in that unit have Stealth.]
   ]
   #v(3pt)
@@ -319,9 +334,9 @@
       columns: (1.2fr, 2.6fr),
       inset: cellpad,
       stroke: 0.3pt + linec,
-      [*Official*], [C'tan sheets; MFM points/DP/disposition; June faction updates; July changes.],
+      [*Official*], [C'tan sheets; MFM roster/DP/disposition; June faction updates; July changes.],
       [*Fallback*], [Awakened Dynasty and non-C'tan Codex datasheet text from Wahapedia 10th edition.],
-      [*Override*], [Orikan/Technomancer are Support; Reanimator is 75; revived Characters return separately.],
+      [*Override*], [Orikan/Technomancer are Support; revived Characters return separately.],
     )
   ]
 ]
