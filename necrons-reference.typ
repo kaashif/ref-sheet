@@ -159,7 +159,10 @@
   #card("20 Necron Warriors", outline: warrior-group, note: text(fill: warrior-group, weight: "bold")[WARRIOR ATTACHMENT - BODYGUARD. 4++ FROM ORIKAN. COMMAND PROTOCOLS APPLIED.])[
     #stats(([Warrior], [5\"], [4], [4+/#r("4++")], [1], [7+], [2]))
     #v(1.4pt)
-    #weapons(([Gauss reaper x20], [12\"], [2], [#r("3+ (4+)")], [4], [-1], [1], [Lethal Hits]))
+    #weapons((
+      [Gauss reaper x20], [12\"], [2], [#r("3+ (4+)")], [4], [-1], [1], [Lethal Hits],
+      [Close combat weapon x20], [Melee], [1], [#r("3+ (4+)")], [4], [0], [1], [-],
+    ))
     #v(1.5pt)
     #rect(width: 100%, fill: rgb("#fff0f2"), stroke: 0.8pt + red, inset: 2pt)[
       #r("RE-ROLL THE REANIMATION DIE whenever this unit's Reanimation Protocols activate.")
