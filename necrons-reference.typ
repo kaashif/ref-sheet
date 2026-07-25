@@ -159,7 +159,10 @@
     #stats(([Warrior], [5\"], [4], [4+/#r("4++")], [1], [7+], [2]))
     #v(1.4pt)
     #weapons(([Gauss reaper x20], [12\"], [2], [#r("3+ (4+)")], [4], [-1], [1], [Lethal Hits]))
-    - *Their Number Is Legion:* re-roll the Reanimation Protocols die.
+    #v(1.5pt)
+    #rect(width: 100%, fill: rgb("#fff0f2"), stroke: 0.8pt + red, inset: 2pt)[
+      #r("RE-ROLL THE REANIMATION DIE whenever this unit's Reanimation Protocols activate.")
+    ]
   ]
 
   #colbreak()
@@ -177,7 +180,7 @@
   ]
   #v(1.5pt)
 
-  #card("6 Canoptek Wraiths", outline: wraith-group, note: text(fill: wraith-group, weight: "bold")[WRAITH ATTACHMENT - BODYGUARD. 5+++ FROM TECHNOMANCER. COMMAND PROTOCOLS APPLIED.])[
+  #card("6 Canoptek Wraiths", outline: wraith-group, note: text(fill: wraith-group, weight: "bold")[WRAITH ATTACHMENT - BODYGUARD. STEALTH + 5+++ FROM TECHNOMANCER. COMMAND PROTOCOLS APPLIED.])[
     #stats(([Wraith], [10\"], [6], [3+/4++/#r("5+++")], [4], [8+], [2]))
     #v(1.4pt)
     #weapons((
@@ -216,11 +219,10 @@
   ]
   #v(3pt)
 
-  #card("Deployment and scoring")[
+  #card("Deployment")[
     - *Likely attachments:* Imotekh leads Warriors; Orikan supports that unit. Technomancer supports Wraiths.
     - *Infiltrate:* deploy both Flayed Ones more than 9\" from enemy zone/models.
     - *Grand Illusion:* redeploy up to 3 units after both armies deploy.
-    - *Secondaries:* Bring It Down; Assassination (6 Characters); Cull the Horde applies to Warriors before attachments.
   ]
 ]
 
@@ -230,6 +232,52 @@
 #h(6pt)
 #text(size: 8.6pt, fill: muted)[Official 2026 sources override Codex fallback text | Red notes are July/edition cautions]
 #v(3pt)
+
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 4pt,
+  row-gutter: 3pt,
+  strat(
+    "PROTOCOL OF THE ETERNAL REVENANT", "1CP",
+    [Any phase, when your Necrons Infantry Character is destroyed.],
+    [That destroyed model; once per model per battle.],
+    [End of phase, return it near where destroyed, outside Engagement Range, at half wounds. #r("July: it returns as its own one-model unit.")],
+    hot: true,
+  ),
+  strat(
+    "PROTOCOL OF THE UNDYING LEGIONS", "1CP",
+    [Opponent's Shooting or Fight phase, after an enemy resolves attacks.],
+    [One Necrons unit that lost one or more models to those attacks.],
+    [Activate Reanimation Protocols and reanimate D3 wounds, or D3+1 if led by a Necrons Character. Other applicable Reanimation rules apply.],
+    hot: true,
+  ),
+  strat(
+    "PROTOCOL OF THE HUNGRY VOID", "1CP",
+    [Fight phase.],
+    [One Necrons unit not yet selected to fight.],
+    [Until phase end, +1 Strength to melee weapons; if led by a Necrons Character, also improve melee AP by 1 (not cumulative with other AP improvements).],
+  ),
+  strat(
+    "PROTOCOL OF THE SUDDEN STORM", "1CP",
+    [Your Movement phase.],
+    [One Necrons unit.],
+    [Until turn end, its ranged weapons gain Assault. If led by a Necrons Character, re-roll Advance rolls until phase end.],
+  ),
+  strat(
+    "PROTOCOL OF THE CONQUERING TYRANT", "1CP",
+    [Your Shooting phase.],
+    [One Necrons unit not yet selected to shoot.],
+    [Against targets within half range, re-roll Hit rolls of 1; if led by a Necrons Character, re-roll all Hits instead.],
+  ),
+  strat(
+    "PROTOCOL OF THE VENGEFUL STARS", "2CP",
+    [Opponent's Shooting phase, after an enemy destroys a Necrons unit.],
+    [One Necrons Character unit that was within 6\" of the destroyed unit.],
+    [After the attacker finishes, your unit shoots as if your Shooting phase, only into that enemy and only if eligible.],
+  ),
+)
+
+#v(4pt)
 
 #columns(2, gutter: 4pt)[
   #card("Army Rule")[
@@ -249,58 +297,8 @@
   #card("Enhancement in list")[
     #rule("Nether-realm Casket")[Necrons model only. While the bearer is attached to a unit, models in that unit have Stealth.]
   ]
-  #v(3pt)
-
-  #strat(
-    "PROTOCOL OF THE ETERNAL REVENANT", "1CP",
-    [Any phase, when your Necrons Infantry Character is destroyed.],
-    [That destroyed model; once per model per battle.],
-    [End of phase, return it near where destroyed, outside Engagement Range, at half wounds. #r("July: it returns as its own one-model unit.")],
-    hot: true,
-  )
-  #v(3pt)
-
-  #strat(
-    "PROTOCOL OF THE UNDYING LEGIONS", "1CP",
-    [Opponent's Shooting or Fight phase, after an enemy resolves attacks.],
-    [One Necrons unit that lost one or more models to those attacks.],
-    [Activate Reanimation Protocols and reanimate D3 wounds, or D3+1 if led by a Necrons Character. Other applicable Reanimation rules apply.],
-    hot: true,
-  )
-  #v(3pt)
-
-  #strat(
-    "PROTOCOL OF THE HUNGRY VOID", "1CP",
-    [Fight phase.],
-    [One Necrons unit not yet selected to fight.],
-    [Until phase end, +1 Strength to melee weapons; if led by a Necrons Character, also improve melee AP by 1 (not cumulative with other AP improvements).],
-  )
 
   #colbreak()
-
-  #strat(
-    "PROTOCOL OF THE SUDDEN STORM", "1CP",
-    [Your Movement phase.],
-    [One Necrons unit.],
-    [Until turn end, its ranged weapons gain Assault. If led by a Necrons Character, re-roll Advance rolls until phase end.],
-  )
-  #v(3pt)
-
-  #strat(
-    "PROTOCOL OF THE CONQUERING TYRANT", "1CP",
-    [Your Shooting phase.],
-    [One Necrons unit not yet selected to shoot.],
-    [Against targets within half range, re-roll Hit rolls of 1; if led by a Necrons Character, re-roll all Hits instead.],
-  )
-  #v(3pt)
-
-  #strat(
-    "PROTOCOL OF THE VENGEFUL STARS", "2CP",
-    [Opponent's Shooting phase, after an enemy destroys a Necrons unit.],
-    [One Necrons Character unit that was within 6\" of the destroyed unit.],
-    [After the attacker finishes, your unit shoots as if your Shooting phase, only into that enemy and only if eligible.],
-  )
-  #v(3pt)
 
   #card("Phase reminders")[
     *Before first turn* \
