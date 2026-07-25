@@ -9,6 +9,7 @@
 #let green = rgb("#087a52")
 #let bright = rgb("#00a86b")
 #let red = rgb("#9b2638")
+#let blue = rgb("#1769aa")
 #let gold = rgb("#8b681d")
 #let warrior-group = rgb("#7542a8")
 #let wraith-group = rgb("#007f83")
@@ -174,9 +175,12 @@
       [Staff of light], [18\"], [3], [#r("3+ (4+)")], [5], [-2], [1], [-],
       [Staff of light], [Melee], [2], [#r("3+ (4+)")], [5], [-2], [1], [-],
     ))
+    #v(1.5pt)
+    #rect(width: 100%, fill: rgb("#eaf4ff"), stroke: 0.9pt + blue, inset: 2pt)[
+      #text(fill: blue, weight: "bold")[ENHANCEMENT - NETHER-REALM CASKET: While attached, every model in this unit has Stealth.]
+    ]
     - *Rites of Reanimation:* every model in the attached unit has #r("Feel No Pain 5+ (5+++)").
     - *Technomancer:* end of Movement, one friendly Necrons model within 6\" regains D3 wounds (once/model/turn).
-    - *Casket:* while attached, unit has Stealth.
   ]
   #v(1.5pt)
 
@@ -294,10 +298,6 @@
   ]
   #v(3pt)
 
-  #card("Enhancement in list")[
-    #rule("Nether-realm Casket")[Necrons model only. While the bearer is attached to a unit, models in that unit have Stealth.]
-  ]
-
   #colbreak()
 
   #card("Phase reminders")[
@@ -322,25 +322,5 @@
     - Scarab Self-destruction at phase start. \
     - Orikan transformation at phase start, once per battle. \
     - Nightbringer Drain Life at phase end.
-  ]
-  #v(3pt)
-
-  #card("Durability stack")[
-    - *Warrior block:* 4++ from Orikan; Reanimation die re-roll; +D3 reanimated in Reanimator aura.
-    - *Wraith block:* 3+/4++, FNP 5+ from Technomancer, Stealth from Casket, plus model healing.
-    - *C'tan:* T11, 3+/4++, FNP 5+, -1 Damage, 16W; all independently reanimate in Command.
-    - #r("Eternal Revenant is Infantry Character only: it cannot revive a C'tan Monster.")
-  ]
-  #v(3pt)
-
-  #card("Source confidence")[
-    #table(
-      columns: (1.2fr, 2.6fr),
-      inset: cellpad,
-      stroke: 0.3pt + linec,
-      [*Official*], [C'tan sheets; MFM roster/DP/disposition; June faction updates; July changes.],
-      [*Fallback*], [Awakened Dynasty and non-C'tan Codex datasheet text from Wahapedia 10th edition.],
-      [*Override*], [Orikan/Technomancer are Support; revived Characters return separately.],
-    )
   ]
 ]
