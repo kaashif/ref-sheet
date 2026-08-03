@@ -92,7 +92,7 @@
 #v(3pt)
 
 #columns(2, gutter: 4pt)[
-  #card("C'tan Shard of the Nightbringer", note: r("Deep Strike. FNP 5+. Deadly Demise D6."))[
+  #card("C'tan Shard of the Nightbringer", note: r("Deep Strike. FNP 5+. Deadly Demise D6. Distortion Fields."))[
     #stats(([Nightbringer], [10\"], [11], [3+/4++], [16], [6+], [4]))
     #v(1.2pt)
     #weapons((
@@ -105,7 +105,7 @@
   ]
   #v(2.5pt)
 
-  #card("C'tan Shard of the Void Dragon", note: r("Deep Strike. FNP 5+. Deadly Demise D6."))[
+  #card("C'tan Shard of the Void Dragon", note: r("Deep Strike. FNP 5+. Deadly Demise D6. Distortion Fields."))[
     #stats(([Void Dragon], [10\"], [11], [3+/4++], [16], [6+], [4]))
     #v(1.2pt)
     #weapons((
@@ -120,7 +120,7 @@
   ]
   #v(2.5pt)
 
-  #card("Nekrosor Ammentar", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DEEP STRIKE. FIGHTS FIRST. 4++. DESTROYER CULT AURA.])[
+  #card("Nekrosor Ammentar", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DEEP STRIKE. FIGHTS FIRST. 4++. FNP 5+. DESTROYER CULT AURA.])[
     #stats(([Nekrosor], [10\"], [8], [3+/4++], [9], [6+], [3]))
     #v(1.2pt)
     #weapons((
@@ -189,7 +189,7 @@
     ))
     #v(1.2pt)
     #rect(width: 100%, fill: rgb("#eaf4ff"), stroke: 0.9pt + blue, inset: 2pt)[
-      #text(fill: blue, weight: "bold")[VEIL OF DARKNESS (WARLORD): once/battle, end of opponent's turn while unit is not engaged, remove it; next Movement Reinforcements step, set it up more than 9\" from enemies.]
+      #text(fill: blue, weight: "bold")[VEIL OF DARKNESS (WARLORD): once/battle/army, end of opponent's turn if unengaged, place this unit in Strategic Reserves. It gains Deep Strike until your next Shooting phase and must make an ingress move next Movement phase, including turn 1. Deep Strike: more than 8\" from enemies.]
     ]
     - *Rites of Reanimation:* every model in the attached unit has Feel No Pain 5+.
     - *Technomancer:* end of Movement, one friendly Necrons model within 6\" regains D3 wounds (once/model/turn).
@@ -214,14 +214,14 @@
       [Atomiser beam], [12\"], [3], [4+], [6], [-2], [1], [-],
       [Reanimator claws], [Melee], [4], [4+], [5], [0], [1], [-],
     ))
-    - *Beam Aura (3\"):* friendly Necrons units reanimate an additional D3 wounds whenever their Reanimation Protocols activate.
+    - *Beam Aura (3\"):* friendly Necrons units heal an additional D3 wounds whenever their Reanimation Protocols activate.
   ]
   #v(2.5pt)
 
   #card("Deployment and groups")[
     - *Destroyers:* Lord leads Skorpekhs; keep Nekrosor close for Lone Operative and Sustained Hits. Lokhust can also screen Nekrosor.
     - *Wraiths:* one Technomancer per unit; mark the Warlord/Veil unit distinctly.
-    - *Infiltrate:* Flayed Ones more than 9\" from enemy zone/models.
+    - *Infiltrate:* Flayed Ones more than 8\" from the opponent's deployment zone and all enemy units.
   ]
 ]
 
@@ -280,7 +280,7 @@
 
 #columns(2, gutter: 4pt)[
   #card("Army Rule")[
-    #rule("Reanimation Protocols")[End of your Command phase, every eligible unit on the battlefield reanimates D3 wounds. Heal wounded models first; if all survivors are full and the unit is below Starting Strength, return destroyed models one wound at a time. Stop at full strength.]
+    #rule("Reanimation Protocols")[At the end of your Command phase, each friendly unit with this ability that is on the battlefield activates its Reanimation Protocols. When a unit's protocols activate, that unit heals D3 wounds.]
     #v(2pt)
     #text(fill: red, weight: "bold")[Reanimator aura adds D3. It also applies when Undying Legions activates the protocols.]
   ]
@@ -297,8 +297,10 @@
     - *Nekrosor 3\":* another Destroyer Cult unit switches on his Lone Operative.
     - *Nekrosor 6\":* Destroyer Cult units gain Sustained Hits 1; other eligible Necrons gain it only into their closest eligible target.
     - *Nekrosor 6\":* Nullstone grants FNP 5+ against mortal wounds and Psychic Attacks.
-    - *Reanimator 3\":* units gain an additional D3 whenever protocols activate.
+    - *Reanimator 3\":* units heal an additional D3 whenever protocols activate.
     - *Technomancer 6\":* one model heals D3 at end of Movement.
+    - *Distortion Fields 6\":* enemies are unravelling; improve AP by 1 for attacks targeting them.
+    - *Distortion boost:* at the start of each phase, each C'tan can suffer 3 mortals to extend its aura to 9\" for that phase.
   ]
 
   #colbreak()
@@ -309,13 +311,13 @@
     - Pair each Technomancer with one Wraith unit; Lord leads Skorpekhs.
 
     *Command* \
-    - Trigger Reanimation Protocols; resolve wounded models before returned models. \
+    - Trigger Reanimation Protocols; each eligible unit heals D3 wounds. \
     - Track Reanimator 3\" aura before rolling.
 
     *Movement* \
     - Technomancers each heal D3 at phase end. \
     - Wraith Form after moving over an enemy. \
-    - Use Veil at the end of the opponent's turn; redeploy in your Reinforcements step.
+    - Use Veil at opponent turn end; the unit must ingress next Movement phase and can use Deep Strike more than 8\" from enemies.
 
     *Shooting* \
     - Void Dragon Matter Absorption before selecting units to shoot. \
@@ -330,4 +332,4 @@
 ]
 
 #v(4pt)
-#text(size: 7.4pt, fill: muted)[Sources: supplied roster for composition; Necrons Faction Pack v1.0 (9 June 2026) for current faction-pack datasheets and updates; Munitorum Field Manual - Necrons v1.1 (22 July 2026) and the repository's stored Necrons rules/catalogue material for remaining profiles and Awakened Dynasty rules. See rules/necrons-reference-materials-2026-07.md.]
+#text(size: 7.4pt, fill: muted)[Sources: supplied roster; official Necrons Faction Pack v1.0 (9 June 2026), Core Rules (1 June 2026), and MFM v1.1 (22 July 2026); BSData/wh40k-11e Necrons.json and Warhammer 40,000.json at commit d1a6efc (3 August 2026). Audit: rules/necrons-nekrosor-bsdata-audit-2026-08.md.]
