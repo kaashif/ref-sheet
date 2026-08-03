@@ -88,11 +88,11 @@
 
 #text(size: 14pt, weight: "bold")[Necrons - Nekrosor Awakened Dynasty]
 #h(6pt)
-#text(size: 8.2pt, fill: muted)[2000 points | Take and Hold | 3DP | 12 units | Warlord: Veil Technomancer]
+#text(size: 8.2pt, fill: muted)[Take and Hold | 3DP | Warlord: Veil Technomancer]
 #v(3pt)
 
 #columns(2, gutter: 4pt)[
-  #card("C'tan Shard of the Nightbringer - 360", note: r("Deep Strike. FNP 5+. Deadly Demise D6."))[
+  #card("C'tan Shard of the Nightbringer", note: r("Deep Strike. FNP 5+. Deadly Demise D6."))[
     #stats(([Nightbringer], [10\"], [11], [3+/4++], [16], [6+], [4]))
     #v(1.2pt)
     #weapons((
@@ -105,7 +105,7 @@
   ]
   #v(2.5pt)
 
-  #card("C'tan Shard of the Void Dragon - 345", note: r("Deep Strike. FNP 5+. Deadly Demise D6."))[
+  #card("C'tan Shard of the Void Dragon", note: r("Deep Strike. FNP 5+. Deadly Demise D6."))[
     #stats(([Void Dragon], [10\"], [11], [3+/4++], [16], [6+], [4]))
     #v(1.2pt)
     #weapons((
@@ -120,7 +120,7 @@
   ]
   #v(2.5pt)
 
-  #card("Nekrosor Ammentar - 185", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DEEP STRIKE. FIGHTS FIRST. 4++. DESTROYER CULT AURA.])[
+  #card("Nekrosor Ammentar", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DEEP STRIKE. FIGHTS FIRST. 4++. DESTROYER CULT AURA.])[
     #stats(([Nekrosor], [10\"], [8], [3+/4++], [9], [6+], [3]))
     #v(1.2pt)
     #weapons((
@@ -135,7 +135,7 @@
   ]
   #v(2.5pt)
 
-  #card("Lokhust Destroyer - 40", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DESTROYER CULT - KEEP WITHIN NEKROSOR'S 6\" AURA.])[
+  #card("Lokhust Destroyer", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DESTROYER CULT - KEEP WITHIN NEKROSOR'S AURA.])[
     #stats(([Lokhust], [8\"], [6], [3+], [3], [7+], [2]))
     #v(1.2pt)
     #weapons((
@@ -146,22 +146,22 @@
   ]
   #v(2.5pt)
 
-  #card("5 Flayed Ones - 55", note: r("Infiltrators. Stealth."))[
+  #card("Flayed Ones", note: r("Infiltrators. Stealth."))[
     #stats(([Flayed One], [5\"], [4], [4+], [1], [7+], [1]))
     #v(1.2pt)
-    #weapons(([Flayer claws x5], [Melee], [4], [3+], [4], [-1], [1], [Sustained 1, Twin-linked]))
-    - *Flesh Hunger:* into a Below Half-strength unit, every successful Hit is Critical.
+    #weapons(([Flayer claws], [Melee], [4], [3+], [4], [-1], [1], [Sustained 1, Twin-linked]))
+    - *Flesh Hunger:* into a Below Half-strength unit (strictly fewer than half), every successful Hit is Critical.
   ]
 
   #colbreak()
 
-  #card("Skorpekh Lord - 120", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DESTROYER ATTACHMENT - LEADER. COMMAND PROTOCOLS. FNP 4+.])[
+  #card("Skorpekh Lord", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DESTROYER ATTACHMENT - LEADER. COMMAND PROTOCOLS. FNP 4+.])[
     #stats(([Skorpekh Lord], [8\"], [7], [3+/4++/#r("4+++")], [7], [6+], [2]))
     #v(1.2pt)
     #weapons((
       [Annihilator], [18\"], [2], [#r("2+ (2+)")], [6], [-1], [1], [Rapid Fire 2; Sustained 1 in aura],
-      [Flensing claw], [Melee], [8], [#r("2+ (2+)")], [6], [-1], [1], [Lethal Hits; Sustained 1 in aura],
-      [Harvester], [Melee], [4], [#r("2+ (2+)")], [10], [-3], [3], [Lethal Hits; Sustained 1 in aura],
+      [Flensing claw], [Melee], [8], [#r("2+ (2+)")], [6], [-1], [1], [#r("Lethal Hits"); Sustained 1 in aura],
+      [Harvester], [Melee], [4], [#r("2+ (2+)")], [10], [-3], [3], [#r("Lethal Hits"); Sustained 1 in aura],
     ))
     #v(1.2pt)
     #rect(width: 100%, fill: rgb("#fff0f2"), stroke: 0.8pt + red, inset: 2pt)[
@@ -172,15 +172,15 @@
   ]
   #v(2.5pt)
 
-  #card("6 Skorpekh Destroyers - 170", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DESTROYER ATTACHMENT - BODYGUARD. COMMAND PROTOCOLS + LETHAL HITS.])[
+  #card("Skorpekh Destroyers", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DESTROYER ATTACHMENT - BODYGUARD. COMMAND PROTOCOLS + LETHAL HITS.])[
     #stats(([Skorpekh], [8\"], [6], [3+], [3], [7+], [2]))
     #v(1.2pt)
-    #weapons(([Hyperphase weapons x6], [Melee], [4], [#r("2+ (3+)")], [7], [-2], [2], [Lethal Hits; Sustained 1 in aura]))
+    #weapons(([Hyperphase weapons], [Melee], [4], [#r("2+ (3+)")], [7], [-2], [2], [#r("Lethal Hits"); Sustained 1 in aura]))
     - *Whirling Onslaught:* melee attacks re-roll Hit 1s; after this unit charged, re-roll the Hit roll instead.
   ]
   #v(2.5pt)
 
-  #card("Technomancers - 100 / 90", outline: wraith, note: text(fill: wraith, weight: "bold")[ONE LEADS EACH WRAITH UNIT. BOTH APPLY COMMAND PROTOCOLS + 5+++.])[
+  #card("Technomancer", outline: wraith, note: text(fill: wraith, weight: "bold")[LEADS A WRAITH UNIT. APPLIES COMMAND PROTOCOLS + 5+++.])[
     #stats(([Technomancer], [10\"], [4], [4+], [4], [6+], [1]))
     #v(1.2pt)
     #weapons((
@@ -196,22 +196,22 @@
   ]
   #v(2.5pt)
 
-  #card("Canoptek Wraiths x2 - 220 / 240", outline: wraith, note: text(fill: wraith, weight: "bold")[TWO SEPARATE 6-MODEL BODYGUARDS. COMMAND PROTOCOLS + 5+++ FROM LEADERS.])[
+  #card("Canoptek Wraiths", outline: wraith, note: text(fill: wraith, weight: "bold")[BODYGUARD. COMMAND PROTOCOLS + 5+++ FROM TECHNOMANCER.])[
     #stats(([Wraith], [10\"], [6], [3+/4++/#r("5+++")], [4], [8+], [2]))
     #v(1.2pt)
     #weapons((
-      [Beamer x6], [12\"], [1], [#r("3+ (4+)")], [4], [-2], [3], [-],
-      [Vicious claws x6], [Melee], [4], [#r("3+ (4+)")], [6], [-1], [2], [-],
+      [Beamer], [12\"], [1], [#r("3+ (4+)")], [4], [-2], [3], [-],
+      [Vicious claws], [Melee], [4], [#r("3+ (4+)")], [6], [-1], [2], [-],
     ))
     - *Wraith Form:* after a Normal move, choose one enemy moved over; roll per Wraith, each 4+ inflicts 1 mortal.
   ]
   #v(2.5pt)
 
-  #card("Canoptek Reanimator - 75", note: r("FNP 4+. Keep key units inside 3\"."))[
+  #card("Canoptek Reanimator", note: r("FNP 4+. Keep key units inside its aura."))[
     #stats(([Reanimator], [8\"], [6], [3+], [6], [7+], [3]))
     #v(1.2pt)
     #weapons((
-      [Atomiser beam x2], [12\"], [3], [4+], [6], [-2], [1], [-],
+      [Atomiser beam], [12\"], [3], [4+], [6], [-2], [1], [-],
       [Reanimator claws], [Melee], [4], [4+], [5], [0], [1], [-],
     ))
     - *Beam Aura (3\"):* friendly Necrons units reanimate an additional D3 wounds whenever their Reanimation Protocols activate.
@@ -219,7 +219,7 @@
   #v(2.5pt)
 
   #card("Deployment and groups")[
-    - *Destroyers:* Lord + 6 Skorpekhs; keep Nekrosor within 3\" for Lone Operative and within 6\" for Sustained Hits 1. Lokhust can also screen Nekrosor.
+    - *Destroyers:* Lord leads Skorpekhs; keep Nekrosor close for Lone Operative and Sustained Hits. Lokhust can also screen Nekrosor.
     - *Wraiths:* one Technomancer per unit; mark the Warlord/Veil unit distinctly.
     - *Infiltrate:* Flayed Ones more than 9\" from enemy zone/models.
   ]
@@ -330,4 +330,4 @@
 ]
 
 #v(4pt)
-#text(size: 7.4pt, fill: muted)[Sources: supplied roster for composition and displayed points; Necrons Faction Pack v1.0 (9 June 2026) for current faction-pack datasheets and updates; Munitorum Field Manual - Necrons v1.1 (22 July 2026) and the repository's stored Necrons rules/catalogue material for remaining profiles and Awakened Dynasty rules. See rules/necrons-reference-materials-2026-07.md.]
+#text(size: 7.4pt, fill: muted)[Sources: supplied roster for composition; Necrons Faction Pack v1.0 (9 June 2026) for current faction-pack datasheets and updates; Munitorum Field Manual - Necrons v1.1 (22 July 2026) and the repository's stored Necrons rules/catalogue material for remaining profiles and Awakened Dynasty rules. See rules/necrons-reference-materials-2026-07.md.]
