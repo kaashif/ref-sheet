@@ -209,7 +209,7 @@
   #v(2.5pt)
 
   #card("Canoptek Reanimator", note: r("FNP 4+."))[
-    #stats(([Reanimator], [8\"], [6], [3+], [6], [7+], [3]))
+    #stats(([Reanimator], [8\"], [6], [3+/#r("4+++")], [6], [7+], [3]))
     #v(1.2pt)
     #weapons((
       [Atomiser beam], [12\"], [3x2], [4+], [6], [-2], [1], [-],
