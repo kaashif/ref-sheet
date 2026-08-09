@@ -100,7 +100,7 @@
       [Scythe - strike], [Melee], [6], [2+], [14], [-4], [D6+2], [Dev Wounds],
       [Scythe - sweep], [Melee], [14], [2+], [8], [-2], [2], [-],
     ))
-    - *Drain Life:* end of Fight, each enemy within 6\" takes D3 mortals on 4+.
+    - *Drain Life:* end of the Fight phase, each enemy within 6\" takes D3 mortals on 4+.
     - *Necrodermis:* subtract 1 Damage from allocated attacks.
   ]
   #v(2.5pt)
@@ -115,12 +115,12 @@
       [Spear - sweep], [Melee], [10], [2+], [8], [-1], [2], [-],
       [Tail blades], [Melee], [6], [2+], [6], [-1], [1], [Extra Attacks],
     ))
-    - *Matter Absorption:* start of Shooting: Vehicle within 12\" takes D3 mortals on 2+; regain that many wounds.
+    - *Matter Absorption:* start of your Shooting phase: Vehicle within 12\" takes D3 mortals on 2+; regain that many wounds.
     - *Necrodermis:* subtract 1 Damage from allocated attacks.
   ]
   #v(2.5pt)
 
-  #card("Nekrosor Ammentar", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DEEP STRIKE. FIGHTS FIRST. 4++. FNP 5+. DESTROYER CULT AURA.])[
+  #card("Nekrosor Ammentar", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DEEP STRIKE. FIGHTS FIRST. 4++. FNP 5+.])[
     #stats(([Nekrosor], [10\"], [8], [3+/4++], [9], [6+], [3]))
     #v(1.2pt)
     #weapons((
@@ -130,12 +130,12 @@
     ))
     - *Protective Disciples:* Lone Operative while within 3\" of another friendly Destroyer Cult unit.
     - *Murder-madness (6\" aura):* friendly non-Monster/non-Titanic units get Sustained Hits 1 if Destroyer Cult or attacking their closest eligible target.
-    - *Prophet:* after he destroys a unit, another Destroyer Cult unit within 9\" re-rolls Wound rolls of 1 for the phase.
+    - *Prophet:* after he destroys a unit, another Destroyer Cult unit within 9\" re-rolls Wound rolls of 1 until the end of that phase.
     - *Nullstone (6\" aura):* friendly Necrons models get FNP 5+ vs mortals and Psychic Attacks.
   ]
   #v(2.5pt)
 
-  #card("Lokhust Destroyer", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DESTROYER CULT - KEEP WITHIN NEKROSOR'S AURA.])[
+  #card("Lokhust Destroyer", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DESTROYER CULT.])[
     #stats(([Lokhust], [8\"], [6], [3+], [3], [7+], [2]))
     #v(1.2pt)
     #weapons((
@@ -146,8 +146,8 @@
   ]
   #v(2.5pt)
 
-  #card("Flayed Ones", note: r("Infiltrators. Stealth."))[
-    #stats(([Flayed One], [5\"], [4], [4+], [1], [7+], [1]))
+  #card("Flayed Ones", note: r("Infiltrators."))[
+    #stats(([Flayed One], [5\"], [#text(size: 7pt)[4 / #r("Stealth")]], [4+], [1], [7+], [1]))
     #v(1.2pt)
     #weapons(([Flayer claws], [Melee], [4], [3+], [4], [-1], [1], [Sustained 1, Twin-linked]))
     - *Flesh Hunger:* into a Below Half-strength unit (strictly fewer than half), every successful Hit is Critical.
@@ -155,7 +155,7 @@
 
   #colbreak()
 
-  #card("Skorpekh Lord", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DESTROYER ATTACHMENT - LEADER. COMMAND PROTOCOLS. FNP 4+.])[
+  #card("Skorpekh Lord", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DESTROYER ATTACHMENT - LEADER. FNP 4+.])[
     #stats(([Skorpekh Lord], [8\"], [7], [3+/4++/#r("4+++")], [7], [6+], [2]))
     #v(1.2pt)
     #weapons((
@@ -172,7 +172,7 @@
   ]
   #v(2.5pt)
 
-  #card("Skorpekh Destroyers", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DESTROYER ATTACHMENT - BODYGUARD. COMMAND PROTOCOLS + LETHAL HITS.])[
+  #card("Skorpekh Destroyers", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DESTROYER ATTACHMENT - BODYGUARD. LETHAL HITS.])[
     #stats(([Skorpekh], [8\"], [6], [3+], [3], [7+], [2]))
     #v(1.2pt)
     #weapons(([Hyperphase weapons], [Melee], [4], [#r("2+ (3+)")], [7], [-2], [2], [#r("Lethal Hits"); Sustained 1 in aura]))
@@ -180,8 +180,8 @@
   ]
   #v(2.5pt)
 
-  #card("Technomancer", outline: wraith, note: text(fill: wraith, weight: "bold")[LEADS A WRAITH UNIT. APPLIES COMMAND PROTOCOLS + 5+++.])[
-    #stats(([Technomancer], [10\"], [4], [4+], [4], [6+], [1]))
+  #card("Technomancer", outline: wraith, note: text(fill: wraith, weight: "bold")[LEADS A WRAITH UNIT.])[
+    #stats(([Technomancer], [10\"], [4], [4+/#r("5+++")], [4], [6+], [1]))
     #v(1.2pt)
     #weapons((
       [Staff of light], [18\"], [3], [#r("3+ (4+)")], [5], [-2], [1], [-],
@@ -189,14 +189,13 @@
     ))
     #v(1.2pt)
     #rect(width: 100%, fill: rgb("#eaf4ff"), stroke: 0.9pt + blue, inset: 2pt)[
-      #text(fill: blue, weight: "bold")[VEIL OF DARKNESS (WARLORD): once/battle/army, end of opponent's turn if unengaged, place this unit in Strategic Reserves. It gains Deep Strike until your next Shooting phase and must make an ingress move next Movement phase, including turn 1. Deep Strike: more than 8\" from enemies.]
+      #text(fill: blue, weight: "bold")[VEIL OF DARKNESS (WARLORD): once/battle/army, end of opponent's turn if unengaged, place this unit in Strategic Reserves. It gains Deep Strike until your next Shooting phase and must make an ingress move during your next Movement phase, including turn 1. Deep Strike: more than 8\" from enemies.]
     ]
-    - *Rites of Reanimation:* every model in the attached unit has Feel No Pain 5+.
-    - *Technomancer:* end of Movement, one friendly Necrons model within 6\" regains D3 wounds (once/model/turn).
+    - *Technomancer:* end of your Movement phase, one friendly Necrons model within 6\" regains D3 wounds (once/model/turn).
   ]
   #v(2.5pt)
 
-  #card("Canoptek Wraiths", outline: wraith, note: text(fill: wraith, weight: "bold")[BODYGUARD. COMMAND PROTOCOLS + 5+++ FROM TECHNOMANCER.])[
+  #card("Canoptek Wraiths", outline: wraith, note: text(fill: wraith, weight: "bold")[BODYGUARD.])[
     #stats(([Wraith], [10\"], [6], [3+/4++/#r("5+++")], [4], [8+], [2]))
     #v(1.2pt)
     #weapons((
@@ -207,7 +206,7 @@
   ]
   #v(2.5pt)
 
-  #card("Canoptek Reanimator", note: r("FNP 4+. Keep key units inside its aura."))[
+  #card("Canoptek Reanimator", note: r("FNP 4+."))[
     #stats(([Reanimator], [8\"], [6], [3+], [6], [7+], [3]))
     #v(1.2pt)
     #weapons((
@@ -240,37 +239,37 @@
     "PROTOCOL OF THE ETERNAL REVENANT", "1CP",
     [Any phase, when your Necrons Infantry Character is destroyed.],
     [That destroyed model; once per model per battle.],
-    [End of phase, return it near where destroyed, outside Engagement Range, at half wounds. #r("It returns as its own one-model unit.")],
+    [End of that phase, return it near where destroyed, outside Engagement Range, at half wounds. #r("It returns as its own one-model unit.")],
     hot: true,
   ),
   strat(
     "PROTOCOL OF THE UNDYING LEGIONS", "1CP",
-    [Opponent's Shooting or Fight phase, after an enemy resolves attacks.],
+    [Your opponent's Shooting phase or the Fight phase, after an enemy resolves attacks.],
     [One Necrons unit that lost one or more models to those attacks.],
     [Activate Reanimation Protocols and reanimate D3 wounds, or D3+1 if led by a Necrons Character. Other applicable Reanimation rules apply.],
     hot: true,
   ),
   strat(
     "PROTOCOL OF THE HUNGRY VOID", "1CP",
-    [Fight phase.],
+    [The Fight phase.],
     [One Necrons unit not yet selected to fight.],
-    [Until phase end, +1 Strength to melee weapons; if led by a Necrons Character, also improve melee AP by 1 (not cumulative with other AP improvements).],
+    [Until the end of the Fight phase, +1 Strength to melee weapons; if led by a Necrons Character, also improve melee AP by 1 (not cumulative with other AP improvements).],
   ),
   strat(
     "PROTOCOL OF THE SUDDEN STORM", "1CP",
     [Your Movement phase.],
     [One Necrons unit.],
-    [Until turn end, its ranged weapons gain Assault. If led by a Necrons Character, re-roll Advance rolls until phase end.],
+    [Until turn end, its ranged weapons gain Assault. If led by a Necrons Character, re-roll Advance rolls until the end of your Movement phase.],
   ),
   strat(
     "PROTOCOL OF THE CONQUERING TYRANT", "1CP",
     [Your Shooting phase.],
     [One Necrons unit not yet selected to shoot.],
-    [Against targets within half range, re-roll Hit rolls of 1; if led by a Necrons Character, re-roll all Hits instead.],
+    [Until the end of your Shooting phase, against targets within half range, re-roll Hit rolls of 1; if led by a Necrons Character, re-roll all Hits instead.],
   ),
   strat(
     "PROTOCOL OF THE VENGEFUL STARS", "2CP",
-    [Opponent's Shooting phase, after an enemy destroys a Necrons unit.],
+    [Your opponent's Shooting phase, after an enemy destroys a Necrons unit.],
     [One Necrons Character unit that was within 6\" of the destroyed unit.],
     [After the attacker finishes, your unit shoots as if your Shooting phase, only into that enemy and only if eligible.],
   ),
@@ -286,21 +285,14 @@
   ]
   #v(3pt)
 
-  #card("Detachment Rule", tag: "Awakened Dynasty")[
-    #rule("Command Protocols")[While a Necrons Character model is leading this unit, add 1 to Hit rolls for attacks made by models in that unit.]
-    #v(2pt)
-    #text(fill: red, weight: "bold")[Applied to the Skorpekh and both Wraith attachments on page 1. Red values show final Hit first, then the original characteristic in parentheses.]
-  ]
-  #v(3pt)
-
   #card("Aura positioning")[
     - *Nekrosor 3\":* another Destroyer Cult unit switches on his Lone Operative.
     - *Nekrosor 6\":* Destroyer Cult units gain Sustained Hits 1; other eligible Necrons gain it only into their closest eligible target.
     - *Nekrosor 6\":* Nullstone grants FNP 5+ against mortal wounds and Psychic Attacks.
     - *Reanimator 3\":* units heal an additional D3 whenever protocols activate.
-    - *Technomancer 6\":* one model heals D3 at end of Movement.
+    - *Technomancer 6\":* one model heals D3 at the end of your Movement phase.
     - *Distortion Fields 6\":* enemies are unravelling; improve AP by 1 for attacks targeting them.
-    - *Distortion boost:* at the start of each phase, each C'tan can suffer 3 mortals to extend its aura to 9\" for that phase.
+    - *Distortion boost:* at the start of any phase, each C'tan can suffer 3 mortals to extend its aura to 9\" until the end of that phase.
   ]
 
   #colbreak()
@@ -310,24 +302,24 @@
     - Deploy Flayed Ones with Infiltrators. \
     - Pair each Technomancer with one Wraith unit; Lord leads Skorpekhs.
 
-    *Command* \
+    *Your Command phase* \
     - Trigger Reanimation Protocols; each eligible unit heals D3 wounds. \
     - Track Reanimator 3\" aura before rolling.
 
-    *Movement* \
-    - Technomancers each heal D3 at phase end. \
+    *Your Movement phase* \
+    - Technomancers each heal D3 at the end of your Movement phase. \
     - Wraith Form after moving over an enemy. \
-    - Use Veil at opponent turn end; the unit must ingress next Movement phase and can use Deep Strike more than 8\" from enemies.
+    - Use Veil at opponent turn end; the unit must ingress during your next Movement phase and can use Deep Strike more than 8\" from enemies.
 
-    *Shooting* \
+    *Your Shooting phase* \
     - Void Dragon Matter Absorption before selecting units to shoot. \
     - Lokhust re-rolls depend on closest target / enemy objective. \
     - Nekrosor pistols already have Sustained Hits 2; do not add Sustained Hits 1.
 
-    *Charge / Fight* \
+    *Your Charge phase / the Fight phase* \
     - Skorpekh Lord's Crimson Harvest after his Charge move. \
     - Charged Skorpekhs re-roll all melee Hits; otherwise re-roll 1s. \
-    - Nightbringer Drain Life at Fight phase end.
+    - Nightbringer Drain Life at the end of the Fight phase.
   ]
 ]
 
