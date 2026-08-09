@@ -18,6 +18,14 @@
 #let g(body) = text(fill: green, weight: "bold", body)
 #let rr(body) = text(size: 5.7pt, fill: blue, weight: "bold", body)
 
+#let plan-chip(body, color: ink, ghost: false) = rect(
+  width: 100%,
+  fill: if ghost { white.transparentize(35%) } else { white },
+  stroke: (if ghost { (paint: color, thickness: 0.55pt, dash: "dashed") } else { 0.8pt + color }),
+  inset: (x: 2pt, y: 1.3pt),
+  radius: 1.5pt,
+)[#text(size: 6.7pt, fill: color, weight: "bold")[#body]]
+
 #show "Reanimation Protocols": g("Reanimation Protocols")
 
 #let head(title, tag: none, note: none) = {
@@ -294,7 +302,7 @@
 
   #card("Phase reminders")[
     *Before first turn* \
-    - Deploy Flayed Ones with Infiltrators. \
+    - Deploy Flayed Ones forward in your blue zone as a screen. \
     - Pair each Technomancer with one Wraith unit; Lord leads Skorpekhs.
 
     *Your Command phase* \
@@ -319,4 +327,36 @@
 ]
 
 #v(4pt)
+#card("Deployment + turn 1 movement plan", note: [Solid tags are deployment; dashed tags are turn 1 destinations. Every unit starts in the blue zone.])[
+  #set text(size: 7pt)
+  #rect(width: 100%, height: 17pt, fill: rgb("#f9e7ea"), stroke: 0.55pt + red, inset: 3pt)[
+    #align(center + horizon)[#text(fill: red, weight: "bold")[OPPONENT RED ZONE - NO DEPLOYMENT MARKERS]]
+  ]
+  #rect(width: 100%, height: 69pt, fill: rgb("#f3f5f4"), stroke: 0.45pt + linec, inset: 3pt)[
+    #grid(columns: (1fr, 1fr, 1fr), gutter: 4pt,
+      [#plan-chip([WRAITHS A + VEIL TECHNO → LEFT OBJECTIVE], color: wraith, ghost: true)
+       #v(2pt)#plan-chip([NIGHTBRINGER + FLAYED ONES → STAGE / SCREEN], color: green, ghost: true)],
+      [#plan-chip([NEKROSOR + SKORPEKHS/LORD → COUNTER-CHARGE POCKET], color: destroyer, ghost: true)
+       #v(2pt)#plan-chip([REANIMATOR → FOLLOW, HIDDEN, KEEP 3" AURA], color: green, ghost: true)],
+      [#plan-chip([WRAITHS B + TECHNO → RIGHT OBJECTIVE], color: wraith, ghost: true)
+       #v(2pt)#plan-chip([VOID DRAGON + LOKHUST → STAGE / FIRING LANE], color: gold, ghost: true)],
+    )
+    #align(center)[#text(size: 7.5pt, fill: blue, weight: "bold")[↑ TURN 1: TAKE SPACE, BUT END BEHIND COVER WHERE POSSIBLE ↑]]
+  ]
+  #rect(width: 100%, height: 64pt, fill: rgb("#e6f2fb"), stroke: 0.75pt + blue, inset: 3pt)[
+    #grid(columns: (1fr, 1fr, 1fr), gutter: 4pt,
+      [#plan-chip([WRAITHS A + VEIL TECHNOMANCER], color: wraith)
+       #v(2pt)#plan-chip([NIGHTBRINGER • FLAYED ONES], color: green)],
+      [#plan-chip([NEKROSOR • SKORPEKHS + LORD], color: destroyer)
+       #v(2pt)#plan-chip([REANIMATOR - TUCK BEHIND CENTRE], color: green)],
+      [#plan-chip([WRAITHS B + TECHNOMANCER], color: wraith)
+       #v(2pt)#plan-chip([VOID DRAGON • LOKHUST], color: gold)],
+    )
+    #align(center)[#text(size: 7.5pt, fill: blue, weight: "bold")[BLUE DEPLOYMENT ZONE - ALL STARTING UNITS]]
+  ]
+  #v(2pt)
+  #text(size: 6.8pt, fill: muted)[If going second, keep the same lanes but shorten every arrow: preserve cover and counter-punch units contesting the Wraiths.]
+]
+
+#v(3pt)
 #text(size: 7.4pt, fill: muted)[Sources: supplied roster; official Necrons Faction Pack v1.0 (9 June 2026), Core Rules (1 June 2026), and MFM v1.1 (22 July 2026); BSData/wh40k-11e Necrons.json and Warhammer 40,000.json at commit d1a6efc (3 August 2026). Audit: rules/necrons-nekrosor-bsdata-audit-2026-08.md.]
