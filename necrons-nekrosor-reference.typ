@@ -199,8 +199,8 @@
     #stats(([Wraith], [10\"], [6], [3+/4++/#r("5+++")], [4], [8+], [2]))
     #v(1.2pt)
     #weapons((
-      [Beamer], [12\"], [1], [#r("3+ (4+)")], [4], [-2], [3], [-],
-      [Vicious claws], [Melee], [4], [#r("3+ (4+)")], [6], [-1], [2], [-],
+      [Beamer], [12\"], [1], [#r("3+ (4+)")], [4], [-2], [3], [Sustained 1 vs closest eligible target within Nekrosor 6\"],
+      [Vicious claws], [Melee], [4], [#r("3+ (4+)")], [6], [-1], [2], [Sustained 1 vs closest eligible target within Nekrosor 6\"],
     ))
     - *Wraith Form:* after a Normal move, choose one enemy moved over; roll per Wraith, each 4+ inflicts 1 mortal.
   ]
