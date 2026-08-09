@@ -16,6 +16,7 @@
 
 #let r(body) = text(fill: red, weight: "bold", body)
 #let g(body) = text(fill: green, weight: "bold", body)
+#let rr(body) = text(size: 5.7pt, fill: blue, weight: "bold", body)
 
 #show "Reanimation Protocols": g("Reanimation Protocols")
 
@@ -92,7 +93,7 @@
 #v(3pt)
 
 #columns(2, gutter: 4pt)[
-  #card("C'tan Shard of the Nightbringer", note: r("Deep Strike. FNP 5+. Deadly Demise D6. Distortion Fields."))[
+  #card("C'tan Shard of the Nightbringer", note: r("Deep Strike. FNP 5+. Deadly Demise D6."))[
     #stats(([Nightbringer], [10\"], [11], [3+/4++], [16], [6+], [4]))
     #v(1.2pt)
     #weapons((
@@ -105,7 +106,7 @@
   ]
   #v(2.5pt)
 
-  #card("C'tan Shard of the Void Dragon", note: r("Deep Strike. FNP 5+. Deadly Demise D6. Distortion Fields."))[
+  #card("C'tan Shard of the Void Dragon", note: r("Deep Strike. FNP 5+. Deadly Demise D6."))[
     #stats(([Void Dragon], [10\"], [11], [3+/4++], [16], [6+], [4]))
     #v(1.2pt)
     #weapons((
@@ -120,7 +121,7 @@
   ]
   #v(2.5pt)
 
-  #card("Nekrosor Ammentar", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DEEP STRIKE. FIGHTS FIRST. 4++. FNP 5+.])[
+  #card("Nekrosor Ammentar", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DEEP STRIKE. FIGHTS FIRST. 4++. FNP 5+ VS MORTALS/PSYCHIC.])[
     #stats(([Nekrosor], [10\"], [8], [3+/4++], [9], [6+], [3]))
     #v(1.2pt)
     #weapons((
@@ -130,7 +131,7 @@
     ))
     - *Protective Disciples:* Lone Operative while within 3\" of another friendly Destroyer Cult unit.
     - *Murder-madness (6\" aura):* friendly non-Monster/non-Titanic units get Sustained Hits 1 if Destroyer Cult or attacking their closest eligible target.
-    - *Prophet:* after he destroys a unit, another Destroyer Cult unit within 9\" re-rolls Wound rolls of 1 until the end of that phase.
+    - *Prophet:* after he destroys a unit, another Destroyer Cult unit within 9\" re-rolls Wound rolls of 1 until the end of that phase (#rr("RR W1*") in S cells).
     - *Nullstone (6\" aura):* friendly Necrons models get FNP 5+ vs mortals and Psychic Attacks.
   ]
   #v(2.5pt)
@@ -139,8 +140,8 @@
     #stats(([Lokhust], [8\"], [6], [3+], [3], [7+], [2]))
     #v(1.2pt)
     #weapons((
-      [Gauss cannon], [24\"], [3], [3+], [5], [-2], [2], [Lethal Hits; Sustained 1 in aura],
-      [Close combat], [Melee], [2], [3+], [4], [0], [1], [Sustained 1 in aura],
+      [Gauss cannon], [24\"], [3], [3+#linebreak()#rr("RR1 closest")#linebreak()#rr("RR all obj")], [5#linebreak()#rr("RR W1*")], [-2], [2], [Lethal Hits; Sustained 1 in aura],
+      [Close combat], [Melee], [2], [3+], [4#linebreak()#rr("RR W1*")], [0], [1], [Sustained 1 in aura],
     ))
     - *Hard-wired:* ranged attacks re-roll Hit 1s into closest eligible enemy; re-roll all Hits if target is in range of an enemy-controlled objective.
   ]
@@ -149,7 +150,7 @@
   #card("Flayed Ones", note: r("Infiltrators."))[
     #stats(([Flayed One], [5\"], [#text(size: 7pt)[4 / #r("Stealth")]], [4+], [1], [7+], [1]))
     #v(1.2pt)
-    #weapons(([Flayer claws], [Melee], [4], [3+], [4], [-1], [1], [Sustained 1, Twin-linked]))
+    #weapons(([Flayer claws], [Melee], [4], [3+], [4#linebreak()#rr("RR W")], [-1], [1], [Sustained 1, Twin-linked]))
     - *Flesh Hunger:* into a Below Half-strength unit (strictly fewer than half), every successful Hit is Critical.
   ]
 
@@ -159,9 +160,9 @@
     #stats(([Skorpekh Lord], [8\"], [7], [3+/4++/#r("4+++")], [7], [6+], [2]))
     #v(1.2pt)
     #weapons((
-      [Annihilator], [18\"], [2], [#r("2+ (2+)")], [6], [-1], [1], [Rapid Fire 2; Sustained 1 in aura],
-      [Flensing claw], [Melee], [8], [#r("2+ (2+)")], [6], [-1], [1], [#r("Lethal Hits"); Sustained 1 in aura],
-      [Harvester], [Melee], [4], [#r("2+ (2+)")], [10], [-3], [3], [#r("Lethal Hits"); Sustained 1 in aura],
+      [Annihilator], [18\"], [2], [#r("2+ (2+)")], [6#linebreak()#rr("RR W1*")], [-1], [1], [Rapid Fire 2; Sustained 1 in aura],
+      [Flensing claw], [Melee], [8], [#r("2+ (2+)")#linebreak()#rr("RR1 / all charged")], [6#linebreak()#rr("RR W1*")], [-1], [1], [#r("Lethal Hits"); Sustained 1 in aura],
+      [Harvester], [Melee], [4], [#r("2+ (2+)")#linebreak()#rr("RR1 / all charged")], [10#linebreak()#rr("RR W1*")], [-3], [3], [#r("Lethal Hits"); Sustained 1 in aura],
     ))
     #v(1.2pt)
     #rect(width: 100%, fill: rgb("#fff0f2"), stroke: 0.8pt + red, inset: 2pt)[
@@ -175,12 +176,13 @@
   #card("Skorpekh Destroyers", outline: destroyer, note: text(fill: destroyer, weight: "bold")[DESTROYER ATTACHMENT - BODYGUARD. LETHAL HITS.])[
     #stats(([Skorpekh], [8\"], [6], [3+], [3], [7+], [2]))
     #v(1.2pt)
-    #weapons(([Hyperphase weapons], [Melee], [4], [#r("2+ (3+)")], [7], [-2], [2], [#r("Lethal Hits"); Sustained 1 in aura]))
+    #weapons(([Hyperphase weapons], [Melee], [4], [#r("2+ (3+)")#linebreak()#rr("RR1 / all charged")], [7#linebreak()#rr("RR W1*")], [-2], [2], [#r("Lethal Hits"); Sustained 1 in aura]))
     - *Whirling Onslaught:* melee attacks re-roll Hit 1s; after this unit charged, re-roll the Hit roll instead.
+    - *2 Plasmacytes:* each once/battle when selected to fight; melee gains Dev Wounds until the end of the Fight phase.
   ]
   #v(2.5pt)
 
-  #card("Technomancer", outline: wraith, note: text(fill: wraith, weight: "bold")[LEADS A WRAITH UNIT.])[
+  #card("Technomancer", outline: wraith, note: text(fill: wraith, weight: "bold")[WRAITH SUPPORT. END OF YOUR MOVEMENT PHASE: HEAL D3.])[
     #stats(([Technomancer], [10\"], [4], [4+/#r("5+++")], [4], [6+], [1]))
     #v(1.2pt)
     #weapons((
@@ -210,25 +212,20 @@
     #stats(([Reanimator], [8\"], [6], [3+], [6], [7+], [3]))
     #v(1.2pt)
     #weapons((
-      [Atomiser beam], [12\"], [3], [4+], [6], [-2], [1], [-],
+      [Atomiser beam], [12\"], [3x2], [4+], [6], [-2], [1], [-],
       [Reanimator claws], [Melee], [4], [4+], [5], [0], [1], [-],
     ))
     - *Beam Aura (3\"):* friendly Necrons units heal an additional D3 wounds whenever their Reanimation Protocols activate.
   ]
   #v(2.5pt)
 
-  #card("Deployment and groups")[
-    - *Destroyers:* Lord leads Skorpekhs; keep Nekrosor close for Lone Operative and Sustained Hits. Lokhust can also screen Nekrosor.
-    - *Wraiths:* one Technomancer per unit; mark the Warlord/Veil unit distinctly.
-    - *Infiltrate:* Flayed Ones more than 8\" from the opponent's deployment zone and all enemy units.
-  ]
 ]
 
 #pagebreak()
 
 #text(size: 14pt, weight: "bold")[Necrons Rules and Awakened Dynasty]
 #h(6pt)
-#text(size: 8.2pt, fill: muted)[Official 2026 sources override fallback text | Red values show applied modifiers and key cautions]
+#text(size: 8.2pt, fill: muted)[Official 2026 sources | Red = applied modifiers and cautions]
 #v(3pt)
 
 #grid(
@@ -291,8 +288,6 @@
     - *Nekrosor 6\":* Nullstone grants FNP 5+ against mortal wounds and Psychic Attacks.
     - *Reanimator 3\":* units heal an additional D3 whenever protocols activate.
     - *Technomancer 6\":* one model heals D3 at the end of your Movement phase.
-    - *Distortion Fields 6\":* enemies are unravelling; improve AP by 1 for attacks targeting them.
-    - *Distortion boost:* at the start of any phase, each C'tan can suffer 3 mortals to extend its aura to 9\" until the end of that phase.
   ]
 
   #colbreak()

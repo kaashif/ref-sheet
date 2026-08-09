@@ -49,9 +49,10 @@ Corrections made during this audit:
   from all enemy units.
 - Veil of Darkness updated to its current Strategic Reserves, temporary Deep
   Strike and mandatory next-Movement-phase ingress wording.
-- Nekrosor Ammentar's native Feel No Pain 5+ added.
-- Distortion Fields and its optional 3-mortal-wound range boost added for both
-  C'tan.
+- Nekrosor Ammentar's Nullstone Field Generator grants Feel No Pain 5+ only
+  against mortal wounds and Psychic Attacks; he has no general Feel No Pain.
+- Distortion Fields belongs to the Pantheon of Woe detachment and does not
+  apply to this Awakened Dynasty roster.
 - Reanimation Protocols and the Canoptek Reanimator reminder updated to the
   current BSData "heals" wording.
 
