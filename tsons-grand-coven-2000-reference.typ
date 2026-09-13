@@ -10,20 +10,26 @@
 #let red = rgb("#8a2634")
 #let blue = rgb("#0078aa")
 #let gold = rgb("#9a6500")
+#let teal-soft = rgb("#e3f2f2")
+#let blue-soft = rgb("#e6f0f8")
 #let cellpad = (x: 1.25pt, y: 0.9pt)
+#let r(body) = text(fill: red, weight: "bold", body)
+#let b(body) = text(fill: blue, weight: "bold", body)
+#show "Psychic": b("Psychic")
+#show "Psyker": b("Psyker")
 
-#let head(title, pts: none, note: none) = {
+#let head(title, pts: none, note: none, title-fill: teal) = {
   grid(columns: (1fr, auto), gutter: 2pt, align: horizon,
-    text(size: 8pt, weight: "bold", fill: ink, upper(title)),
+    text(size: 8pt, weight: "bold", fill: title-fill, upper(title)),
     if pts != none { text(size: 7pt, weight: "bold", fill: red, pts) },
   )
   if note != none { text(size: 5pt, fill: muted, note) }
   line(length: 100%, stroke: 0.35pt + ink)
 }
 
-#let card(title, body, pts: none, note: none, stroke: linec) = {
+#let card(title, body, pts: none, note: none, stroke: teal, title-fill: teal) = {
   rect(width: 100%, stroke: 0.45pt + stroke, inset: 1.8pt, radius: 0.7pt)[
-    #head(title, pts: pts, note: note)
+    #head(title, pts: pts, note: note, title-fill: title-fill)
     #v(0.8pt)
     #body
   ]
@@ -36,14 +42,28 @@
 #let stats(rows) = table(
   columns: (2.1fr, .65fr, .6fr, .9fr, .6fr, .65fr, .6fr),
   inset: cellpad, stroke: 0.25pt + linec,
-  fill: (x, y) => if y == 0 { soft },
+  fill: (x, y) => if y == 0 { teal-soft },
   table.header[*Model*][*M*][*T*][*Sv*][*W*][*Ld*][*OC*], ..rows,
 )
 
 #let weapons(rows) = table(
   columns: (2.2fr, .7fr, .55fr, .62fr, .55fr, .55fr, .62fr, 2.25fr),
   inset: cellpad, stroke: 0.25pt + linec,
-  fill: (x, y) => if y == 0 { soft },
+  fill: (x, y) => if y == 0 { blue-soft },
+  table.header[*Weapon*][*Rng*][*A*][*Hit*][*S*][*AP*][*D*][*Key*], ..rows,
+)
+
+#let melee-weapons(rows) = table(
+  columns: (2.8fr, .85fr, .85fr, .7fr, .65fr, .65fr, .7fr),
+  inset: cellpad, stroke: 0.25pt + linec,
+  fill: (x, y) => if y == 0 { blue-soft },
+  table.header[*Weapon*][*Rng*][*A*][*Hit*][*S*][*AP*][*D*], ..rows,
+)
+
+#let buff-weapons(rows) = table(
+  columns: (1.75fr, .62fr, .48fr, .58fr, 1.08fr, .5fr, .55fr, 2.45fr),
+  inset: cellpad, stroke: 0.25pt + linec,
+  fill: (x, y) => if y == 0 { blue-soft },
   table.header[*Weapon*][*Rng*][*A*][*Hit*][*S*][*AP*][*D*][*Key*], ..rows,
 )
 
@@ -98,28 +118,28 @@
     #stats(([Prince], [13"], [9], [2+/4++], [10], [6+], [3]))
     #v(1pt)
     #weapons((
-      [Dark Blessing], [24"], [9], [2+], [*6*], [-1], [*3*], [Ignores Cover, Psychic, Sustained 1],
+      [Dark Blessing], [24"], [9], [2+], [#r("6")], [-1], [#r("3")], [Ignores Cover, Psychic, Sustained 1],
       [Infernal cannon], [24"], [3], [2+], [5], [-2], [2], [-],
-      [Hellforged - strike], [Melee], [6], [2+], [*10*], [-2], [*5*], [Devs, Psychic],
-      [Hellforged - sweep], [Melee], [12], [2+], [*8*], [-1], [*3*], [Devs, Psychic],
+      [Hellforged - strike], [Melee], [6], [2+], [#r("10")], [-2], [#r("5")], [Devs, Psychic],
+      [Hellforged - sweep], [Melee], [12], [2+], [#r("8")], [-1], [#r("3")], [Devs, Psychic],
     ))
-    - *Eldritch Vortex:* +1 Strength and Damage to bearer Psychic weapons (bold above).
+    - #r("Eldritch Vortex:") +1 Strength and Damage to bearer Psychic weapons (red above).
     - *Aetherstride:* Deep Strike more than 6" away; Dark Blessing gains Sustained Hits D3; cannot charge.
     - *Hunter of Souls:* re-roll Hit/Wound 1 into Characters; full re-rolls into Psyker Characters. Destroy one: heal D3, or 3 if Psyker.
   ]
   #gap
 
-  #card("Chaos Spawn", note: "Feel No Pain 5+")[
-    #stats(([Chaos Spawn], [8"], [5], [4+/5++], [4], [7+], [1]))
+  #card("Chaos Spawn", note: r("FEEL NO PAIN 5+"), stroke: blue, title-fill: blue)[
+    #stats(([Chaos Spawn], [8"], [5], [4+ #linebreak() #b("5++") #linebreak() #r("5+++")], [4], [7+], [1]))
     #v(1pt)
-    #weapons(([2x Hideous mutations], [Melee], [D6+2], [4+], [5], [-1], [2], [-]))
-    - *Regenerating Monstrosities:* start of each player's Command phase, one model regains up to 3 lost wounds.
+    #melee-weapons(([2x Hideous mutations], [Melee], [D6+2], [4+], [5], [-1], [2]))
+    - #b("REGENERATING MONSTROSITIES:") #b("At the start of each player's Command phase, one model regains up to 3 lost wounds.")
   ]
 
   #colbreak()
 
   #group[
-    #card("Exalted Sorcerer on Disc", note: "Incandaeum | Leads the Greatbows")[
+    #card("Exalted Sorcerer on Disc", note: "Incandaeum | Leads the Greatbows", stroke: blue, title-fill: blue)[
       #stats(([Exalted Sorcerer], [10"], [4], [3+/4++], [6], [6+], [2]))
       #v(1pt)
       #weapons((
@@ -127,19 +147,19 @@
         [Inferno bolt pistol], [12"], [1], [2+], [4], [-1], [1], [Pistol],
         [Force weapon], [Melee], [5], [2+], [6], [-1], [D3], [Psychic],
       ))
-      - *Incandaeum:* once/battle, select Doombolt even if another model already attempted it this phase.
-      - *Illusions of Tzeentch:* this led unit can only be targeted by ranged attacks from within 18".
-      - *Binding Tendrils:* after Arcane Fire hits enemy Infantry, it is ensnared until your next turn: -2" Move and -2 Charge.
+      - #b("INCANDAEUM:") Once/battle, select Doombolt even if another model already attempted it this phase.
+      - #b("ILLUSIONS OF TZEENTCH:") This led unit can only be targeted by ranged attacks from within 18".
+      - #b("BINDING TENDRILS:") After Arcane Fire hits enemy Infantry, it is ensnared until your next turn: -2" Move and -2 Charge.
     ]
     #v(1.2pt)
-    #card("Fatecaster Greatbows", note: "Fly | Led by the Disc Sorcerer")[
+    #card("Fatecaster Greatbows", note: "Fly | Led by the Disc Sorcerer", stroke: blue, title-fill: blue)[
       #stats(([Enlightened], [10"], [4], [5+/5++], [2], [7+], [2]))
       #v(1pt)
       #weapons((
         [3x Fatecaster greatbow], [30"], [2], [4+], [5], [-2], [2], [Ignores Cover, Lethal, Precision],
         [3x Close combat weapon], [Melee], [2], [4+], [4], [0], [1], [-],
       ))
-      - *Malign Trickery:* opponent Movement, if an enemy ends a move within 8" and this unit is unengaged, make a Normal move up to D6".
+      - #b("MALIGN TRICKERY:") Opponent Movement, if an enemy ends a move within 8" and this unit is unengaged, make a Normal move up to D6".
     ]
   ]
   #gap
@@ -151,14 +171,15 @@
       [Aspiring Sorcerer], [6"], [4], [3+/5++], [3], [6+], [2],
     ))
     #v(1pt)
-    #weapons((
-      [4x Inferno boltgun], [24"], [2], [3+], [4], [-1], [1], [Rapid Fire 1, Ignores Cover (Icon)],
-      [Warpflame pistol], [12"], [D6], [N/A], [3], [-1], [1], [Pistol, Torrent, Ignores Cover (Icon)],
-      [Malefic Curse], [24"], [3], [3+], [4], [-3], [1], [Anti-Inf 4+, Devs, Psychic, Ignores Cover (Icon)],
-      [Pandaemonic Delusion], [24"], [6], [3+], [5], [-1], [1], [Psychic, Sustained Hits 3],
-      [Sorcerer force weapon], [Melee], [4], [3+], [6], [-1], [D3], [Psychic],
+    #buff-weapons((
+      [3x Warpflamer], [12"], [D6], [N/A], [4 #r("RR1W/RRW obj")], [-1], [1], [Torrent, #r("LETHAL HITS"), #r("IGNORES COVER")],
+      [1x Soulreaper cannon], [24"], [6], [3+], [6 #r("RR1W/RRW obj")], [-2], [1], [Devs, #r("LETHAL HITS"), #r("IGNORES COVER")],
+      [Warpflame pistol], [12"], [D6], [N/A], [3 #r("RR1W/RRW obj")], [-1], [1], [Pistol, Torrent, #r("LETHAL HITS"), #r("IGNORES COVER")],
+      [Malefic Curse], [24"], [3], [3+], [4 #r("RR1W/RRW obj")], [-3], [1], [Anti-Inf 4+, Devs, Psychic, #r("LETHAL HITS"), #r("IGNORES COVER")],
+      [Pandaemonic Delusion], [24"], [6 #r("+3A")], [3+], [5 #r("+3S")], [-1], [1], [Psychic, Sustained Hits 3, #r("LETHAL HITS")],
+      [Sorcerer force weapon], [Melee], [4 #r("+3A")], [3+], [6 #r("+3S")], [-1], [D3], [Psychic, #r("LETHAL HITS")],
     ))
-    - *Empyric Guidance:* while Sorcerer leads, weapons in the unit gain Lethal Hits.
+    - #r("EMPYRIC GUIDANCE:") While Sorcerer leads, #r("ALL WEAPONS IN THE UNIT GAIN LETHAL HITS") (shown red above).
     - *Twisted Sorceries:* once/battle in Shooting/Fight, Sorcerer Psychic weapons get +3 Strength and Attacks for the phase.
     - *Bringers of Change:* Rubric ranged attacks re-roll Wound 1; full Wound re-roll into a target on an objective you do not control. *Icon:* ranged weapons gain Ignores Cover.
   ]
@@ -189,14 +210,14 @@
     ))
     #v(1pt)
     #weapons((
-      [10x Inferno combi-bolter], [24"], [2], [3+], [4], [-1], [1], [Rapid Fire 2],
-      [2x Hellfyre missile rack], [36"], [2], [3+], [10], [-2], [3], [-],
-      [Scarab Malefic Curse], [24"], [3], [3+], [4], [-3], [1], [Anti-Inf 4+, Devs, Psychic],
-      [Gaze of Hate], [18"], [D6], [3+], [6], [-2], [2], [Devs, Psychic],
+      [10x Inferno combi-bolter], [24"], [2], [3+ #r("+1H")], [4], [-1], [1], [Rapid Fire 2],
+      [2x Hellfyre missile rack], [36"], [2], [3+ #r("+1H")], [10], [-2], [3], [-],
+      [Scarab Malefic Curse], [24"], [3], [3+ #r("+1H")], [4], [-3], [1], [Anti-Inf 4+, Devs, Psychic],
+      [Gaze of Hate], [18"], [D6], [3+ #r("+1H")], [6], [-2], [2], [Devs, Psychic],
       [Prosperine khopesh], [Melee], [3], [3+], [5], [-2], [2], [-],
     ))
-    - Deep Strike. *Rites of Coalescence:* while unit contains a Psyker, attacks targeting it are -1 to Wound.
-    - *Marked by Fate:* start of Shooting, select visible enemy; this unit gets +1 to Hit against it for the phase.
+    - Deep Strike. #r("Rites of Coalescence:") while unit contains a Psyker, attacks targeting it are #r("-1 TO WOUND").
+    - #r("MARKED BY FATE:") start of Shooting, select visible enemy; this unit gets #r("+1 TO HIT") against it for the phase (red above).
     - *Umbralefic Crystal:* once/battle in Command, if unengaged, place unit into Strategic Reserves; return next Reinforcements step more than 9" from enemies.
   ]
   #gap
@@ -214,7 +235,7 @@
   ]
   #gap
 
-  #card("Grand Coven Stratagems", stroke: red)[
+  #card("Grand Coven Stratagems", stroke: red, title-fill: red)[
     #rule("DESTINED BY FATE - 1CP, any phase")[After a save fails for a TS Psyker model, change that attack's Damage to 0.]
     #rule("ARCANE FOCUS - 1CP, Shooting")[After a Channelled Psychic test, re-roll every D6 in that test.]
     #rule("DEVASTATING SORCERY - 2CP, Shooting")[One TS Psyker unit not yet selected to shoot: Psychic weapons get +9" range and full Hit/Wound re-rolls for the phase.]
@@ -224,13 +245,13 @@
   ]
   #gap
 
-  #card("Don't Forget - Phase Triggers", stroke: gold)[
+  #card("Don't Forget - Phase Triggers", stroke: gold, title-fill: gold)[
     #rule("START OF BATTLE ROUND")[*Magnus:* choose one Unearthly Power ability.]
     #rule("YOUR COMMAND PHASE")[Choose *Kindred Sorcery*. *Umbralefic Crystal:* once/battle, if unengaged, put the Terminator unit into Strategic Reserves.]
-    #rule("EACH PLAYER'S COMMAND PHASE")[*Chaos Spawn:* one model regains up to 3 lost wounds.]
+    #rule("EACH PLAYER'S COMMAND PHASE")[#b("CHAOS SPAWN: one model regains up to 3 lost wounds.")]
     #rule("START OF YOUR SHOOTING PHASE")[Attempt Rituals. *Marked by Fate:* select one visible enemy for the Terminator unit's +1 to Hit.]
-    #rule("AFTER THE DISC SORCERER SHOOTS")[If Arcane Fire hit enemy Infantry, apply *Binding Tendrils:* -2" Move and -2 Charge until your next turn.]
-    #rule("OPPONENT'S MOVEMENT PHASE")[*Greatbows:* after an enemy ends a move within 8", if unengaged, make a Normal move up to D6".]
+    #rule("AFTER THE DISC SORCERER SHOOTS")[#b("If Arcane Fire hit enemy Infantry, apply Binding Tendrils: -2\" Move and -2 Charge until your next turn.")]
+    #rule("OPPONENT'S MOVEMENT PHASE")[#b("GREATBOWS: after an enemy ends a move within 8\", if unengaged, make a Normal move up to D6\".")]
     #rule("AFTER THE SPEARS CHARGE")[Roll one D6 per engaged model; each 4+ inflicts 1 mortal wound.]
     #rule("END OF OPPONENT'S TURN")[*Tzaangors:* if more than 6" from every enemy, you may put the unit into Strategic Reserves.]
   ]
