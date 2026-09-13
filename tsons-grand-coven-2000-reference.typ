@@ -9,6 +9,7 @@
 #let teal = rgb("#006b78")
 #let red = rgb("#8a2634")
 #let blue = rgb("#0078aa")
+#let gold = rgb("#9a6500")
 #let cellpad = (x: 1.25pt, y: 0.9pt)
 
 #let head(title, pts: none, note: none) = {
@@ -217,5 +218,17 @@
     #rule("PSYCHIC DOMINION - 1CP, any phase")[After enemy selects targets: its Psychic weapons gain Hazardous; targeted TS unit gets FNP 4+ vs Psychic Attacks.]
     #rule("EGOTISTICAL POWER - 1CP, Command")[One TS Psyker unit gets a selected Kindred Sorcery ability instead of the army-wide ability until next Command.]
     #rule("DESECRATION OF WORLDS - 1CP, Command")[One TS Psyker unit on an objective you control makes it sticky.]
+  ]
+  #gap
+
+  #card("Don't Forget - Phase Triggers", stroke: gold)[
+    #rule("START OF BATTLE ROUND")[*Magnus:* choose one Unearthly Power ability.]
+    #rule("YOUR COMMAND PHASE")[Choose *Kindred Sorcery*. *Umbralefic Crystal:* once/battle, if unengaged, put the Terminator unit into Strategic Reserves.]
+    #rule("EACH PLAYER'S COMMAND PHASE")[*Chaos Spawn:* one model regains up to 3 lost wounds.]
+    #rule("START OF YOUR SHOOTING PHASE")[Attempt Rituals. *Marked by Fate:* select one visible enemy for the Terminator unit's +1 to Hit.]
+    #rule("AFTER THE DISC SORCERER SHOOTS")[If Arcane Fire hit enemy Infantry, apply *Binding Tendrils:* -2" Move and -2 Charge until your next turn.]
+    #rule("OPPONENT'S MOVEMENT PHASE")[*Greatbows:* after an enemy ends a move within 8", if unengaged, make a Normal move up to D6".]
+    #rule("AFTER THE SPEARS CHARGE")[Roll one D6 per engaged model; each 4+ inflicts 1 mortal wound.]
+    #rule("END OF OPPONENT'S TURN")[*Tzaangors:* if more than 6" from every enemy, you may put the unit into Strategic Reserves.]
   ]
 ]
