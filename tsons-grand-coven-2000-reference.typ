@@ -60,7 +60,10 @@
 
 #columns(3, gutter: 3pt)[
   #card("Grand Coven Detachment Rule")[
-    #rule("Kindred Sorcery - Command")[Choose one until next Command; each once/battle: *Imbued Manifestation* (+6" ranged Psychic range); *Psychic Maelstrom* (+1 to Wound with Psychic); *Wrath of the Immaterium* (Psychic gains Devastating Wounds).]
+    #rule("Kindred Sorcery - Command")[Choose one until your next Command phase; each choice is once per battle:]
+    - *Imbued Manifestation:* +6" range to ranged Psychic weapons.
+    - *Psychic Maelstrom:* +1 to Wound with Psychic weapons.
+    - *Wrath of the Immaterium:* Psychic weapons gain Devastating Wounds.
   ]
   #gap
 
