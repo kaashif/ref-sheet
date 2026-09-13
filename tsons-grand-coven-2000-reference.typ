@@ -102,7 +102,7 @@
   ]
   #gap
 
-  #card("Magnus the Red", note: "Must be Warlord | Deep Strike | Deadly Demise D6")[
+  #card("Magnus the Red", note: "MONSTER | Must be Warlord | Deep Strike | Deadly Demise D6")[
     #stats(([Magnus], [14"], [11], [2+/4++], [16], [5+], [6]))
     #v(1pt)
     #weapons((
@@ -117,7 +117,7 @@
   ]
   #gap
 
-  #card("Daemon Prince with Wings", note: "Eldritch Vortex applied | Deep Strike | Deadly Demise D3")[
+  #card("Daemon Prince with Wings", note: "MONSTER | Eldritch Vortex applied | Deep Strike | Deadly Demise D3")[
     #stats(([Prince], [13"], [9], [2+/4++], [10], [6+], [3]))
     #v(1pt)
     #weapons((
@@ -132,7 +132,7 @@
   ]
   #gap
 
-  #card("Chaos Spawn", note: r("FEEL NO PAIN 5+"), stroke: blue, title-fill: blue)[
+  #card("Chaos Spawn", note: [BEAST | #r("FEEL NO PAIN 5+")], stroke: blue, title-fill: blue)[
     #stats(([Chaos Spawn], [8"], [5], [4+ #linebreak() #b("5++") #linebreak() #r("5+++")], [4], [7+], [1]))
     #v(1pt)
     #melee-weapons(([2x Hideous mutations], [Melee], [D6+2], [4+], [5], [-1], [2]))
@@ -142,7 +142,7 @@
   #colbreak()
 
   #group[
-    #card("Exalted Sorcerer on Disc", note: "Incandaeum | Leads the Greatbows", stroke: blue, title-fill: blue)[
+    #card("Exalted Sorcerer on Disc", note: "INFANTRY / MOUNTED | Incandaeum | Leads the Greatbows", stroke: blue, title-fill: blue)[
       #stats(([Exalted Sorcerer], [10"], [4], [3+/4++], [6], [6+], [2]))
       #v(1pt)
       #weapons((
@@ -155,7 +155,7 @@
       - #b("BINDING TENDRILS:") After Arcane Fire hits enemy Infantry, it is ensnared until your next turn: -2" Move and -2 Charge.
     ]
     #v(1.2pt)
-    #card("Fatecaster Greatbows", note: "Fly | Led by the Disc Sorcerer", stroke: blue, title-fill: blue)[
+    #card("Fatecaster Greatbows", note: "MOUNTED | Fly | Led by the Disc Sorcerer", stroke: blue, title-fill: blue)[
       #stats(([Enlightened], [10"], [4], [5+/5++], [2], [7+], [2]))
       #v(1pt)
       #weapons((
@@ -168,7 +168,7 @@
   #gap
 
   #group(stroke: purple)[
-    #card("Sorcerer", note: "Attached to Rubric Marines", stroke: purple, title-fill: purple)[
+    #card("Sorcerer", note: "INFANTRY | Attached to Rubric Marines", stroke: purple, title-fill: purple)[
       #stats(([Sorcerer], [6"], [4], [3+/5++], [4], [6+], [1]))
       #v(1pt)
       #buff-weapons((
@@ -180,7 +180,7 @@
       - *Twisted Sorceries:* once/battle in Shooting/Fight, Sorcerer Psychic weapons get +3 Strength and Attacks for the phase.
     ]
     #v(1.2pt)
-    #card("Rubric Marines", note: "Bodyguard for the Sorcerer", stroke: purple, title-fill: purple)[
+    #card("Rubric Marines", note: "INFANTRY | Bodyguard for the Sorcerer", stroke: purple, title-fill: purple)[
       #stats((
         [Rubric Marine], [6"], [4], [3+/5++], [2], [7+], [2],
         [Aspiring Sorcerer], [6"], [4], [3+/5++], [3], [6+], [2],
@@ -199,7 +199,7 @@
   ]
   #gap
 
-  #card("Tzaangor Enlightened - Spears", note: "Fly")[
+  #card("Tzaangor Enlightened - Spears", note: "MOUNTED | Fly")[
     #stats(([Enlightened], [10"], [4], [5+/5++], [2], [7+], [2]))
     #v(1pt)
     #weapons(([3x Divining spear], [Melee], [3], [4+], [5], [-1], [2], [Lance, Precision]))
@@ -207,7 +207,7 @@
   ]
   #gap
 
-  #card("Tzaangors", note: "Scouts 6\"")[
+  #card("Tzaangors", note: "INFANTRY | Scouts 6\"")[
     #stats(([Tzaangor], [6"], [4], [6+/6++], [1], [7+], [1]))
     #v(1pt)
     #weapons(([10x Tzaangor blades], [Melee], [2], [4+], [5], [0], [1], [-]))
@@ -217,7 +217,7 @@
   #colbreak()
 
   #group(stroke: indigo)[
-    #card("Sorcerer in Terminator Armour", note: "Umbralefic Crystal | Attached to Scarabs", stroke: indigo, title-fill: indigo)[
+    #card("Sorcerer in Terminator Armour", note: "INFANTRY | Umbralefic Crystal | Attached to Scarabs", stroke: indigo, title-fill: indigo)[
       #stats(([Terminator Sorcerer], [5"], [5], [2+/4++], [5], [6+], [1]))
       #v(1pt)
       #buff-weapons((
@@ -230,7 +230,7 @@
       - *Umbralefic Crystal:* once/battle/army in Command, if unengaged, place this unit in Strategic Reserves. It gains Deep Strike until your next Shooting phase and must make an ingress move in your next Movement phase (even turn 1).
     ]
     #v(1.2pt)
-    #card("Scarab Occult Terminators", note: "Bodyguard | Soulreaper cannons | Hellfyre missile racks", stroke: indigo, title-fill: indigo)[
+    #card("Scarab Occult Terminators", note: "INFANTRY | Bodyguard | Soulreaper cannons | Hellfyre missile racks", stroke: indigo, title-fill: indigo)[
       #stats((
         [Scarab Sorcerer], [5"], [5], [2+/4++], [4], [6+], [1],
         [Scarab Occult], [5"], [5], [2+/4++], [3], [7+], [1],
@@ -249,7 +249,7 @@
   ]
   #gap
 
-  #card("Sekhetar Robots", note: "Infiltrators | Stealth")[
+  #card("Sekhetar Robots", note: "VEHICLE / WALKER | Infiltrators | Stealth")[
     #stats(([Sekhetar Robot], [8"], [6], [3+/5++], [4], [7+], [1]))
     #v(1pt)
     #weapons((
