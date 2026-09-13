@@ -1,5 +1,5 @@
 #set page(paper: "a4", margin: 4mm)
-#set text(font: "Arial", size: 6pt)
+#set text(font: "Arial", size: 6.6pt)
 #set par(leading: 0.26em, spacing: 0.16em)
 
 #let ink = rgb("#171717")
@@ -10,6 +10,8 @@
 #let red = rgb("#8a2634")
 #let blue = rgb("#0078aa")
 #let gold = rgb("#9a6500")
+#let purple = rgb("#6b3fa0")
+#let indigo = rgb("#3749a6")
 #let teal-soft = rgb("#e3f2f2")
 #let blue-soft = rgb("#e6f0f8")
 #let cellpad = (x: 1.25pt, y: 0.9pt)
@@ -35,7 +37,7 @@
   ]
 }
 
-#let group(body) = rect(width: 100%, stroke: 1.5pt + blue, inset: 1.2pt, radius: 1pt)[#body]
+#let group(body, stroke: blue) = rect(width: 100%, stroke: 1.5pt + stroke, inset: 1.2pt, radius: 1pt)[#body]
 
 #let rule(name, body) = block(stroke: (left: 1pt + teal), inset: (left: 1.7pt), width: 100%)[*#name:* #body]
 
@@ -71,7 +73,7 @@
 
 #grid(columns: (1fr, auto), gutter: 5pt, align: horizon)[
   #text(size: 9pt, weight: "bold")[THOUSAND SONS - GRAND COVEN]
-  #text(size: 4.4pt, fill: muted)[New Recruit v35.82 | Warlord not specified]
+  #text(size: 4.4pt, fill: muted)[11TH EDITION | Wahapedia Faction Pack v1.2 | New Recruit v35.82]
 ][
   #text(size: 7pt, weight: "bold", fill: red)[2000 PTS]
 ]
@@ -100,7 +102,7 @@
   ]
   #gap
 
-  #card("Magnus the Red", note: "Deep Strike | Deadly Demise D6")[
+  #card("Magnus the Red", note: "Must be Warlord | Deep Strike | Deadly Demise D6")[
     #stats(([Magnus], [14"], [11], [2+/4++], [16], [5+], [6]))
     #v(1pt)
     #weapons((
@@ -109,7 +111,8 @@
       [Blade - strike], [Melee], [7], [2+], [16], [-3], [3], [Devs, Psychic],
       [Blade - sweep], [Melee], [14], [2+], [8], [-1], [2], [Psychic],
     ))
-    - *Unearthly Power:* start of battle round choose -1 Damage vs non-Psychic; enemy ranged weapons within 24" gain Hazardous; or +2" Move aura (6").
+    - *Unearthly Power:* start of battle round choose -1 Damage vs non-Psychic; at opponent Shooting start, one enemy within 24" gains Hazardous on ranged weapons; or +2" Move aura (6").
+    - *Lord of the Planet of the Sorcerers:* attempt up to 2 Rituals/turn; +2 to Magnus's Psychic tests.
     - Damaged 1-6W: -1 to Hit.
   ]
   #gap
@@ -118,10 +121,10 @@
     #stats(([Prince], [13"], [9], [2+/4++], [10], [6+], [3]))
     #v(1pt)
     #weapons((
-      [Dark Blessing], [24"], [9], [2+], [#r("6")], [-1], [#r("3")], [Ignores Cover, Psychic, Sustained 1],
+      [Dark Blessing], [24"], [9], [2+], [#r("5")], [-1], [#r("2")], [Ignores Cover, Psychic, Sustained 1],
       [Infernal cannon], [24"], [3], [2+], [5], [-2], [2], [-],
-      [Hellforged - strike], [Melee], [6], [2+], [#r("10")], [-2], [#r("5")], [Devs, Psychic],
-      [Hellforged - sweep], [Melee], [12], [2+], [#r("8")], [-1], [#r("3")], [Devs, Psychic],
+      [Hellforged - strike], [Melee], [6], [2+], [#r("9")], [-2], [#r("4")], [Devs, Psychic],
+      [Hellforged - sweep], [Melee], [12], [2+], [#r("7")], [-1], [#r("2")], [Devs, Psychic],
     ))
     - #r("Eldritch Vortex:") +1 Strength and Damage to bearer Psychic weapons (red above).
     - *Aetherstride:* Deep Strike more than 6" away; Dark Blessing gains Sustained Hits D3; cannot charge.
@@ -164,24 +167,35 @@
   ]
   #gap
 
-  #card("Sorcerer + Rubric Marines", note: "Use this grouped profile for each Sorcerer/Rubric pairing")[
-    #stats((
-      [Sorcerer], [6"], [4], [3+/5++], [4], [6+], [1],
-      [Rubric Marine], [6"], [4], [3+/5++], [2], [7+], [2],
-      [Aspiring Sorcerer], [6"], [4], [3+/5++], [3], [6+], [2],
-    ))
-    #v(1pt)
-    #buff-weapons((
-      [3x Warpflamer], [12"], [D6], [N/A], [4 #r("RR1W/RRW obj")], [-1], [1], [Torrent, #r("LETHAL HITS"), #r("IGNORES COVER")],
-      [1x Soulreaper cannon], [24"], [6], [3+], [6 #r("RR1W/RRW obj")], [-2], [1], [Devs, #r("LETHAL HITS"), #r("IGNORES COVER")],
-      [Warpflame pistol], [12"], [D6], [N/A], [3 #r("RR1W/RRW obj")], [-1], [1], [Pistol, Torrent, #r("LETHAL HITS"), #r("IGNORES COVER")],
-      [Malefic Curse], [24"], [3], [3+], [4 #r("RR1W/RRW obj")], [-3], [1], [Anti-Inf 4+, Devs, Psychic, #r("LETHAL HITS"), #r("IGNORES COVER")],
-      [Pandaemonic Delusion], [24"], [6 #r("+3A")], [3+], [5 #r("+3S")], [-1], [1], [Psychic, Sustained Hits 3, #r("LETHAL HITS")],
-      [Sorcerer force weapon], [Melee], [4 #r("+3A")], [3+], [6 #r("+3S")], [-1], [D3], [Psychic, #r("LETHAL HITS")],
-    ))
-    - #r("EMPYRIC GUIDANCE:") While Sorcerer leads, #r("ALL WEAPONS IN THE UNIT GAIN LETHAL HITS") (shown red above).
-    - *Twisted Sorceries:* once/battle in Shooting/Fight, Sorcerer Psychic weapons get +3 Strength and Attacks for the phase.
-    - *Bringers of Change:* Rubric ranged attacks re-roll Wound 1; full Wound re-roll into a target on an objective you do not control. *Icon:* ranged weapons gain Ignores Cover.
+  #group(stroke: purple)[
+    #card("Sorcerer", note: "Attached to Rubric Marines", stroke: purple, title-fill: purple)[
+      #stats(([Sorcerer], [6"], [4], [3+/5++], [4], [6+], [1]))
+      #v(1pt)
+      #buff-weapons((
+        [Inferno bolt pistol], [12"], [1], [3+], [4], [-1], [1], [Pistol, #r("LETHAL HITS")],
+        [Pandaemonic Delusion], [24"], [6 #r("+3A")], [3+], [5 #r("+3S")], [-1], [1], [Psychic, Sustained Hits 3, #r("LETHAL HITS")],
+        [Force weapon], [Melee], [4 #r("+3A")], [3+], [6 #r("+3S")], [-1], [D3], [Psychic, #r("LETHAL HITS")],
+      ))
+      - #r("EMPYRIC GUIDANCE:") While leading, #r("ALL WEAPONS IN THE UNIT GAIN LETHAL HITS") (shown red on both cards).
+      - *Twisted Sorceries:* once/battle in Shooting/Fight, Sorcerer Psychic weapons get +3 Strength and Attacks for the phase.
+    ]
+    #v(1.2pt)
+    #card("Rubric Marines", note: "Bodyguard for the Sorcerer", stroke: purple, title-fill: purple)[
+      #stats((
+        [Rubric Marine], [6"], [4], [3+/5++], [2], [7+], [2],
+        [Aspiring Sorcerer], [6"], [4], [3+/5++], [3], [6+], [2],
+      ))
+      #v(1pt)
+      #buff-weapons((
+        [3x Warpflamer], [12"], [D6], [N/A], [4 #r("RR1W/RRW obj")], [-1], [1], [Torrent, #r("LETHAL HITS"), #r("IGNORES COVER")],
+        [1x Soulreaper cannon], [24"], [6], [3+], [6 #r("RR1W/RRW obj")], [-2], [1], [Devs, #r("LETHAL HITS"), #r("IGNORES COVER")],
+        [Warpflame pistol], [12"], [D6], [N/A], [3 #r("RR1W/RRW obj")], [-1], [1], [Pistol, Torrent, #r("LETHAL HITS"), #r("IGNORES COVER")],
+        [Malefic Curse], [24"], [3], [3+], [4 #r("RR1W/RRW obj")], [-3], [1], [Anti-Inf 4+, Devs, Psychic, #r("LETHAL HITS"), #r("IGNORES COVER")],
+        [Force weapon], [Melee], [3], [3+], [6], [-1], [D3], [Psychic, #r("LETHAL HITS")],
+        [4x Close combat weapon], [Melee], [2], [3+], [4], [0], [1], [#r("LETHAL HITS")],
+      ))
+      - *Bringers of Change:* ranged attacks re-roll Wound 1; full Wound re-roll into a target on an objective you do not control. *Icon:* ranged weapons gain Ignores Cover.
+    ]
   ]
   #gap
 
@@ -202,23 +216,36 @@
 
   #colbreak()
 
-  #card("Terminator Sorcerer + Scarabs", note: "Umbralefic Crystal | Hellfyre missile racks")[
-    #stats((
-      [Terminator Sorcerer], [5"], [5], [2+/4++], [5], [6+], [1],
-      [Scarab Sorcerer], [5"], [5], [2+/4++], [4], [6+], [1],
-      [Scarab Occult], [5"], [5], [2+/4++], [3], [6+], [1],
-    ))
-    #v(1pt)
-    #weapons((
-      [10x Inferno combi-bolter], [24"], [2], [3+ #r("+1H")], [4], [-1], [1], [Rapid Fire 2],
-      [2x Hellfyre missile rack], [36"], [2], [3+ #r("+1H")], [10], [-2], [3], [-],
-      [Scarab Malefic Curse], [24"], [3], [3+ #r("+1H")], [4], [-3], [1], [Anti-Inf 4+, Devs, Psychic],
-      [Gaze of Hate], [18"], [D6], [3+ #r("+1H")], [6], [-2], [2], [Devs, Psychic],
-      [Prosperine khopesh], [Melee], [3], [3+], [5], [-2], [2], [-],
-    ))
-    - Deep Strike. #r("Rites of Coalescence:") while unit contains a Psyker, attacks targeting it are #r("-1 TO WOUND").
-    - #r("MARKED BY FATE:") start of Shooting, select visible enemy; this unit gets #r("+1 TO HIT") against it for the phase (red above).
-    - *Umbralefic Crystal:* once/battle in Command, if unengaged, place unit into Strategic Reserves; return next Reinforcements step more than 9" from enemies.
+  #group(stroke: indigo)[
+    #card("Sorcerer in Terminator Armour", note: "Umbralefic Crystal | Attached to Scarabs", stroke: indigo, title-fill: indigo)[
+      #stats(([Terminator Sorcerer], [5"], [5], [2+/4++], [5], [6+], [1]))
+      #v(1pt)
+      #buff-weapons((
+        [Inferno combi-bolter], [24"], [2], [3+ #r("+1H")], [4], [-2], [1], [Rapid Fire 2, #r("LETHAL HITS")],
+        [Gaze of Hate], [18"], [3], [3+ #r("+1H")], [4], [-3], [2], [Anti-Monster/Vehicle 4+, Devs, Psychic, #r("LETHAL HITS")],
+        [Force weapon], [Melee], [5], [3+], [6], [-1], [D3], [Psychic, #r("LETHAL HITS")],
+      ))
+      - #r("EMPYRIC GUIDANCE:") While leading, #r("ALL WEAPONS IN THE UNIT GAIN LETHAL HITS") (shown red on both cards).
+      - #r("MARKED BY FATE:") start of Shooting, select visible enemy; #r("EVERY MODEL IN THE ATTACHED UNIT GETS +1 TO HIT") against it for the phase (red on both cards).
+      - *Umbralefic Crystal:* once/battle/army in Command, if unengaged, place this unit in Strategic Reserves. It gains Deep Strike until your next Shooting phase and must make an ingress move in your next Movement phase (even turn 1).
+    ]
+    #v(1.2pt)
+    #card("Scarab Occult Terminators", note: "Bodyguard | Soulreaper cannons | Hellfyre missile racks", stroke: indigo, title-fill: indigo)[
+      #stats((
+        [Scarab Sorcerer], [5"], [5], [2+/4++], [4], [6+], [1],
+        [Scarab Occult], [5"], [5], [2+/4++], [3], [7+], [1],
+      ))
+      #v(1pt)
+      #buff-weapons((
+        [8x Inferno combi-bolter], [24"], [2], [3+ #r("+1H")], [4], [-2], [1], [Rapid Fire 2, #r("LETHAL HITS")],
+        [2x Soulreaper cannon], [24"], [6], [3+ #r("+1H")], [6], [-2], [1], [Devs, #r("LETHAL HITS")],
+        [2x Hellfyre missile rack], [36"], [2], [3+ #r("+1H")], [10], [-2], [3], [#r("LETHAL HITS")],
+        [Malefic Curse], [24"], [3], [3+ #r("+1H")], [4], [-3], [1], [Anti-Inf 4+, Devs, Psychic, #r("LETHAL HITS")],
+        [Force weapon], [Melee], [4], [3+], [6], [-1], [D3], [Psychic, #r("LETHAL HITS")],
+        [9x Prosperine khopesh], [Melee], [3], [3+], [5], [-2], [2], [#r("LETHAL HITS")],
+      ))
+      - Deep Strike. #r("Rites of Coalescence:") while unit contains a Psyker, attacks targeting it are #r("-1 TO WOUND").
+    ]
   ]
   #gap
 
@@ -247,7 +274,7 @@
 
   #card("Don't Forget - Phase Triggers", stroke: gold, title-fill: gold)[
     #rule("START OF BATTLE ROUND")[*Magnus:* choose one Unearthly Power ability.]
-    #rule("YOUR COMMAND PHASE")[Choose *Kindred Sorcery*. *Umbralefic Crystal:* once/battle, if unengaged, put the Terminator unit into Strategic Reserves.]
+    #rule("YOUR COMMAND PHASE")[Choose *Kindred Sorcery*. *Umbralefic Crystal:* once/battle/army, if unengaged, put the Terminator unit into Strategic Reserves; it must ingress next Movement phase.]
     #rule("EACH PLAYER'S COMMAND PHASE")[#b("CHAOS SPAWN: one model regains up to 3 lost wounds.")]
     #rule("START OF YOUR SHOOTING PHASE")[Attempt Rituals. *Marked by Fate:* select one visible enemy for the Terminator unit's +1 to Hit.]
     #rule("AFTER THE DISC SORCERER SHOOTS")[#b("If Arcane Fire hit enemy Infantry, apply Binding Tendrils: -2\" Move and -2 Charge until your next turn.")]
