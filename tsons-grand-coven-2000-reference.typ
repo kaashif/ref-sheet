@@ -52,7 +52,7 @@
   #text(size: 9pt, weight: "bold")[THOUSAND SONS - GRAND COVEN]
   #text(size: 4.4pt, fill: muted)[New Recruit v35.82 | Warlord not specified]
 ][
-  #text(size: 7pt, weight: "bold", fill: red)[2080 PTS]
+  #text(size: 7pt, weight: "bold", fill: red)[2000 PTS]
 ]
 #line(length: 100%, stroke: 0.8pt + teal)
 #v(2pt)
@@ -217,14 +217,5 @@
     #rule("PSYCHIC DOMINION - 1CP, any phase")[After enemy selects targets: its Psychic weapons gain Hazardous; targeted TS unit gets FNP 4+ vs Psychic Attacks.]
     #rule("EGOTISTICAL POWER - 1CP, Command")[One TS Psyker unit gets a selected Kindred Sorcery ability instead of the army-wide ability until next Command.]
     #rule("DESECRATION OF WORLDS - 1CP, Command")[One TS Psyker unit on an objective you control makes it sticky.]
-  ]
-  #gap
-
-  #card("Fast Reminders")[
-    *Deep Strike:* set up more than 9" away unless stated. \
-    *Infiltrators:* deploy outside your zone, more than 9" from enemies and their zone. \
-    *Stealth:* -1 to Hit with ranged attacks. *Torrent:* auto-hit. \
-    *Precision:* wounds can be allocated to visible Character in an Attached unit. \
-    *Lethal Hits:* Critical Hits auto-wound. *Devastating Wounds:* no save on a Critical Wound; inflict mortal wounds equal to Damage.
   ]
 ]

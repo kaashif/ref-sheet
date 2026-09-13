@@ -14,6 +14,6 @@ typst compile sheet.typ thousand-sons-reference.pdf
 
 ## Additional reference sheets
 
-- `output/pdf/tsons-grand-coven-2080-reference.pdf` is the one-page A4 portrait Grand Coven sheet for the New Recruit v35.82 roster.
+- `output/pdf/tsons-grand-coven-2000-reference.pdf` is the one-page A4 portrait Grand Coven sheet for the New Recruit v35.82 roster.
 - `necrons-reference.pdf` is the Triple C'tan Awakened Dynasty sheet built from `necrons_list`.
 - `necrons-nekrosor-reference.pdf` is the Nekrosor Awakened Dynasty sheet built from `necrons_nekrosor_list`.
