@@ -1,7 +1,7 @@
 // Dated roster: 2026-09-17. Unspecified weapons retain the user's prior selections.
 // Rules: https://wahapedia.ru/wh40k11ed/factions/thousand-sons/
 #set page(paper: "a4", margin: 4mm)
-#set text(font: "Arial", size: 6.6pt)
+#set text(font: "Arial", size: 7pt, hyphenate: true)
 #set par(leading: 0.26em, spacing: 0.16em)
 
 #let ink = rgb("#171717")
@@ -28,7 +28,7 @@
     text(size: 8pt, weight: "bold", fill: title-fill, upper(title)),
     if pts != none { text(size: 7pt, weight: "bold", fill: red, pts) },
   )
-  if note != none { text(size: 5pt, fill: muted, note) }
+  if note != none { text(size: 5.5pt, fill: muted, note) }
   line(length: 100%, stroke: 0.35pt + ink)
 }
 
@@ -83,23 +83,8 @@
 #line(length: 100%, stroke: 0.8pt + teal)
 #v(2pt)
 
-#grid(columns: (1fr, 1fr, 1fr), gutter: 3pt, align: top)[
-#card("Magnus the Red", note: "MONSTER | FLY | Must be Warlord | Deep Strike | Deadly Demise D6")[
-    #stats(([Magnus], [14"], [11], [2+/4++], [16], [5+], [6]))
-    #v(1pt)
-    #weapons((
-      [Gaze of Magnus], [24"], [3D3], [2+], [11], [-2], [3], [Devs, Psychic],
-      [Tzeentch's Firestorm], [24"], [D6+3], [2+], [6], [-1], [2], [Blast, Ignores Cover, Psychic],
-      [Blade - strike], [M], [7], [2+], [16], [-3], [3], [Devs, Psychic],
-      [Blade - sweep], [M], [14], [2+], [8], [-1], [2], [Psychic],
-    ))
-    - *Unearthly Power:* start of battle round choose -1 Damage vs non-Psychic; at opponent Shooting start, one enemy within 24" gains Hazardous on ranged weapons; or #r("+2\" Move to friendly TS units within 6\" (including Magnus)"). Choice lasts until next battle round.
-    - *Lord of the Planet of the Sorcerers:* attempt up to 2 Rituals/turn; +2 to Magnus's Psychic tests.
-    - Damaged 1-6W: -1 to Hit.
-  ]
-  #gap
-
-  #card("Daemon Prince with Wings", note: "MONSTER | FLY | Eldritch Vortex applied | Deep Strike | Deadly Demise D3")[
+#grid(columns: (1fr, 1fr, 1fr), gutter: 4pt, align: top)[
+#card("Daemon Prince with Wings", note: "MONSTER | FLY | Eldritch Vortex applied | Deep Strike | Deadly Demise D3")[
     #stats(([Prince], [13"], [9], [2+/4++], [10], [6+], [3]))
     #v(1pt)
     #weapons((
@@ -112,30 +97,7 @@
     - *Aetherstride:* when Deep Striking in #r("MY Movement phase"), may land >6" horizontally from enemies. Dark Blessing gets #r("Sustained D3") and no charge, both until turn end.
     - *Hunter of Souls:* #r("ALL attacks: RR Hit/Wound 1") vs CHARACTER units; #r("full Hit/Wound RR") vs PSYKER CHARACTER units. Destroy such a unit: heal D3, or 3 if PSYKER.
   ]
-  #gap
-
-  #card("Chaos Spawn", note: [BEAST | #r("FEEL NO PAIN 5+")], stroke: blue, title-fill: blue)[
-    #stats(([Chaos Spawn], [8"], [5], [4+ #linebreak() #b("5++") #linebreak() #r("5+++")], [4], [7+], [1]))
-    #v(1pt)
-    #melee-weapons(([2x Hideous mutations], [M], [D6+2], [4+], [5], [-1], [2]))
-    - #b("REGENERATING MONSTROSITIES:") #b("At the start of each player's Command phase, one model regains up to 3 lost wounds.")
-  ]
 #gap
-#card("Tzaangor Enlightened - Spears", note: "MOUNTED | Fly")[
-    #stats(([Enlightened], [10"], [4], [5+/5++], [2], [7+], [2]))
-    #v(1pt)
-    #weapons(([3x Divining spear], [M], [3], [4+], [5], [-1], [2], [Lance, Precision]))
-    - *Prophesied Doom:* after charging, select an enemy in Engagement Range; roll for each model in this unit within Engagement Range of it, each 4+ inflicts 1 mortal.
-  ]
-  #gap
-
-  #card("Tzaangors", note: "INFANTRY | Scouts 6\"")[
-    #stats(([Tzaangor], [6"], [4], [6+/6++], [1], [7+], [1]))
-    #v(1pt)
-    #weapons(([10x Tzaangor blades], [M], [2], [4+], [5], [0], [1], [-]))
-    - *Ambushing Hunters:* end of opponent's turn, if more than 6" from all enemies, remove this unit into Strategic Reserves.
-  ]
-][
 #group[
     #card("Exalted Sorcerer on Disc", note: "INFANTRY / MOUNTED | FLY | GRENADES | Incandaeum", stroke: blue, title-fill: blue)[
       #stats(([Exalted Sorcerer], [10"], [4], [3+/4++], [6], [6+], [2]))
@@ -160,9 +122,37 @@
       - #b("MALIGN TRICKERY:") Opponent Movement, if an enemy ends a move within 8" and this unit is unengaged, the whole attached unit (including Disc) may move normally up to D6".
     ]
   ]
+#gap
+#card("Tzaangor Enlightened - Spears", note: "MOUNTED | Fly")[
+    #stats(([Enlightened], [10"], [4], [5+/5++], [2], [7+], [2]))
+    #v(1pt)
+    #weapons(([3x Divining spear], [M], [3], [4+], [5], [-1], [2], [Lance, Precision]))
+    - *Prophesied Doom:* after charging, select an enemy in Engagement Range; roll for each model in this unit within Engagement Range of it, each 4+ inflicts 1 mortal.
+  ]
   #gap
 
-  #group(stroke: purple)[
+  #card("Tzaangors", note: "INFANTRY | Scouts 6\"")[
+    #stats(([Tzaangor], [6"], [4], [6+/6++], [1], [7+], [1]))
+    #v(1pt)
+    #weapons(([10x Tzaangor blades], [M], [2], [4+], [5], [0], [1], [-]))
+    - *Ambushing Hunters:* end of opponent's turn, if more than 6" from all enemies, remove this unit into Strategic Reserves.
+  ]
+][
+#card("Magnus the Red", note: "MONSTER | FLY | Must be Warlord | Deep Strike | Deadly Demise D6")[
+    #stats(([Magnus], [14"], [11], [2+/4++], [16], [5+], [6]))
+    #v(1pt)
+    #weapons((
+      [Gaze of Magnus], [24"], [3D3], [2+], [11], [-2], [3], [Devs, Psychic],
+      [Tzeentch's Firestorm], [24"], [D6+3], [2+], [6], [-1], [2], [Blast, Ignores Cover, Psychic],
+      [Blade - strike], [M], [7], [2+], [16], [-3], [3], [Devs, Psychic],
+      [Blade - sweep], [M], [14], [2+], [8], [-1], [2], [Psychic],
+    ))
+    - *Unearthly Power:* start of battle round choose -1 Damage vs non-Psychic; at opponent Shooting start, one enemy within 24" gains Hazardous on ranged weapons; or #r("+2\" Move to friendly TS units within 6\" (including Magnus)"). Choice lasts until next battle round.
+    - *Lord of the Planet of the Sorcerers:* attempt up to 2 Rituals/turn; +2 to Magnus's Psychic tests.
+    - Damaged 1-6W: -1 to Hit.
+  ]
+#gap
+#group(stroke: purple)[
     #card("Sorcerer", note: "INFANTRY | GRENADES | Attached to Rubric Marines", stroke: purple, title-fill: purple)[
       #stats(([Sorcerer], [6"], [4], [3+/5++], [4], [6+], [1]))
       #v(1pt)
@@ -237,12 +227,19 @@
     ))
     - *Prophetic Sentinels:* once/turn, when targeted with Fire Overwatch/Heroic Intervention, that use costs 1CP less.
   ]
+#gap
+#card("Chaos Spawn", note: [BEAST | #r("FEEL NO PAIN 5+")], stroke: blue, title-fill: blue)[
+    #stats(([Chaos Spawn], [8"], [5], [4+ #linebreak() #b("5++") #linebreak() #r("5+++")], [4], [7+], [1]))
+    #v(1pt)
+    #melee-weapons(([2x Hideous mutations], [M], [D6+2], [4+], [5], [-1], [2]))
+    - #b("REGENERATING MONSTROSITIES:") #b("At the start of each player's Command phase, one model regains up to 3 lost wounds.")
+  ]
 ]
 #v(4pt)
 #line(length: 100%, stroke: 1.2pt + gold)
 #text(size: 7pt, weight: "bold", fill: gold)[ARMY RULES, STRATAGEMS & PHASE REMINDERS]
 #v(2pt)
-#set text(size: 5.8pt)
+#set text(size: 6.4pt)
 #grid(columns: (1fr, 1fr, 1fr), gutter: 3pt, align: top)[
 #card("Grand Coven Detachment Rule")[
     #rule("Kindred Sorcery - MY Command")[Choose one until your next Command phase; each choice is once per battle:]
