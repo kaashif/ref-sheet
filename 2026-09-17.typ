@@ -21,6 +21,7 @@
 #let b(body) = text(fill: blue, weight: "bold", body)
 #show "Psychic": b("Psychic")
 #show "Psyker": b("Psyker")
+#show "GRENADES": r("GRENADES")
 
 #let head(title, pts: none, note: none, title-fill: teal) = {
   grid(columns: (1fr, auto), gutter: 2pt, align: horizon,
@@ -83,7 +84,7 @@
 #v(2pt)
 
 #grid(columns: (1fr, 1fr, 1fr), gutter: 3pt, align: top)[
-#card("Magnus the Red", note: "MONSTER | Must be Warlord | Deep Strike | Deadly Demise D6")[
+#card("Magnus the Red", note: "MONSTER | FLY | Must be Warlord | Deep Strike | Deadly Demise D6")[
     #stats(([Magnus], [14"], [11], [2+/4++], [16], [5+], [6]))
     #v(1pt)
     #weapons((
@@ -92,13 +93,13 @@
       [Blade - strike], [M], [7], [2+], [16], [-3], [3], [Devs, Psychic],
       [Blade - sweep], [M], [14], [2+], [8], [-1], [2], [Psychic],
     ))
-    - *Unearthly Power:* start of battle round choose -1 Damage vs non-Psychic; at opponent Shooting start, one enemy within 24" gains Hazardous on ranged weapons; or +2" Move aura (6").
+    - *Unearthly Power:* start of battle round choose -1 Damage vs non-Psychic; at opponent Shooting start, one enemy within 24" gains Hazardous on ranged weapons; or #r("+2\" Move to friendly TS units within 6\" (including Magnus)"). Choice lasts until next battle round.
     - *Lord of the Planet of the Sorcerers:* attempt up to 2 Rituals/turn; +2 to Magnus's Psychic tests.
     - Damaged 1-6W: -1 to Hit.
   ]
   #gap
 
-  #card("Daemon Prince with Wings", note: "MONSTER | Eldritch Vortex applied | Deep Strike | Deadly Demise D3")[
+  #card("Daemon Prince with Wings", note: "MONSTER | FLY | Eldritch Vortex applied | Deep Strike | Deadly Demise D3")[
     #stats(([Prince], [13"], [9], [2+/4++], [10], [6+], [3]))
     #v(1pt)
     #weapons((
@@ -108,8 +109,8 @@
       [Hellforged - sweep], [M], [12], [2+], [#r("7")], [-1], [#r("2")], [Devs, Psychic],
     ))
     - #r("Eldritch Vortex:") +1 Strength and Damage to bearer Psychic weapons (red above).
-    - *Aetherstride:* Deep Strike more than 6" away; Dark Blessing gains Sustained Hits D3; cannot charge.
-    - *Hunter of Souls:* re-roll Hit/Wound 1 into Characters; full re-rolls into Psyker Characters. Destroy one: heal D3, or 3 if Psyker.
+    - *Aetherstride:* when Deep Striking in #r("MY Movement phase"), may land >6" horizontally from enemies. Dark Blessing gets #r("Sustained D3") and no charge, both until turn end.
+    - *Hunter of Souls:* #r("ALL attacks: RR Hit/Wound 1") vs CHARACTER units; #r("full Hit/Wound RR") vs PSYKER CHARACTER units. Destroy such a unit: heal D3, or 3 if PSYKER.
   ]
   #gap
 
@@ -136,7 +137,7 @@
   ]
 ][
 #group[
-    #card("Exalted Sorcerer on Disc", note: "INFANTRY / MOUNTED | Incandaeum | Leads the Greatbows", stroke: blue, title-fill: blue)[
+    #card("Exalted Sorcerer on Disc", note: "INFANTRY / MOUNTED | FLY | GRENADES | Incandaeum", stroke: blue, title-fill: blue)[
       #stats(([Exalted Sorcerer], [10"], [4], [3+/4++], [6], [6+], [2]))
       #v(1pt)
       #weapons((
@@ -146,23 +147,23 @@
       ))
       - #b("INCANDAEUM:") Once/battle, select Doombolt even if another model already attempted it this phase.
       - #b("ILLUSIONS OF TZEENTCH:") This led unit can only be targeted by ranged attacks from within 18".
-      - #b("BINDING TENDRILS:") After Arcane Fire hits enemy Infantry, it is ensnared until your next turn: -2" Move and -2 Charge.
+      - #b("BINDING TENDRILS:") in MY Shooting phase, after shooting, choose one enemy INFANTRY unit hit by Arcane Fire: -2" Move and -2 Charge until start of my next turn.
     ]
     #v(1.2pt)
-    #card("Fatecaster Greatbows", note: "MOUNTED | Fly | Led by the Disc Sorcerer", stroke: blue, title-fill: blue)[
+    #card("Fatecaster Greatbows", note: "MOUNTED | FLY | Unit has GRENADES while Disc leads", stroke: blue, title-fill: blue)[
       #stats(([Enlightened], [10"], [4], [5+/5++], [2], [7+], [2]))
       #v(1pt)
       #weapons((
         [3x Fatecaster greatbow], [30"], [2], [4+], [5], [-2], [2], [Ignores Cover, Lethal, Precision],
         [3x Close combat weapon], [M], [2], [4+], [4], [0], [1], [-],
       ))
-      - #b("MALIGN TRICKERY:") Opponent Movement, if an enemy ends a move within 8" and this unit is unengaged, make a Normal move up to D6".
+      - #b("MALIGN TRICKERY:") Opponent Movement, if an enemy ends a move within 8" and this unit is unengaged, the whole attached unit (including Disc) may move normally up to D6".
     ]
   ]
   #gap
 
   #group(stroke: purple)[
-    #card("Sorcerer", note: "INFANTRY | Attached to Rubric Marines", stroke: purple, title-fill: purple)[
+    #card("Sorcerer", note: "INFANTRY | GRENADES | Attached to Rubric Marines", stroke: purple, title-fill: purple)[
       #stats(([Sorcerer], [6"], [4], [3+/5++], [4], [6+], [1]))
       #v(1pt)
       #buff-weapons((
@@ -171,10 +172,10 @@
         [Force weapon], [M], [4 #r("+3A")], [3+], [6 #r("+3S")], [-1], [D3], [Psychic, #r("LETHAL HITS")],
       ))
       - #r("EMPYRIC GUIDANCE:") While leading, #r("ALL WEAPONS IN THE UNIT GAIN LETHAL HITS") (shown red on both cards).
-      - *Twisted Sorceries:* once/battle in Shooting/Fight, Sorcerer Psychic weapons get +3 Strength and Attacks for the phase.
+      - *Twisted Sorceries:* once/battle in MY Shooting or either Fight phase: this Sorcerer only gets +3 Strength/Attacks on Psychic weapons for the phase.
     ]
     #v(1.2pt)
-    #card("Rubric Marines", note: "INFANTRY | Bodyguard for the Sorcerer", stroke: purple, title-fill: purple)[
+    #card("Rubric Marines", note: "INFANTRY | Unit has GRENADES while Sorcerer leads", stroke: purple, title-fill: purple)[
       #stats((
         [Rubric Marine], [6"], [4], [3+/5++], [2], [7+], [2],
         [Aspiring Sorcerer], [6"], [4], [3+/5++], [3], [6+], [2],
@@ -193,7 +194,7 @@
   ]
 ][
 #group(stroke: indigo)[
-    #card("Sorcerer in Terminator Armour", note: "INFANTRY | Umbralefic Crystal | Attached to Scarabs", stroke: indigo, title-fill: indigo)[
+    #card("Sorcerer in Terminator Armour", note: "INFANTRY | Deep Strike | Umbralefic Crystal", stroke: indigo, title-fill: indigo)[
       #stats(([Terminator Sorcerer], [5"], [5], [2+/4++], [5], [6+], [1]))
       #v(1pt)
       #buff-weapons((
@@ -202,8 +203,8 @@
         [Force weapon], [M], [5], [3+], [6], [-1], [D3], [Psychic, #r("LETHAL HITS")],
       ))
       - #r("EMPYRIC GUIDANCE:") While leading, #r("ALL WEAPONS IN THE UNIT GAIN LETHAL HITS") (shown red on both cards).
-      - #r("MARKED BY FATE:") start of Shooting, select visible enemy; #r("EVERY MODEL IN THE ATTACHED UNIT GETS +1 TO HIT") against it for the phase (red on both cards).
-      - *Umbralefic Crystal:* once/battle/army in Command, if unengaged, place this unit in Strategic Reserves. It gains Deep Strike until your next Shooting phase and must make an ingress move in your next Movement phase (even turn 1).
+      - #r("MARKED BY FATE:") start of MY Shooting, select enemy visible to this Sorcerer; #r("EVERY MODEL IN THE ATTACHED UNIT GETS +1 TO HIT") against it for the phase (red on both cards).
+      - *Umbralefic Crystal:* once/battle/army in #r("MY COMMAND PHASE"), if unengaged, place the attached unit in Strategic Reserves. Deep Strike until my next Shooting phase; #r("MUST ingress in MY next Movement phase") (even turn 1).
     ]
     #v(1.2pt)
     #card("Scarab Occult Terminators", note: "INFANTRY | Bodyguard | Soulreaper cannons | Hellfyre missile racks", stroke: indigo, title-fill: indigo)[
@@ -220,7 +221,7 @@
         [Force weapon], [M], [4], [3+], [6], [-1], [D3], [Psychic, #r("LETHAL HITS")],
         [9x Prosperine khopesh], [M], [3], [3+], [5], [-2], [2], [#r("LETHAL HITS")],
       ))
-      - Deep Strike. #r("Rites of Coalescence:") while unit contains a Psyker, attacks targeting it are #r("-1 TO WOUND").
+      - Deep Strike. #r("Rites of Coalescence:") while unit contains a Psyker, attacks against the #r("WHOLE ATTACHED UNIT are -1 TO WOUND").
     ]
   ]
   #gap
@@ -241,9 +242,10 @@
 #line(length: 100%, stroke: 1.2pt + gold)
 #text(size: 7pt, weight: "bold", fill: gold)[ARMY RULES, STRATAGEMS & PHASE REMINDERS]
 #v(2pt)
+#set text(size: 5.8pt)
 #grid(columns: (1fr, 1fr, 1fr), gutter: 3pt, align: top)[
 #card("Grand Coven Detachment Rule")[
-    #rule("Kindred Sorcery - Command")[Choose one until your next Command phase; each choice is once per battle:]
+    #rule("Kindred Sorcery - MY Command")[Choose one until your next Command phase; each choice is once per battle:]
     - *Imbued Manifestation:* +6" range to ranged Psychic weapons.
     - *Psychic Maelstrom:* +1 to Wound with Psychic weapons.
     - *Wrath of the Immaterium:* Psychic weapons gain Devastating Wounds.
@@ -255,10 +257,10 @@
       columns: (.52fr, 1.12fr, 4fr), inset: cellpad, stroke: 0.25pt + linec,
       fill: (x, y) => if y == 0 { soft },
       table.header[*WC*][*Ritual*][*Effect*],
-      [5/10], [Destiny's Ruin], [Visible enemy within 24": TS/Scintillating attacks re-roll Hit 1; 10+ re-roll Hits.],
+      [5/10], [Destiny's Ruin], [Visible enemy within 24": TS/Scintillating attacks re-roll Hit 1; 10+ re-roll Hits. This phase.],
       [6/10], [Temporal Surge], [Visible friendly TS/Scintillating within 24", not engaged: Normal move D6"; 10+ move 6". Cannot charge.],
-      [7/11], [Doombolt], [Visible enemy within 24" suffers D3 mortals; 11+ D3+3. Lone Operative exclusion outside 12".],
-      [9/12], [Twist of Fate], [Visible enemy within 24": TS/Scintillating attacks improve AP by 1; 12+ improve by 2.],
+      [7/11], [Doombolt], [Visible enemy within 24" suffers D3 mortals; 11+ D3+3. Exclude unattached Lone Operatives beyond 12".],
+      [9/12], [Twist of Fate], [Visible enemy within 24": TS/Scintillating attacks improve AP by 1; 12+ by 2. This phase.],
     )
   ]
 ][
@@ -267,16 +269,27 @@
     #rule("ARCANE FOCUS - 1CP, Shooting")[After a Channelled Psychic test, re-roll every D6 in that test.]
     #rule("DEVASTATING SORCERY - 2CP, Shooting")[One TS Psyker unit not yet selected to shoot: Psychic weapons get +9" range and full Hit/Wound re-rolls for the phase.]
     #rule("PSYCHIC DOMINION - 1CP, any phase")[After enemy selects targets: its Psychic weapons gain Hazardous; targeted TS unit gets FNP 4+ vs Psychic Attacks.]
-    #rule("EGOTISTICAL POWER - 1CP, Command")[One TS Psyker unit gets a selected Kindred Sorcery ability instead of the army-wide ability until next Command.]
-    #rule("DESECRATION OF WORLDS - 1CP, Command")[One TS Psyker unit on an objective you control makes it sticky.]
+    #rule("EGOTISTICAL POWER - 1CP, MY Command")[One TS Psyker unit gets a selected Kindred Sorcery ability instead of army choice until MY next Command; may reuse a spent choice.]
+    #rule("DESECRATION OF WORLDS - 1CP, MY Command")[One TS Psyker unit on an objective you control makes it sticky.]
+  ]
+  #gap
+  #card("Weapon & Attached-unit Interactions", stroke: purple, title-fill: purple)[
+    - *Torrent:* auto-hits; #r("no Lethal/Sustained triggers").
+    - *Lethal + Sustained:* original critical hit may auto-wound; extra hits still roll wounds.
+    - *11e Lethal is optional:* may roll to wound instead to seek Devastating Wounds. Anti 4+ triggers Devs on unmodified 4+ vs its listed target.
+    - *Pistols:* each model shoots pistols OR its other ranged weapons.
+    - *Psychic buffs:* weapon attacks only; no +range, +wound or +Damage to Rituals.
+    - *Buffs end with their source:* leader must be leading for Lethals/Illusions; Rubric re-rolls end when bodyguard dies; Icon ends when its bearer dies.
+    - *GRENADES:* only foot/Disc Sorcerer models have it here. Their attached units qualify; measure Explosives from the Sorcerer, not bodyguards.
   ]
 ][
 #card("Don't Forget - Phase Triggers", stroke: gold, title-fill: gold)[
     #rule("START OF BATTLE ROUND")[*Magnus:* choose one Unearthly Power ability.]
-    #rule("YOUR COMMAND PHASE")[Choose *Kindred Sorcery*. *Umbralefic Crystal:* once/battle/army, if unengaged, put the Terminator unit into Strategic Reserves; it must ingress next Movement phase.]
-    #rule("EACH PLAYER'S COMMAND PHASE")[#b("CHAOS SPAWN: one model regains up to 3 lost wounds.")]
-    #rule("START OF YOUR SHOOTING PHASE")[Attempt Rituals. *Marked by Fate:* select one visible enemy for the Terminator unit's +1 to Hit.]
-    #rule("AFTER THE DISC SORCERER SHOOTS")[#b("If Arcane Fire hit enemy Infantry, apply Binding Tendrils: -2\" Move and -2 Charge until your next turn.")]
+    #rule("MY COMMAND PHASE")[Choose *Kindred Sorcery*. *Umbralefic Crystal:* #r("MY COMMAND PHASE ONLY"), once/battle/army if unengaged. Reserve the attached unit; #r("MUST ingress in MY next Movement phase").]
+    #rule("START OF EACH PLAYER'S COMMAND PHASE")[#b("CHAOS SPAWN: one model regains up to 3 lost wounds.")]
+    #rule("START OF MY SHOOTING PHASE")[Attempt Rituals. *Marked by Fate:* select one visible enemy for the Terminator unit's +1 to Hit.]
+    #rule("MY SHOOTING - AFTER DISC SHOOTS")[#b("If Arcane Fire hit enemy Infantry, apply Binding Tendrils: -2\" Move and -2 Charge until your next turn.")]
+    #rule("START OF OPPONENT SHOOTING")[*Magnus:* if Treason chosen, select one enemy within 24"; its ranged weapons gain Hazardous this phase.]
     #rule("OPPONENT'S MOVEMENT PHASE")[#b("GREATBOWS: after an enemy ends a move within 8\", if unengaged, make a Normal move up to D6\".")]
     #rule("AFTER THE SPEARS CHARGE")[Roll one D6 per engaged model; each 4+ inflicts 1 mortal wound.]
     #rule("END OF OPPONENT'S TURN")[*Tzaangors:* if more than 6" from every enemy, you may put the unit into Strategic Reserves.]
