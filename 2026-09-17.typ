@@ -285,14 +285,41 @@
   ]
 ][
 #card("Don't Forget - Phase Triggers", stroke: gold, title-fill: gold)[
-    #rule("START OF BATTLE ROUND")[*Magnus:* choose one Unearthly Power ability.]
-    #rule("MY COMMAND PHASE")[Choose *Kindred Sorcery*. *Umbralefic Crystal:* #r("MY COMMAND PHASE ONLY"), once/battle/army if unengaged. Reserve the attached unit; #r("MUST ingress in MY next Movement phase").]
-    #rule("START OF EACH PLAYER'S COMMAND PHASE")[#b("CHAOS SPAWN: one model regains up to 3 lost wounds.")]
-    #rule("START OF MY SHOOTING PHASE")[Attempt Rituals. *Marked by Fate:* select one visible enemy for the Terminator unit's +1 to Hit.]
-    #rule("MY SHOOTING - AFTER DISC SHOOTS")[#b("If Arcane Fire hit enemy Infantry, apply Binding Tendrils: -2\" Move and -2 Charge until your next turn.")]
-    #rule("START OF OPPONENT SHOOTING")[*Magnus:* if Treason chosen, select one enemy within 24"; its ranged weapons gain Hazardous this phase.]
-    #rule("OPPONENT'S MOVEMENT PHASE")[#b("GREATBOWS: after an enemy ends a move within 8\", if unengaged, make a Normal move up to D6\".")]
-    #rule("AFTER THE SPEARS CHARGE")[Roll one D6 per engaged model; each 4+ inflicts 1 mortal wound.]
-    #rule("END OF OPPONENT'S TURN")[*Tzaangors:* if more than 6" from every enemy, you may put the unit into Strategic Reserves.]
+    #let phase(title, body, opponent: false) = block(width: 100%, above: 1.5pt, below: 0pt)[
+      #block(width: 100%, fill: if opponent { blue-soft } else { teal-soft }, inset: (x: 2pt, y: 1pt))[
+        #text(weight: "bold", fill: if opponent { blue } else { teal }, title)
+      ]
+      #set list(indent: 5pt, body-indent: 2pt, spacing: 1.5pt)
+      #body
+    ]
+    #phase("START OF BATTLE ROUND")[- *Magnus:* choose one Unearthly Power.]
+    #phase("MY COMMAND PHASE")[
+      - #b("Start - Spawn: one model heals up to 3 wounds.")
+      - Choose *Kindred Sorcery*.
+      - *Crystal:* #r("MY COMMAND PHASE ONLY"), once/battle/army, unengaged: reserve attached unit.
+    ]
+    #phase("MY MOVEMENT PHASE")[
+      - *Crystal:* #r("MUST ingress") if used this turn.
+    ]
+    #phase("MY SHOOTING PHASE")[
+      - *Start:* attempt Rituals.
+      - *Start - Marked by Fate:* visible enemy; Terminator unit gets +1 Hit against it this phase.
+      - #b("After Disc shoots: Arcane Fire hit Infantry? -2\" Move/-2 Charge until your next turn.")
+    ]
+    #phase("MY CHARGE PHASE")[
+      - *After Spears charge:* D6 per engaged model; each 4+ inflicts 1 mortal wound.
+    ]
+    #phase("OPPONENT'S COMMAND PHASE", opponent: true)[
+      - #b("Start - Spawn: one model heals up to 3 wounds.")
+    ]
+    #phase("OPPONENT'S MOVEMENT PHASE", opponent: true)[
+      - #b("Greatbows: enemy ends move within 8\", if unengaged, Normal move up to D6\".")
+    ]
+    #phase("OPPONENT'S SHOOTING PHASE", opponent: true)[
+      - *Start - Magnus:* if Treason chosen, enemy within 24": ranged weapons Hazardous this phase.
+    ]
+    #phase("END OF OPPONENT'S TURN", opponent: true)[
+      - *Tzaangors:* >6" from all enemies: may enter Strategic Reserves.
+    ]
   ]
 ]
