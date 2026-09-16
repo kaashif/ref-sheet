@@ -166,8 +166,8 @@
       #stats(([Sorcerer], [6"], [4], [3+/5++], [4], [6+], [1]))
       #v(1pt)
       #buff-weapons((
-        [Inferno bolt pistol], [12"], [1], [3+], [4], [-1], [1], [Pistol, #r("LETHAL HITS")],
-        [Pandaemonic Delusion], [24"], [6 #r("+3A")], [3+], [5 #r("+3S")], [-1], [1], [Psychic, Sustained Hits 3, #r("LETHAL HITS")],
+        [Inferno bolt pistol], [12"], [1], [3+], [4 #r("RR1W/RRW obj")], [-1], [1], [Pistol, #r("LETHAL HITS")],
+        [Pandaemonic Delusion], [24"], [6 #r("+3A")], [3+], [5 #r("+3S") #r("RR1W/RRW obj")], [-1], [1], [Psychic, Sustained Hits 3, #r("LETHAL HITS")],
         [Force weapon], [M], [4 #r("+3A")], [3+], [6 #r("+3S")], [-1], [D3], [Psychic, #r("LETHAL HITS")],
       ))
       - #r("EMPYRIC GUIDANCE:") While leading, #r("ALL WEAPONS IN THE UNIT GAIN LETHAL HITS") (shown red on both cards).
@@ -188,7 +188,7 @@
         [Force weapon], [M], [3], [3+], [6], [-1], [D3], [Psychic, #r("LETHAL HITS")],
         [4x Close combat weapon], [M], [2], [3+], [4], [0], [1], [#r("LETHAL HITS")],
       ))
-      - *Bringers of Change:* ranged attacks re-roll Wound 1; full Wound re-roll into a target on an objective you do not control. *Icon:* ranged weapons gain Ignores Cover.
+      - #r("BRINGERS OF CHANGE:") #r("Entire attached unit, INCLUDING SORCERER:") ranged attacks re-roll Wound 1; full Wound re-roll against a target within range of an objective you do not control. *Icon:* non-Character models' ranged weapons gain Ignores Cover.
     ]
   ]
 ][
