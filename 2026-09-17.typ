@@ -51,8 +51,8 @@
   table.header[*Model*][*M*][*T*][*Sv*][*W*][*Ld*][*OC*], ..rows,
 )
 
-#let weapons(rows) = table(
-  columns: (2.2fr, .7fr, .55fr, .62fr, .55fr, .55fr, .62fr, 2.25fr),
+#let weapons(rows, widths: (2.2fr, .7fr, .55fr, .62fr, .55fr, .55fr, .62fr, 2.25fr)) = table(
+  columns: widths,
   inset: cellpad, stroke: 0.25pt + linec,
   fill: (x, y) => if y == 0 { blue-soft },
   table.header[*Weapon*][*Rng*][*A*][*Hit*][*S*][*AP*][*D*][*Key*], ..rows,
@@ -88,14 +88,14 @@
     #stats(([Prince], [13"], [9], [2+/4++], [10], [6+], [3]))
     #v(1pt)
     #weapons((
-      [Dark Blessing], [24"], [9], [2+], [#r("5")], [-1], [#r("2")], [Ignores Cover, Psychic, Sustained 1],
-      [Infernal cannon], [24"], [3], [2+], [5], [-2], [2], [-],
-      [Hellforged - strike], [M], [6], [2+], [#r("9")], [-2], [#r("4")], [Devs, Psychic],
-      [Hellforged - sweep], [M], [12], [2+], [#r("7")], [-1], [#r("2")], [Devs, Psychic],
-    ))
+      [Dark Blessing], [24"], [9], [2+ #linebreak() #r("RR1 C") #linebreak() #r("RR PC")], [#r("5") #linebreak() #r("RR1 C") #linebreak() #r("RR PC")], [-1], [#r("2")], [Ignores Cover, Psychic, Sustained 1],
+      [Infernal cannon], [24"], [3], [2+ #linebreak() #r("RR1 C") #linebreak() #r("RR PC")], [5 #linebreak() #r("RR1 C") #linebreak() #r("RR PC")], [-2], [2], [-],
+      [Hellforged - strike], [M], [6], [2+ #linebreak() #r("RR1 C") #linebreak() #r("RR PC")], [#r("9") #linebreak() #r("RR1 C") #linebreak() #r("RR PC")], [-2], [#r("4")], [Devs, Psychic],
+      [Hellforged - sweep], [M], [12], [2+ #linebreak() #r("RR1 C") #linebreak() #r("RR PC")], [#r("7") #linebreak() #r("RR1 C") #linebreak() #r("RR PC")], [-1], [#r("2")], [Devs, Psychic],
+    ), widths: (1.6fr, .65fr, .5fr, 1.35fr, 1.35fr, .5fr, .5fr, 1.8fr))
     - #r("Eldritch Vortex:") +1 Strength and Damage to bearer Psychic weapons (red above).
-    - *Aetherstride:* when Deep Striking in #r("MY Movement phase"), may land >6" horizontally from enemies. Dark Blessing gets #r("Sustained D3") and no charge, both until turn end.
-    - *Hunter of Souls:* #r("ALL attacks: RR Hit/Wound 1") vs CHARACTER units; #r("full Hit/Wound RR") vs PSYKER CHARACTER units. Destroy such a unit: heal D3, or 3 if PSYKER.
+    - *Aetherstride:* Deep Strike in #r("MY Movement"): may land >6" horizontally away; Dark Blessing #r("Sustained D3"), no charge (this turn).
+    - *Hunter:* #r("RR1 C: Hit/Wound 1s vs CHARACTER units. RR PC: full RR vs PSYKER CHARACTER units.") Destroy one: heal D3 (3 if PSYKER).
   ]
 #gap
 #group[
@@ -131,7 +131,8 @@
   ]
   #gap
 
-  #card("Tzaangors", note: "INFANTRY | Scouts 6\"")[
+#gap
+#card("Tzaangors", note: "INFANTRY | Scouts 6\"")[
     #stats(([Tzaangor], [6"], [4], [6+/6++], [1], [7+], [1]))
     #v(1pt)
     #weapons(([10x Tzaangor blades], [M], [2], [4+], [5], [0], [1], [-]))
@@ -260,6 +261,13 @@
       [9/12], [Twist of Fate], [Visible enemy within 24": TS/Scintillating attacks improve AP by 1; 12+ by 2. This phase.],
     )
   ]
+#gap
+#card("Weapon Interactions", stroke: purple, title-fill: purple)[
+    - *Torrent:* auto-hits; #r("no Lethal/Sustained triggers").
+    - *Lethal + Sustained:* original critical hit may auto-wound; extra hits still roll wounds.
+    - *11e Lethal is optional:* may roll to wound instead to seek Devastating Wounds. Anti 4+ triggers Devs on unmodified 4+ vs its listed target.
+    - *Pistols:* each model shoots pistols OR its other ranged weapons.
+  ]
 ][
 #card("Grand Coven Stratagems", stroke: red, title-fill: red)[
     #rule("DESTINED BY FATE - 1CP, any phase")[After a save fails for a TS Psyker model, change that attack's Damage to 0.]
@@ -270,11 +278,7 @@
     #rule("DESECRATION OF WORLDS - 1CP, MY Command")[One TS Psyker unit on an objective you control makes it sticky.]
   ]
   #gap
-  #card("Weapon & Attached-unit Interactions", stroke: purple, title-fill: purple)[
-    - *Torrent:* auto-hits; #r("no Lethal/Sustained triggers").
-    - *Lethal + Sustained:* original critical hit may auto-wound; extra hits still roll wounds.
-    - *11e Lethal is optional:* may roll to wound instead to seek Devastating Wounds. Anti 4+ triggers Devs on unmodified 4+ vs its listed target.
-    - *Pistols:* each model shoots pistols OR its other ranged weapons.
+  #card("Attached-unit Interactions", stroke: purple, title-fill: purple)[
     - *Psychic buffs:* weapon attacks only; no +range, +wound or +Damage to Rituals.
     - *Buffs end with their source:* leader must be leading for Lethals/Illusions; Rubric re-rolls end when bodyguard dies; Icon ends when its bearer dies.
     - *GRENADES:* only foot/Disc Sorcerer models have it here. Their attached units qualify; measure Explosives from the Sorcerer, not bodyguards.
