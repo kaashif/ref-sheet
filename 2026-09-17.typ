@@ -82,29 +82,8 @@
 #line(length: 100%, stroke: 0.8pt + teal)
 #v(2pt)
 
-#columns(3, gutter: 3pt)[
-  #card("Grand Coven Detachment Rule")[
-    #rule("Kindred Sorcery - Command")[Choose one until your next Command phase; each choice is once per battle:]
-    - *Imbued Manifestation:* +6" range to ranged Psychic weapons.
-    - *Psychic Maelstrom:* +1 to Wound with Psychic weapons.
-    - *Wrath of the Immaterium:* Psychic weapons gain Devastating Wounds.
-  ]
-  #gap
-
-  #card("Rituals")[
-    #table(
-      columns: (.52fr, 1.12fr, 4fr), inset: cellpad, stroke: 0.25pt + linec,
-      fill: (x, y) => if y == 0 { soft },
-      table.header[*WC*][*Ritual*][*Effect*],
-      [5/10], [Destiny's Ruin], [Visible enemy within 24": TS/Scintillating attacks re-roll Hit 1; 10+ re-roll Hits.],
-      [6/10], [Temporal Surge], [Visible friendly TS/Scintillating within 24", not engaged: Normal move D6"; 10+ move 6". Cannot charge.],
-      [7/11], [Doombolt], [Visible enemy within 24" suffers D3 mortals; 11+ D3+3. Lone Operative exclusion outside 12".],
-      [9/12], [Twist of Fate], [Visible enemy within 24": TS/Scintillating attacks improve AP by 1; 12+ improve by 2.],
-    )
-  ]
-  #gap
-
-  #card("Magnus the Red", note: "MONSTER | Must be Warlord | Deep Strike | Deadly Demise D6")[
+#grid(columns: (1fr, 1fr, 1fr), gutter: 3pt, align: top)[
+#card("Magnus the Red", note: "MONSTER | Must be Warlord | Deep Strike | Deadly Demise D6")[
     #stats(([Magnus], [14"], [11], [2+/4++], [16], [5+], [6]))
     #v(1pt)
     #weapons((
@@ -140,10 +119,23 @@
     #melee-weapons(([2x Hideous mutations], [M], [D6+2], [4+], [5], [-1], [2]))
     - #b("REGENERATING MONSTROSITIES:") #b("At the start of each player's Command phase, one model regains up to 3 lost wounds.")
   ]
+#gap
+#card("Tzaangor Enlightened - Spears", note: "MOUNTED | Fly")[
+    #stats(([Enlightened], [10"], [4], [5+/5++], [2], [7+], [2]))
+    #v(1pt)
+    #weapons(([3x Divining spear], [M], [3], [4+], [5], [-1], [2], [Lance, Precision]))
+    - *Prophesied Doom:* after charging, select an enemy in Engagement Range; roll for each model in this unit within Engagement Range of it, each 4+ inflicts 1 mortal.
+  ]
+  #gap
 
-  #colbreak()
-
-  #group[
+  #card("Tzaangors", note: "INFANTRY | Scouts 6\"")[
+    #stats(([Tzaangor], [6"], [4], [6+/6++], [1], [7+], [1]))
+    #v(1pt)
+    #weapons(([10x Tzaangor blades], [M], [2], [4+], [5], [0], [1], [-]))
+    - *Ambushing Hunters:* end of opponent's turn, if more than 6" from all enemies, remove this unit into Strategic Reserves.
+  ]
+][
+#group[
     #card("Exalted Sorcerer on Disc", note: "INFANTRY / MOUNTED | Incandaeum | Leads the Greatbows", stroke: blue, title-fill: blue)[
       #stats(([Exalted Sorcerer], [10"], [4], [3+/4++], [6], [6+], [2]))
       #v(1pt)
@@ -199,26 +191,8 @@
       - *Bringers of Change:* ranged attacks re-roll Wound 1; full Wound re-roll into a target on an objective you do not control. *Icon:* ranged weapons gain Ignores Cover.
     ]
   ]
-  #gap
-
-  #card("Tzaangor Enlightened - Spears", note: "MOUNTED | Fly")[
-    #stats(([Enlightened], [10"], [4], [5+/5++], [2], [7+], [2]))
-    #v(1pt)
-    #weapons(([3x Divining spear], [M], [3], [4+], [5], [-1], [2], [Lance, Precision]))
-    - *Prophesied Doom:* after charging, select an enemy in Engagement Range; roll for each model in this unit within Engagement Range of it, each 4+ inflicts 1 mortal.
-  ]
-  #gap
-
-  #card("Tzaangors", note: "INFANTRY | Scouts 6\"")[
-    #stats(([Tzaangor], [6"], [4], [6+/6++], [1], [7+], [1]))
-    #v(1pt)
-    #weapons(([10x Tzaangor blades], [M], [2], [4+], [5], [0], [1], [-]))
-    - *Ambushing Hunters:* end of opponent's turn, if more than 6" from all enemies, remove this unit into Strategic Reserves.
-  ]
-
-  #colbreak()
-
-  #group(stroke: indigo)[
+][
+#group(stroke: indigo)[
     #card("Sorcerer in Terminator Armour", note: "INFANTRY | Umbralefic Crystal | Attached to Scarabs", stroke: indigo, title-fill: indigo)[
       #stats(([Terminator Sorcerer], [5"], [5], [2+/4++], [5], [6+], [1]))
       #v(1pt)
@@ -262,9 +236,33 @@
     ))
     - *Prophetic Sentinels:* once/turn, when targeted with Fire Overwatch/Heroic Intervention, that use costs 1CP less.
   ]
+]
+#v(4pt)
+#line(length: 100%, stroke: 1.2pt + gold)
+#text(size: 7pt, weight: "bold", fill: gold)[ARMY RULES, STRATAGEMS & PHASE REMINDERS]
+#v(2pt)
+#grid(columns: (1fr, 1fr, 1fr), gutter: 3pt, align: top)[
+#card("Grand Coven Detachment Rule")[
+    #rule("Kindred Sorcery - Command")[Choose one until your next Command phase; each choice is once per battle:]
+    - *Imbued Manifestation:* +6" range to ranged Psychic weapons.
+    - *Psychic Maelstrom:* +1 to Wound with Psychic weapons.
+    - *Wrath of the Immaterium:* Psychic weapons gain Devastating Wounds.
+  ]
   #gap
 
-  #card("Grand Coven Stratagems", stroke: red, title-fill: red)[
+  #card("Rituals")[
+    #table(
+      columns: (.52fr, 1.12fr, 4fr), inset: cellpad, stroke: 0.25pt + linec,
+      fill: (x, y) => if y == 0 { soft },
+      table.header[*WC*][*Ritual*][*Effect*],
+      [5/10], [Destiny's Ruin], [Visible enemy within 24": TS/Scintillating attacks re-roll Hit 1; 10+ re-roll Hits.],
+      [6/10], [Temporal Surge], [Visible friendly TS/Scintillating within 24", not engaged: Normal move D6"; 10+ move 6". Cannot charge.],
+      [7/11], [Doombolt], [Visible enemy within 24" suffers D3 mortals; 11+ D3+3. Lone Operative exclusion outside 12".],
+      [9/12], [Twist of Fate], [Visible enemy within 24": TS/Scintillating attacks improve AP by 1; 12+ improve by 2.],
+    )
+  ]
+][
+#card("Grand Coven Stratagems", stroke: red, title-fill: red)[
     #rule("DESTINED BY FATE - 1CP, any phase")[After a save fails for a TS Psyker model, change that attack's Damage to 0.]
     #rule("ARCANE FOCUS - 1CP, Shooting")[After a Channelled Psychic test, re-roll every D6 in that test.]
     #rule("DEVASTATING SORCERY - 2CP, Shooting")[One TS Psyker unit not yet selected to shoot: Psychic weapons get +9" range and full Hit/Wound re-rolls for the phase.]
@@ -272,9 +270,8 @@
     #rule("EGOTISTICAL POWER - 1CP, Command")[One TS Psyker unit gets a selected Kindred Sorcery ability instead of the army-wide ability until next Command.]
     #rule("DESECRATION OF WORLDS - 1CP, Command")[One TS Psyker unit on an objective you control makes it sticky.]
   ]
-  #gap
-
-  #card("Don't Forget - Phase Triggers", stroke: gold, title-fill: gold)[
+][
+#card("Don't Forget - Phase Triggers", stroke: gold, title-fill: gold)[
     #rule("START OF BATTLE ROUND")[*Magnus:* choose one Unearthly Power ability.]
     #rule("YOUR COMMAND PHASE")[Choose *Kindred Sorcery*. *Umbralefic Crystal:* once/battle/army, if unengaged, put the Terminator unit into Strategic Reserves; it must ingress next Movement phase.]
     #rule("EACH PLAYER'S COMMAND PHASE")[#b("CHAOS SPAWN: one model regains up to 3 lost wounds.")]
