@@ -14,7 +14,7 @@ typst compile sheet.typ thousand-sons-reference.pdf
 
 ## Additional reference sheets
 
-- `output/pdf/2026-09-17.pdf` is the dated, one-page A4 portrait Thousand Sons sheet for New Recruit v36.2 / Data v13. Rebuild with `typst compile 2026-09-17.typ output/pdf/2026-09-17.pdf`. Unspecified weapons retain the previously requested Rubric warpflamers/Soulreaper and Terminator Soulreapers.
+- `output/pdf/2026-09-17.pdf` is the dated A4 portrait Thousand Sons sheet for New Recruit v36.2 / Data v13: the original one-page reference plus a second page of Priority Assets mirror deployment examples against big Knights. Rebuild with `typst compile 2026-09-17.typ output/pdf/2026-09-17.pdf`. Deployment notes live in `deployment-examples.typ`; attributed map artwork is in `assets/deployments/`. Unspecified weapons retain the previously requested Rubric warpflamers/Soulreaper and Terminator Soulreapers.
 - `output/pdf/tsons-grand-coven-2000-reference.pdf` is the one-page A4 portrait Grand Coven sheet for the New Recruit v35.82 roster.
 - `necrons-reference.pdf` is the Triple C'tan Awakened Dynasty sheet built from `necrons_list`.
 - `necrons-nekrosor-reference.pdf` is the Nekrosor Awakened Dynasty sheet built from `necrons_nekrosor_list`.
