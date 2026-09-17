@@ -15,7 +15,7 @@
 ]
 #let labels = (
   "K2": "Castellan", "L": "Lancer", "K3": "Crusader",
-  "K4": "Paladin", "K5": "Valiant", "M?": "Magnus\nT2 option",
+  "K4": "Paladin", "K5": "Valiant", "Magnus": "Magnus",
   "E": "Spear disc", "Z": "Tzaangor", "SP": "Spawn", "RO": "Robot",
   "R2": "Rubric 2\n+ sorc", "T": "Termies\n+ term sorc", "DP": "DP",
   "R1": "Rubric 1\n+ sorc", "B": "Bow disc\n+ disc sorc",
@@ -44,13 +44,13 @@
 #text(size: 14pt, weight: "bold", fill: teal)[PRIORITY ASSETS MIRROR / BIG KNIGHTS]
 #h(1fr) #text(size: 7pt)[17 SEP 2026 • DEPLOYMENT NOTES]
 #line(length: 100%, stroke: 1pt + gold)
-*Plan: Magnus starts in reserve; the rest of the army scores and keeps options open.*
+*Plan: Magnus deploys on the table at the back; the army stages under cover and scores.*
 These are suggested staging areas on the three GDM mirror maps, not exact model footprints or guaranteed hiding spots. You are *blue/Defender*; rotate the plan 180° for the other side. Confirm your event uses these layouts.
 
-#panel("MAGNUS: YES TO RESERVE, NO TO AN AUTOMATICALLY SAFE DROP")[
-  Start in reserve to avoid turn-one shooting/charges. His Deep Strike allows arrival in your turn two, *more than 8\" horizontally from all enemies*, including in their deployment zone. Fit his whole base legally; arrive by the end of round three. Initial reserves are capped at half your army's points limit. [1, 2]
+#panel("MAGNUS: DEPLOY AT THE BACK")[
+  *Magnus starts on the battlefield, not in reserve.* Use the rear pocket and check actual line of sight from the Knights' likely firing positions. Being far from the Lancer is not enough if the gunline can see him. Terrain and legal base placement decide the exact position; the maps do not guarantee safety.
 
-  *Recommendation:* start the Terminator unit on the table, hidden, with Crystal available. On turn two choose Magnus's landing only after checking every Knight's next movement and charge routes, firing lanes, screening and your own support. A far flank is an option, not a promise of safety. *Magnus's gold marker is a future candidate, not a deployed model.*
+  Start the Terminators hidden on the table with Crystal available. Keep room to manoeuvre around Magnus rather than crowding the rear with support units. *All friendly map labels now show initial on-table staging areas.*
 ]
 #v(3pt)
 #grid(columns: (1fr, 1fr, 1fr), gutter: 6pt)[
@@ -58,43 +58,43 @@ These are suggested staging areas on the three GDM mirror maps, not exact model 
   #board(1, (
     (.08,.12,"K2",red), (.21,.28,"L",red), (.07,.40,"K3",red), (.05,.67,"K4",red), (.07,.91,"K5",red),
     (.86,.80,"R1",teal), (.88,.57,"R2",teal), (.70,.66,"T",purple), (.93,.72,"DP",purple),
-    (.85,.91,"B",blue), (.85,.39,"SP",blue), (.86,.11,"E",blue), (.91,.30,"Z",blue), (.85,.49,"RO",blue),
-    (.44,.91,"M?",gold),
+    (.71,.88,"B",blue), (.85,.39,"SP",blue), (.86,.11,"E",blue), (.91,.30,"Z",blue), (.85,.49,"RO",blue),
+    (.94,.97,"Magnus",purple),
   ))
   - *Stage:* main damage package in the lower blue pocket. Keep upper flank cheap; do not feed it Rubrics piecemeal.
   - *Score:* send a small unit toward the lower-left expansion when the route is safe.
-  - *T2:* consider the lower lane if the Lancer commits high; check the Paladin and Valiant too.
+  - *Magnus:* deploy in the rear-right pocket, behind the home ruin if it blocks the relevant sight lines.
 ][
   #heading("02 / CRUCIBLE OF BATTLE")
   #board(2, (
     (.13,.11,"K2",red), (.31,.23,"L",red), (.09,.32,"K3",red), (.49,.06,"K4",red), (.72,.05,"K5",red),
     (.78,.88,"R1",teal), (.53,.92,"R2",teal), (.64,.77,"T",purple), (.86,.75,"DP",purple),
-    (.25,.95,"B",blue), (.66,.69,"SP",blue), (.12,.85,"E",blue), (.89,.97,"Z",blue), (.49,.85,"RO",blue),
-    (.86,.54,"M?",gold),
+    (.25,.95,"B",blue), (.66,.69,"SP",blue), (.12,.85,"E",blue), (.92,.64,"Z",blue), (.49,.85,"RO",blue),
+    (.94,.97,"Magnus",purple),
   ))
   - *Stage:* use the bottom-right depth; avoid lining up on the diagonal edge.
   - *Score:* expansion first; retain a second small unit for centre if Knights leave it open.
-  - *T2:* right-side arrival may support the brick if the Lancer pushes left. Check cross-board guns.
+  - *Magnus:* use the back-right corner as the planned deployment pocket. Keep support units out of his way.
 ][
   #heading("03 / TIPPING POINT")
   #board(3, (
     (.11,.11,"K2",red), (.31,.23,"L",red), (.09,.29,"K3",red), (.52,.07,"K4",red), (.83,.13,"K5",red),
     (.84,.87,"R1",teal), (.43,.93,"R2",teal), (.68,.78,"T",purple), (.92,.73,"DP",purple),
-    (.17,.87,"B",blue), (.54,.85,"SP",blue), (.10,.95,"E",blue), (.89,.96,"Z",blue), (.72,.69,"RO",blue),
-    (.86,.47,"M?",gold),
+    (.17,.87,"B",blue), (.54,.85,"SP",blue), (.10,.95,"E",blue), (.63,.96,"Z",blue), (.72,.69,"RO",blue),
+    (.94,.97,"Magnus",purple),
   ))
   - *Stage:* brick and Prince in the lower-right pocket; mobile scorers cover the lower-left route.
   - *Score:* do not funnel every unit through the middle to chase one Knight.
-  - *T2:* Magnus's right-side arrival only if vacated and defensible; otherwise use your own backfield.
+  - *Magnus:* deploy deep in the rear-right pocket. Do not expose him in the right midfield just because the Lancer is elsewhere.
 ]
-#text(size: 7.2pt)[*Read the maps:* compact labels mark staging areas, not model footprints. “+ sorc” shows an attached character; spear disc and bow disc distinguish the two Enlightened units. *Red:* enemy Knights. *Gold:* possible turn-two Magnus arrival, not an initial deployment.]
+#text(size: 7.2pt)[*Read the maps:* compact labels mark initial staging areas, not model footprints. “+ sorc” shows an attached character; spear disc and bow disc distinguish the two Enlightened units. *Red:* enemy Knights. *Purple:* Magnus, DP and Terminator package.]
 #v(3pt)
 #grid(columns: (1fr, 1fr), gutter: 7pt)[
   #panel("FIRST TWO TURNS / PLAY THE MISSION")[
-    - *Deployment:* hide valuable units from likely Knight firing positions, not only their starting positions. Keep a fallback pocket for Magnus; do not rely on a single thin infantry screen.
-    - *Your T1:* use cheap units for expansion/centre only when they can survive or earn enough VP. Keep the brick relevant while Magnus is absent; resist spending Crystal without a useful destination.
+    - *Deployment:* hide valuable units from likely Knight firing positions, not only their starting positions. Place Magnus at the rear; do not rely on a single thin infantry screen.
+    - *Your T1:* use cheap units for expansion/centre only when they can survive or earn enough VP. Stage Magnus and the brick conservatively; resist spending Crystal without a useful destination.
     - *Sabotage:* action in your Shooting phase, one eligible unit per different non-home objective. Finish at turn end controlling it: 3VP, +2 if in enemy territory. From round two, holding a non-home objective scores 4VP at Command end (turn end in round five). [3]
-    - *Your T2:* land Magnus to combine damage into one exposed Knight while preserving the next turn. If you go second, assess after their T2, not after their T1. Do not assume he kills his target.
+    - *Your T2:* reassess the gunline before moving Magnus out. Survival first; do not expose him just to force a shot. Commit only with a useful target, supporting damage and a plan for the Knights' reply.
   ]
 ][
   #panel("KNIGHT TRAPS / CHECK BEFORE PLACING MAGNUS")[
@@ -102,7 +102,7 @@ These are suggested staging areas on the three GDM mirror maps, not exact model 
     - *Screens:* Super-heavy Walker can cross non-Titanic models on normal/advance/fall-back moves. A thin line is not a wall. Check legal landing space beyond it. [1]
     - *Your Disc cannot slow a Knight:* Binding Tendrils targets INFANTRY. Use the bows' reactive move for positioning, not as guaranteed escape. [5]
     - *Your Prince:* these big Knight CHARACTER targets give RR1 Hit/Wound, not full re-rolls unless also PSYKER. The Terminator Sorcerer's Anti-Vehicle 4+ / Devs is relevant. [5]
-    - *Rapid Ingress is not the default:* it exposes Magnus during their turn. Use only after checking both remaining shooting and charges.
+    - *Do not crowd the rear:* leave Magnus a route to reposition without forcing him into an exposed lane.
   ]
 ]
 #v(3pt)
