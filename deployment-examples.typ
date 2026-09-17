@@ -13,13 +13,44 @@
   #heading(title)
   #body
 ]
-#let badge(x, y, label, color: teal) = place(top + left, dx: x * 61mm, dy: y * 83mm)[
-  #rect(fill: color, stroke: .6pt + white, radius: 1pt, inset: 1.5pt)[#text(size: 6.5pt, fill: white, weight: "bold", label)]
-]
-#let board(n, marks) = box(width: 61mm, height: 83mm, clip: true)[
-  #place(top + left, dx: -14.24mm, dy: -41.21mm)[
-    #image("assets/deployments/priority-assets-mirror-" + str(n) + ".png", width: 89.55mm, height: 153.47mm, fit: "stretch")
+#let labels = (
+  "K2": ("Knight Castellan", .01, .02),
+  "L": ("Cerastus Knight Lancer", .01, .14),
+  "K3": ("Knight Crusader", .01, .28),
+  "K4": ("Knight Paladin", .01, .43),
+  "K5": ("Knight Valiant", .01, .58),
+  "M?": ("Magnus the Red\nPossible turn-two arrival", .01, .77),
+  "E": ("Tzaangor Enlightened\n(Divining spears)", .53, .01),
+  "Z": ("Tzaangors", .53, .13),
+  "SP": ("Chaos Spawn", .53, .19),
+  "RO": ("Sekhetar Robots", .53, .25),
+  "R2": ("Rubric Marines\n+ Sorcerer\n(second unit)", .53, .32),
+  "T": ("Scarab Occult Terminators\n+ Sorcerer in Terminator Armour", .53, .44),
+  "DP": ("Daemon Prince of Tzeentch with wings", .53, .59),
+  "R1": ("Rubric Marines\n+ Sorcerer\n(first unit)", .53, .71),
+  "B": ("Tzaangor Enlightened with Fatecaster greatbows\n+ Exalted Sorcerer on Disc of Tzeentch", .53, .83),
+)
+#let badge(x, y, label, color: teal) = {
+  let (name, lx, ly) = labels.at(label)
+  place(top + left, dx: lx * 61mm, dy: ly * 101mm)[
+    #rect(width: 28mm, fill: color, stroke: .6pt + white, radius: 1pt, inset: 1.5pt)[
+      #set par(leading: .15em, spacing: 0pt)
+      #text(size: 6.5pt, fill: white, weight: "bold", name)
+    ]
   ]
+}
+#let board(n, marks) = box(width: 61mm, height: 101mm, clip: true)[
+  #place(top + left)[#box(width: 61mm, height: 83mm, clip: true)[
+    #place(top + left, dx: -14.24mm, dy: -41.21mm)[
+      #image("assets/deployments/priority-assets-mirror-" + str(n) + ".png", width: 89.55mm, height: 153.47mm, fit: "stretch")
+    ]
+  ]
+  ]
+  #for m in marks {
+    let (_, lx, ly) = labels.at(m.at(2))
+    place(top + left)[#line(start: (m.at(0) * 61mm, m.at(1) * 83mm), end: ((lx + .23) * 61mm, ly * 101mm), stroke: .8pt + m.at(3))]
+    place(top + left, dx: m.at(0) * 61mm - 1mm, dy: m.at(1) * 83mm - 1mm)[#circle(radius: 1mm, fill: m.at(3), stroke: .5pt + white)]
+  }
   #for m in marks { badge(m.at(0), m.at(1), m.at(2), color: m.at(3)) }
 ]
 
@@ -32,7 +63,7 @@ These are suggested staging areas on the three GDM mirror maps, not exact model 
 #panel("MAGNUS: YES TO RESERVE, NO TO AN AUTOMATICALLY SAFE DROP")[
   Start in reserve to avoid turn-one shooting/charges. His Deep Strike allows arrival in your turn two, *more than 8\" horizontally from all enemies*, including in their deployment zone. Fit his whole base legally; arrive by the end of round three. Initial reserves are capped at half your army's points limit. [1, 2]
 
-  *Recommendation:* start the Terminator unit on the table, hidden, with Crystal available. On turn two choose Magnus's landing only after checking every Knight's next movement and charge routes, firing lanes, screening and your own support. A far flank is an option, not a promise of safety. *M? below is a future candidate, not a deployed model.*
+  *Recommendation:* start the Terminator unit on the table, hidden, with Crystal available. On turn two choose Magnus's landing only after checking every Knight's next movement and charge routes, firing lanes, screening and your own support. A far flank is an option, not a promise of safety. *Magnus's gold marker is a future candidate, not a deployed model.*
 ]
 #v(3pt)
 #grid(columns: (1fr, 1fr, 1fr), gutter: 6pt)[
@@ -45,7 +76,7 @@ These are suggested staging areas on the three GDM mirror maps, not exact model 
   ))
   - *Stage:* main damage package in the lower blue pocket. Keep upper flank cheap; do not feed it Rubrics piecemeal.
   - *Score:* send a small unit toward the lower-left expansion when the route is safe.
-  - *T2:* consider the lower lane if the Lancer commits high; check K4/K5 too.
+  - *T2:* consider the lower lane if the Lancer commits high; check the Paladin and Valiant too.
 ][
   #heading("02 / CRUCIBLE OF BATTLE")
   #board(2, (
@@ -67,9 +98,9 @@ These are suggested staging areas on the three GDM mirror maps, not exact model 
   ))
   - *Stage:* brick and Prince in the lower-right pocket; mobile scorers cover the lower-left route.
   - *Score:* do not funnel every unit through the middle to chase one Knight.
-  - *T2:* right-side M? only if vacated and defensible; otherwise use your own backfield.
+  - *T2:* Magnus's right-side arrival only if vacated and defensible; otherwise use your own backfield.
 ]
-#text(size: 7.2pt)[*Key:* R1/R2 = Rubrics + Sorcerer; T = Scarabs + Terminator Sorcerer; DP = Prince; B = bows + Disc; SP = Spawn; E = spears; Z = Tzaangors; RO = Robots. *Red L/K2-K5* = illustrative five-Knight placement, with Lancer variation. *Gold M?* = possible T2 arrival. Tokens show areas, not bases.]
+#text(size: 7.2pt)[*Read the maps:* each full-name callout connects to its coloured staging dot; the box itself is not a unit footprint. Attached characters are named with their bodyguards. *Red:* example Knights. *Gold:* possible turn-two Magnus arrival, not an initial deployment.]
 #v(3pt)
 #grid(columns: (1fr, 1fr), gutter: 7pt)[
   #panel("FIRST TWO TURNS / PLAY THE MISSION")[
@@ -89,7 +120,7 @@ These are suggested staging areas on the three GDM mirror maps, not exact model 
 ]
 #v(3pt)
 #text(size: 7.1pt)[
-  *Listhammer baseline:* #link("https://listhammer.info/list/6bd8ec2f9675900b85")[Nathaniel Bjorge, Lone Star Open, 5-1]: Castellan, Crusader, Errant, Paladin, Valiant; five big Knights, no Armigers/allies, Priority Assets. This verified list has *no Lancer*: diagram L is an explicit hypothetical Lancer variation for your matchup, not a claim about that roster. [6]
+  *Listhammer baseline:* #link("https://listhammer.info/list/6bd8ec2f9675900b85")[Nathaniel Bjorge, Lone Star Open, 5-1]: Castellan, Crusader, Errant, Paladin, Valiant; five big Knights, no Armigers/allies, Priority Assets. This verified list has *no Lancer*: the diagrams replace the Errant with a hypothetical Lancer for your matchup, not as a claim about that roster or a points-checked army. [6]
 
   *Sources (clickable):* #link("https://wahapedia.ru/wh40k11ed/the-rules/core-rules/")[1 Core rules 20/24]; #link("https://wahapedia.ru/wh40k11ed/factions/thousand-sons/Magnus-The-Red")[2 Magnus]; #link("https://gdmissions.app/11th/primary-missions/priority-assets/sabotage")[3 Sabotage]; #link("https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Cerastus-Knight-Lancer")[4 Lancer]; #link("https://wahapedia.ru/wh40k11ed/factions/thousand-sons/")[5 Thousand Sons]; #link("https://listhammer.info/list/6bd8ec2f9675900b85")[6 Listhammer]. Map artwork: #link("https://game-datamissions.com/11th/layouts/priority-assets/priority-assets")[GDM 2026 layouts 1-3], annotated with illustrative staging areas. Tactics are suggestions, not rules or measured charge/visibility guarantees.
 ]
