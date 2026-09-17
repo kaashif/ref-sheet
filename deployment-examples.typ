@@ -14,43 +14,30 @@
   #body
 ]
 #let labels = (
-  "K2": ("Knight Castellan", .01, .02),
-  "L": ("Cerastus Knight Lancer", .01, .14),
-  "K3": ("Knight Crusader", .01, .28),
-  "K4": ("Knight Paladin", .01, .43),
-  "K5": ("Knight Valiant", .01, .58),
-  "M?": ("Magnus the Red\nPossible turn-two arrival", .01, .77),
-  "E": ("Tzaangor Enlightened\n(Divining spears)", .53, .01),
-  "Z": ("Tzaangors", .53, .13),
-  "SP": ("Chaos Spawn", .53, .19),
-  "RO": ("Sekhetar Robots", .53, .25),
-  "R2": ("Rubric Marines\n+ Sorcerer\n(second unit)", .53, .32),
-  "T": ("Scarab Occult Terminators\n+ Sorcerer in Terminator Armour", .53, .44),
-  "DP": ("Daemon Prince of Tzeentch with wings", .53, .59),
-  "R1": ("Rubric Marines\n+ Sorcerer\n(first unit)", .53, .71),
-  "B": ("Tzaangor Enlightened with Fatecaster greatbows\n+ Exalted Sorcerer on Disc of Tzeentch", .53, .83),
+  "K2": "Castellan", "L": "Lancer", "K3": "Crusader",
+  "K4": "Paladin", "K5": "Valiant", "M?": "Magnus\nT2 option",
+  "E": "Spear disc", "Z": "Tzaangor", "SP": "Spawn", "RO": "Robot",
+  "R2": "Rubric 2\n+ sorc", "T": "Termies\n+ term sorc", "DP": "DP",
+  "R1": "Rubric 1\n+ sorc", "B": "Bow disc\n+ disc sorc",
 )
-#let badge(x, y, label, color: teal) = {
-  let (name, lx, ly) = labels.at(label)
-  place(top + left, dx: lx * 61mm, dy: ly * 101mm)[
-    #rect(width: 28mm, fill: color, stroke: .6pt + white, radius: 1pt, inset: 1.5pt)[
-      #set par(leading: .15em, spacing: 0pt)
-      #text(size: 6.5pt, fill: white, weight: "bold", name)
+#let badge(x, y, label, color: teal) = context {
+  let tag = rect(fill: color, stroke: .7pt + white, radius: 1.5pt, inset: (x: 2.5pt, y: 2pt))[
+      #set par(leading: .22em, spacing: 0pt)
+      #set align(center)
+      #text(size: 7.2pt, fill: white, weight: "bold", labels.at(label))
     ]
-  ]
+  let size = measure(tag)
+  let left-pos = calc.max(1pt, calc.min(x * 61mm - size.width / 2, 61mm - size.width - 1pt))
+  let top-pos = calc.max(1pt, calc.min(y * 83mm - size.height / 2, 83mm - size.height - 1pt))
+  place(top + left, dx: left-pos, dy: top-pos, tag)
 }
-#let board(n, marks) = box(width: 61mm, height: 101mm, clip: true)[
+#let board(n, marks) = box(width: 61mm, height: 83mm, clip: true)[
   #place(top + left)[#box(width: 61mm, height: 83mm, clip: true)[
     #place(top + left, dx: -14.24mm, dy: -41.21mm)[
       #image("assets/deployments/priority-assets-mirror-" + str(n) + ".png", width: 89.55mm, height: 153.47mm, fit: "stretch")
     ]
   ]
   ]
-  #for m in marks {
-    let (_, lx, ly) = labels.at(m.at(2))
-    place(top + left)[#line(start: (m.at(0) * 61mm, m.at(1) * 83mm), end: ((lx + .23) * 61mm, ly * 101mm), stroke: .8pt + m.at(3))]
-    place(top + left, dx: m.at(0) * 61mm - 1mm, dy: m.at(1) * 83mm - 1mm)[#circle(radius: 1mm, fill: m.at(3), stroke: .5pt + white)]
-  }
   #for m in marks { badge(m.at(0), m.at(1), m.at(2), color: m.at(3)) }
 ]
 
@@ -70,7 +57,7 @@ These are suggested staging areas on the three GDM mirror maps, not exact model 
   #heading("01 / SWEEPING ENGAGEMENT")
   #board(1, (
     (.08,.12,"K2",red), (.21,.28,"L",red), (.07,.40,"K3",red), (.05,.67,"K4",red), (.07,.91,"K5",red),
-    (.86,.78,"R1",teal), (.88,.57,"R2",teal), (.76,.66,"T",purple), (.88,.69,"DP",purple),
+    (.86,.80,"R1",teal), (.88,.57,"R2",teal), (.70,.66,"T",purple), (.93,.72,"DP",purple),
     (.85,.91,"B",blue), (.85,.39,"SP",blue), (.86,.11,"E",blue), (.91,.30,"Z",blue), (.85,.49,"RO",blue),
     (.44,.91,"M?",gold),
   ))
@@ -82,7 +69,7 @@ These are suggested staging areas on the three GDM mirror maps, not exact model 
   #board(2, (
     (.13,.11,"K2",red), (.31,.23,"L",red), (.09,.32,"K3",red), (.49,.06,"K4",red), (.72,.05,"K5",red),
     (.78,.88,"R1",teal), (.53,.92,"R2",teal), (.64,.77,"T",purple), (.86,.75,"DP",purple),
-    (.30,.94,"B",blue), (.66,.69,"SP",blue), (.16,.95,"E",blue), (.87,.94,"Z",blue), (.49,.85,"RO",blue),
+    (.25,.95,"B",blue), (.66,.69,"SP",blue), (.12,.85,"E",blue), (.89,.97,"Z",blue), (.49,.85,"RO",blue),
     (.86,.54,"M?",gold),
   ))
   - *Stage:* use the bottom-right depth; avoid lining up on the diagonal edge.
@@ -92,15 +79,15 @@ These are suggested staging areas on the three GDM mirror maps, not exact model 
   #heading("03 / TIPPING POINT")
   #board(3, (
     (.11,.11,"K2",red), (.31,.23,"L",red), (.09,.29,"K3",red), (.52,.07,"K4",red), (.83,.13,"K5",red),
-    (.79,.86,"R1",teal), (.40,.91,"R2",teal), (.68,.80,"T",purple), (.85,.73,"DP",purple),
-    (.17,.87,"B",blue), (.55,.87,"SP",blue), (.10,.95,"E",blue), (.89,.94,"Z",blue), (.72,.69,"RO",blue),
+    (.84,.87,"R1",teal), (.43,.93,"R2",teal), (.68,.78,"T",purple), (.92,.73,"DP",purple),
+    (.17,.87,"B",blue), (.54,.85,"SP",blue), (.10,.95,"E",blue), (.89,.96,"Z",blue), (.72,.69,"RO",blue),
     (.86,.47,"M?",gold),
   ))
   - *Stage:* brick and Prince in the lower-right pocket; mobile scorers cover the lower-left route.
   - *Score:* do not funnel every unit through the middle to chase one Knight.
   - *T2:* Magnus's right-side arrival only if vacated and defensible; otherwise use your own backfield.
 ]
-#text(size: 7.2pt)[*Read the maps:* each full-name callout connects to its coloured staging dot; the box itself is not a unit footprint. Attached characters are named with their bodyguards. *Red:* example Knights. *Gold:* possible turn-two Magnus arrival, not an initial deployment.]
+#text(size: 7.2pt)[*Read the maps:* compact labels mark staging areas, not model footprints. “+ sorc” shows an attached character; spear disc and bow disc distinguish the two Enlightened units. *Red:* enemy Knights. *Gold:* possible turn-two Magnus arrival, not an initial deployment.]
 #v(3pt)
 #grid(columns: (1fr, 1fr), gutter: 7pt)[
   #panel("FIRST TWO TURNS / PLAY THE MISSION")[
