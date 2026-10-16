@@ -33,6 +33,8 @@ Individual datasheet links for table use:
 - **Army and detachment:** checked territory-based Shadow timing/thresholds, friendly Battle-shock healing/Plaguebearer returns, enemy Battle-shock penalty/mortals, matching-god and wholly-within arrival conditions, >6-inch Warp Rifts and >8-inch default distance. FAQ prevents an arriving Monster using its own newly arriving aura to reduce its arrival distance.
 - **All six stratagems:** CP costs, phase windows, eligibility and durations checked. Denizens has no printed charge prohibition. Realm of Chaos uses the updated mandatory ingress in the next own Movement phase, including turn one, and excludes engaged units. Corrupt Realspace adds a 6-inch Shadow area while the corrupted objective is controlled, unlike Plaguebearers' ordinary sticky ability.
 
+Kairos's two Gateway Strength cells show base S9 alongside conditional S10*, with the asterisk keyed to Lord of Change's +1 Strength aura within 6 inches. The melee profile remains unchanged.
+
 ## Validation
 
 Compiled with Typst 0.14.2; confirmed one A4 portrait page with `pdfinfo`. Rendered with Poppler and visually inspected after the final table sizing changes: no clipped or overlapping text, complete cards and readable numerical profiles. Saved the exact roster export and documented the rebuild command in README. This is a condensed roster aid; use the full rules for mission scoring, core stratagems, terrain and opponent-specific interactions.

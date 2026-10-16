@@ -115,14 +115,14 @@ table(
     #stats(([Kairos], [12"], [10], [6+/4++], [20], [6+], [5]))
     #v(1pt)
     #weapons((
-      [Gateway - safe], [24"], [D6+3], [2+], [9], [-2], [D3], [Blast, Indirect, Psychic],
-      [Gateway - focused], [24"], [D3+6], [2+], [9], [-2], [3], [Blast, Indirect, Haz, Psychic],
+      [Gateway - safe], [24"], [D6+3], [2+], [9 #linebreak() #r("10*")], [-2], [D3], [Blast, Indirect, Psychic],
+      [Gateway - focused], [24"], [D3+6], [2+], [9 #linebreak() #r("10*")], [-2], [3], [Blast, Indirect, Haz, Psychic],
       [Staff of Tomorrow], [M], [5], [3+], [8], [-2], [2D3], [Psychic],
     ))
     - *Tzeentch aura 6":* friendly Tzeentch Daemons are in Shadow (self included).
     - *One Head Looks Forward:* end of MY Command, if on battlefield: Leadership test; pass = +1CP. This is not a Battle-shock test.
     - #r("One Head Looks Back:") once/turn, opponent targets their unit within 12" of Kairos with a stratagem: may increase that use's cost by 1CP.
-    - Within 6" of Lord of Change: Gateway #r("S10").
+    - #r("10* in Strength cells:") Gateway is S10 instead of base S9 while within 6" of Lord of Change (+1 S aura).
     - *Damaged 1-7W:* -1 to Hit.
   ]
   #gap
@@ -146,7 +146,7 @@ table(
     - *All Monsters:* Deadly Demise D6.
     - Attacks are *per model/weapon*. Choose one safe/focused or strike/sweep profile; shoot all equipped ranged weapons.
     - *++* invulnerable save; *FNP* ignore lost wound on listed roll; *Haz* Hazardous; *Devs* Devastating Wounds.
-    - Red = applied self-buff. Nearby-unit bonuses are conditional; check ranges when resolving attacks.
+    - Red = buffed value. Nearby-unit bonuses are conditional; check listed aura ranges when resolving attacks.
   ]
 ][
   #card("Skarbrand", note: "MONSTER | KHORNE | ADVANCE AND CHARGE")[
