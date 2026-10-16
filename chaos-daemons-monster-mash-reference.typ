@@ -232,4 +232,3 @@ table(
 ]
 #v(2pt)
 #text(size: 4.5pt, fill: muted)[Profiles: official Chaos Daemons Faction Pack v1.1; condensed reminders, checked 16 Oct 2026. Points retained from supplied roster. Full source links / assumptions: rules/monster-mash-audit-2026-10-16.md.]
-
