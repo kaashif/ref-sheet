@@ -103,11 +103,11 @@ table(
   ]
   #gap
   #card("Plaguebearers", note: "INFANTRY | BATTLELINE | NURGLE")[
-    #stats(([All models], [5"], [5], [7+/5++], [2], [7+], [2]))
+    #stats(([All models], [5"], [5 #linebreak() #r("6*")], [7+/5++], [2], [7+], [2]))
     #v(1pt)
     #weapons(([Plaguesword], [M], [2], [3+], [4], [-1], [1], [Lethal]))
     - *Infected Outbreak:* end of MY Command, objective you control in range becomes sticky until opponent controls it at start/end of any turn.
-    - Within 6" of GUO: #r("T6") and in Shadow.
+    - #r("6* in Toughness cell:") T6 instead of base T5 while within 6" of GUO (+1 T aura); also in Shadow.
     - Icon/instrument absent from export: not applied. If equipped: Icon Ld6+; Instrument +1 Charge.
   ]
 ][

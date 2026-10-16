@@ -35,6 +35,8 @@ Individual datasheet links for table use:
 
 Kairos's two Gateway Strength cells show base S9 alongside conditional S10*, with the asterisk keyed to Lord of Change's +1 Strength aura within 6 inches. The melee profile remains unchanged.
 
+The Plaguebearers' Toughness cell shows base T5 alongside conditional T6*, keyed to the Great Unclean One's +1 Toughness aura within 6 inches.
+
 ## Validation
 
 Compiled with Typst 0.14.2; confirmed one A4 portrait page with `pdfinfo`. Rendered with Poppler and visually inspected after the final table sizing changes: no clipped or overlapping text, complete cards and readable numerical profiles. Saved the exact roster export and documented the rebuild command in README. This is a condensed roster aid; use the full rules for mission scoring, core stratagems, terrain and opponent-specific interactions.
