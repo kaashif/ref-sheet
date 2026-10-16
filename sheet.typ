@@ -9,6 +9,8 @@
 #let accent = rgb("#006b78")
 #let red = rgb("#8a2634")
 #let psychic-blue = rgb("#00a9ff")
+#let scout-pink = rgb("#c2185b")
+#let infiltrate-green = rgb("#16804a")
 
 #let cellpad = (x: 2pt, y: 1.4pt)
 #let r(body) = text(fill: red, weight: "bold", body)
@@ -18,26 +20,27 @@
 #show "psyC": p("psyC")
 #let datasheet-cols(body) = {
   block(width: 100%, height: 831.8898pt)[
-    #set text(size: 5.25pt)
-    #set par(leading: 0.22em, spacing: 0.14em)
+    #set text(size: 5.8pt)
+    #set par(leading: 0.24em, spacing: 0.14em)
     #body
   ]
 }
 
-#let head(title, pts: none, note: none) = {
+#let head(title, pts: none, note: none, tag: none, tag-fill: ink, title-fill: ink) = {
   grid(
-    columns: (1fr,),
+    columns: (1fr, auto),
     gutter: 4pt,
     align: horizon,
-    text(size: 9pt, weight: "bold", upper(title)),
+    text(size: 9pt, weight: "bold", fill: title-fill, upper(title)),
+    if tag != none { text(size: 8.2pt, weight: "bold", fill: tag-fill, upper(tag)) },
   )
-  if note != none { text(size: 6.1pt, fill: muted, note) }
+  if note != none { text(size: 6.6pt, fill: muted, note) }
   line(length: 100%, stroke: 0.45pt + ink)
 }
 
-#let card(title, pts: none, note: none, body) = {
+#let card(title, pts: none, note: none, tag: none, tag-fill: ink, title-fill: ink, body) = {
   rect(width: 100%, stroke: 0.55pt + ruleline, inset: 3.4pt)[
-    #head(title, pts: pts, note: note)
+    #head(title, pts: pts, note: note, tag: tag, tag-fill: tag-fill, title-fill: title-fill)
     #v(2pt)
     #body
   ]
@@ -84,16 +87,16 @@
     inset: if redname { 3.8pt } else { 3pt },
   )[
     #grid(columns: (1fr, auto), gutter: 4pt)[
-      #text(size: if redname { 8.8pt } else { 8pt }, weight: "bold", fill: if redname { red } else { ink })[#name]
-      #text(size: if redname { 8.8pt } else { 8pt }, weight: "bold", fill: if redname { red } else { ink })[#cost]
+      #text(size: if redname { 9.4pt } else { 8.6pt }, weight: "bold", fill: if redname { red } else { ink })[#name]
+      #text(size: if redname { 9.4pt } else { 8.6pt }, weight: "bold", fill: if redname { red } else { ink })[#cost]
     ]
-    #text(size: 5.9pt, fill: muted)[Grand Coven - #kind]
+    #text(size: 6.4pt, fill: muted)[Grand Coven - #kind]
     #v(1pt)
-    #text(size: 6.2pt)[*When:* #when]
+    #text(size: 6.8pt)[*When:* #when]
     #linebreak()
-    #text(size: 6.2pt)[*Target:* #target]
+    #text(size: 6.8pt)[*Target:* #target]
     #linebreak()
-    #text(size: 6.2pt)[*Effect:* #effect]
+    #text(size: 6.8pt)[*Effect:* #effect]
   ]
 }
 
@@ -206,9 +209,9 @@
 
   #colbreak()
 
-  #card("Sekhetar Robots")[
+  #card("Sekhetar Robots", tag: "Infiltrate", tag-fill: infiltrate-green, title-fill: infiltrate-green)[
     #stats((
-      [Sekhetar Robot], [8\"], [6], [3+/5++], [4], [7+], [1],
+      [Sekhetar Robot], [8\"], [6 #r("STLTH")], [3+/5++], [4], [7+], [1],
     ))
     #v(2pt)
     #weapons((
@@ -227,8 +230,8 @@
     #v(2pt)
     #weapons((
       [x1 Hades battle cannon], [48\"], [D6+3], [3+], [10], [-1], [3], [Blast],
-      [x2 Excruciator cannon], [36\"], [12], [3+], [6], [-2], [2], [-],
-      [x2 Heavy reaper autocannon], [48\"], [8], [3+], [9], [-2], [3], [Devs, Sustained Hits 1],
+      [Excruciator cannon (2x)], [36\"], [6], [3+], [6], [-2], [2], [-],
+      [Heavy reaper autocannon (2x)], [48\"], [4], [3+], [9], [-2], [3], [Devs, Sustained Hits 1],
       [x1 Shearing claws strike], [Melee], [5], [3+], [16], [-3], [D6+1], [-],
       [x1 Shearing claws sweep], [Melee], [10], [3+], [6], [-2], [1], [-],
     ))
@@ -266,7 +269,7 @@
 
   #v(4pt)
 
-  #card("Tzaangors")[
+  #card("Tzaangors", tag: "Scout", tag-fill: scout-pink, title-fill: scout-pink)[
     #stats((
       [Tzaangor], [6\"], [4], [6+/6++], [1], [7+], [1],
     ))
@@ -281,7 +284,7 @@
 ]
 ]
 
-#set text(font: "Arial", size: 7pt)
+#set text(font: "Arial", size: 8pt)
 
 #grid(columns: (1fr), gutter: 6pt, align: top)[
   #card("Cabal of Sorcerers")[
