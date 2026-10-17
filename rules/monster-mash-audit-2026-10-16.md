@@ -39,4 +39,14 @@ The Plaguebearers' Toughness cell shows base T5 alongside conditional T6*, keyed
 
 ## Validation
 
+### Aura display audit - 17 October 2026
+
+Cross-checked the five aura-source datasheets linked above. Every affected unit now has incoming defensive and Shadow aura markers, and every non-Torrent weapon profile has an RR1* marker inside its Hit cell. The key requires Be'lakor's Shadow Lord mode and range within 6 inches, including Be'lakor himself. Torrent profiles retain no Hit roll and receive no reroll marker. Wreathed's 18-inch ranged targeting restriction is marked on every card; the key requires range within 6 inches of Be'lakor with Wreathed selected. Shadow Lord, Wreathed and Pall are explicitly alternative battle-round choices.
+
+The incoming Shadow sources are listed per card: Be'lakor supplies every unit; GUO supplies itself and Plaguebearers; Kairos/LoC supply themselves and the Tzeentch units; Skarbrand supplies itself. Model aura ranges are 6 inches, while territory and Corrupt Realspace remain separate sources. Pall's enemy test/heal aura stays on Be'lakor's card. No extra god-specific buff is applied to Be'lakor.
+
+Numeric profile cells show base and starred buffed values: GUO T12/13*, Plaguebearers T5/6*, Kairos Gateway S9/10*, Flamers ranged S4/5*, Skarbrand melee A8/9* and A16/17*. LoC rod S8/11*, Bolt S9/12* and range 18/24* include its own ranged Strength aura plus the Shadow-tier Everstave once; its melee Staff is unchanged. LoC does not buff Screamer bites or Flamer mouths, and Skarbrand's +1 Attack aura affects no other model in this roster. Native/non-aura effects remain separate.
+
+Recompiled and inspected the final one-page A4 render, retaining the no-points/no-roster-quantities format. The linked copy on the prep site is refreshed from this PDF.
+
 Compiled with Typst 0.14.2; confirmed one A4 portrait page with `pdfinfo`. Rendered with Poppler and visually inspected after the final table sizing changes: no clipped or overlapping text, complete cards and readable numerical profiles. Saved the exact roster export and documented the rebuild command in README. This is a condensed roster aid; use the full rules for mission scoring, core stratagems, terrain and opponent-specific interactions.
