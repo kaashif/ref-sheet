@@ -4,8 +4,8 @@
     "section": "Army",
     "subject": "Chaos Daemons",
     "ability": "Shadow areas",
-    "question": "Shadow of Chaos: Shadow areas?",
-    "answer": "Your deployment zone is always in Shadow. At the start of any phase, controlling at least half the objectives in No Man's Land puts that whole area in Shadow until phase end; the same check applies separately to the enemy deployment zone.",
+    "question": "Shadow of Chaos: when does objective control put a territory in Shadow?",
+    "answer": "At the start of EITHER PLAYER'S phase, control at least half its objectives. That territory stays in Shadow until that phase ends. Check No Man's Land and THEIR deployment zone separately.",
     "source": "faction"
   },
   {
@@ -13,8 +13,8 @@
     "section": "Army",
     "subject": "Chaos Daemons",
     "ability": "Empty territory",
-    "question": "Does controlling half of zero objectives put an empty territory in Shadow?",
-    "answer": "No. If an area has no objective markers, the objective-control condition does not put it in Shadow. Your own deployment zone remains in Shadow.",
+    "question": "Does an objective-free territory enter Shadow through objective control?",
+    "answer": "No. Controlling half of zero objectives does not qualify it. YOUR deployment zone is always in Shadow anyway.",
     "source": "faction"
   },
   {
@@ -22,8 +22,8 @@
     "section": "Army",
     "subject": "Chaos Daemons",
     "ability": "Daemonic Manifestation",
-    "question": "Shadow of Chaos: Daemonic Manifestation?",
-    "answer": "A friendly Legiones Daemonica unit in Shadow adds 1 to its Battle-shock roll. On a success, heal one model D3 wounds; if it is Battleline, you may instead return up to D3 destroyed non-Character models.",
+    "question": "Daemonic Manifestation: what Battle-shock modifier does a friendly Daemon get in Shadow?",
+    "answer": "Add 1 to its Battle-shock roll.",
     "source": "faction"
   },
   {
@@ -31,8 +31,8 @@
     "section": "Army",
     "subject": "Chaos Daemons",
     "ability": "Manifestation in this roster",
-    "question": "Which unit in this roster can return models through Daemonic Manifestation?",
-    "answer": "Plaguebearers are the Battleline unit: on a successful Battle-shock roll in Shadow, you may return up to D3 destroyed Plaguebearers instead of healing one model D3 wounds.",
+    "question": "Which roster unit can return models through Daemonic Manifestation?",
+    "answer": "Plaguebearers: after a successful Battle-shock test in Shadow, return up to D3 destroyed models instead of healing one model.",
     "source": "faction"
   },
   {
@@ -40,8 +40,8 @@
     "section": "Army",
     "subject": "Chaos Daemons",
     "ability": "Daemonic Terror",
-    "question": "Shadow of Chaos: Daemonic Terror?",
-    "answer": "An enemy unit in your Shadow and/or within 6 inches of a listed Greater Daemon subtracts 1 from its Battle-shock test. A failed test inflicts D3 mortal wounds on it. In this roster the listed Greater Daemons are GUO, Lord of Change and Skarbrand.",
+    "question": "Daemonic Terror: what happens to a qualifying enemy's Battle-shock test?",
+    "answer": "Subtract 1 from the test. If it fails, that enemy suffers D3 mortal wounds.",
     "source": "faction"
   },
   {
@@ -49,8 +49,8 @@
     "section": "Army",
     "subject": "Chaos Daemons",
     "ability": "Terror stacking",
-    "question": "Does Daemonic Terror stack for several nearby Greater Daemons or overlapping Shadow areas?",
-    "answer": "No. Shadow and Greater Daemon proximity are alternative qualifying conditions for the same rule, not separate cumulative penalties.",
+    "question": "Does Daemonic Terror stack from overlapping Shadow or several Greater Daemons?",
+    "answer": "No. They are alternative ways to qualify for the same effect.",
     "source": "faction"
   },
   {
@@ -58,8 +58,8 @@
     "section": "Army",
     "subject": "Chaos Daemons",
     "ability": "Pall interaction",
-    "question": "Shadow of Chaos: Pall interaction?",
-    "answer": "Pall can force a below-starting-strength enemy within 9 inches to test in the opponent's Battle-shock step. Terror adds -1 and D3 mortals on failure only if the enemy also meets Terror's own Shadow/Greater Daemon condition. Pall heals Be'lakor D3 for each enemy unit failing a test within 9 inches while the mode is active.",
+    "question": "Does Pall of Despair automatically give every forced test Daemonic Terror?",
+    "answer": "No. The enemy must also be in YOUR Shadow or within 6 inches of GUO, Lord of Change or Skarbrand.",
     "source": "faction"
   },
   {
@@ -67,8 +67,8 @@
     "section": "Army",
     "subject": "Chaos Daemons",
     "ability": "Daemonic Pact",
-    "question": "Is Daemonic Pact used by this pure Chaos Daemons roster?",
-    "answer": "This is the allied-Daemons rule for an army whose models all have Chaos Knights or Heretic Astartes. It is not used by this pure Chaos Daemons roster; use the normal Shadow army rule here.",
+    "question": "Does this pure Chaos Daemons roster use Daemonic Pact?",
+    "answer": "No. It is the allied-Daemons rule for Chaos Knights or Heretic Astartes armies.",
     "source": "faction"
   },
   {
@@ -76,8 +76,8 @@
     "section": "Detachment",
     "subject": "Daemonic Incursion",
     "ability": "Warp Rifts",
-    "question": "Warp Rifts: when can a Deep Strike unit arrive more than 6 inches away?",
-    "answer": "When set up wholly within your Shadow of Chaos and/or wholly within 6 inches of a friendly listed Greater Daemon sharing its Khorne, Tzeentch, Nurgle or Slaanesh keyword. It must be more than 6 inches horizontally from every enemy model; otherwise Deep Strike requires more than 8 inches.",
+    "question": "Warp Rifts: what positioning qualifies for a closer Deep Strike?",
+    "answer": "Set up wholly within YOUR Shadow, or wholly within 6 inches of a friendly listed Greater Daemon sharing the arriving unit's god keyword.",
     "source": "faction"
   },
   {
@@ -85,8 +85,8 @@
     "section": "Detachment",
     "subject": "Daemonic Incursion",
     "ability": "Arrival self aura",
-    "question": "Can Be'lakor or a Greater Daemon use its own arriving aura to give itself a closer Deep Strike?",
-    "answer": "No. Its own newly arriving aura does not qualify it for closer placement. Establish a qualifying Shadow area or another suitable Greater Daemon before setting it up.",
+    "question": "Can an arriving Be'lakor or Greater Daemon use its own new aura for closer Deep Strike?",
+    "answer": "No. A qualifying Shadow area or another suitable Greater Daemon must already be present.",
     "source": "faction"
   },
   {
@@ -94,8 +94,8 @@
     "section": "Detachment",
     "subject": "Daemonic Incursion",
     "ability": "Arrival god matching",
-    "question": "Which Greater Daemon supports each god in this roster for Warp Rifts?",
-    "answer": "GUO: Nurgle / Plaguebearers. Lord of Change: Tzeentch / Flamers and Screamers. Skarbrand: Khorne / Skullmaster, Bloodcrushers and Flesh Hounds. The arriving unit must be wholly within 6 inches. Be'lakor has no god keyword; his already-established Dark Master Shadow area works without god matching.",
+    "question": "Warp Rifts: which Greater Daemon matches Nurgle arrivals in this roster?",
+    "answer": "Great Unclean One. Plaguebearers arriving through this route must be wholly within 6 inches.",
     "source": "faction"
   },
   {
@@ -103,8 +103,8 @@
     "section": "Stratagems",
     "subject": "Daemonic Incursion",
     "ability": "Corrupt Realspace",
-    "question": "Corrupt Realspace: CP cost, timing, target and effect?",
-    "answer": "1CP. Start of either Command phase. Target a friendly Legiones Daemonica unit in range of an objective you control. The objective stays yours until the opponent controls it at the start or end of a turn; while Corrupted and yours, the area within 6 inches is Shadow.",
+    "question": "Corrupt Realspace: what is its main effect?",
+    "answer": "The objective stays YOURS until THEY control it at the start or end of any turn. While corrupted and YOURS, the area within 6 inches is Shadow.",
     "source": "faction"
   },
   {
@@ -112,8 +112,8 @@
     "section": "Stratagems",
     "subject": "Daemonic Incursion",
     "ability": "Warp Surge",
-    "question": "Warp Surge: CP cost, timing, target and effect?",
-    "answer": "1CP. Your Charge phase. Target a friendly Legiones Daemonica unit in Shadow. It may declare a charge despite having Advanced this turn; effect lasts that phase.",
+    "question": "Warp Surge: what is its main effect?",
+    "answer": "The selected unit may charge after Advancing this turn. Permission lasts until the end of YOUR Charge phase.",
     "source": "faction"
   },
   {
@@ -121,8 +121,8 @@
     "section": "Stratagems",
     "subject": "Daemonic Incursion",
     "ability": "Draught of Terror",
-    "question": "Draught of Terror: CP cost, timing, target and effect?",
-    "answer": "1CP. YOUR Shooting phase or EITHER PLAYER'S Fight phase. Target ONE friendly Legiones Daemonica unit not yet selected to shoot/fight. Improve its weapons' AP by 1 (e.g. AP -1 becomes -2) until the end of that phase; attacks against Battle-shocked targets also re-roll Wounds.",
+    "question": "Draught of Terror: what is its main effect?",
+    "answer": "Improve the selected unit's weapon AP by 1 until that phase ends: AP -1 becomes -2.",
     "source": "faction"
   },
   {
@@ -130,8 +130,8 @@
     "section": "Stratagems",
     "subject": "Daemonic Incursion",
     "ability": "Denizens of the Warp",
-    "question": "Denizens of the Warp: CP cost, timing, target and effect?",
-    "answer": "1CP. Your Movement phase. Target a friendly Legiones Daemonica unit arriving by Deep Strike this phase. Set it up anywhere more than 6 inches horizontally from all enemies, without needing Shadow.",
+    "question": "Denizens of the Warp: what is its main effect?",
+    "answer": "Set it up anywhere more than 6 inches horizontally from every enemy model. No Shadow requirement.",
     "source": "faction"
   },
   {
@@ -139,8 +139,8 @@
     "section": "Stratagems",
     "subject": "Daemonic Incursion",
     "ability": "The Realm of Chaos",
-    "question": "The Realm of Chaos: CP cost, timing, target and effect?",
-    "answer": "1CP. End of the opponent's turn. Target up to two friendly Legiones Daemonica units in Shadow, or one other friendly Legiones Daemonica unit. All must be unengaged. Put them in Strategic Reserves; they MUST make an ingress move in your next Movement phase, including your first turn.",
+    "question": "The Realm of Chaos: what is its main effect?",
+    "answer": "Remove the selected unit(s) into Strategic Reserves.",
     "source": "faction"
   },
   {
@@ -148,8 +148,8 @@
     "section": "Stratagems",
     "subject": "Daemonic Incursion",
     "ability": "Daemonic Invulnerability",
-    "question": "Daemonic Invulnerability: CP cost, timing, target and effect?",
-    "answer": "1CP. Opponent's Shooting phase, just after an enemy unit chooses targets. Target one friendly Legiones Daemonica unit selected as a target. Until phase end, its models re-roll invulnerable saving throws of 1.",
+    "question": "Daemonic Invulnerability: what is its main effect?",
+    "answer": "Re-roll invulnerable saving throws of 1 for the selected unit until THEIR Shooting phase ends.",
     "source": "faction"
   },
   {
@@ -158,7 +158,7 @@
     "subject": "Daemonic Incursion",
     "ability": "Denizens charge",
     "question": "Does Denizens of the Warp itself prohibit charging?",
-    "answer": "No charge prohibition is printed in this stratagem. Follow any other applicable arrival and mission restrictions.",
+    "answer": "No. Obey any other applicable arrival or mission restrictions.",
     "source": "faction"
   },
   {
@@ -166,8 +166,8 @@
     "section": "Stratagems",
     "subject": "Daemonic Incursion",
     "ability": "Realm versus Hounds",
-    "question": "How does Realm of Chaos differ from the Flesh Hounds' reserve pickup?",
-    "answer": "Realm costs 1CP, can pick up two units in Shadow or one elsewhere, and requires next-own-Movement ingress. Hunters from the Warp is free, affects only that Flesh Hounds unit, needs no Shadow, and does not itself state Realm's mandatory return clause. Both require the picked-up units to be unengaged.",
+    "question": "Which reserve pickup is free: Realm of Chaos or Hunters from the Warp?",
+    "answer": "Hunters from the Warp is free, affects its Flesh Hounds unit only, and needs no Shadow. Realm of Chaos costs 1CP.",
     "source": "faction"
   },
   {
@@ -175,8 +175,8 @@
     "section": "Enhancements",
     "subject": "Great Unclean One",
     "ability": "The Endless Gift",
-    "question": "The Endless Gift: eligible bearer and effect?",
-    "answer": "Nurgle Legiones Daemonica model only; taken on your GUO. The bearer has Feel No Pain 5+. Use this instead of its native 6+, without rolling both. There is no stronger Shadow tier.",
+    "question": "The Endless Gift: what FNP does YOUR Great Unclean One have?",
+    "answer": "5+++ instead of its native 6+++. There is no stronger Shadow tier.",
     "source": "faction"
   },
   {
@@ -184,8 +184,8 @@
     "section": "Enhancements",
     "subject": "Lord of Change",
     "ability": "The Everstave",
-    "question": "The Everstave: eligible bearer and both tiers?",
-    "answer": "Tzeentch Legiones Daemonica model only; taken on your Lord of Change. Its ranged weapons gain +1 Strength and +3 inches Range, replaced by +2 Strength and +6 inches Range while the bearer is in Shadow. These tiers do not stack; melee weapons are unaffected.",
+    "question": "The Everstave: what bonus applies while the bearer is in Shadow?",
+    "answer": "Its ranged weapons gain +2 Strength and +6 inches Range. This replaces the outside-Shadow bonus; it does not stack with it.",
     "source": "faction"
   },
   {
@@ -193,8 +193,8 @@
     "section": "Enhancements",
     "subject": "Lord of Change",
     "ability": "Everstave applied",
-    "question": "What are this Lord of Change's ranged Strength and Range with its self-auras and Everstave?",
-    "answer": "On-board, its own Tzeentch aura supplies Shadow. Add +2 Strength/+6 inches from Everstave and +1 ranged Strength from Daemon Lord of Tzeentch: rod S8 becomes S11; either Bolt S9 becomes S12; both base 18-inch ranges become 24 inches. Do not apply either buff twice.",
+    "question": "With self-aura and Everstave in Shadow, what Strength is YOUR Lord of Change's Bolt?",
+    "answer": "S12: base S9, +1 from its ranged Strength aura, +2 from Everstave.",
     "source": "faction"
   },
   {
@@ -202,8 +202,8 @@
     "section": "Units",
     "subject": "Be'lakor",
     "ability": "The Dark Master",
-    "question": "Be'lakor: how does The Dark Master work?",
-    "answer": "The battlefield area within 6 inches of Be'lakor is your Shadow of Chaos. It is an area aura, without god matching; it can qualify wholly-within arrivals once Be'lakor is already on the battlefield.",
+    "question": "Be'lakor: what area does The Dark Master put in YOUR Shadow?",
+    "answer": "The battlefield area within 6 inches of him, without god matching.",
     "source": "faction"
   },
   {
@@ -211,8 +211,8 @@
     "section": "Units",
     "subject": "Be'lakor",
     "ability": "Shadow Form",
-    "question": "Be'lakor: how does Shadow Form work?",
-    "answer": "At the start of each battle round choose Wreathed in Shadows, Pall of Despair or Shadow Lord. Only the selected mode applies until the end of that round.",
+    "question": "Be'lakor: when do YOU select a Shadow Form, and how long does it last?",
+    "answer": "At the start of each battle round. Choose ONE mode; it lasts until that round ends.",
     "source": "faction"
   },
   {
@@ -220,8 +220,8 @@
     "section": "Units",
     "subject": "Be'lakor",
     "ability": "Wreathed in Shadows",
-    "question": "Be'lakor: how does Wreathed in Shadows work?",
-    "answer": "While a friendly Legiones Daemonica or Shadow Legion unit is within 6 inches, a model can target it with a ranged attack only from within 18 inches. Be'lakor qualifies himself. This is one selected Shadow Form, not a permanent additional effect.",
+    "question": "Selected Wreathed in Shadows: how does it restrict ranged targeting?",
+    "answer": "Friendly Daemon or Shadow Legion units within 6 inches can only be targeted by attacking models within 18 inches. Be'lakor qualifies himself.",
     "source": "faction"
   },
   {
@@ -229,8 +229,8 @@
     "section": "Units",
     "subject": "Be'lakor",
     "ability": "Pall of Despair",
-    "question": "Be'lakor: how does Pall of Despair work?",
-    "answer": "In the opponent's Command-phase Battle-shock step, enemies within 9 inches that are below Starting Strength must test. A starting-strength-one unit qualifies if it has lost any wounds. Also, each enemy unit failing a Battle-shock test within 9 inches heals Be'lakor up to D3 wounds while this mode is active.",
+    "question": "Selected Pall of Despair: when does it force Battle-shock tests?",
+    "answer": "In THEIR Command phase Battle-shock step: enemies within 9 inches that are below Starting Strength must test.",
     "source": "faction"
   },
   {
@@ -238,8 +238,8 @@
     "section": "Units",
     "subject": "Be'lakor",
     "ability": "Shadow Lord",
-    "question": "Be'lakor: how does Shadow Lord work?",
-    "answer": "Friendly Legiones Daemonica or Shadow Legion units within 6 inches re-roll Hit rolls of 1. Includes himself, melee and ranged attacks; Torrent has no Hit roll. Applies only when this Shadow Form is selected. Snap shooting prohibits Hit rerolls, so this does not override that restriction.",
+    "question": "Selected Shadow Lord: what buff do friendly units within 6 inches get?",
+    "answer": "Friendly Daemon or Shadow Legion units re-roll Hit rolls of 1, in melee and shooting. Be'lakor qualifies himself.",
     "source": "faction"
   },
   {
@@ -247,8 +247,8 @@
     "section": "Units",
     "subject": "Be'lakor",
     "ability": "Supreme Commander",
-    "question": "Be'lakor: how does Supreme Commander work?",
-    "answer": "If included, Be'lakor must be your Warlord. He is the Warlord in this roster.",
+    "question": "If Be'lakor is included, who must be YOUR Warlord?",
+    "answer": "Be'lakor, because of Supreme Commander.",
     "source": "faction"
   },
   {
@@ -256,8 +256,8 @@
     "section": "Units",
     "subject": "Be'lakor",
     "ability": "Damaged",
-    "question": "Be'lakor: how does Damaged work?",
-    "answer": "At 1-7 wounds remaining, subtract 1 from his attack Hit rolls. Psychic weapons can ignore Hit-roll modifiers under the current Psychic core ability; the melee blade is not Psychic.",
+    "question": "Be'lakor: what is his damaged-profile penalty, and when does it apply?",
+    "answer": "At 1-7 wounds remaining, subtract 1 from his attack Hit rolls. His Psychic shooting can ignore this modifier; his non-Psychic blade cannot.",
     "source": "faction"
   },
   {
@@ -265,8 +265,8 @@
     "section": "Units",
     "subject": "Great Unclean One",
     "ability": "Greater Daemon of Nurgle",
-    "question": "Great Unclean One: how does Greater Daemon of Nurgle work?",
-    "answer": "Friendly Nurgle Legiones Daemonica units within 6 inches are in Shadow. Includes GUO itself and nearby Plaguebearers; does not apply to other gods or Be'lakor.",
+    "question": "Greater Daemon of Nurgle: which units enter Shadow through GUO?",
+    "answer": "Friendly Nurgle Daemon units within 6 inches, including GUO itself and nearby Plaguebearers.",
     "source": "faction"
   },
   {
@@ -274,8 +274,8 @@
     "section": "Units",
     "subject": "Great Unclean One",
     "ability": "Daemon Lord of Nurgle",
-    "question": "Great Unclean One: how does Daemon Lord of Nurgle work?",
-    "answer": "Friendly Nurgle Legiones Daemonica models in units within 6 inches gain +1 Toughness. Includes self: T12 becomes T13; nearby Plaguebearers: T5 becomes T6.",
+    "question": "Daemon Lord of Nurgle: what defensive buff does GUO project?",
+    "answer": "+1 Toughness to models in friendly Nurgle Daemon units within 6 inches, including itself.",
     "source": "faction"
   },
   {
@@ -283,8 +283,8 @@
     "section": "Units",
     "subject": "Great Unclean One",
     "ability": "Nurgle's Rot",
-    "question": "Great Unclean One: how does Nurgle's Rot work?",
-    "answer": "At the end of your Movement phase select one enemy unit within 12 inches. Its models have -1 Toughness until the start of your next Movement phase. The ability does not require visibility.",
+    "question": "Nurgle's Rot: what debuff can GUO apply, and to whom?",
+    "answer": "Choose one enemy unit within 12 inches: its models get -1 Toughness. Visibility is not required.",
     "source": "faction"
   },
   {
@@ -292,8 +292,8 @@
     "section": "Units",
     "subject": "Great Unclean One",
     "ability": "Native Feel No Pain",
-    "question": "Great Unclean One: how does Native Feel No Pain work?",
-    "answer": "Native FNP6+ ignores each lost wound on 6+. Your Endless Gift improves this to FNP5+; use one applicable FNP roll per wound, not both.",
+    "question": "Great Unclean One: what is its native FNP before Endless Gift?",
+    "answer": "6+++. With Endless Gift, use 5+++ instead; do not roll both.",
     "source": "faction"
   },
   {
@@ -301,8 +301,8 @@
     "section": "Units",
     "subject": "Great Unclean One",
     "ability": "Damaged",
-    "question": "Great Unclean One: how does Damaged work?",
-    "answer": "At 1-7 wounds remaining, subtract 1 from its attack Hit rolls. Putrid vomit still auto-hits through Torrent.",
+    "question": "Great Unclean One: what happens at 1-7 wounds remaining?",
+    "answer": "Subtract 1 from its attack Hit rolls. Putrid vomit still auto-hits because it has Torrent.",
     "source": "faction"
   },
   {
@@ -310,8 +310,8 @@
     "section": "Units",
     "subject": "Lord of Change",
     "ability": "Greater Daemon of Tzeentch",
-    "question": "Lord of Change: how does Greater Daemon of Tzeentch work?",
-    "answer": "Friendly Tzeentch Legiones Daemonica units within 6 inches are in Shadow. Includes self, nearby Flamers and Screamers.",
+    "question": "Greater Daemon of Tzeentch: which units enter Shadow through Lord of Change?",
+    "answer": "Friendly Tzeentch Daemon units within 6 inches, including itself, Flamers and Screamers.",
     "source": "faction"
   },
   {
@@ -319,8 +319,8 @@
     "section": "Units",
     "subject": "Lord of Change",
     "ability": "Daemon Lord of Tzeentch",
-    "question": "Lord of Change: how does Daemon Lord of Tzeentch work?",
-    "answer": "When a model in a friendly Tzeentch Legiones Daemonica unit within 6 inches makes a ranged attack, add 1 to its Strength. Includes the Lord itself and Flamer flames. No melee bonus; Everstave does not transfer to other units.",
+    "question": "Daemon Lord of Tzeentch: what offensive buff does Lord of Change project?",
+    "answer": "+1 Strength to ranged attacks by models in friendly Tzeentch Daemon units within 6 inches. No melee bonus.",
     "source": "faction"
   },
   {
@@ -328,8 +328,8 @@
     "section": "Units",
     "subject": "Lord of Change",
     "ability": "Master of Magicks",
-    "question": "Lord of Change: how does Master of Magicks work?",
-    "answer": "In your Shooting phase choose Ignores Cover, Lethal Hits or Sustained Hits D3 for its Bolt of Change until phase end. Does not affect the rod, staff, other units or Overwatch in the opponent's turn. This reference sheet selects Sustained Hits D3.",
+    "question": "Master of Magicks: which weapon gets YOUR chosen Sustained Hits D3?",
+    "answer": "Bolt of Change only, including either profile. The rod, staff and other units do not gain it.",
     "source": "faction"
   },
   {
@@ -337,8 +337,8 @@
     "section": "Units",
     "subject": "Lord of Change",
     "ability": "Damaged",
-    "question": "Lord of Change: how does Damaged work?",
-    "answer": "At 1-7 wounds remaining, subtract 1 from its attack Hit rolls. Its equipped rod, Bolt and staff are Psychic, whose current core rule allows their attacks to ignore Hit-roll modifiers.",
+    "question": "Lord of Change: does its 1-7W damaged Hit penalty have to affect its equipped weapons?",
+    "answer": "No. They are all Psychic, allowing their attacks to ignore Hit modifiers, including its damaged-profile -1 to Hit.",
     "source": "faction"
   },
   {
@@ -346,8 +346,8 @@
     "section": "Units",
     "subject": "Skarbrand",
     "ability": "Greater Daemon of Khorne",
-    "question": "Skarbrand: how does Greater Daemon of Khorne work?",
-    "answer": "Friendly Khorne Legiones Daemonica units within 6 inches are in Shadow. Includes self, Skullmaster/Bloodcrushers and Flesh Hounds.",
+    "question": "Greater Daemon of Khorne: which roster units enter Shadow through Skarbrand?",
+    "answer": "Friendly Khorne Daemon units within 6 inches: Skarbrand, Skullmaster, Bloodcrushers and Flesh Hounds.",
     "source": "faction"
   },
   {
@@ -355,8 +355,8 @@
     "section": "Units",
     "subject": "Skarbrand",
     "ability": "Rage Embodied",
-    "question": "Skarbrand: how does Rage Embodied work?",
-    "answer": "Add 1 to the Attacks of melee weapons on models in friendly Khorne Legiones Daemonica units within 6 inches. Includes self; strike A8 becomes A9 and sweep A16 becomes A17. Also applies to the attached cavalry's blades/horns and Hound fangs.",
+    "question": "Rage Embodied: what offensive buff does Skarbrand project?",
+    "answer": "+1 Attack to melee weapons on models in friendly Khorne Daemon units within 6 inches. Includes himself and cavalry horns.",
     "source": "faction"
   },
   {
@@ -364,8 +364,8 @@
     "section": "Units",
     "subject": "Skarbrand",
     "ability": "Murderlust",
-    "question": "Skarbrand: how does Murderlust work?",
-    "answer": "Skarbrand may declare a charge in a turn in which he Advanced. No Shadow requirement and no Warp Surge CP cost.",
+    "question": "Does Skarbrand need Warp Surge or Shadow to charge after Advancing?",
+    "answer": "No. His native Murderlust permits it.",
     "source": "faction"
   },
   {
@@ -373,8 +373,8 @@
     "section": "Units",
     "subject": "Skarbrand",
     "ability": "Damaged",
-    "question": "Skarbrand: how does Damaged work?",
-    "answer": "At 1-7 wounds remaining, Slaughter and Carnage gains +2 Attacks. With his own +1 Attack aura, strike is A11 and sweep A19. This damaged rule is not a Hit penalty.",
+    "question": "Skarbrand: what changes at 1-7 wounds remaining?",
+    "answer": "Slaughter and Carnage gains +2 Attacks. With his own aura, strike is A11 and sweep A19. There is no damaged Hit penalty.",
     "source": "faction"
   },
   {
@@ -382,8 +382,8 @@
     "section": "Units",
     "subject": "Skullmaster",
     "ability": "Leader",
-    "question": "Skullmaster: how does Leader work?",
-    "answer": "May lead Bloodcrushers, as selected in this roster. Together they form an attached unit; unit-wide bodyguard abilities such as Brass Stampede also include the leader while their source remains. Retain individual saves; use bodyguard Toughness while bodyguards remain.",
+    "question": "Which unit can Skullmaster lead in this roster?",
+    "answer": "Bloodcrushers. Together they form an attached unit.",
     "source": "faction"
   },
   {
@@ -391,8 +391,8 @@
     "section": "Units",
     "subject": "Skullmaster",
     "ability": "Skullmaster's Fury",
-    "question": "Skullmaster: how does Skullmaster's Fury work?",
-    "answer": "While leading, each time the unit ends a Charge move, every Juggernaut bladed horn in that unit gains Devastating Wounds until end of turn. Applies to the leader's horn too; does not grant it to blades. Under Core Rules 19.04, the leader retains his own while-leading ability after the bodyguards die if he started the battle attached.",
+    "question": "Skullmaster's Fury: what does a charge grant the attached unit's horns?",
+    "answer": "Devastating Wounds until the end of that turn, including the leader's horn. Rider blades do not gain it.",
     "source": "faction"
   },
   {
@@ -400,8 +400,8 @@
     "section": "Units",
     "subject": "Skullmaster",
     "ability": "Devastating Charge",
-    "question": "Skullmaster: how does Devastating Charge work?",
-    "answer": "Each time this model's unit ends a Charge move, every enemy unit within Engagement Range of that unit must take a Battle-shock test.",
+    "question": "Devastating Charge: which enemies must test after Skullmaster's unit charges?",
+    "answer": "Every enemy unit within Engagement Range of the charging unit must take a Battle-shock test.",
     "source": "faction"
   },
   {
@@ -409,8 +409,8 @@
     "section": "Units",
     "subject": "Bloodcrushers",
     "ability": "Brass Stampede",
-    "question": "Bloodcrushers: how does Brass Stampede work?",
-    "answer": "After this unit ends a Charge move, select one enemy unit in Engagement Range. Roll one D6 for each model in your unit; each 4+ inflicts D3 mortal wounds. Include the attached Skullmaster in the number of dice.",
+    "question": "Brass Stampede: how do YOU roll its mortal wounds after a charge?",
+    "answer": "Select ONE engaged enemy. Roll one D6 per model in YOUR unit; each 4+ inflicts D3 mortal wounds. Count attached Skullmaster too.",
     "source": "faction"
   },
   {
@@ -418,8 +418,8 @@
     "section": "Units",
     "subject": "Bloodcrushers",
     "ability": "Daemonic Icon",
-    "question": "Bloodcrushers: how does Daemonic Icon work?",
-    "answer": "Models in the bearer's unit have Leadership 6+. The equipped icon also benefits the attached Skullmaster; the effect ends if the icon bearer is destroyed.",
+    "question": "Bloodcrushers' Daemonic Icon: what does it do for the attached unit?",
+    "answer": "Models have Leadership 6+, including attached Skullmaster, while the icon bearer remains.",
     "source": "faction"
   },
   {
@@ -427,8 +427,8 @@
     "section": "Units",
     "subject": "Bloodcrushers",
     "ability": "Instrument of Chaos",
-    "question": "Bloodcrushers: how does Instrument of Chaos work?",
-    "answer": "Add 1 to the bearer's unit's Charge rolls while its equipped instrument bearer remains alive. Benefits the whole attached unit.",
+    "question": "Bloodcrushers' Instrument of Chaos: what bonus does it give?",
+    "answer": "+1 to the attached unit's Charge rolls while its instrument bearer remains.",
     "source": "faction"
   },
   {
@@ -436,8 +436,8 @@
     "section": "Units",
     "subject": "Bloodcrushers",
     "ability": "Charge sequence",
-    "question": "Skullmaster + Bloodcrushers: what are the three charge-triggered abilities?",
-    "answer": "Resolve Brass Stampede against one engaged enemy, Devastating Charge against all engaged enemies, and Skullmaster's Fury granting horn Devastating Wounds until end of turn. Resolve simultaneous own effects in your chosen order; a prior effect may change later eligibility. Terror applies to tests only if its own range/Shadow condition is met.",
+    "question": "When several of YOUR charge-triggered abilities happen together, who chooses their order?",
+    "answer": "YOU choose the order. An earlier effect may change a later effect's eligibility.",
     "source": "faction"
   },
   {
@@ -445,8 +445,8 @@
     "section": "Units",
     "subject": "Plaguebearers",
     "ability": "Infected Outbreak",
-    "question": "Plaguebearers: how does Infected Outbreak work?",
-    "answer": "At the end of YOUR Command phase, if this unit is in range of an objective you control, it remains yours until THEIR Level of Control over it exceeds yours at the end of EITHER PLAYER'S phase. This alone creates no 6-inch Shadow area. Unlike this ability, Corrupt Realspace retains its start/end-of-turn expiry wording.",
+    "question": "Infected Outbreak: when do Plaguebearers make an objective sticky?",
+    "answer": "At the end of YOUR Command phase, if they are in range of an objective YOU control.",
     "source": "faction",
     "sources": [
       {
@@ -462,8 +462,8 @@
     "section": "Units",
     "subject": "Plaguebearers",
     "ability": "Daemonic Icon",
-    "question": "Plaguebearers: how does Daemonic Icon work?",
-    "answer": "Models in the bearer's unit have Leadership 6+ while the icon bearer remains. Equipped in this roster; base Leadership is 7+.",
+    "question": "Plaguebearers' Daemonic Icon: what Leadership do they use?",
+    "answer": "6+ while their icon bearer remains, instead of their base 7+.",
     "source": "faction"
   },
   {
@@ -471,8 +471,8 @@
     "section": "Units",
     "subject": "Plaguebearers",
     "ability": "Instrument of Chaos",
-    "question": "Plaguebearers: how does Instrument of Chaos work?",
-    "answer": "Add 1 to the unit's Charge rolls while its instrument bearer remains. Equipped in this roster.",
+    "question": "Plaguebearers' Instrument of Chaos: what bonus does it give?",
+    "answer": "+1 to their Charge rolls while the instrument bearer remains.",
     "source": "faction"
   },
   {
@@ -480,8 +480,8 @@
     "section": "Units",
     "subject": "Flamers",
     "ability": "Bounding Leaps",
-    "question": "Flamers: how does Bounding Leaps work?",
-    "answer": "This unit may shoot in a turn in which it Fell Back. This does not grant permission to charge after Falling Back.",
+    "question": "Bounding Leaps: what can Flamers do after Falling Back?",
+    "answer": "Shoot. It does not grant permission to charge.",
     "source": "faction"
   },
   {
@@ -489,8 +489,8 @@
     "section": "Units",
     "subject": "Screamers",
     "ability": "Slashing Dive",
-    "question": "Screamers: how does Slashing Dive work?",
-    "answer": "In your Movement phase, after a Normal move, select one enemy unit moved over. Roll one D6 per model in this unit; each 4+ causes 1 mortal wound. Does not trigger from an Advance, Fall Back or ingress.",
+    "question": "Slashing Dive: how do Screamers inflict mortal wounds?",
+    "answer": "After a Normal move in YOUR Movement phase, select one enemy moved over. Roll one D6 per Screamer; each 4+ inflicts 1 mortal wound.",
     "source": "faction"
   },
   {
@@ -498,8 +498,8 @@
     "section": "Units",
     "subject": "Flesh Hounds",
     "ability": "Hunters from the Warp",
-    "question": "Flesh Hounds: how does Hunters from the Warp work?",
-    "answer": "At the end of the opponent's turn, if unengaged, you may put this unit into Strategic Reserves. No CP, Shadow or minimum-distance-from-enemies requirement beyond being unengaged.",
+    "question": "Hunters from the Warp: when can Flesh Hounds enter Strategic Reserves?",
+    "answer": "At the end of THEIR turn, if unengaged. It costs no CP and requires no Shadow.",
     "source": "faction"
   },
   {
@@ -507,8 +507,8 @@
     "section": "Units",
     "subject": "Flesh Hounds",
     "ability": "Collar of Khorne",
-    "question": "Flesh Hounds: how does Collar of Khorne work?",
-    "answer": "Each bearer has FNP3+ against Psychic Attacks. Every Hound, including the Gore Hound, carries a collar. Does not protect against all mortal wounds merely because they are mortal wounds.",
+    "question": "Collar of Khorne: what does every Flesh Hound get protection against?",
+    "answer": "FNP3+ against Psychic Attacks only. It is not general protection against every source of mortal wounds.",
     "source": "faction"
   },
   {
@@ -516,8 +516,8 @@
     "section": "Units",
     "subject": "Flesh Hounds",
     "ability": "Gore Hound wargear",
-    "question": "Which Flesh Hound models have burning roar?",
-    "answer": "Only the Gore Hound has burning roar. Every model has gore-drenched fangs and a Collar of Khorne. There is not one roar per Hound.",
+    "question": "In YOUR five Flesh Hounds, how many models have burning roar?",
+    "answer": "One: the Gore Hound. All five have fangs and a Collar of Khorne.",
     "source": "faction"
   },
   {
@@ -525,8 +525,8 @@
     "section": "Core abilities",
     "subject": "Be'lakor / Great Unclean One / Lord of Change / Skarbrand / Skullmaster / Bloodcrushers / Plaguebearers / Flamers / Flesh Hounds / Screamers",
     "ability": "Deep Strike",
-    "question": "Deep Strike: what does it do for this roster?",
-    "answer": "When the unit makes an ingress move and every model has Deep Strike, set it up anywhere more than 8 inches horizontally from enemy units, including the enemy deployment zone. Warp Rifts/Denizens can reduce this to more than 6 inches; obey other ingress restrictions.",
+    "question": "Normal Deep Strike: where may a unit make its ingress move?",
+    "answer": "Anywhere more than 8 inches horizontally from enemy units, including THEIR deployment zone, if every model has Deep Strike. Obey other ingress restrictions.",
     "source": "core"
   },
   {
@@ -534,8 +534,8 @@
     "section": "Core abilities",
     "subject": "Be'lakor / Great Unclean One / Lord of Change / Skarbrand",
     "ability": "Deadly Demise D6",
-    "question": "Deadly Demise D6: what does it do for this roster?",
-    "answer": "When the model is destroyed, roll one D6. On a 6, each unit within 6 inches suffers D6 mortal wounds; roll damage separately for each affected unit. Can affect friendly units.",
+    "question": "Deadly Demise D6: what happens when the model is destroyed?",
+    "answer": "Roll one D6. On a 6, each unit within 6 inches takes D6 mortal wounds; roll damage separately for each unit. Friendly units are affected too.",
     "source": "core"
   },
   {
@@ -543,8 +543,8 @@
     "section": "Core abilities",
     "subject": "Be'lakor",
     "ability": "Stealth",
-    "question": "Stealth: what does it do for this roster?",
-    "answer": "If every model in the unit has Stealth, the unit has the benefit of cover against ranged attacks. In this edition it is not a -1 to Hit modifier. Ignores Cover defeats this cover benefit.",
+    "question": "Stealth in this edition: what protection does it grant?",
+    "answer": "The unit benefits from cover against ranged attacks if every model has Stealth. It is not -1 to Hit.",
     "source": "core"
   },
   {
@@ -552,8 +552,8 @@
     "section": "Core abilities",
     "subject": "Great Unclean One / Flesh Hounds",
     "ability": "Feel No Pain",
-    "question": "Feel No Pain: what does it do for this roster?",
-    "answer": "When the model would lose a wound, roll one D6 per wound; a result meeting its FNP value prevents that lost wound. Applies after saves; use only one applicable FNP ability per lost wound.",
+    "question": "Feel No Pain: when and how do YOU roll it?",
+    "answer": "After saves, roll one D6 per wound the model would lose. Meeting its FNP value prevents that wound; use only one applicable FNP per wound.",
     "source": "core"
   },
   {
@@ -561,8 +561,8 @@
     "section": "Core abilities",
     "subject": "Be'lakor / Skullmaster / Bloodcrushers",
     "ability": "Devastating Wounds",
-    "question": "Devastating Wounds: what does it do for this roster?",
-    "answer": "A Critical Wound ends that attack sequence and inflicts mortal wounds equal to the weapon's Damage, resolved after normal attack damage. These mortals can damage at most one model per Critical Wound; excess is lost. Applies to Be'lakor's Shades and blade strike, plus cavalry horns after a charge while Skullmaster leads.",
+    "question": "Devastating Wounds: what happens on a Critical Wound?",
+    "answer": "The attack inflicts mortal wounds equal to its Damage instead of continuing the normal attack sequence. Resolve these after normal attack damage.",
     "source": "core"
   },
   {
@@ -570,8 +570,8 @@
     "section": "Core abilities",
     "subject": "Be'lakor / Lord of Change",
     "ability": "Hazardous",
-    "question": "Hazardous: what does it do for this roster?",
-    "answer": "After the unit finishes all attacks for a shoot/fight selection, make one hazard roll for each Hazardous weapon selected. A 1-2 fails: 1 mortal wound, or 3 if every model in the unit is Monster/Vehicle. For this roster's focused Be'lakor/LoC weapons, that is 3 mortals per failed roll.",
+    "question": "Hazardous: when do YOU roll hazard tests, and how many?",
+    "answer": "After the unit finishes all attacks for that shooting/fighting selection. Roll once per Hazardous weapon selected.",
     "source": "core"
   },
   {
@@ -579,8 +579,8 @@
     "section": "Core abilities",
     "subject": "Be'lakor / Great Unclean One / Lord of Change / Flamers / Flesh Hounds / Skarbrand",
     "ability": "Ignores Cover",
-    "question": "Ignores Cover: what does it do for this roster?",
-    "answer": "The target cannot benefit from cover against this attack, including cover supplied by Stealth. Does not remove an invulnerable save.",
+    "question": "Ignores Cover: what does it prevent?",
+    "answer": "The target cannot benefit from cover against that attack, including cover from Stealth. It does not remove an invulnerable save.",
     "source": "core"
   },
   {
@@ -588,8 +588,8 @@
     "section": "Core abilities",
     "subject": "Be'lakor / Lord of Change / Flamers",
     "ability": "Psychic",
-    "question": "Psychic: what does it do for this roster?",
-    "answer": "A Psychic weapon's attacks may ignore any or all modifiers to BS/WS and/or Hit rolls. They are Psychic Attacks for other rules, such as Collar of Khorne. A Psyker keyword alone does not make every weapon Psychic.",
+    "question": "Psychic weapons: which modifiers can their attacks ignore?",
+    "answer": "Any or all modifiers to BS/WS and/or Hit rolls.",
     "source": "core"
   },
   {
@@ -597,8 +597,8 @@
     "section": "Core abilities",
     "subject": "Great Unclean One / Flamers / Flesh Hounds / Skarbrand",
     "ability": "Torrent",
-    "question": "Torrent: what does it do for this roster?",
-    "answer": "Each attack automatically hits: no Hit roll, so no Critical Hit, no Hit re-roll and no Lethal/Sustained trigger. Roll attacks, then Wounds normally. Applies to putrid vomit, flickering flames, burning roar and Bellow of endless fury.",
+    "question": "Torrent: do these attacks roll to hit?",
+    "answer": "No. They automatically hit, so cannot score Critical Hits or trigger Lethal Hits/Sustained Hits. Roll the number of attacks, then Wound rolls normally.",
     "source": "core"
   },
   {
@@ -606,8 +606,8 @@
     "section": "Core abilities",
     "subject": "Great Unclean One / Plaguebearers / Lord of Change",
     "ability": "Lethal Hits",
-    "question": "Lethal Hits: what does it do for this roster?",
-    "answer": "On a Critical Hit you may choose for the attack to wound automatically. If you do, no Wound roll is made and it cannot be a Critical Wound. Native on bilesword/plaguesword; LoC may select it for Bolt through Master of Magicks.",
+    "question": "Lethal Hits: what happens on a Critical Hit?",
+    "answer": "YOU may choose for that attack to wound automatically, without a Wound roll.",
     "source": "core"
   },
   {
@@ -615,8 +615,8 @@
     "section": "Core abilities",
     "subject": "Be'lakor",
     "ability": "Sustained Hits 1",
-    "question": "Sustained Hits 1: what does it do for this roster?",
-    "answer": "A Critical Hit scores one extra hit: two hits total. Be'lakor's blade sweep has this; his blade strike instead has Devastating Wounds.",
+    "question": "Sustained Hits 1: how many hits does a Critical Hit score?",
+    "answer": "Two total: the original hit plus one extra hit.",
     "source": "core"
   },
   {
@@ -624,8 +624,8 @@
     "section": "Core abilities",
     "subject": "Lord of Change",
     "ability": "Sustained Hits D3",
-    "question": "Sustained Hits D3: what does it do for this roster?",
-    "answer": "Each Critical Hit adds D3 extra hits. Lord of Change can select this for Bolt in its own Shooting phase; it is not a permanent rod or army-wide buff.",
+    "question": "Sustained Hits D3: how many extra hits does a Critical Hit generate?",
+    "answer": "D3 extra hits, in addition to the original hit.",
     "source": "core"
   },
   {
@@ -633,8 +633,8 @@
     "section": "Core abilities",
     "subject": "Skullmaster / Bloodcrushers",
     "ability": "Extra Attacks",
-    "question": "Extra Attacks: what does it do for this roster?",
-    "answer": "When the model fights, select all its Extra Attacks weapons plus one other melee weapon if possible. For the cavalry, attack with horn AND blade/hellblade. Current rules do not prohibit Skarbrand's +1 Attack from modifying horns.",
+    "question": "Extra Attacks: can cavalry use their horn and rider weapon together?",
+    "answer": "Yes. Select all Extra Attacks weapons plus one other melee weapon if possible: horn AND blade/hellblade.",
     "source": "core"
   },
   {
@@ -642,8 +642,8 @@
     "section": "Core abilities",
     "subject": "Skullmaster / Bloodcrushers",
     "ability": "Lance",
-    "question": "Lance: what does it do for this roster?",
-    "answer": "If the attacking model's unit made a Charge move this turn, add 1 to Wound rolls for its Lance weapon. Applies to Juggernaut horns, not rider blades.",
+    "question": "Lance: what bonus applies after the attacking unit charged this turn?",
+    "answer": "Add 1 to Wound rolls with the Lance weapon. YOUR cavalry horns have Lance; their rider blades do not.",
     "source": "core"
   },
   {
@@ -651,8 +651,8 @@
     "section": "Core abilities",
     "subject": "Screamers",
     "ability": "Anti-Monster 4+ / Anti-Vehicle 4+",
-    "question": "Anti-Monster 4+ / Anti-Vehicle 4+: what does it do for this roster?",
-    "answer": "Against a unit with the matching keyword, an unmodified Wound roll of 4+ is a Critical Wound. Screamer lamprey bites have both. They do not natively have Devastating Wounds, so Anti alone does not cause mortals.",
+    "question": "Anti-Monster 4+ / Anti-Vehicle 4+: what does an unmodified 4+ Wound roll do?",
+    "answer": "Against the matching target keyword, it is a Critical Wound. Anti alone does not cause mortal wounds; Screamers do not natively have Devastating Wounds.",
     "source": "core"
   },
   {
@@ -660,8 +660,8 @@
     "section": "Unit checklists",
     "subject": "Be'lakor",
     "ability": "Ability checklist",
-    "question": "Be'lakor: recall all abilities and equipped weapon keywords.",
-    "answer": "Deep Strike; Deadly Demise D6; Stealth; The Shadow of Chaos; The Dark Master; Shadow Form (Wreathed in Shadows / Pall of Despair / Shadow Lord); Supreme Commander; Damaged at 1-7 wounds. Weapons: Devastating Wounds, Ignores Cover, Psychic, focused Hazardous, sweep Sustained Hits 1. Invulnerable save 4+.",
+    "question": "Be'lakor: how do blade strike and sweep handle critical results?",
+    "answer": "Strike: Critical Wounds inflict mortal wounds equal to Damage. Sweep: Critical Hits generate one extra hit.",
     "source": "faction"
   },
   {
@@ -669,8 +669,8 @@
     "section": "Unit checklists",
     "subject": "Great Unclean One",
     "ability": "Ability checklist",
-    "question": "Great Unclean One: recall all abilities and equipped weapon keywords.",
-    "answer": "Deep Strike; Deadly Demise D6; native FNP6+ (Endless Gift improves to 5+); The Shadow of Chaos; Greater Daemon of Nurgle; Daemon Lord of Nurgle; Nurgle's Rot; Damaged at 1-7 wounds. Selected weapons: vomit Torrent/Ignores Cover; bilesword Lethal Hits. No bell/bileblade abilities in this loadout. Invulnerable save 4+.",
+    "question": "GUO: what happens when a bilesword attack scores a Critical Hit?",
+    "answer": "It can wound automatically through Lethal Hits, with either bilesword profile.",
     "source": "faction"
   },
   {
@@ -678,8 +678,8 @@
     "section": "Unit checklists",
     "subject": "Lord of Change",
     "ability": "Ability checklist",
-    "question": "Lord of Change: recall all abilities and equipped weapon keywords.",
-    "answer": "Deep Strike; Deadly Demise D6; The Shadow of Chaos; Greater Daemon of Tzeentch; Daemon Lord of Tzeentch; Master of Magicks; Damaged at 1-7 wounds; Everstave. All equipped weapons Psychic; focused Bolt Hazardous; selected Bolt gains Ignores Cover, Lethal Hits or Sustained Hits D3. No optional sword in this loadout. Invulnerable save 4+.",
+    "question": "Lord of Change: which equipped ranged profile is Hazardous?",
+    "answer": "Focused Bolt of Change. Safe Bolt and rod of sorcery are not Hazardous.",
     "source": "faction"
   },
   {
@@ -687,8 +687,8 @@
     "section": "Unit checklists",
     "subject": "Skarbrand",
     "ability": "Ability checklist",
-    "question": "Skarbrand: recall all abilities and equipped weapon keywords.",
-    "answer": "Deep Strike; Deadly Demise D6; The Shadow of Chaos; Greater Daemon of Khorne; Rage Embodied; Murderlust; Damaged at 1-7 wounds (+2 Attacks). Bellow has Torrent and Ignores Cover. Invulnerable save 4+; no Fly.",
+    "question": "Skarbrand: how does Bellow of fury handle Hit rolls and cover?",
+    "answer": "It automatically hits and ignores cover: Torrent and Ignores Cover.",
     "source": "faction"
   },
   {
@@ -696,8 +696,8 @@
     "section": "Unit checklists",
     "subject": "Skullmaster",
     "ability": "Ability checklist",
-    "question": "Skullmaster: recall all abilities and equipped weapon keywords.",
-    "answer": "Deep Strike; Leader (Bloodcrushers); The Shadow of Chaos; Skullmaster's Fury; Devastating Charge. Horn has Extra Attacks and Lance, gaining Devastating Wounds on charge while leading. Receives unit-wide Brass Stampede, icon and instrument while attached and their sources survive. Invulnerable save 4+.",
+    "question": "Skullmaster: what do the horn's native weapon rules let it do?",
+    "answer": "Attack alongside the rider's blade, and add 1 to Wound rolls after the unit charged this turn. Charging with his while-leading ability also grants horn Devastating Wounds.",
     "source": "faction"
   },
   {
@@ -705,8 +705,8 @@
     "section": "Unit checklists",
     "subject": "Bloodcrushers",
     "ability": "Ability checklist",
-    "question": "Bloodcrushers: recall all abilities and equipped weapon keywords.",
-    "answer": "Deep Strike; The Shadow of Chaos; Brass Stampede; equipped Daemonic Icon and Instrument of Chaos. Horns have Extra Attacks and Lance; attached Skullmaster adds Devastating Charge and horn Devastating Wounds on charge while leading. Bloodhunter uses the same profile as other Bloodcrushers. Invulnerable save 5+.",
+    "question": "Bloodcrushers: does the Bloodhunter have a different weapon or model profile?",
+    "answer": "No. It uses the same profile as the other Bloodcrushers.",
     "source": "faction"
   },
   {
@@ -714,8 +714,8 @@
     "section": "Unit checklists",
     "subject": "Plaguebearers",
     "ability": "Ability checklist",
-    "question": "Plaguebearers: recall all abilities and equipped weapon keywords.",
-    "answer": "Deep Strike; The Shadow of Chaos; Infected Outbreak; equipped Daemonic Icon and Instrument of Chaos; plaguesword Lethal Hits. Plagueridden uses the same profile as other Plaguebearers. Invulnerable save 5+.",
+    "question": "Plaguebearers: does the Plagueridden have a different weapon or model profile?",
+    "answer": "No. It uses the same profile as the other Plaguebearers.",
     "source": "faction"
   },
   {
@@ -723,8 +723,8 @@
     "section": "Unit checklists",
     "subject": "Flamers",
     "ability": "Ability checklist",
-    "question": "Flamers: recall all abilities and equipped weapon keywords.",
-    "answer": "Deep Strike; The Shadow of Chaos; Bounding Leaps. Flickering flames: Ignores Cover, Psychic, Torrent. Pyrocaster uses the same profile as other Flamers. Invulnerable save 4+.",
+    "question": "Flamers: how do flickering flames handle Hit rolls, cover and Psychic rules?",
+    "answer": "They automatically hit, ignore cover and count as Psychic Attacks. Psychic also lets them ignore applicable BS/WS and Hit modifiers.",
     "source": "faction"
   },
   {
@@ -732,8 +732,8 @@
     "section": "Unit checklists",
     "subject": "Flesh Hounds",
     "ability": "Ability checklist",
-    "question": "Flesh Hounds: recall all abilities and equipped weapon keywords.",
-    "answer": "Deep Strike; The Shadow of Chaos; Hunters from the Warp; Collar of Khorne (FNP3+ against Psychic Attacks). Gore Hound alone has burning roar (Ignores Cover, Torrent); all have fangs and collars. Invulnerable save 5+.",
+    "question": "Flesh Hounds: which weapon has Torrent and Ignores Cover?",
+    "answer": "Burning roar, carried only by the Gore Hound.",
     "source": "faction"
   },
   {
@@ -741,8 +741,8 @@
     "section": "Unit checklists",
     "subject": "Screamers",
     "ability": "Ability checklist",
-    "question": "Screamers: recall all abilities and equipped weapon keywords.",
-    "answer": "Deep Strike; The Shadow of Chaos; Slashing Dive; lamprey bite Anti-Monster 4+ and Anti-Vehicle 4+. Invulnerable save 4+.",
+    "question": "Screamers: which target types do lamprey bites have Anti 4+ against?",
+    "answer": "Monsters and Vehicles.",
     "source": "faction"
   },
   {
@@ -751,7 +751,7 @@
     "subject": "Be'lakor",
     "ability": "Invulnerable save",
     "question": "Be'lakor: invulnerable save?",
-    "answer": "4+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "answer": "4+.",
     "source": "core"
   },
   {
@@ -760,7 +760,7 @@
     "subject": "Great Unclean One",
     "ability": "Invulnerable save",
     "question": "Great Unclean One: invulnerable save?",
-    "answer": "4+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "answer": "4+.",
     "source": "core"
   },
   {
@@ -769,7 +769,7 @@
     "subject": "Lord of Change",
     "ability": "Invulnerable save",
     "question": "Lord of Change: invulnerable save?",
-    "answer": "4+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "answer": "4+.",
     "source": "core"
   },
   {
@@ -778,7 +778,7 @@
     "subject": "Skarbrand",
     "ability": "Invulnerable save",
     "question": "Skarbrand: invulnerable save?",
-    "answer": "4+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "answer": "4+.",
     "source": "core"
   },
   {
@@ -787,7 +787,7 @@
     "subject": "Skullmaster",
     "ability": "Invulnerable save",
     "question": "Skullmaster: invulnerable save?",
-    "answer": "4+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "answer": "4+.",
     "source": "core"
   },
   {
@@ -796,7 +796,7 @@
     "subject": "Bloodcrushers",
     "ability": "Invulnerable save",
     "question": "Bloodcrushers: invulnerable save?",
-    "answer": "5+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "answer": "5+.",
     "source": "core"
   },
   {
@@ -805,7 +805,7 @@
     "subject": "Plaguebearers",
     "ability": "Invulnerable save",
     "question": "Plaguebearers: invulnerable save?",
-    "answer": "5+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "answer": "5+.",
     "source": "core"
   },
   {
@@ -814,7 +814,7 @@
     "subject": "Flamers",
     "ability": "Invulnerable save",
     "question": "Flamers: invulnerable save?",
-    "answer": "4+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "answer": "4+.",
     "source": "core"
   },
   {
@@ -823,7 +823,7 @@
     "subject": "Flesh Hounds",
     "ability": "Invulnerable save",
     "question": "Flesh Hounds: invulnerable save?",
-    "answer": "5+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "answer": "5+.",
     "source": "core"
   },
   {
@@ -832,7 +832,7 @@
     "subject": "Screamers",
     "ability": "Invulnerable save",
     "question": "Screamers: invulnerable save?",
-    "answer": "4+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "answer": "4+.",
     "source": "core"
   },
   {
@@ -841,7 +841,7 @@
     "subject": "Take and Hold mirror",
     "ability": "Your primary",
     "question": "Take and Hold vs Take and Hold: what is MY primary, and how do I score it?",
-    "answer": "Battlefield Dominance.\nRounds 1-2, end of YOUR turn: 2VP if you hold more objectives than them.\nRounds 2-4, end of YOUR Command phase; round 5, end of YOUR turn: 3VP per objective you hold. If you hold YOUR home, add 2VP for each other objective you hold (so home 3VP, each non-home 5VP). Without YOUR home, each held objective is 3VP.\nApply the 15VP-per-battle-round and 45VP-total primary caps.",
+    "answer": "Rounds 1-2, end of YOUR turn: 2VP if you hold more objectives than them.\nRounds 2-4, end of YOUR Command phase; round 5, end of YOUR turn: 3VP per objective you hold. If you hold YOUR home, add 2VP for each other objective you hold (so home 3VP, each non-home 5VP). Without YOUR home, each held objective is 3VP.",
     "source": "missions",
     "source_title": "Chapter Approved 2026-27 Mission Deck",
     "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official October 2026 Event Companion v1.3.",
@@ -862,7 +862,7 @@
     "subject": "Take and Hold mirror",
     "ability": "Their primary",
     "question": "Take and Hold vs Take and Hold: what is THEIR primary, and how do THEY score it?",
-    "answer": "Battlefield Dominance.\nRounds 1-2, end of THEIR turn: 2VP if they hold more objectives than you.\nRounds 2-4, end of THEIR Command phase; round 5, end of THEIR turn: 3VP per objective they hold. If they hold THEIR home, add 2VP for each other objective they hold. Their home is your enemy home, not YOUR home.\nApply the 15VP-per-battle-round and 45VP-total primary caps.",
+    "answer": "Rounds 1-2, end of THEIR turn: 2VP if they hold more objectives than you.\nRounds 2-4, end of THEIR Command phase; round 5, end of THEIR turn: 3VP per objective they hold. If they hold THEIR home, add 2VP for each other objective they hold. Their home is your enemy home, not YOUR home.",
     "source": "missions",
     "source_title": "Chapter Approved 2026-27 Mission Deck",
     "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official October 2026 Event Companion v1.3.",
@@ -883,7 +883,7 @@
     "subject": "Take and Hold vs Purge the Foe",
     "ability": "Your primary",
     "question": "Take and Hold vs Purge the Foe: what is MY primary, and how do I score it?",
-    "answer": "Immovable Object.\nEvery round, end of YOUR turn: 3VP if you hold at least one central objective (3VP total, not per central).\nRounds 2-4, end of YOUR Command phase; round 5, end of YOUR turn: 5VP per held objective except YOUR home.\nYOUR home scores none directly; central and expansion objectives qualify for the 5VP. The central end-turn bonus is additional. Apply primary caps.",
+    "answer": "Every round, end of YOUR turn: 3VP if you hold at least one central objective (3VP total, not per central).\nRounds 2-4, end of YOUR Command phase; round 5, end of YOUR turn: 5VP per held objective except YOUR home.\nYOUR home scores none directly; central and expansion objectives qualify for the 5VP. The central end-turn bonus is additional.",
     "source": "missions",
     "source_title": "Chapter Approved 2026-27 Mission Deck",
     "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official October 2026 Event Companion v1.3.",
@@ -904,7 +904,7 @@
     "subject": "Take and Hold vs Purge the Foe",
     "ability": "Their primary",
     "question": "Take and Hold vs Purge the Foe: what is THEIR primary, and how do THEY score it?",
-    "answer": "Unstoppable Force.\nEvery round, end of THEIR turn: 3VP if at least one of YOUR units was destroyed that turn, plus 4VP per objective THEY hold except THEIR home.\nRounds 2-5, end of THEIR turn: an additional 3VP if THEY hold at least one non-home objective that THEY did not hold at the start of THEIR turn (3VP total, not per newly gained objective).\nEnd of battle: 5VP if THEY hold at least one central objective. Apply primary caps.",
+    "answer": "Every round, end of THEIR turn: 3VP if at least one of YOUR units was destroyed that turn, plus 4VP per objective THEY hold except THEIR home.\nRounds 2-5, end of THEIR turn: an additional 3VP if THEY hold at least one non-home objective that THEY did not hold at the start of THEIR turn (3VP total, not per newly gained objective).\nEnd of battle: 5VP if THEY hold at least one central objective.",
     "source": "missions",
     "source_title": "Chapter Approved 2026-27 Mission Deck",
     "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official October 2026 Event Companion v1.3.",
@@ -925,7 +925,7 @@
     "subject": "Take and Hold vs Disruption",
     "ability": "Your primary",
     "question": "Take and Hold vs Disruption: what is MY primary, and how do I score it?",
-    "answer": "Determined Acquisition.\nEvery round, end of YOUR turn: 2VP per objective you hold now but did not hold at the start of YOUR turn, excluding YOUR home.\nRounds 2-4, end of YOUR Command phase; round 5, end of YOUR turn: 3VP per held objective, plus another 3VP per such objective in THEIR territory. Thus an objective in THEIR territory is worth 6VP in this window; other held objectives are worth 3VP, including YOUR home.\nApply primary caps. Territory is the layout-defined area, not a synonym for deployment zone.",
+    "answer": "Every round, end of YOUR turn: 2VP per objective you hold now but did not hold at the start of YOUR turn, excluding YOUR home.\nRounds 2-4, end of YOUR Command phase; round 5, end of YOUR turn: 3VP per held objective, plus another 3VP per such objective in THEIR territory. Thus an objective in THEIR territory is worth 6VP in this window; other held objectives are worth 3VP, including YOUR home.\n Territory is the layout-defined area, not a synonym for deployment zone.",
     "source": "missions",
     "source_title": "Chapter Approved 2026-27 Mission Deck",
     "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official October 2026 Event Companion v1.3.",
@@ -946,7 +946,7 @@
     "subject": "Take and Hold vs Disruption",
     "ability": "Their primary",
     "question": "Take and Hold vs Disruption: what is THEIR primary, and how do THEY score it?",
-    "answer": "Death Trap.\nEvery round, end of THEIR turn: 2VP per terrain area THEY trapped that turn, plus 3VP for each of those terrain areas that is an objective (5VP total for trapping an objective).\nAlso 3VP total if one or more of YOUR units that began THEIR turn within a terrain area were destroyed, provided that terrain area is trapped when scoring. The FAQ permits trapping it after the kill in that same turn.\nRounds 2-4, end of THEIR Command phase; round 5, end of THEIR turn: 4VP total if THEY hold at least one objective except THEIR home.\nApply primary caps; use the Booby Trap action.",
+    "answer": "Every round, end of THEIR turn: 2VP per terrain area THEY trapped that turn, plus 3VP for each of those terrain areas that is an objective (5VP total for trapping an objective).\nAlso 3VP total if one or more of YOUR units that began THEIR turn within a terrain area were destroyed, provided that terrain area is trapped when scoring. The FAQ permits trapping it after the kill in that same turn.\nRounds 2-4, end of THEIR Command phase; round 5, end of THEIR turn: 4VP total if THEY hold at least one objective except THEIR home.\nApply primary caps; use the Booby Trap action.",
     "source": "missions",
     "source_title": "Chapter Approved 2026-27 Mission Deck",
     "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official October 2026 Event Companion v1.3.",
@@ -967,7 +967,7 @@
     "subject": "Take and Hold vs Reconnaissance",
     "ability": "Your primary",
     "question": "Take and Hold vs Reconnaissance: what is MY primary, and how do I score it?",
-    "answer": "Purge and Secure.\nEvery round, end of YOUR turn: 3VP total if at least one enemy unit was destroyed by YOUR unit while YOUR unit was in range of an objective, OR if at least one destroyed enemy unit began YOUR turn in range of an objective. These alternatives do not add to 6VP.\nRounds 2-4, end of YOUR Command phase; round 5, end of YOUR turn: 4VP per held objective except YOUR home.\nRounds 2-5, end of YOUR turn: another 3VP total if you hold at least one non-home objective you did not hold at the start of YOUR turn. Apply primary caps.",
+    "answer": "Every round, end of YOUR turn: 3VP total if at least one enemy unit was destroyed by YOUR unit while YOUR unit was in range of an objective, OR if at least one destroyed enemy unit began YOUR turn in range of an objective. These alternatives do not add to 6VP.\nRounds 2-4, end of YOUR Command phase; round 5, end of YOUR turn: 4VP per held objective except YOUR home.\nRounds 2-5, end of YOUR turn: another 3VP total if you hold at least one non-home objective you did not hold at the start of YOUR turn.",
     "source": "missions",
     "source_title": "Chapter Approved 2026-27 Mission Deck",
     "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official October 2026 Event Companion v1.3.",
@@ -988,7 +988,7 @@
     "subject": "Take and Hold vs Reconnaissance",
     "ability": "Their primary",
     "question": "Take and Hold vs Reconnaissance: what is THEIR primary, and how do THEY score it?",
-    "answer": "Reconnaissance Sweep.\nEvery round, end of THEIR turn: 3VP for at least three of THEIR units wholly within three different table quarters and outside 6 inches of the battlefield centre; OR 6VP for at least four units in all four quarters meeting those conditions. Score one option, not both.\nAlso 1VP per YOUR unit destroyed that turn.\nRounds 2-4, end of THEIR Command phase; round 5, end of THEIR turn: 3VP total if THEY hold at least one objective except THEIR home. Apply primary caps.",
+    "answer": "Every round, end of THEIR turn: 3VP for at least three of THEIR units wholly within three different table quarters and outside 6 inches of the battlefield centre; OR 6VP for at least four units in all four quarters meeting those conditions. Score one option, not both.\nAlso 1VP per YOUR unit destroyed that turn.\nRounds 2-4, end of THEIR Command phase; round 5, end of THEIR turn: 3VP total if THEY hold at least one objective except THEIR home.",
     "source": "missions",
     "source_title": "Chapter Approved 2026-27 Mission Deck",
     "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official October 2026 Event Companion v1.3.",
@@ -1009,7 +1009,7 @@
     "subject": "Take and Hold vs Priority Assets",
     "ability": "Your primary",
     "question": "Take and Hold vs Priority Assets: what is MY primary, and how do I score it?",
-    "answer": "Inescapable Dominion.\nEvery round, end of YOUR turn: 4VP total if you hold three or more objectives.\nRounds 2-4, end of YOUR Command phase; round 5, end of YOUR turn: 5VP if you hold two or more objectives, plus 4VP if you hold more objectives than THEM. These are separate conditions, not per-objective scoring; YOUR home counts toward the thresholds.\nEnd of battle: 5VP if you hold THEIR home objective. Apply primary caps.",
+    "answer": "Every round, end of YOUR turn: 4VP total if you hold three or more objectives.\nRounds 2-4, end of YOUR Command phase; round 5, end of YOUR turn: 5VP if you hold two or more objectives, plus 4VP if you hold more objectives than THEM. These are separate conditions, not per-objective scoring; YOUR home counts toward the thresholds.\nEnd of battle: 5VP if you hold THEIR home objective.",
     "source": "missions",
     "source_title": "Chapter Approved 2026-27 Mission Deck",
     "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official October 2026 Event Companion v1.3.",
@@ -1030,7 +1030,7 @@
     "subject": "Take and Hold vs Priority Assets",
     "ability": "Their primary",
     "question": "Take and Hold vs Priority Assets: what is THEIR primary, and how do THEY score it?",
-    "answer": "Secure Asset.\nEvery round, end of THEIR turn: 4VP if THEY secured the asset through the action, plus 2VP total if at least one of YOUR units that began THEIR turn in range of a central objective was destroyed.\nRounds 2-4, end of THEIR Command phase; round 5, end of THEIR turn: 4VP total if THEY hold at least one objective except THEIR home, plus a separate 4VP if THEY hold three or more objectives. THEIR home counts toward that three-objective threshold.\nApply primary caps.",
+    "answer": "Every round, end of THEIR turn: 4VP if THEY secured the asset through the action, plus 2VP total if at least one of YOUR units that began THEIR turn in range of a central objective was destroyed.\nRounds 2-4, end of THEIR Command phase; round 5, end of THEIR turn: 4VP total if THEY hold at least one objective except THEIR home, plus a separate 4VP if THEY hold three or more objectives. THEIR home counts toward that three-objective threshold.",
     "source": "missions",
     "source_title": "Chapter Approved 2026-27 Mission Deck",
     "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official October 2026 Event Companion v1.3.",
@@ -1113,8 +1113,8 @@
     "section": "Buff sources",
     "subject": "Be'lakor",
     "ability": "Complete support checklist",
-    "question": "Be'lakor: which units and abilities in this roster can buff or support it?",
-    "answer": "• SELF: Dark Master supplies Shadow within 6 inches. Choose ONE Shadow Form per battle round: Shadow Lord gives RR1 to non-Torrent Hits (except snap shooting); Wreathed limits incoming shooting to attackers within 18 inches; Pall forces enemy tests/heals Be'lakor, not a simultaneous extra mode.\n• GOD LIMIT: no god keyword, so no GUO Toughness, LoC Strength or Skarbrand Attacks aura.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): improve AP by 1 (AP -1 becomes -2), ONE selected unit; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• CORE CHARACTER SUPPORT: Epic Challenge (1CP, EITHER PLAYER'S Fight phase) gives a selected Character model's melee weapons Precision until end of that Fight phase. It does not grant Precision to the bodyguard models.\n• CORE MONSTER SUPPORT: Crushing Impact (1CP, YOUR Charge phase after charging) can inflict impact mortals; it also risks self-mortals.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.\n• CORE SHOOTING SUPPORT: Fire Overwatch (1CP, end of THEIR Movement phase) lets an unengaged unit snap shoot one visible eligible enemy within 24 inches; Torrent still auto-hits. Weapon range and eligibility still apply.",
+    "question": "Be'lakor: what are its roster buffs and support sources?",
+    "answer": "• Be'lakor (6 inches): Shadow; selected 18-inch ranged screen OR re-roll Hit 1s.\n• GUO's selected enemy: -1 Toughness, helping all attackers.",
     "source": "faction"
   },
   {
@@ -1122,8 +1122,8 @@
     "section": "Buff sources",
     "subject": "Great Unclean One",
     "ability": "Complete support checklist",
-    "question": "Great Unclean One: which units and abilities in this roster can buff or support it?",
-    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to flail/sword Hits, or selected Wreathed 18-inch ranged screen. No Torrent Hit rerolls.\n• SELF: Greater Daemon of Nurgle supplies Shadow; Daemon Lord of Nurgle adds 1 Toughness (T12 -> T13). ENDLESS GIFT supplies FNP5+ instead of native 6+; it is bearer-only.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): improve AP by 1 (AP -1 becomes -2), ONE selected unit; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• CORE CHARACTER SUPPORT: Epic Challenge (1CP, EITHER PLAYER'S Fight phase) gives a selected Character model's melee weapons Precision until end of that Fight phase. It does not grant Precision to the bodyguard models.\n• CORE MONSTER SUPPORT: Crushing Impact (1CP, YOUR Charge phase after charging) can inflict impact mortals; it also risks self-mortals.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.\n• CORE SHOOTING SUPPORT: Fire Overwatch (1CP, end of THEIR Movement phase) lets an unengaged unit snap shoot one visible eligible enemy within 24 inches; Torrent still auto-hits. Weapon range and eligibility still apply.",
+    "question": "Great Unclean One: what are its roster buffs and support sources?",
+    "answer": "• Be'lakor (6 inches): Shadow; selected 18-inch ranged screen OR re-roll Hit 1s.\n• GUO (6 inches): Shadow, +1 Toughness.\n• Endless Gift: FNP5+ replaces native 6+.\n• GUO's selected enemy: -1 Toughness, helping all attackers.",
     "source": "faction"
   },
   {
@@ -1131,8 +1131,8 @@
     "section": "Buff sources",
     "subject": "Lord of Change",
     "ability": "Complete support checklist",
-    "question": "Lord of Change: which units and abilities in this roster can buff or support it?",
-    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to Hits, or selected Wreathed 18-inch ranged screen.\n• SELF: Greater Daemon of Tzeentch supplies Shadow; Daemon Lord of Tzeentch adds 1 ranged Strength. EVERSTAVE adds 2 ranged Strength/6-inch Range in Shadow, instead of its outside-Shadow +1/+3-inch tier: rod S11, Bolt S12, both 24 inches.\n• SELF: Master of Magicks selects Sustained Hits D3 for Bolt until end of YOUR Shooting phase; not rod, staff or THEIR turn.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): improve AP by 1 (AP -1 becomes -2), ONE selected unit; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• CORE CHARACTER SUPPORT: Epic Challenge (1CP, EITHER PLAYER'S Fight phase) gives a selected Character model's melee weapons Precision until end of that Fight phase. It does not grant Precision to the bodyguard models.\n• CORE MONSTER SUPPORT: Crushing Impact (1CP, YOUR Charge phase after charging) can inflict impact mortals; it also risks self-mortals.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.\n• CORE SHOOTING SUPPORT: Fire Overwatch (1CP, end of THEIR Movement phase) lets an unengaged unit snap shoot one visible eligible enemy within 24 inches; Torrent still auto-hits. Weapon range and eligibility still apply.",
+    "question": "Lord of Change: what are its roster buffs and support sources?",
+    "answer": "• Be'lakor (6 inches): Shadow; selected 18-inch ranged screen OR re-roll Hit 1s.\n• Lord of Change (6 inches): Shadow, +1 ranged Strength.\n• Everstave in Shadow: +2 ranged Strength, +6 inches Range.\n• Self: selected Sustained Hits D3 on Bolt in YOUR Shooting phase.\n• GUO's selected enemy: -1 Toughness, helping all attackers.",
     "source": "faction"
   },
   {
@@ -1140,8 +1140,8 @@
     "section": "Buff sources",
     "subject": "Skarbrand",
     "ability": "Complete support checklist",
-    "question": "Skarbrand: which units and abilities in this roster can buff or support it?",
-    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to melee Hits, or selected Wreathed 18-inch ranged screen. Bellow is Torrent, so no Hit reroll.\n• SELF: Greater Daemon of Khorne supplies Shadow; Rage Embodied adds 1 melee Attack. Strike A8 -> A9, sweep A16 -> A17; at 1-7W add 2 more, giving A11/A19. Murderlust permits Advance-charge without CP or Shadow.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): improve AP by 1 (AP -1 becomes -2), ONE selected unit; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• CORE CHARACTER SUPPORT: Epic Challenge (1CP, EITHER PLAYER'S Fight phase) gives a selected Character model's melee weapons Precision until end of that Fight phase. It does not grant Precision to the bodyguard models.\n• CORE MONSTER SUPPORT: Crushing Impact (1CP, YOUR Charge phase after charging) can inflict impact mortals; it also risks self-mortals.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.\n• CORE SHOOTING SUPPORT: Fire Overwatch (1CP, end of THEIR Movement phase) lets an unengaged unit snap shoot one visible eligible enemy within 24 inches; Torrent still auto-hits. Weapon range and eligibility still apply.",
+    "question": "Skarbrand: what are its roster buffs and support sources?",
+    "answer": "• Be'lakor (6 inches): Shadow; selected 18-inch ranged screen OR re-roll Hit 1s.\n• Skarbrand (6 inches): Shadow, +1 melee Attack.\n• GUO's selected enemy: -1 Toughness, helping all attackers.",
     "source": "faction"
   },
   {
@@ -1149,8 +1149,8 @@
     "section": "Buff sources",
     "subject": "Skullmaster",
     "ability": "Complete support checklist",
-    "question": "Skullmaster: which units and abilities in this roster can buff or support it?",
-    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to Hits, or selected Wreathed 18-inch ranged screen.\n• SKARBRAND within 6 inches: Shadow and +1 melee Attack; blade A5 -> A6, horn A4 -> A5.\n• ATTACHED BLOODCRUSHERS: icon gives the leader Ld6+; instrument gives the attached unit +1 Charge, while their respective bearers survive. Brass Stampede includes the attached Skullmaster in its dice count.\n• SELF WHILE LEADING: after the unit charges, Skullmaster's Fury gives its horns (including the leader's) Devastating Wounds until end of that turn. Devastating Charge forces tests that can enable Draught's Wound rerolls.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): improve AP by 1 (AP -1 becomes -2), ONE selected unit; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• CORE CHARACTER SUPPORT: Epic Challenge (1CP, EITHER PLAYER'S Fight phase) gives a selected Character model's melee weapons Precision until end of that Fight phase. It does not grant Precision to the bodyguard models.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.",
+    "question": "Skullmaster: what are its roster buffs and support sources?",
+    "answer": "• Be'lakor (6 inches): Shadow; selected 18-inch ranged screen OR re-roll Hit 1s.\n• Skarbrand (6 inches): Shadow, +1 melee Attack.\n• Bloodcrushers attached: Ld6+, +1 Charge; count leader for charge mortals.\n• GUO's selected enemy: -1 Toughness, helping all attackers.",
     "source": "faction"
   },
   {
@@ -1158,8 +1158,8 @@
     "section": "Buff sources",
     "subject": "Bloodcrushers",
     "ability": "Complete support checklist",
-    "question": "Bloodcrushers: which units and abilities in this roster can buff or support it?",
-    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to Hits, or selected Wreathed 18-inch ranged screen.\n• SKARBRAND within 6 inches: Shadow and +1 melee Attack; hellblade A2 -> A3, horn A4 -> A5.\n• ATTACHED SKULLMASTER: while leading, a charge grants Devastating Wounds to horns until end of that turn; also forces every engaged enemy to test Battle-shock. The leader contributes another model for Brass Stampede.\n• OWN ICON / INSTRUMENT: Ld7+ -> 6+ and +1 Charge while the relevant bearer survives; benefits the attached leader too.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): improve AP by 1 (AP -1 becomes -2), ONE selected unit; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.",
+    "question": "Bloodcrushers: what are its roster buffs and support sources?",
+    "answer": "• Be'lakor (6 inches): Shadow; selected 18-inch ranged screen OR re-roll Hit 1s.\n• Skarbrand (6 inches): Shadow, +1 melee Attack.\n• Skullmaster attached: charge grants horn Devastating Wounds and forces engaged enemies to test Battle-shock.\n• GUO's selected enemy: -1 Toughness, helping all attackers.",
     "source": "faction"
   },
   {
@@ -1167,8 +1167,8 @@
     "section": "Buff sources",
     "subject": "Plaguebearers",
     "ability": "Complete support checklist",
-    "question": "Plaguebearers: which units and abilities in this roster can buff or support it?",
-    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to plaguesword Hits, or selected Wreathed 18-inch ranged screen.\n• GREAT UNCLEAN ONE within 6 inches: Shadow and +1 Toughness (T5 -> T6).\n• OWN ICON / INSTRUMENT: Ld7+ -> 6+ and +1 Charge while the relevant bearer survives.\n• BATTLELINE: successful Battle-shock in Shadow can return D3 destroyed Plaguebearers instead of healing one model. Their own sticky objective helps maintain territory Shadow; it does not itself create a 6-inch Shadow area.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): improve AP by 1 (AP -1 becomes -2), ONE selected unit; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.",
+    "question": "Plaguebearers: what are its roster buffs and support sources?",
+    "answer": "• Be'lakor (6 inches): Shadow; selected 18-inch ranged screen OR re-roll Hit 1s.\n• GUO (6 inches): Shadow, +1 Toughness.\n• GUO's selected enemy: -1 Toughness, helping all attackers.",
     "source": "faction"
   },
   {
@@ -1176,8 +1176,8 @@
     "section": "Buff sources",
     "subject": "Flamers",
     "ability": "Complete support checklist",
-    "question": "Flamers: which units and abilities in this roster can buff or support it?",
-    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to mouth Hits only, or selected Wreathed 18-inch ranged screen. Flames are Torrent: no Hit roll or Hit rerolls.\n• LORD OF CHANGE within 6 inches: Shadow and +1 ranged Strength (flames S4 -> S5); no Strength bonus to mouths. Everstave and Master of Magicks do not transfer to Flamers.\n• SELF: Bounding Leaps allows shooting after Falling Back.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): improve AP by 1 (AP -1 becomes -2), ONE selected unit; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.\n• CORE SHOOTING SUPPORT: Fire Overwatch (1CP, end of THEIR Movement phase) lets an unengaged unit snap shoot one visible eligible enemy within 24 inches; Torrent still auto-hits. Weapon range and eligibility still apply.",
+    "question": "Flamers: what are its roster buffs and support sources?",
+    "answer": "• Be'lakor (6 inches): Shadow; selected 18-inch ranged screen OR re-roll Hit 1s.\n• Lord of Change (6 inches): Shadow, +1 ranged Strength.\n• GUO's selected enemy: -1 Toughness, helping all attackers.",
     "source": "faction"
   },
   {
@@ -1185,8 +1185,8 @@
     "section": "Buff sources",
     "subject": "Flesh Hounds",
     "ability": "Complete support checklist",
-    "question": "Flesh Hounds: which units and abilities in this roster can buff or support it?",
-    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to fang Hits only, or selected Wreathed 18-inch ranged screen. Roar is Torrent: no Hit reroll.\n• SKARBRAND within 6 inches: Shadow and +1 melee Attack (fangs A3 -> A4); roar is unaffected.\n• SELF: Collar of Khorne gives each bearer FNP3+ against Psychic Attacks. Hunters from the Warp is a free end-of-THEIR-turn reserve pickup if unengaged; no Shadow needed.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): improve AP by 1 (AP -1 becomes -2), ONE selected unit; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.\n• CORE SHOOTING SUPPORT: Fire Overwatch (1CP, end of THEIR Movement phase) lets an unengaged unit snap shoot one visible eligible enemy within 24 inches; Torrent still auto-hits. Weapon range and eligibility still apply.",
+    "question": "Flesh Hounds: what are its roster buffs and support sources?",
+    "answer": "• Be'lakor (6 inches): Shadow; selected 18-inch ranged screen OR re-roll Hit 1s.\n• Skarbrand (6 inches): Shadow, +1 melee Attack.\n• GUO's selected enemy: -1 Toughness, helping all attackers.",
     "source": "faction"
   },
   {
@@ -1194,8 +1194,8 @@
     "section": "Buff sources",
     "subject": "Screamers",
     "ability": "Complete support checklist",
-    "question": "Screamers: which units and abilities in this roster can buff or support it?",
-    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to bite Hits, or selected Wreathed 18-inch ranged screen.\n• LORD OF CHANGE within 6 inches: Shadow only. Its Strength aura affects ranged attacks, not lamprey bites; Everstave/Master of Magicks do not transfer.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): improve AP by 1 (AP -1 becomes -2), ONE selected unit; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.",
+    "question": "Screamers: what are its roster buffs and support sources?",
+    "answer": "• Be'lakor (6 inches): Shadow; selected 18-inch ranged screen OR re-roll Hit 1s.\n• Lord of Change (6 inches): Shadow; Strength aura does not affect bites.\n• GUO's selected enemy: -1 Toughness, helping all attackers.",
     "source": "faction"
   },
   {
@@ -1203,8 +1203,600 @@
     "section": "Core abilities",
     "subject": "Skullmaster / Bloodcrushers",
     "ability": "Attached unit destroyed",
-    "question": "No Prisoners in 11th: does wiping the bodyguard while its leader survives count as destroying a unit?",
-    "answer": "No. Core Rule 19.02: unit-destroyed triggers only happen when the last model that started the battle in the attached unit is destroyed.\nYour Bloodcrushers wiped out with Skullmaster still alive: zero unit kills for No Prisoners. Destroy the whole attached unit: one unit kill, not separate bodyguard and leader kills. The rule also applies if the leader dies first and bodyguards survive. This differs from 10th-edition advice about leaders becoming separate units.",
+    "question": "No Prisoners: does wiping Bloodcrushers while attached Skullmaster survives count as a unit kill?",
+    "answer": "No. Core Rule 19.02 requires the last model that started in that attached unit to be destroyed.",
+    "source": "core"
+  },
+  {
+    "id": "Army/Chaos Daemons/Shadow areas/home",
+    "section": "Army",
+    "subject": "Chaos Daemons",
+    "ability": "Shadow areas",
+    "question": "Shadow of Chaos: is YOUR deployment zone always in Shadow?",
+    "answer": "Yes, regardless of objective control.",
+    "source": "faction"
+  },
+  {
+    "id": "Army/Chaos Daemons/Daemonic Manifestation/healing",
+    "section": "Army",
+    "subject": "Chaos Daemons",
+    "ability": "Daemonic Manifestation",
+    "question": "Daemonic Manifestation: what does a successful Battle-shock test in Shadow heal?",
+    "answer": "One model regains up to D3 lost wounds. A Battleline unit may instead return up to D3 destroyed non-Character models.",
+    "source": "faction"
+  },
+  {
+    "id": "Army/Chaos Daemons/Daemonic Terror/eligibility",
+    "section": "Army",
+    "subject": "Chaos Daemons",
+    "ability": "Daemonic Terror",
+    "question": "Daemonic Terror: which enemy units qualify?",
+    "answer": "Enemies in YOUR Shadow and/or within 6 inches of YOUR GUO, Lord of Change or Skarbrand.",
+    "source": "faction"
+  },
+  {
+    "id": "Detachment/Daemonic Incursion/Warp Rifts/distance",
+    "section": "Detachment",
+    "subject": "Daemonic Incursion",
+    "ability": "Warp Rifts",
+    "question": "Warp Rifts: what is the minimum enemy distance for a qualifying Deep Strike?",
+    "answer": "More than 6 inches horizontally from every enemy model. Without a closer-arrival rule, Deep Strike requires more than 8 inches.",
+    "source": "faction"
+  },
+  {
+    "id": "Detachment/Daemonic Incursion/Arrival god matching/tzeentch",
+    "section": "Detachment",
+    "subject": "Daemonic Incursion",
+    "ability": "Arrival god matching",
+    "question": "Warp Rifts: which Greater Daemon matches Tzeentch arrivals in this roster?",
+    "answer": "Lord of Change, supporting Flamers and Screamers wholly within 6 inches.",
+    "source": "faction"
+  },
+  {
+    "id": "Detachment/Daemonic Incursion/Arrival god matching/khorne",
+    "section": "Detachment",
+    "subject": "Daemonic Incursion",
+    "ability": "Arrival god matching",
+    "question": "Warp Rifts: which Greater Daemon matches Khorne arrivals in this roster?",
+    "answer": "Skarbrand, supporting Skullmaster, Bloodcrushers and Flesh Hounds wholly within 6 inches.",
+    "source": "faction"
+  },
+  {
+    "id": "Detachment/Daemonic Incursion/Arrival god matching/belakor",
+    "section": "Detachment",
+    "subject": "Daemonic Incursion",
+    "ability": "Arrival god matching",
+    "question": "Warp Rifts: does Be'lakor need to match the arriving unit's god?",
+    "answer": "No. His already-established Dark Master creates a Shadow area. Arrivals wholly within that area qualify through Shadow.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Corrupt Realspace/timing",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Corrupt Realspace",
+    "question": "Corrupt Realspace: when can YOU use it?",
+    "answer": "Start of EITHER PLAYER'S Command phase.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Corrupt Realspace/target",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Corrupt Realspace",
+    "question": "Corrupt Realspace: what can YOU target?",
+    "answer": "One friendly Daemon unit in range of an objective YOU control.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Warp Surge/timing",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Warp Surge",
+    "question": "Warp Surge: when can YOU use it?",
+    "answer": "YOUR Charge phase.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Warp Surge/target",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Warp Surge",
+    "question": "Warp Surge: what can YOU target?",
+    "answer": "One friendly Daemon unit in YOUR Shadow.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Draught of Terror/timing",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Draught of Terror",
+    "question": "Draught of Terror: when can YOU use it?",
+    "answer": "YOUR Shooting phase or EITHER PLAYER'S Fight phase.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Draught of Terror/target",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Draught of Terror",
+    "question": "Draught of Terror: what can YOU target?",
+    "answer": "ONE friendly Daemon unit not yet selected to shoot or fight, respectively.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Denizens of the Warp/timing",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Denizens of the Warp",
+    "question": "Denizens of the Warp: when can YOU use it?",
+    "answer": "YOUR Movement phase.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Denizens of the Warp/target",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Denizens of the Warp",
+    "question": "Denizens of the Warp: what can YOU target?",
+    "answer": "One friendly Daemon unit arriving by Deep Strike in that phase.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/The Realm of Chaos/timing",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "The Realm of Chaos",
+    "question": "The Realm of Chaos: when can YOU use it?",
+    "answer": "End of THEIR turn.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/The Realm of Chaos/target",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "The Realm of Chaos",
+    "question": "The Realm of Chaos: what can YOU target?",
+    "answer": "Up to two unengaged friendly Daemon units in Shadow, or one other unengaged friendly Daemon unit.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Daemonic Invulnerability/timing",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Daemonic Invulnerability",
+    "question": "Daemonic Invulnerability: when can YOU use it?",
+    "answer": "THEIR Shooting phase, just after an enemy unit selects its targets.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Daemonic Invulnerability/target",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Daemonic Invulnerability",
+    "question": "Daemonic Invulnerability: what can YOU target?",
+    "answer": "One friendly Daemon unit selected as a target of those attacks.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Corrupt Realspace/cost",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Corrupt Realspace",
+    "question": "How much does each of the six Daemonic Incursion stratagems cost?",
+    "answer": "1CP each.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Draught of Terror/wound-rerolls",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Draught of Terror",
+    "question": "Draught of Terror: when does it also grant Wound rerolls?",
+    "answer": "When the selected unit attacks a Battle-shocked enemy. Re-roll Wound rolls against that enemy until the phase ends.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/The Realm of Chaos/return",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "The Realm of Chaos",
+    "question": "The Realm of Chaos: when must the picked-up units return?",
+    "answer": "They MUST make an ingress move in YOUR NEXT Movement phase, even in YOUR first turn.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Realm versus Hounds/return-difference",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Realm versus Hounds",
+    "question": "Does Hunters from the Warp impose Realm of Chaos's mandatory next-turn return?",
+    "answer": "No. Hunters does not itself state that mandatory return clause. Both pickups require the affected unit(s) to be unengaged.",
+    "source": "faction"
+  },
+  {
+    "id": "Enhancements/Great Unclean One/The Endless Gift/eligibility",
+    "section": "Enhancements",
+    "subject": "Great Unclean One",
+    "ability": "The Endless Gift",
+    "question": "The Endless Gift: which models may take it?",
+    "answer": "Nurgle Legiones Daemonica models. YOUR selected bearer is Great Unclean One.",
+    "source": "faction"
+  },
+  {
+    "id": "Enhancements/Lord of Change/The Everstave/outside",
+    "section": "Enhancements",
+    "subject": "Lord of Change",
+    "ability": "The Everstave",
+    "question": "The Everstave: what bonus applies outside Shadow?",
+    "answer": "Its ranged weapons gain +1 Strength and +3 inches Range. Melee weapons are unaffected.",
+    "source": "faction"
+  },
+  {
+    "id": "Enhancements/Lord of Change/The Everstave/eligibility",
+    "section": "Enhancements",
+    "subject": "Lord of Change",
+    "ability": "The Everstave",
+    "question": "The Everstave: which models may take it?",
+    "answer": "Tzeentch Legiones Daemonica models. YOUR selected bearer is Lord of Change.",
+    "source": "faction"
+  },
+  {
+    "id": "Enhancements/Lord of Change/Everstave applied/rod",
+    "section": "Enhancements",
+    "subject": "Lord of Change",
+    "ability": "Everstave applied",
+    "question": "With self-aura and Everstave in Shadow, what Strength is YOUR Lord of Change's rod?",
+    "answer": "S11: base S8, +1 from its ranged Strength aura, +2 from Everstave.",
+    "source": "faction"
+  },
+  {
+    "id": "Enhancements/Lord of Change/Everstave applied/range",
+    "section": "Enhancements",
+    "subject": "Lord of Change",
+    "ability": "Everstave applied",
+    "question": "With Everstave in Shadow, what Range do YOUR Lord of Change's rod and Bolt have?",
+    "answer": "24 inches each: base 18 inches +6 inches from Everstave.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Be'lakor/Shadow Form/choices",
+    "section": "Units",
+    "subject": "Be'lakor",
+    "ability": "Shadow Form",
+    "question": "Be'lakor: what are the three alternative Shadow Form effects?",
+    "answer": "An 18-inch ranged targeting screen; force nearby damaged enemies to test Battle-shock and heal from failures; OR re-roll Hit rolls of 1. Pick ONE per battle round.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Be'lakor/Pall of Despair/single-model",
+    "section": "Units",
+    "subject": "Be'lakor",
+    "ability": "Pall of Despair",
+    "question": "Pall of Despair: when is a Starting-Strength-one enemy below Starting Strength?",
+    "answer": "When it has lost one or more wounds.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Be'lakor/Pall of Despair/heal",
+    "section": "Units",
+    "subject": "Be'lakor",
+    "ability": "Pall of Despair",
+    "question": "Selected Pall of Despair: what heals Be'lakor?",
+    "answer": "Each enemy unit failing a Battle-shock test within 9 inches lets him regain up to D3 lost wounds.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Be'lakor/Shadow Lord/snap",
+    "section": "Units",
+    "subject": "Be'lakor",
+    "ability": "Shadow Lord",
+    "question": "Can Shadow Lord grant Hit rerolls during snap shooting, including Overwatch?",
+    "answer": "No. Snap shooting prohibits Hit rerolls. Torrent has no Hit roll to re-roll either.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Great Unclean One/Nurgle's Rot/timing",
+    "section": "Units",
+    "subject": "Great Unclean One",
+    "ability": "Nurgle's Rot",
+    "question": "Nurgle's Rot: when is the enemy selected, and when does the debuff expire?",
+    "answer": "Select at the end of YOUR Movement phase. It lasts until the start of YOUR NEXT Movement phase.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Lord of Change/Master of Magicks/timing",
+    "section": "Units",
+    "subject": "Lord of Change",
+    "ability": "Master of Magicks",
+    "question": "Master of Magicks: when is the choice active?",
+    "answer": "Select in YOUR Shooting phase; it lasts until that phase ends. It does not carry into Overwatch in THEIR turn.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Lord of Change/Master of Magicks/choices",
+    "section": "Units",
+    "subject": "Lord of Change",
+    "ability": "Master of Magicks",
+    "question": "Lord of Change: what three effects can Master of Magicks give Bolt?",
+    "answer": "Ignore cover; automatically wound on Critical Hits; OR generate D3 extra hits per Critical Hit. YOUR sheet selects the extra-hits option.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Skullmaster/Leader/toughness",
+    "section": "Units",
+    "subject": "Skullmaster",
+    "ability": "Leader",
+    "question": "Which Toughness do attacks use against Skullmaster's attached unit while bodyguards remain?",
+    "answer": "The bodyguard Toughness. Models retain their own saving throws.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Skullmaster/Skullmaster's Fury/survival",
+    "section": "Units",
+    "subject": "Skullmaster",
+    "ability": "Skullmaster's Fury",
+    "question": "Does Skullmaster retain his own while-leading ability after all Bloodcrushers die?",
+    "answer": "Yes, if he started the battle attached. Core Rules 19.04 lets him retain it after the bodyguards are destroyed.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Plaguebearers/Infected Outbreak/expiry",
+    "section": "Units",
+    "subject": "Plaguebearers",
+    "ability": "Infected Outbreak",
+    "question": "Infected Outbreak: when does sticky control end?",
+    "answer": "When THEIR Level of Control exceeds YOURS at the end of EITHER PLAYER'S phase.",
+    "source": "faction",
+    "sources": [
+      {
+        "title": "Wahapedia: Plaguebearers (11th edition)",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-daemons/Plaguebearers"
+      }
+    ],
+    "source_title": "Wahapedia 11th-edition datasheet",
+    "source_note": "Current Infected Outbreak wording differs from the July faction PDF: compare Level of Control at the end of a phase."
+  },
+  {
+    "id": "Units/Plaguebearers/Infected Outbreak/shadow",
+    "section": "Units",
+    "subject": "Plaguebearers",
+    "ability": "Infected Outbreak",
+    "question": "Does Infected Outbreak itself create a 6-inch Shadow area?",
+    "answer": "No. Corrupt Realspace does; Plaguebearer sticky control alone does not.",
+    "source": "faction",
+    "sources": [
+      {
+        "title": "Wahapedia: Plaguebearers (11th edition)",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-daemons/Plaguebearers"
+      }
+    ],
+    "source_title": "Wahapedia 11th-edition datasheet",
+    "source_note": "Current Infected Outbreak wording differs from the July faction PDF: compare Level of Control at the end of a phase."
+  },
+  {
+    "id": "Units/Screamers/Slashing Dive/moves",
+    "section": "Units",
+    "subject": "Screamers",
+    "ability": "Slashing Dive",
+    "question": "Does Slashing Dive trigger after Screamers Advance, Fall Back or arrive from reserves?",
+    "answer": "No. It requires a Normal move in YOUR Movement phase.",
+    "source": "faction"
+  },
+  {
+    "id": "Core abilities/Be'lakor / Skullmaster / Bloodcrushers/Devastating Wounds/spill",
+    "section": "Core abilities",
+    "subject": "Be'lakor / Skullmaster / Bloodcrushers",
+    "ability": "Devastating Wounds",
+    "question": "Can one Devastating Wounds attack spill its mortal wounds across several models?",
+    "answer": "No. It can damage at most one model; excess is lost.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Be'lakor / Lord of Change/Hazardous/damage",
+    "section": "Core abilities",
+    "subject": "Be'lakor / Lord of Change",
+    "ability": "Hazardous",
+    "question": "Hazardous: which results fail, and how much damage do they cause?",
+    "answer": "A 1-2 fails: 1 mortal wound, or 3 if every model in the unit is Monster/Vehicle. YOUR Be'lakor and Lord of Change take 3 per failed roll.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Be'lakor / Lord of Change / Flamers/Psychic/psyker",
+    "section": "Core abilities",
+    "subject": "Be'lakor / Lord of Change / Flamers",
+    "ability": "Psychic",
+    "question": "Does the Psyker model keyword make all its weapons Psychic?",
+    "answer": "No. The weapon needs the Psychic keyword. GUO being a Psyker does not make all its attacks Psychic.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Great Unclean One / Plaguebearers / Lord of Change/Lethal Hits/devs",
+    "section": "Core abilities",
+    "subject": "Great Unclean One / Plaguebearers / Lord of Change",
+    "ability": "Lethal Hits",
+    "question": "Can a wound automatically caused by Lethal Hits trigger Devastating Wounds?",
+    "answer": "No. There was no Wound roll, so it cannot be a Critical Wound.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Skullmaster / Bloodcrushers/Extra Attacks/buff",
+    "section": "Core abilities",
+    "subject": "Skullmaster / Bloodcrushers",
+    "ability": "Extra Attacks",
+    "question": "Can Skarbrand's +1 melee Attack modify an Extra Attacks horn?",
+    "answer": "Yes. This edition's Extra Attacks rule does not prohibit Attack-characteristic modifiers.",
+    "source": "core"
+  },
+  {
+    "id": "Unit checklists/Be'lakor/Ability checklist/shades",
+    "section": "Unit checklists",
+    "subject": "Be'lakor",
+    "ability": "Ability checklist",
+    "question": "Be'lakor: what special effects do both Betraying Shades profiles share?",
+    "answer": "They ignore cover, count as Psychic Attacks, and turn Critical Wounds into mortal wounds equal to Damage.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Be'lakor/Ability checklist/focused",
+    "section": "Unit checklists",
+    "subject": "Be'lakor",
+    "ability": "Ability checklist",
+    "question": "Be'lakor: which Betraying Shades profile is Hazardous?",
+    "answer": "Focused witchfire only.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Great Unclean One/Ability checklist/vomit",
+    "section": "Unit checklists",
+    "subject": "Great Unclean One",
+    "ability": "Ability checklist",
+    "question": "GUO: how does putrid vomit handle Hit rolls and cover?",
+    "answer": "It automatically hits and ignores cover.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Great Unclean One/Ability checklist/loadout",
+    "section": "Unit checklists",
+    "subject": "Great Unclean One",
+    "ability": "Ability checklist",
+    "question": "Does YOUR GUO have bell or bileblade abilities?",
+    "answer": "No. YOUR loadout is bilesword and plague flail.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Lord of Change/Ability checklist/psychic",
+    "section": "Unit checklists",
+    "subject": "Lord of Change",
+    "ability": "Ability checklist",
+    "question": "Lord of Change: which equipped weapons are Psychic?",
+    "answer": "All of them: rod of sorcery, Bolt of Change and staff of Tzeentch.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Skarbrand/Ability checklist/fly",
+    "section": "Unit checklists",
+    "subject": "Skarbrand",
+    "ability": "Ability checklist",
+    "question": "Does Skarbrand have Fly?",
+    "answer": "No.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Plaguebearers/Ability checklist/sword",
+    "section": "Unit checklists",
+    "subject": "Plaguebearers",
+    "ability": "Ability checklist",
+    "question": "Plaguebearers: what happens when a plaguesword scores a Critical Hit?",
+    "answer": "It can wound automatically through Lethal Hits.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Flamers/Ability checklist/champion",
+    "section": "Unit checklists",
+    "subject": "Flamers",
+    "ability": "Ability checklist",
+    "question": "Flamers: does the Pyrocaster have a different weapon or model profile?",
+    "answer": "No. It uses the same profile as the other Flamers.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Bloodcrushers/Ability checklist/horn",
+    "section": "Unit checklists",
+    "subject": "Bloodcrushers",
+    "ability": "Ability checklist",
+    "question": "Bloodcrushers: what do the horns' native weapon rules let them do?",
+    "answer": "Attack alongside hellblades, and add 1 to Wound rolls after the unit charged this turn. Attached Skullmaster can also grant horn Devastating Wounds after charging.",
+    "source": "faction"
+  },
+  {
+    "id": "Saves/Be'lakor/Invulnerable save/save-choice",
+    "section": "Core abilities",
+    "subject": "Be'lakor",
+    "ability": "Invulnerable save",
+    "question": "Can YOU roll both armour and invulnerable saves against the same attack?",
+    "answer": "No. Choose one applicable save. AP does not worsen invulnerable saves.",
+    "source": "core"
+  },
+  {
+    "id": "Buff sources/Be'lakor/Complete support checklist/shadow-heal",
+    "section": "Core abilities",
+    "subject": "Be'lakor",
+    "ability": "Complete support checklist",
+    "question": "Can an auto-successful Battle-shock test from Insane Bravery trigger Manifestation?",
+    "answer": "Yes, if the friendly Daemon unit is in Shadow. Manifestation then heals D3 wounds or returns D3 Battleline models.",
+    "source": "core"
+  },
+  {
+    "id": "Buff sources/Be'lakor/Complete support checklist/insane",
+    "section": "Core abilities",
+    "subject": "Be'lakor",
+    "ability": "Complete support checklist",
+    "question": "Insane Bravery: cost, timing and use limit?",
+    "answer": "1CP, once per battle, in YOUR Command phase Battle-shock step. Makes the selected test successful.",
+    "source": "core"
+  },
+  {
+    "id": "Buff sources/Be'lakor/Complete support checklist/reroll",
+    "section": "Core abilities",
+    "subject": "Be'lakor",
+    "ability": "Complete support checklist",
+    "question": "Command Re-roll: what does spending 1CP let YOU re-roll?",
+    "answer": "One eligible roll in EITHER PLAYER'S applicable phase. It is not an ongoing buff to every roll.",
+    "source": "core"
+  },
+  {
+    "id": "Buff sources/Be'lakor/Complete support checklist/rapid",
+    "section": "Core abilities",
+    "subject": "Be'lakor",
+    "ability": "Complete support checklist",
+    "question": "Rapid Ingress: cost and timing?",
+    "answer": "1CP at the end of THEIR Movement phase, from round 2 onward. Make the unit's ingress move, obeying arrival restrictions.",
+    "source": "core"
+  },
+  {
+    "id": "Buff sources/Be'lakor/Complete support checklist/overwatch",
+    "section": "Core abilities",
+    "subject": "Be'lakor",
+    "ability": "Complete support checklist",
+    "question": "Fire Overwatch: cost, timing and basic target requirements?",
+    "answer": "1CP at the end of THEIR Movement phase. An unengaged unit snap shoots one visible eligible enemy within 24 inches; weapon ranges and eligibility still apply.",
+    "source": "core"
+  },
+  {
+    "id": "Buff sources/Be'lakor/Complete support checklist/overwatch-torrent",
+    "section": "Core abilities",
+    "subject": "Be'lakor",
+    "ability": "Complete support checklist",
+    "question": "Do Torrent weapons still auto-hit during Overwatch?",
+    "answer": "Yes. Torrent auto-hits; snap shooting still prohibits Hit rerolls.",
+    "source": "core"
+  },
+  {
+    "id": "Buff sources/Be'lakor/Complete support checklist/epic",
+    "section": "Core abilities",
+    "subject": "Be'lakor",
+    "ability": "Complete support checklist",
+    "question": "Epic Challenge: who gets Precision, and for how long?",
+    "answer": "For 1CP in EITHER PLAYER'S Fight phase, the selected Character's melee weapons gain Precision until that phase ends. Bodyguards do not gain it.",
+    "source": "core"
+  },
+  {
+    "id": "Buff sources/Be'lakor/Complete support checklist/impact",
+    "section": "Core abilities",
+    "subject": "Be'lakor",
+    "ability": "Complete support checklist",
+    "question": "Crushing Impact: what does it offer YOUR Monsters?",
+    "answer": "For 1CP in YOUR Charge phase after charging, it can inflict impact mortal wounds, with a risk of self-inflicted mortal wounds.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Skullmaster / Bloodcrushers/Attached unit destroyed/whole",
+    "section": "Core abilities",
+    "subject": "Skullmaster / Bloodcrushers",
+    "ability": "Attached unit destroyed",
+    "question": "No Prisoners: how many unit kills does destroying the whole original attached unit give?",
+    "answer": "One total, not separate bodyguard and leader kills. The same rule applies if the leader dies first.",
     "source": "core"
   }
 ]

@@ -23,3 +23,12 @@
 - Keep the top section exclusively for unit cards. Put Shadow of Chaos & Warp Rifts at the bottom left, alongside the separate stratagem cards.
 - Show Feel No Pain in the affected model's save cell using triple-plus notation, alongside armour and invulnerable saves. For this roster GUO shows 5+ / 4++ / 5+++* from Endless Gift, and Flesh Hounds show 7+ / 5++ / 3+++*, explicitly restricted to Psychic Attacks in the Collar ability.
 - Do not print the repeated Be'lakor/Shadow aura-summary lines on recipient cards (the former `received` helper), and do not replace them with another summary. Keep the requested starred profile modifiers and source abilities.
+
+# Flashcard preferences
+
+- Ask what happens in play, not the names of abilities, rules or missions. Never make the answer just an ability name. Weapon keyword reminders should explain their gameplay effects.
+- Keep ordinary rules questions manageable, with the essential conditions alongside the effect. Do not turn a card into a catalogue of unrelated rules or duplicate shared rules on every unit.
+- A complete objective/primary scoring explanation on one card is useful and explicitly preferred over name-recall questions or excessive fragmentation.
+- Per-unit buff cards should use concise source/effect lists, e.g. Lord of Change: Shadow, +1 ranged Strength; Be'lakor: selected 18-inch ranged screen OR Hit RR1. Preserve ranges and alternative-mode restrictions without repeating every generic stratagem.
+- Keep sources collapsed below the answer. Preserve retained note GUIDs and study progress. Remove consolidated duplicate cards from the installed deck as well as the package, using Anki's collection API so deletions sync.
+- Rebuild, verify imported fields and retained review history, and confirm completed sync when updating the installed deck.

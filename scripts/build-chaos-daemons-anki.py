@@ -28,7 +28,7 @@ MODEL = genanki.Model(
     templates=[{
         'name': 'Recall',
         'qfmt': '<div class="label">CHAOS DAEMONS · RULES RECALL</div><div class="question">{{Question}}</div>',
-        'afmt': '{{FrontSide}}<hr id="answer"><div class="answer">{{Answer}}</div><div class="source">{{Source}}</div>',
+        'afmt': '{{FrontSide}}<hr id="answer"><div class="answer">{{Answer}}</div><details class="source"><summary>Sources</summary>{{Source}}</details>',
     }],
     css='''
 .card { font-family: Arial, sans-serif; font-size: 21px; text-align: left;
@@ -37,6 +37,7 @@ MODEL = genanki.Model(
 .question { font-weight: bold; }
 .answer { margin-top: 20px; }
 .source { font-size: 12px; opacity: .7; margin-top: 28px; }
+.source summary { cursor: pointer; margin-bottom: 8px; }
 .owner { color: #16808c; font-weight: bold; }
 .answer li { margin-bottom: 12px; }
 a { color: #16808c; }
@@ -70,6 +71,16 @@ def build():
     assert len(set(ids)) == len(ids), 'Duplicate stable IDs'
     assert len({row['question'] for row in rows}) == len(rows), 'Duplicate questions'
     assert all(row[key].strip() for row in rows for key in ['id', 'section', 'question', 'answer'])
+    # Ordinary rules stay focused; full scoring and concise buff lists are useful.
+    for row in rows:
+        limit = 120 if row['section'] in ['Primary missions', 'Buff sources'] else 40
+        assert len(row['answer'].split()) <= limit, f"Shorten long answer: {row['id']}"
+        assert not re.search(r'what.*(?:called|name\b)|which.*named abilities',
+                             row['question'], re.IGNORECASE), f"Ask for an effect: {row['id']}"
+        assert not re.search(
+            r'recall all|all abilities|complete support|cost, timing, target and effect',
+            row['question'], re.IGNORECASE,
+        ), f"Narrow broad prompt: {row['id']}"
     # Append new sections: existing deck IDs must stay stable on re-import.
     sections = ['Army', 'Detachment', 'Stratagems', 'Enhancements', 'Units', 'Core abilities', 'Unit checklists', 'Saves', 'Primary missions', 'Buff sources']
     assert set(row['section'] for row in rows) == set(sections)
