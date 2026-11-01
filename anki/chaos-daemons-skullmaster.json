@@ -1,0 +1,830 @@
+[
+  {
+    "id": "Army/Chaos Daemons/Shadow areas",
+    "section": "Army",
+    "subject": "Chaos Daemons",
+    "ability": "Shadow areas",
+    "question": "Shadow of Chaos: Shadow areas?",
+    "answer": "Your deployment zone is always in Shadow. At the start of any phase, controlling at least half the objectives in No Man's Land puts that whole area in Shadow until phase end; the same check applies separately to the enemy deployment zone.",
+    "source": "faction"
+  },
+  {
+    "id": "Army/Chaos Daemons/Empty territory",
+    "section": "Army",
+    "subject": "Chaos Daemons",
+    "ability": "Empty territory",
+    "question": "Does controlling half of zero objectives put an empty territory in Shadow?",
+    "answer": "No. If an area has no objective markers, the objective-control condition does not put it in Shadow. Your own deployment zone remains in Shadow.",
+    "source": "faction"
+  },
+  {
+    "id": "Army/Chaos Daemons/Daemonic Manifestation",
+    "section": "Army",
+    "subject": "Chaos Daemons",
+    "ability": "Daemonic Manifestation",
+    "question": "Shadow of Chaos: Daemonic Manifestation?",
+    "answer": "A friendly Legiones Daemonica unit in Shadow adds 1 to its Battle-shock roll. On a success, heal one model D3 wounds; if it is Battleline, you may instead return up to D3 destroyed non-Character models.",
+    "source": "faction"
+  },
+  {
+    "id": "Army/Chaos Daemons/Manifestation in this roster",
+    "section": "Army",
+    "subject": "Chaos Daemons",
+    "ability": "Manifestation in this roster",
+    "question": "Which unit in this roster can return models through Daemonic Manifestation?",
+    "answer": "Plaguebearers are the Battleline unit: on a successful Battle-shock roll in Shadow, you may return up to D3 destroyed Plaguebearers instead of healing one model D3 wounds.",
+    "source": "faction"
+  },
+  {
+    "id": "Army/Chaos Daemons/Daemonic Terror",
+    "section": "Army",
+    "subject": "Chaos Daemons",
+    "ability": "Daemonic Terror",
+    "question": "Shadow of Chaos: Daemonic Terror?",
+    "answer": "An enemy unit in your Shadow and/or within 6 inches of a listed Greater Daemon subtracts 1 from its Battle-shock test. A failed test inflicts D3 mortal wounds on it. In this roster the listed Greater Daemons are GUO, Lord of Change and Skarbrand.",
+    "source": "faction"
+  },
+  {
+    "id": "Army/Chaos Daemons/Terror stacking",
+    "section": "Army",
+    "subject": "Chaos Daemons",
+    "ability": "Terror stacking",
+    "question": "Does Daemonic Terror stack for several nearby Greater Daemons or overlapping Shadow areas?",
+    "answer": "No. Shadow and Greater Daemon proximity are alternative qualifying conditions for the same rule, not separate cumulative penalties.",
+    "source": "faction"
+  },
+  {
+    "id": "Army/Chaos Daemons/Pall interaction",
+    "section": "Army",
+    "subject": "Chaos Daemons",
+    "ability": "Pall interaction",
+    "question": "Shadow of Chaos: Pall interaction?",
+    "answer": "Pall can force a below-starting-strength enemy within 9 inches to test in the opponent's Battle-shock step. Terror adds -1 and D3 mortals on failure only if the enemy also meets Terror's own Shadow/Greater Daemon condition. Pall heals Be'lakor D3 for each enemy unit failing a test within 9 inches while the mode is active.",
+    "source": "faction"
+  },
+  {
+    "id": "Army/Chaos Daemons/Daemonic Pact",
+    "section": "Army",
+    "subject": "Chaos Daemons",
+    "ability": "Daemonic Pact",
+    "question": "Is Daemonic Pact used by this pure Chaos Daemons roster?",
+    "answer": "This is the allied-Daemons rule for an army whose models all have Chaos Knights or Heretic Astartes. It is not used by this pure Chaos Daemons roster; use the normal Shadow army rule here.",
+    "source": "faction"
+  },
+  {
+    "id": "Detachment/Daemonic Incursion/Warp Rifts",
+    "section": "Detachment",
+    "subject": "Daemonic Incursion",
+    "ability": "Warp Rifts",
+    "question": "Warp Rifts: when can a Deep Strike unit arrive more than 6 inches away?",
+    "answer": "When set up wholly within your Shadow of Chaos and/or wholly within 6 inches of a friendly listed Greater Daemon sharing its Khorne, Tzeentch, Nurgle or Slaanesh keyword. It must be more than 6 inches horizontally from every enemy model; otherwise Deep Strike requires more than 8 inches.",
+    "source": "faction"
+  },
+  {
+    "id": "Detachment/Daemonic Incursion/Arrival self aura",
+    "section": "Detachment",
+    "subject": "Daemonic Incursion",
+    "ability": "Arrival self aura",
+    "question": "Can Be'lakor or a Greater Daemon use its own arriving aura to give itself a closer Deep Strike?",
+    "answer": "No. Its own newly arriving aura does not qualify it for closer placement. Establish a qualifying Shadow area or another suitable Greater Daemon before setting it up.",
+    "source": "faction"
+  },
+  {
+    "id": "Detachment/Daemonic Incursion/Arrival god matching",
+    "section": "Detachment",
+    "subject": "Daemonic Incursion",
+    "ability": "Arrival god matching",
+    "question": "Which Greater Daemon supports each god in this roster for Warp Rifts?",
+    "answer": "GUO: Nurgle / Plaguebearers. Lord of Change: Tzeentch / Flamers and Screamers. Skarbrand: Khorne / Skullmaster, Bloodcrushers and Flesh Hounds. The arriving unit must be wholly within 6 inches. Be'lakor has no god keyword; his already-established Dark Master Shadow area works without god matching.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Corrupt Realspace",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Corrupt Realspace",
+    "question": "Corrupt Realspace: CP cost, timing, target and effect?",
+    "answer": "1CP. Start of either Command phase. Target a friendly Legiones Daemonica unit in range of an objective you control. The objective stays yours until the opponent controls it at the start or end of a turn; while Corrupted and yours, the area within 6 inches is Shadow.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Warp Surge",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Warp Surge",
+    "question": "Warp Surge: CP cost, timing, target and effect?",
+    "answer": "1CP. Your Charge phase. Target a friendly Legiones Daemonica unit in Shadow. It may declare a charge despite having Advanced this turn; effect lasts that phase.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Draught of Terror",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Draught of Terror",
+    "question": "Draught of Terror: CP cost, timing, target and effect?",
+    "answer": "1CP. Your Shooting phase or either Fight phase. Target a friendly Legiones Daemonica unit not yet selected to shoot/fight. Improve its weapons' AP by 1 until phase end; attacks against Battle-shocked targets also re-roll Wounds.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Denizens of the Warp",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Denizens of the Warp",
+    "question": "Denizens of the Warp: CP cost, timing, target and effect?",
+    "answer": "1CP. Your Movement phase. Target a friendly Legiones Daemonica unit arriving by Deep Strike this phase. Set it up anywhere more than 6 inches horizontally from all enemies, without needing Shadow.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/The Realm of Chaos",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "The Realm of Chaos",
+    "question": "The Realm of Chaos: CP cost, timing, target and effect?",
+    "answer": "1CP. End of the opponent's turn. Target up to two friendly Legiones Daemonica units in Shadow, or one other friendly Legiones Daemonica unit. All must be unengaged. Put them in Strategic Reserves; they MUST make an ingress move in your next Movement phase, including your first turn.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Daemonic Invulnerability",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Daemonic Invulnerability",
+    "question": "Daemonic Invulnerability: CP cost, timing, target and effect?",
+    "answer": "1CP. Opponent's Shooting phase, just after an enemy unit chooses targets. Target one friendly Legiones Daemonica unit selected as a target. Until phase end, its models re-roll invulnerable saving throws of 1.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Denizens charge",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Denizens charge",
+    "question": "Does Denizens of the Warp itself prohibit charging?",
+    "answer": "No charge prohibition is printed in this stratagem. Follow any other applicable arrival and mission restrictions.",
+    "source": "faction"
+  },
+  {
+    "id": "Stratagems/Daemonic Incursion/Realm versus Hounds",
+    "section": "Stratagems",
+    "subject": "Daemonic Incursion",
+    "ability": "Realm versus Hounds",
+    "question": "How does Realm of Chaos differ from the Flesh Hounds' reserve pickup?",
+    "answer": "Realm costs 1CP, can pick up two units in Shadow or one elsewhere, and requires next-own-Movement ingress. Hunters from the Warp is free, affects only that Flesh Hounds unit, needs no Shadow, and does not itself state Realm's mandatory return clause. Both require the picked-up units to be unengaged.",
+    "source": "faction"
+  },
+  {
+    "id": "Enhancements/Great Unclean One/The Endless Gift",
+    "section": "Enhancements",
+    "subject": "Great Unclean One",
+    "ability": "The Endless Gift",
+    "question": "The Endless Gift: eligible bearer and effect?",
+    "answer": "Nurgle Legiones Daemonica model only; taken on your GUO. The bearer has Feel No Pain 5+. Use this instead of its native 6+, without rolling both. There is no stronger Shadow tier.",
+    "source": "faction"
+  },
+  {
+    "id": "Enhancements/Lord of Change/The Everstave",
+    "section": "Enhancements",
+    "subject": "Lord of Change",
+    "ability": "The Everstave",
+    "question": "The Everstave: eligible bearer and both tiers?",
+    "answer": "Tzeentch Legiones Daemonica model only; taken on your Lord of Change. Its ranged weapons gain +1 Strength and +3 inches Range, replaced by +2 Strength and +6 inches Range while the bearer is in Shadow. These tiers do not stack; melee weapons are unaffected.",
+    "source": "faction"
+  },
+  {
+    "id": "Enhancements/Lord of Change/Everstave applied",
+    "section": "Enhancements",
+    "subject": "Lord of Change",
+    "ability": "Everstave applied",
+    "question": "What are this Lord of Change's ranged Strength and Range with its self-auras and Everstave?",
+    "answer": "On-board, its own Tzeentch aura supplies Shadow. Add +2 Strength/+6 inches from Everstave and +1 ranged Strength from Daemon Lord of Tzeentch: rod S8 becomes S11; either Bolt S9 becomes S12; both base 18-inch ranges become 24 inches. Do not apply either buff twice.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Be'lakor/The Dark Master",
+    "section": "Units",
+    "subject": "Be'lakor",
+    "ability": "The Dark Master",
+    "question": "Be'lakor: how does The Dark Master work?",
+    "answer": "The battlefield area within 6 inches of Be'lakor is your Shadow of Chaos. It is an area aura, without god matching; it can qualify wholly-within arrivals once Be'lakor is already on the battlefield.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Be'lakor/Shadow Form",
+    "section": "Units",
+    "subject": "Be'lakor",
+    "ability": "Shadow Form",
+    "question": "Be'lakor: how does Shadow Form work?",
+    "answer": "At the start of each battle round choose Wreathed in Shadows, Pall of Despair or Shadow Lord. Only the selected mode applies until the end of that round.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Be'lakor/Wreathed in Shadows",
+    "section": "Units",
+    "subject": "Be'lakor",
+    "ability": "Wreathed in Shadows",
+    "question": "Be'lakor: how does Wreathed in Shadows work?",
+    "answer": "While a friendly Legiones Daemonica or Shadow Legion unit is within 6 inches, a model can target it with a ranged attack only from within 18 inches. Be'lakor qualifies himself. This is one selected Shadow Form, not a permanent additional effect.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Be'lakor/Pall of Despair",
+    "section": "Units",
+    "subject": "Be'lakor",
+    "ability": "Pall of Despair",
+    "question": "Be'lakor: how does Pall of Despair work?",
+    "answer": "In the opponent's Command-phase Battle-shock step, enemies within 9 inches that are below Starting Strength must test. A starting-strength-one unit qualifies if it has lost any wounds. Also, each enemy unit failing a Battle-shock test within 9 inches heals Be'lakor up to D3 wounds while this mode is active.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Be'lakor/Shadow Lord",
+    "section": "Units",
+    "subject": "Be'lakor",
+    "ability": "Shadow Lord",
+    "question": "Be'lakor: how does Shadow Lord work?",
+    "answer": "Friendly Legiones Daemonica or Shadow Legion units within 6 inches re-roll Hit rolls of 1. Includes himself, melee and ranged attacks; Torrent has no Hit roll. Applies only when this Shadow Form is selected.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Be'lakor/Supreme Commander",
+    "section": "Units",
+    "subject": "Be'lakor",
+    "ability": "Supreme Commander",
+    "question": "Be'lakor: how does Supreme Commander work?",
+    "answer": "If included, Be'lakor must be your Warlord. He is the Warlord in this roster.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Be'lakor/Damaged",
+    "section": "Units",
+    "subject": "Be'lakor",
+    "ability": "Damaged",
+    "question": "Be'lakor: how does Damaged work?",
+    "answer": "At 1-7 wounds remaining, subtract 1 from his attack Hit rolls. Psychic weapons can ignore Hit-roll modifiers under the current Psychic core ability; the melee blade is not Psychic.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Great Unclean One/Greater Daemon of Nurgle",
+    "section": "Units",
+    "subject": "Great Unclean One",
+    "ability": "Greater Daemon of Nurgle",
+    "question": "Great Unclean One: how does Greater Daemon of Nurgle work?",
+    "answer": "Friendly Nurgle Legiones Daemonica units within 6 inches are in Shadow. Includes GUO itself and nearby Plaguebearers; does not apply to other gods or Be'lakor.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Great Unclean One/Daemon Lord of Nurgle",
+    "section": "Units",
+    "subject": "Great Unclean One",
+    "ability": "Daemon Lord of Nurgle",
+    "question": "Great Unclean One: how does Daemon Lord of Nurgle work?",
+    "answer": "Friendly Nurgle Legiones Daemonica models in units within 6 inches gain +1 Toughness. Includes self: T12 becomes T13; nearby Plaguebearers: T5 becomes T6.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Great Unclean One/Nurgle's Rot",
+    "section": "Units",
+    "subject": "Great Unclean One",
+    "ability": "Nurgle's Rot",
+    "question": "Great Unclean One: how does Nurgle's Rot work?",
+    "answer": "At the end of your Movement phase select one enemy unit within 12 inches. Its models have -1 Toughness until the start of your next Movement phase. The ability does not require visibility.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Great Unclean One/Native Feel No Pain",
+    "section": "Units",
+    "subject": "Great Unclean One",
+    "ability": "Native Feel No Pain",
+    "question": "Great Unclean One: how does Native Feel No Pain work?",
+    "answer": "Native FNP6+ ignores each lost wound on 6+. Your Endless Gift improves this to FNP5+; use one applicable FNP roll per wound, not both.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Great Unclean One/Damaged",
+    "section": "Units",
+    "subject": "Great Unclean One",
+    "ability": "Damaged",
+    "question": "Great Unclean One: how does Damaged work?",
+    "answer": "At 1-7 wounds remaining, subtract 1 from its attack Hit rolls. Putrid vomit still auto-hits through Torrent.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Lord of Change/Greater Daemon of Tzeentch",
+    "section": "Units",
+    "subject": "Lord of Change",
+    "ability": "Greater Daemon of Tzeentch",
+    "question": "Lord of Change: how does Greater Daemon of Tzeentch work?",
+    "answer": "Friendly Tzeentch Legiones Daemonica units within 6 inches are in Shadow. Includes self, nearby Flamers and Screamers.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Lord of Change/Daemon Lord of Tzeentch",
+    "section": "Units",
+    "subject": "Lord of Change",
+    "ability": "Daemon Lord of Tzeentch",
+    "question": "Lord of Change: how does Daemon Lord of Tzeentch work?",
+    "answer": "When a model in a friendly Tzeentch Legiones Daemonica unit within 6 inches makes a ranged attack, add 1 to its Strength. Includes the Lord itself and Flamer flames. No melee bonus; Everstave does not transfer to other units.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Lord of Change/Master of Magicks",
+    "section": "Units",
+    "subject": "Lord of Change",
+    "ability": "Master of Magicks",
+    "question": "Lord of Change: how does Master of Magicks work?",
+    "answer": "In your Shooting phase choose Ignores Cover, Lethal Hits or Sustained Hits D3 for its Bolt of Change until phase end. Does not affect the rod, staff, other units or Overwatch in the opponent's turn.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Lord of Change/Damaged",
+    "section": "Units",
+    "subject": "Lord of Change",
+    "ability": "Damaged",
+    "question": "Lord of Change: how does Damaged work?",
+    "answer": "At 1-7 wounds remaining, subtract 1 from its attack Hit rolls. Its equipped rod, Bolt and staff are Psychic, whose current core rule allows their attacks to ignore Hit-roll modifiers.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Skarbrand/Greater Daemon of Khorne",
+    "section": "Units",
+    "subject": "Skarbrand",
+    "ability": "Greater Daemon of Khorne",
+    "question": "Skarbrand: how does Greater Daemon of Khorne work?",
+    "answer": "Friendly Khorne Legiones Daemonica units within 6 inches are in Shadow. Includes self, Skullmaster/Bloodcrushers and Flesh Hounds.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Skarbrand/Rage Embodied",
+    "section": "Units",
+    "subject": "Skarbrand",
+    "ability": "Rage Embodied",
+    "question": "Skarbrand: how does Rage Embodied work?",
+    "answer": "Add 1 to the Attacks of melee weapons on models in friendly Khorne Legiones Daemonica units within 6 inches. Includes self; strike A8 becomes A9 and sweep A16 becomes A17. Also applies to the attached cavalry's blades/horns and Hound fangs.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Skarbrand/Murderlust",
+    "section": "Units",
+    "subject": "Skarbrand",
+    "ability": "Murderlust",
+    "question": "Skarbrand: how does Murderlust work?",
+    "answer": "Skarbrand may declare a charge in a turn in which he Advanced. No Shadow requirement and no Warp Surge CP cost.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Skarbrand/Damaged",
+    "section": "Units",
+    "subject": "Skarbrand",
+    "ability": "Damaged",
+    "question": "Skarbrand: how does Damaged work?",
+    "answer": "At 1-7 wounds remaining, Slaughter and Carnage gains +2 Attacks. With his own +1 Attack aura, strike is A11 and sweep A19. This damaged rule is not a Hit penalty.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Skullmaster/Leader",
+    "section": "Units",
+    "subject": "Skullmaster",
+    "ability": "Leader",
+    "question": "Skullmaster: how does Leader work?",
+    "answer": "May lead Bloodcrushers, as selected in this roster. Together they form an attached unit; unit-wide bodyguard abilities such as Brass Stampede also include the leader while their source remains. Retain individual saves; use bodyguard Toughness while bodyguards remain.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Skullmaster/Skullmaster's Fury",
+    "section": "Units",
+    "subject": "Skullmaster",
+    "ability": "Skullmaster's Fury",
+    "question": "Skullmaster: how does Skullmaster's Fury work?",
+    "answer": "While leading, each time the unit ends a Charge move, every Juggernaut bladed horn in that unit gains Devastating Wounds until end of turn. Applies to the leader's horn too; does not grant it to blades.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Skullmaster/Devastating Charge",
+    "section": "Units",
+    "subject": "Skullmaster",
+    "ability": "Devastating Charge",
+    "question": "Skullmaster: how does Devastating Charge work?",
+    "answer": "Each time this model's unit ends a Charge move, every enemy unit within Engagement Range of that unit must take a Battle-shock test.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Bloodcrushers/Brass Stampede",
+    "section": "Units",
+    "subject": "Bloodcrushers",
+    "ability": "Brass Stampede",
+    "question": "Bloodcrushers: how does Brass Stampede work?",
+    "answer": "After this unit ends a Charge move, select one enemy unit in Engagement Range. Roll one D6 for each model in your unit; each 4+ inflicts D3 mortal wounds. Include the attached Skullmaster in the number of dice.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Bloodcrushers/Daemonic Icon",
+    "section": "Units",
+    "subject": "Bloodcrushers",
+    "ability": "Daemonic Icon",
+    "question": "Bloodcrushers: how does Daemonic Icon work?",
+    "answer": "Models in the bearer's unit have Leadership 6+. The equipped icon also benefits the attached Skullmaster; the effect ends if the icon bearer is destroyed.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Bloodcrushers/Instrument of Chaos",
+    "section": "Units",
+    "subject": "Bloodcrushers",
+    "ability": "Instrument of Chaos",
+    "question": "Bloodcrushers: how does Instrument of Chaos work?",
+    "answer": "Add 1 to the bearer's unit's Charge rolls while its equipped instrument bearer remains alive. Benefits the whole attached unit.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Bloodcrushers/Charge sequence",
+    "section": "Units",
+    "subject": "Bloodcrushers",
+    "ability": "Charge sequence",
+    "question": "Skullmaster + Bloodcrushers: what are the three charge-triggered abilities?",
+    "answer": "Resolve Brass Stampede against one engaged enemy, Devastating Charge against all engaged enemies, and Skullmaster's Fury granting horn Devastating Wounds until end of turn. Resolve simultaneous own effects in your chosen order; a prior effect may change later eligibility. Terror applies to tests only if its own range/Shadow condition is met.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Plaguebearers/Infected Outbreak",
+    "section": "Units",
+    "subject": "Plaguebearers",
+    "ability": "Infected Outbreak",
+    "question": "Plaguebearers: how does Infected Outbreak work?",
+    "answer": "At the end of your Command phase, if the unit is in range of an objective you control, it stays yours until the opponent controls it at the start or end of any turn. This alone creates no 6-inch Shadow area.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Plaguebearers/Daemonic Icon",
+    "section": "Units",
+    "subject": "Plaguebearers",
+    "ability": "Daemonic Icon",
+    "question": "Plaguebearers: how does Daemonic Icon work?",
+    "answer": "Models in the bearer's unit have Leadership 6+ while the icon bearer remains. Equipped in this roster; base Leadership is 7+.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Plaguebearers/Instrument of Chaos",
+    "section": "Units",
+    "subject": "Plaguebearers",
+    "ability": "Instrument of Chaos",
+    "question": "Plaguebearers: how does Instrument of Chaos work?",
+    "answer": "Add 1 to the unit's Charge rolls while its instrument bearer remains. Equipped in this roster.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Flamers/Bounding Leaps",
+    "section": "Units",
+    "subject": "Flamers",
+    "ability": "Bounding Leaps",
+    "question": "Flamers: how does Bounding Leaps work?",
+    "answer": "This unit may shoot in a turn in which it Fell Back. This does not grant permission to charge after Falling Back.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Screamers/Slashing Dive",
+    "section": "Units",
+    "subject": "Screamers",
+    "ability": "Slashing Dive",
+    "question": "Screamers: how does Slashing Dive work?",
+    "answer": "In your Movement phase, after a Normal move, select one enemy unit moved over. Roll one D6 per model in this unit; each 4+ causes 1 mortal wound. Does not trigger from an Advance, Fall Back or ingress.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Flesh Hounds/Hunters from the Warp",
+    "section": "Units",
+    "subject": "Flesh Hounds",
+    "ability": "Hunters from the Warp",
+    "question": "Flesh Hounds: how does Hunters from the Warp work?",
+    "answer": "At the end of the opponent's turn, if unengaged, you may put this unit into Strategic Reserves. No CP, Shadow or minimum-distance-from-enemies requirement beyond being unengaged.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Flesh Hounds/Collar of Khorne",
+    "section": "Units",
+    "subject": "Flesh Hounds",
+    "ability": "Collar of Khorne",
+    "question": "Flesh Hounds: how does Collar of Khorne work?",
+    "answer": "Each bearer has FNP3+ against Psychic Attacks. Every Hound, including the Gore Hound, carries a collar. Does not protect against all mortal wounds merely because they are mortal wounds.",
+    "source": "faction"
+  },
+  {
+    "id": "Units/Flesh Hounds/Gore Hound wargear",
+    "section": "Units",
+    "subject": "Flesh Hounds",
+    "ability": "Gore Hound wargear",
+    "question": "Which Flesh Hound models have burning roar?",
+    "answer": "Only the Gore Hound has burning roar. Every model has gore-drenched fangs and a Collar of Khorne. There is not one roar per Hound.",
+    "source": "faction"
+  },
+  {
+    "id": "Core abilities/Be'lakor / Great Unclean One / Lord of Change / Skarbrand / Skullmaster / Bloodcrushers / Plaguebearers / Flamers / Flesh Hounds / Screamers/Deep Strike",
+    "section": "Core abilities",
+    "subject": "Be'lakor / Great Unclean One / Lord of Change / Skarbrand / Skullmaster / Bloodcrushers / Plaguebearers / Flamers / Flesh Hounds / Screamers",
+    "ability": "Deep Strike",
+    "question": "Deep Strike: what does it do for this roster?",
+    "answer": "When the unit makes an ingress move and every model has Deep Strike, set it up anywhere more than 8 inches horizontally from enemy units, including the enemy deployment zone. Warp Rifts/Denizens can reduce this to more than 6 inches; obey other ingress restrictions.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Be'lakor / Great Unclean One / Lord of Change / Skarbrand/Deadly Demise D6",
+    "section": "Core abilities",
+    "subject": "Be'lakor / Great Unclean One / Lord of Change / Skarbrand",
+    "ability": "Deadly Demise D6",
+    "question": "Deadly Demise D6: what does it do for this roster?",
+    "answer": "When the model is destroyed, roll one D6. On a 6, each unit within 6 inches suffers D6 mortal wounds; roll damage separately for each affected unit. Can affect friendly units.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Be'lakor/Stealth",
+    "section": "Core abilities",
+    "subject": "Be'lakor",
+    "ability": "Stealth",
+    "question": "Stealth: what does it do for this roster?",
+    "answer": "If every model in the unit has Stealth, the unit has the benefit of cover against ranged attacks. In this edition it is not a -1 to Hit modifier. Ignores Cover defeats this cover benefit.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Great Unclean One / Flesh Hounds/Feel No Pain",
+    "section": "Core abilities",
+    "subject": "Great Unclean One / Flesh Hounds",
+    "ability": "Feel No Pain",
+    "question": "Feel No Pain: what does it do for this roster?",
+    "answer": "When the model would lose a wound, roll one D6 per wound; a result meeting its FNP value prevents that lost wound. Applies after saves; use only one applicable FNP ability per lost wound.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Be'lakor / Skullmaster / Bloodcrushers/Devastating Wounds",
+    "section": "Core abilities",
+    "subject": "Be'lakor / Skullmaster / Bloodcrushers",
+    "ability": "Devastating Wounds",
+    "question": "Devastating Wounds: what does it do for this roster?",
+    "answer": "A Critical Wound ends that attack sequence and inflicts mortal wounds equal to the weapon's Damage, resolved after normal attack damage. These mortals can damage at most one model per Critical Wound; excess is lost. Applies to Be'lakor's Shades and blade strike, plus cavalry horns after a charge while Skullmaster leads.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Be'lakor / Lord of Change/Hazardous",
+    "section": "Core abilities",
+    "subject": "Be'lakor / Lord of Change",
+    "ability": "Hazardous",
+    "question": "Hazardous: what does it do for this roster?",
+    "answer": "After the unit finishes all attacks for a shoot/fight selection, make one hazard roll for each Hazardous weapon selected. A 1-2 fails: 1 mortal wound, or 3 if every model in the unit is Monster/Vehicle. For this roster's focused Be'lakor/LoC weapons, that is 3 mortals per failed roll.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Be'lakor / Great Unclean One / Lord of Change / Flamers / Flesh Hounds / Skarbrand/Ignores Cover",
+    "section": "Core abilities",
+    "subject": "Be'lakor / Great Unclean One / Lord of Change / Flamers / Flesh Hounds / Skarbrand",
+    "ability": "Ignores Cover",
+    "question": "Ignores Cover: what does it do for this roster?",
+    "answer": "The target cannot benefit from cover against this attack, including cover supplied by Stealth. Does not remove an invulnerable save.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Be'lakor / Lord of Change / Flamers/Psychic",
+    "section": "Core abilities",
+    "subject": "Be'lakor / Lord of Change / Flamers",
+    "ability": "Psychic",
+    "question": "Psychic: what does it do for this roster?",
+    "answer": "A Psychic weapon's attacks may ignore any or all modifiers to BS/WS and/or Hit rolls. They are Psychic Attacks for other rules, such as Collar of Khorne. A Psyker keyword alone does not make every weapon Psychic.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Great Unclean One / Flamers / Flesh Hounds / Skarbrand/Torrent",
+    "section": "Core abilities",
+    "subject": "Great Unclean One / Flamers / Flesh Hounds / Skarbrand",
+    "ability": "Torrent",
+    "question": "Torrent: what does it do for this roster?",
+    "answer": "Each attack automatically hits: no Hit roll, so no Critical Hit, no Hit re-roll and no Lethal/Sustained trigger. Roll attacks, then Wounds normally. Applies to putrid vomit, flickering flames, burning roar and Bellow of endless fury.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Great Unclean One / Plaguebearers / Lord of Change/Lethal Hits",
+    "section": "Core abilities",
+    "subject": "Great Unclean One / Plaguebearers / Lord of Change",
+    "ability": "Lethal Hits",
+    "question": "Lethal Hits: what does it do for this roster?",
+    "answer": "On a Critical Hit you may choose for the attack to wound automatically. If you do, no Wound roll is made and it cannot be a Critical Wound. Native on bilesword/plaguesword; LoC may select it for Bolt through Master of Magicks.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Be'lakor/Sustained Hits 1",
+    "section": "Core abilities",
+    "subject": "Be'lakor",
+    "ability": "Sustained Hits 1",
+    "question": "Sustained Hits 1: what does it do for this roster?",
+    "answer": "A Critical Hit scores one extra hit: two hits total. Be'lakor's blade sweep has this; his blade strike instead has Devastating Wounds.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Lord of Change/Sustained Hits D3",
+    "section": "Core abilities",
+    "subject": "Lord of Change",
+    "ability": "Sustained Hits D3",
+    "question": "Sustained Hits D3: what does it do for this roster?",
+    "answer": "Each Critical Hit adds D3 extra hits. Lord of Change can select this for Bolt in its own Shooting phase; it is not a permanent rod or army-wide buff.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Skullmaster / Bloodcrushers/Extra Attacks",
+    "section": "Core abilities",
+    "subject": "Skullmaster / Bloodcrushers",
+    "ability": "Extra Attacks",
+    "question": "Extra Attacks: what does it do for this roster?",
+    "answer": "When the model fights, select all its Extra Attacks weapons plus one other melee weapon if possible. For the cavalry, attack with horn AND blade/hellblade. Current rules do not prohibit Skarbrand's +1 Attack from modifying horns.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Skullmaster / Bloodcrushers/Lance",
+    "section": "Core abilities",
+    "subject": "Skullmaster / Bloodcrushers",
+    "ability": "Lance",
+    "question": "Lance: what does it do for this roster?",
+    "answer": "If the attacking model's unit made a Charge move this turn, add 1 to Wound rolls for its Lance weapon. Applies to Juggernaut horns, not rider blades.",
+    "source": "core"
+  },
+  {
+    "id": "Core abilities/Screamers/Anti-Monster 4+ / Anti-Vehicle 4+",
+    "section": "Core abilities",
+    "subject": "Screamers",
+    "ability": "Anti-Monster 4+ / Anti-Vehicle 4+",
+    "question": "Anti-Monster 4+ / Anti-Vehicle 4+: what does it do for this roster?",
+    "answer": "Against a unit with the matching keyword, an unmodified Wound roll of 4+ is a Critical Wound. Screamer lamprey bites have both. They do not natively have Devastating Wounds, so Anti alone does not cause mortals.",
+    "source": "core"
+  },
+  {
+    "id": "Unit checklists/Be'lakor/Ability checklist",
+    "section": "Unit checklists",
+    "subject": "Be'lakor",
+    "ability": "Ability checklist",
+    "question": "Be'lakor: recall all abilities and equipped weapon keywords.",
+    "answer": "Deep Strike; Deadly Demise D6; Stealth; The Shadow of Chaos; The Dark Master; Shadow Form (Wreathed in Shadows / Pall of Despair / Shadow Lord); Supreme Commander; Damaged at 1-7 wounds. Weapons: Devastating Wounds, Ignores Cover, Psychic, focused Hazardous, sweep Sustained Hits 1. Invulnerable save 4+.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Great Unclean One/Ability checklist",
+    "section": "Unit checklists",
+    "subject": "Great Unclean One",
+    "ability": "Ability checklist",
+    "question": "Great Unclean One: recall all abilities and equipped weapon keywords.",
+    "answer": "Deep Strike; Deadly Demise D6; native FNP6+ (Endless Gift improves to 5+); The Shadow of Chaos; Greater Daemon of Nurgle; Daemon Lord of Nurgle; Nurgle's Rot; Damaged at 1-7 wounds. Selected weapons: vomit Torrent/Ignores Cover; bilesword Lethal Hits. No bell/bileblade abilities in this loadout. Invulnerable save 4+.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Lord of Change/Ability checklist",
+    "section": "Unit checklists",
+    "subject": "Lord of Change",
+    "ability": "Ability checklist",
+    "question": "Lord of Change: recall all abilities and equipped weapon keywords.",
+    "answer": "Deep Strike; Deadly Demise D6; The Shadow of Chaos; Greater Daemon of Tzeentch; Daemon Lord of Tzeentch; Master of Magicks; Damaged at 1-7 wounds; Everstave. All equipped weapons Psychic; focused Bolt Hazardous; selected Bolt gains Ignores Cover, Lethal Hits or Sustained Hits D3. No optional sword in this loadout. Invulnerable save 4+.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Skarbrand/Ability checklist",
+    "section": "Unit checklists",
+    "subject": "Skarbrand",
+    "ability": "Ability checklist",
+    "question": "Skarbrand: recall all abilities and equipped weapon keywords.",
+    "answer": "Deep Strike; Deadly Demise D6; The Shadow of Chaos; Greater Daemon of Khorne; Rage Embodied; Murderlust; Damaged at 1-7 wounds (+2 Attacks). Bellow has Torrent and Ignores Cover. Invulnerable save 4+; no Fly.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Skullmaster/Ability checklist",
+    "section": "Unit checklists",
+    "subject": "Skullmaster",
+    "ability": "Ability checklist",
+    "question": "Skullmaster: recall all abilities and equipped weapon keywords.",
+    "answer": "Deep Strike; Leader (Bloodcrushers); The Shadow of Chaos; Skullmaster's Fury; Devastating Charge. Horn has Extra Attacks and Lance, gaining Devastating Wounds on charge while leading. Receives unit-wide Brass Stampede, icon and instrument while attached and their sources survive. Invulnerable save 4+.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Bloodcrushers/Ability checklist",
+    "section": "Unit checklists",
+    "subject": "Bloodcrushers",
+    "ability": "Ability checklist",
+    "question": "Bloodcrushers: recall all abilities and equipped weapon keywords.",
+    "answer": "Deep Strike; The Shadow of Chaos; Brass Stampede; equipped Daemonic Icon and Instrument of Chaos. Horns have Extra Attacks and Lance; attached Skullmaster adds Devastating Charge and horn Devastating Wounds on charge while leading. Bloodhunter uses the same profile as other Bloodcrushers. Invulnerable save 5+.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Plaguebearers/Ability checklist",
+    "section": "Unit checklists",
+    "subject": "Plaguebearers",
+    "ability": "Ability checklist",
+    "question": "Plaguebearers: recall all abilities and equipped weapon keywords.",
+    "answer": "Deep Strike; The Shadow of Chaos; Infected Outbreak; equipped Daemonic Icon and Instrument of Chaos; plaguesword Lethal Hits. Plagueridden uses the same profile as other Plaguebearers. Invulnerable save 5+.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Flamers/Ability checklist",
+    "section": "Unit checklists",
+    "subject": "Flamers",
+    "ability": "Ability checklist",
+    "question": "Flamers: recall all abilities and equipped weapon keywords.",
+    "answer": "Deep Strike; The Shadow of Chaos; Bounding Leaps. Flickering flames: Ignores Cover, Psychic, Torrent. Pyrocaster uses the same profile as other Flamers. Invulnerable save 4+.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Flesh Hounds/Ability checklist",
+    "section": "Unit checklists",
+    "subject": "Flesh Hounds",
+    "ability": "Ability checklist",
+    "question": "Flesh Hounds: recall all abilities and equipped weapon keywords.",
+    "answer": "Deep Strike; The Shadow of Chaos; Hunters from the Warp; Collar of Khorne (FNP3+ against Psychic Attacks). Gore Hound alone has burning roar (Ignores Cover, Torrent); all have fangs and collars. Invulnerable save 5+.",
+    "source": "faction"
+  },
+  {
+    "id": "Unit checklists/Screamers/Ability checklist",
+    "section": "Unit checklists",
+    "subject": "Screamers",
+    "ability": "Ability checklist",
+    "question": "Screamers: recall all abilities and equipped weapon keywords.",
+    "answer": "Deep Strike; The Shadow of Chaos; Slashing Dive; lamprey bite Anti-Monster 4+ and Anti-Vehicle 4+. Invulnerable save 4+.",
+    "source": "faction"
+  },
+  {
+    "id": "Saves/Be'lakor/Invulnerable save",
+    "section": "Saves",
+    "subject": "Be'lakor",
+    "ability": "Invulnerable save",
+    "question": "Be'lakor: invulnerable save?",
+    "answer": "4+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "source": "core"
+  },
+  {
+    "id": "Saves/Great Unclean One/Invulnerable save",
+    "section": "Saves",
+    "subject": "Great Unclean One",
+    "ability": "Invulnerable save",
+    "question": "Great Unclean One: invulnerable save?",
+    "answer": "4+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "source": "core"
+  },
+  {
+    "id": "Saves/Lord of Change/Invulnerable save",
+    "section": "Saves",
+    "subject": "Lord of Change",
+    "ability": "Invulnerable save",
+    "question": "Lord of Change: invulnerable save?",
+    "answer": "4+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "source": "core"
+  },
+  {
+    "id": "Saves/Skarbrand/Invulnerable save",
+    "section": "Saves",
+    "subject": "Skarbrand",
+    "ability": "Invulnerable save",
+    "question": "Skarbrand: invulnerable save?",
+    "answer": "4+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "source": "core"
+  },
+  {
+    "id": "Saves/Skullmaster/Invulnerable save",
+    "section": "Saves",
+    "subject": "Skullmaster",
+    "ability": "Invulnerable save",
+    "question": "Skullmaster: invulnerable save?",
+    "answer": "4+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "source": "core"
+  },
+  {
+    "id": "Saves/Bloodcrushers/Invulnerable save",
+    "section": "Saves",
+    "subject": "Bloodcrushers",
+    "ability": "Invulnerable save",
+    "question": "Bloodcrushers: invulnerable save?",
+    "answer": "5+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "source": "core"
+  },
+  {
+    "id": "Saves/Plaguebearers/Invulnerable save",
+    "section": "Saves",
+    "subject": "Plaguebearers",
+    "ability": "Invulnerable save",
+    "question": "Plaguebearers: invulnerable save?",
+    "answer": "5+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "source": "core"
+  },
+  {
+    "id": "Saves/Flamers/Invulnerable save",
+    "section": "Saves",
+    "subject": "Flamers",
+    "ability": "Invulnerable save",
+    "question": "Flamers: invulnerable save?",
+    "answer": "4+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "source": "core"
+  },
+  {
+    "id": "Saves/Flesh Hounds/Invulnerable save",
+    "section": "Saves",
+    "subject": "Flesh Hounds",
+    "ability": "Invulnerable save",
+    "question": "Flesh Hounds: invulnerable save?",
+    "answer": "5+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "source": "core"
+  },
+  {
+    "id": "Saves/Screamers/Invulnerable save",
+    "section": "Saves",
+    "subject": "Screamers",
+    "ability": "Invulnerable save",
+    "question": "Screamers: invulnerable save?",
+    "answer": "4+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
+    "source": "core"
+  }
+]

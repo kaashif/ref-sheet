@@ -12,6 +12,10 @@ typst compile sheet.typ thousand-sons-reference.pdf
 
 `index.html` is kept as the earlier browser-print version.
 
+GitHub Pages now opens the [Chaos Daemons Warp Rifts PDF](https://kaashif.github.io/ref-sheet/output/pdf/chaos-daemons-skullmaster-reference.pdf) by default. Other PDFs remain available at their existing paths.
+
+The [Chaos Daemons Anki deck](https://kaashif.github.io/ref-sheet/output/anki/chaos-daemons-skullmaster.apkg) contains 92 cards covering this roster's abilities, army/detachment rules, six stratagems and both selected enhancements. See [deck coverage and rebuilding instructions](anki/README.md). Import the `.apkg` in Anki using **File > Import**.
+
 ## Additional reference sheets
 
 - `output/pdf/chaos-daemons-skullmaster-reference.pdf` is the one-page A4 portrait Daemonic Incursion / Warp Rifts sheet for the supplied New Recruit v37.8 roster, saved verbatim in `chaos_daemons_skullmaster_list`. Includes Skullmaster leading Bloodcrushers, Flesh Hounds, and the equipped Plaguebearer/Bloodcrusher icons and instruments. Rebuild with `typst compile chaos-daemons-skullmaster-reference.typ output/pdf/chaos-daemons-skullmaster-reference.pdf`. Sources and interactions are in `rules/chaos-daemons-skullmaster-audit-2026-11-01.md`.
