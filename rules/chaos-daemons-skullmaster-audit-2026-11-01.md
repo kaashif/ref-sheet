@@ -39,4 +39,8 @@ Hazardous is spelled out in bold green with a light green background, including 
 
 Flesh Hound bearer counts now sit beside the weapon names: Burning roar `(x1)`, gore-drenched fangs `(xN)`. The shared key defines N as the models in the unit, with attacks still per weapon. The previous bearer-count prose is removed; Collar of Khorne appears in the abilities list with FNP3+ against Psychic Attacks, rather than in the card subtitle.
 
+### Simplified lower section
+
+Removed the standalone phase-trigger box, battlefield-reminder box and tiny printed source footer as requested. Sources remain in this audit. The army/detachment card remains at lower left; the six stratagems each have a separate red box, with 3.2pt internal padding and 6pt gaps, arranged in a numbered two-column grid. The editorial priority for this roster is Realm of Chaos, Warp Surge, Draught of Terror, Daemonic Invulnerability, Denizens of the Warp, Corrupt Realspace. This prioritizes repositioning, Advance-charge and combat output/defence; existing Shadow sources and Plaguebearer sticky control reduce the frequency of the last two effects. This order is an assessment, not a rules ranking.
+
 Compiled with Typst 0.14.2 into `output/pdf/chaos-daemons-skullmaster-reference.pdf`. Poppler confirms one A4 portrait page. Rendered and visually inspected the final page for readable profiles, intact cards, alignment and complete army/stratagem/phase reminders. Checked extracted text for all ten roster unit names, absence of Kairos and points, equipped icons/instruments, and the three new unit abilities. This is a condensed table aid; consult the full source rules for complete wording.

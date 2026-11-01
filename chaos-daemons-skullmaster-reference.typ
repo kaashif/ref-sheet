@@ -232,43 +232,35 @@ table(
   ]
 ]
 
-#v(4pt)
+#v(5pt)
 #line(length: 100%, stroke: 1.2pt + gold)
-#text(size: 7pt, weight: "bold", fill: gold)[ARMY RULES, STRATAGEMS & PHASE REMINDERS]
-#v(2pt)
+#text(size: 7pt, weight: "bold", fill: gold)[ARMY RULES & DAEMONIC INCURSION STRATAGEMS]
+#v(3pt)
 #set text(size: 7.3pt)
-#grid(columns: (1fr, 1fr, 1fr), gutter: 3pt, align: top)[
+#let strat(title, body) = rect(width: 100%, stroke: 0.8pt + red, inset: 3.2pt, radius: 1pt)[
+  #head(title, title-fill: red)
+  #v(2.2pt)
+  #body
+]
+#grid(columns: (1fr, 2fr), gutter: 5pt, align: top)[
   #card("Shadow of Chaos & Warp Rifts")[
     #rule("Shadow areas")[Own deployment zone always. At start of ANY #p("EITHER PLAYER'S", ""), control at least half the objectives in No Man's Land / enemy zone: that area is Shadow until end of the SAME #p("EITHER PLAYER'S", ""). No objectives there = no Shadow this way.]
     #rule("Manifestation")[Friendly Daemons in Shadow: +1 Battle-shock roll; success heals one model D3 W, or returns D3 Plaguebearers instead.]
     #rule("Terror")[Enemy in Shadow and/or within 6" of GUO/LoC/Skarbrand: -1 Battle-shock; failure causes D3 mortals.]
     #rule("Warp Rifts")[Deep Strike #r(">6\" horizontally") from enemies if set up *wholly* in Shadow and/or wholly within 6" of a matching-god Greater Daemon; otherwise >8". These are strict distances.]
   ]
-  #gap
-  #card("Battlefield Reminders", stroke: purple, title-fill: purple)[
-    - Plaguebearer sticky control alone creates no 6" Shadow bubble; *Corrupt Realspace* does.
-    - Be'lakor gets no god-specific aura buff. His Shadow Lord re-rolls can affect this entire roster.
-    - Keep CP for repositioning, Advance-charge, or AP. Flesh Hounds have a free end-of-#text(fill: blue, weight: "bold")[THEIR-turn] pickup.
-  ]
 ][
-  #card("Daemonic Incursion Stratagems", stroke: red, title-fill: red)[
-    #rule("CORRUPT REALSPACE - 1CP")[Start of #p("EITHER PLAYER'S", "Command"). Daemon unit on controlled objective: sticky until opponent controls it at start/end of any turn; while yours, area within 6" is Shadow.]
-    #rule("WARP SURGE - 1CP")[#p("YOUR", "Charge"): Daemon unit *in Shadow* can charge after Advancing this turn.]
-    #rule("DRAUGHT OF TERROR - 1CP")[#p("YOUR", "Shooting") / #p("EITHER PLAYER'S", "Fight"), #r("ONE unit not yet selected to shoot/fight:") #r("AP*") values and full Wound re-rolls vs Battle-shocked targets until end of #p("YOUR", "Shooting") / #p("EITHER PLAYER'S", "Fight"), respectively.]
-    #rule("DENIZENS OF THE WARP - 1CP")[#p("YOUR", "Movement"): arriving Deep Strike Daemon unit may set up >6" horizontally from enemies anywhere, without Shadow requirement.]
-    #rule("THE REALM OF CHAOS - 1CP")[End of #text(fill: blue, weight: "bold")[THEIR turn]: up to 2 Daemon units in Shadow, or 1 elsewhere; all unengaged. Place in Strategic Reserves; #r("MUST ingress") in #p("YOUR NEXT", "Movement"), even turn 1.]
-    #rule("DAEMONIC INVULNERABILITY - 1CP")[#p("THEIR", "Shooting"), just after targets selected: one targeted Daemon unit re-rolls invulnerable saves of 1 until end of #p("THEIR", "Shooting").]
-  ]
-][
-  #card("Don't Forget - Phase Triggers", stroke: gold, title-fill: gold)[
-    #rule("START OF BATTLE ROUND")[Be'lakor chooses Shadow Form.]
-    #rule([START OF #p("EITHER PLAYER'S", "Command")])[Corrupt Realspace window. #p("THEIR", "Command") Battle-shock step: Be'lakor's Pall if selected.]
-    #rule([END OF #p("YOUR", "Command")])[Plaguebearers make controlled objective sticky.]
-    #rule([#p("YOUR", "Movement")])[Screamers' Normal move flyover mortals. End: GUO picks -1 T target within 12". Arrivals: check Shadow / matching god / Denizens; Realm units must return.]
-    #rule([#p("YOUR", "Shooting")])[LoC selects #r("Sustained Hits D3*") for Bolt. Pick safe/focused separately for each Monster weapon; resolve Hazardous when required. Check LoC +1 S and Be'lakor re-roll auras.]
-    #rule([#p("YOUR", "Charge") / #p("EITHER PLAYER'S", "Fight")])[Skarbrand Advance-charge is native. Others need Warp Surge after Advance. Draught: +1 AP for #r("ONE selected unit"). Crushers: charge mortals, enemy Battle-shock tests and horns gain Devs while led.]
-    #rule(text(fill: blue, weight: "bold", "THEIR TURN"))[Wreathed shooting limit if chosen. Invulnerability when targets declared. End: Flesh Hounds / Realm of Chaos pickup.]
+  #grid(columns: (1fr, 1fr), gutter: 6pt, align: top)[
+    #strat("1. THE REALM OF CHAOS - 1CP")[End of #text(fill: blue, weight: "bold")[THEIR turn]: up to 2 Daemon units in Shadow, or 1 elsewhere; all unengaged. Place in Strategic Reserves; #r("MUST ingress") in #p("YOUR NEXT", "Movement"), even turn 1.]
+  ][
+    #strat("2. WARP SURGE - 1CP")[#p("YOUR", "Charge"): one Daemon unit *in Shadow* can charge after Advancing this turn. Lasts until end of #p("YOUR", "Charge").]
+  ][
+    #strat("3. DRAUGHT OF TERROR - 1CP")[#p("YOUR", "Shooting") / #p("EITHER PLAYER'S", "Fight"). #r("ONE unit not yet selected to shoot/fight:") #r("AP*") values and full Wound re-rolls vs Battle-shocked targets until end of #p("YOUR", "Shooting") / #p("EITHER PLAYER'S", "Fight"), respectively.]
+  ][
+    #strat("4. DAEMONIC INVULNERABILITY - 1CP")[#p("THEIR", "Shooting"), just after targets selected: one targeted Daemon unit re-rolls invulnerable saves of 1 until end of #p("THEIR", "Shooting").]
+  ][
+    #strat("5. DENIZENS OF THE WARP - 1CP")[#p("YOUR", "Movement"): one arriving Deep Strike Daemon unit may set up >6" horizontally from enemies anywhere, without Shadow requirement.]
+  ][
+    #strat("6. CORRUPT REALSPACE - 1CP")[Start of #p("EITHER PLAYER'S", "Command"). One Daemon unit on controlled objective: sticky until opponent controls it at start/end of any turn; while yours, area within 6" is Shadow.]
   ]
 ]
-#v(2pt)
-#text(size: 4.5pt, fill: muted)[Profiles: official Chaos Daemons Faction Pack v1.1; condensed reminders, auras checked 1 Nov 2026. Full source links / assumptions: rules/chaos-daemons-skullmaster-audit-2026-11-01.md.]
