@@ -29,4 +29,6 @@ Both Bolt of Change keyword cells now show bold red Sustained Hits D3*, selected
 
 All 24 weapon profiles show the improved AP from Draught of Terror beside base AP, explicitly conditional on spending its CP in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Damaged Be'lakor/GUO Hit values are in the affected Hit cells; Skarbrand's damaged attacks appear in its Attacks cells. Double-star markers distinguish damaged profiles, and Psychic's ability to ignore Hit modifiers is explained. Existing base values and Strength calculations were compared against the previous committed sheet. No roster export changes.
 
+Clarified the AP key, stratagem text and phase reminder to emphasize **1CP, ONE selected unit only**. The AP asterisk on every weapon records potential eligibility, not an army-wide or continuously active AP buff.
+
 Compiled with Typst 0.14.2 into `output/pdf/chaos-daemons-skullmaster-reference.pdf`. Poppler confirms one A4 portrait page. Rendered and visually inspected the final page for readable profiles, intact cards, alignment and complete army/stratagem/phase reminders. Checked extracted text for all ten roster unit names, absence of Kairos and points, equipped icons/instruments, and the three new unit abilities. This is a condensed table aid; consult the full source rules for complete wording.

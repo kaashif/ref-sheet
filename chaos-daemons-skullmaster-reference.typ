@@ -167,7 +167,7 @@ table(
     - #r("18\"*:") Be'lakor within 6", *Wreathed* chosen: only attackers within 18" can shoot that unit.
     - #r("Choose ONE:") Shadow Lord / Wreathed / Pall are alternative battle-round modes.
     - #r("Shadow*:") listed source within 6"; self qualifies on-board. Territory / Corrupt Realspace also apply. Arriving Monsters cannot use their own arriving aura for closer Deep Strike.
-    - #r("AP*") = Draught of Terror: +1 AP in #p("YOUR", "Shooting") / #p("EITHER PLAYER'S", "Fight"). #r("Hit** / A**") = damaged 1-7W. Starred values include named buffs; do not add twice.
+    - #r("AP* = 1CP, ONE selected unit only") via Draught of Terror in #p("YOUR", "Shooting") / #p("EITHER PLAYER'S", "Fight"). #r("Hit** / A**") = damaged 1-7W. Starred values include named buffs; do not add twice.
   ]
 ][
   #card("Skarbrand", note: "MONSTER | KHORNE | ADVANCE AND CHARGE")[
@@ -241,7 +241,7 @@ table(
   #card("Daemonic Incursion Stratagems", stroke: red, title-fill: red)[
     #rule("CORRUPT REALSPACE - 1CP")[Start of #p("EITHER PLAYER'S", "Command"). Daemon unit on controlled objective: sticky until opponent controls it at start/end of any turn; while yours, area within 6" is Shadow.]
     #rule("WARP SURGE - 1CP")[#p("YOUR", "Charge"): Daemon unit *in Shadow* can charge after Advancing this turn.]
-    #rule("DRAUGHT OF TERROR - 1CP")[#p("YOUR", "Shooting") / #p("EITHER PLAYER'S", "Fight"), unselected unit: #r("AP*") values and full Wound re-rolls vs Battle-shocked targets until end of #p("YOUR", "Shooting") / #p("EITHER PLAYER'S", "Fight"), respectively.]
+    #rule("DRAUGHT OF TERROR - 1CP")[#p("YOUR", "Shooting") / #p("EITHER PLAYER'S", "Fight"), #r("ONE unit not yet selected to shoot/fight:") #r("AP*") values and full Wound re-rolls vs Battle-shocked targets until end of #p("YOUR", "Shooting") / #p("EITHER PLAYER'S", "Fight"), respectively.]
     #rule("DENIZENS OF THE WARP - 1CP")[#p("YOUR", "Movement"): arriving Deep Strike Daemon unit may set up >6" horizontally from enemies anywhere, without Shadow requirement.]
     #rule("THE REALM OF CHAOS - 1CP")[End of #text(fill: blue, weight: "bold")[THEIR turn]: up to 2 Daemon units in Shadow, or 1 elsewhere; all unengaged. Place in Strategic Reserves; #r("MUST ingress") in #p("YOUR NEXT", "Movement"), even turn 1.]
     #rule("DAEMONIC INVULNERABILITY - 1CP")[#p("THEIR", "Shooting"), just after targets selected: one targeted Daemon unit re-rolls invulnerable saves of 1 until end of #p("THEIR", "Shooting").]
@@ -253,7 +253,7 @@ table(
     #rule([END OF #p("YOUR", "Command")])[Plaguebearers make controlled objective sticky.]
     #rule([#p("YOUR", "Movement")])[Screamers' Normal move flyover mortals. End: GUO picks -1 T target within 12". Arrivals: check Shadow / matching god / Denizens; Realm units must return.]
     #rule([#p("YOUR", "Shooting")])[LoC selects #r("Sustained Hits D3*") for Bolt. Pick safe/focused separately for each Monster weapon; resolve Hazardous when required. Check LoC +1 S and Be'lakor re-roll auras.]
-    #rule([#p("YOUR", "Charge") / #p("EITHER PLAYER'S", "Fight")])[Skarbrand Advance-charge is native. Others need Warp Surge after Advance. Draught gives +1 AP. Crushers: charge mortals, enemy Battle-shock tests and horns gain Devs while led.]
+    #rule([#p("YOUR", "Charge") / #p("EITHER PLAYER'S", "Fight")])[Skarbrand Advance-charge is native. Others need Warp Surge after Advance. Draught: +1 AP for #r("ONE selected unit"). Crushers: charge mortals, enemy Battle-shock tests and horns gain Devs while led.]
     #rule(text(fill: blue, weight: "bold", "THEIR TURN"))[Wreathed shooting limit if chosen. Invulnerability when targets declared. End: Flesh Hounds / Realm of Chaos pickup.]
   ]
 ]
