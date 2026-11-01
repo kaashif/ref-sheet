@@ -61,14 +61,13 @@ table(
   columns: widths,
   inset: cellpad, stroke: 0.25pt + linec,
   fill: (x, y) => if y == 0 { blue-soft },
-  table.header[*Weapon*][*Rng*][*A*][*Hit*][*S*][*AP*][*D*][*Key*],
+  table.header[*Weapon*][*Rng*][*A*][*Hit*][*S*][*AP* #linebreak() #text(size: 4.4pt, fill: red, weight: "bold", "Draught*")][*D*][*Key*],
   ..rows,
 )}
 
 // Conditional Hit aura marker lives inside each eligible Hit cell.
 #let damaged-hit(skill) = [#skill #r("3+**") #linebreak() #text(size: 5pt, fill: red, weight: "bold", "RR1*")]
 #let hit(skill) = [#skill #linebreak() #text(size: 5pt, fill: red, weight: "bold", "RR1*")]
-#let received(shadow) = text(size: 5.7pt, fill: purple)[#r("Wreathed 18\"*") | #r("Shadow*:") #text(weight: "bold", shadow)]
 #let gap = v(2.8pt)
 
 #grid(columns: (1fr, auto), gutter: 5pt, align: horizon)[
@@ -79,9 +78,8 @@ table(
 #v(2pt)
 
 #grid(columns: (1fr, 1fr, 1fr), gutter: 4pt, align: top)[
-  #card("Be'lakor", note: "MONSTER | FLY | PSYKER | WARLORD | Stealth")[
+  #card("Be'lakor", note: "MONSTER | FLY | PSYKER | WARLORD | Stealth | Deep Strike | Deadly Demise D6")[
     #stats(([Be'lakor], [12"], [11], [3+/4++], [20], [6+], [5]))
-    #received("self")
     #v(1pt)
     #weapons((
       [Shades - safe], [18"], [9], [#hit([2+])], [5], [-2 #linebreak() #r("-3*")], [1], [Devs, Ignores Cover, Psychic],
@@ -97,9 +95,8 @@ table(
     - *Damaged 1-7W:* #r("Hit**") at 1-7W: -1 to Hit. Psychic may ignore; Torrent auto-hits.
   ]
   #gap
-  #card("Great Unclean One", note: [MONSTER | PSYKER | Endless Gift: FNP 6+ / #r("5+*")])[
-    #stats(([GUO], [7"], [12 #linebreak() #r("13*")], [5+/4++], [20], [6+], [5]))
-    #received("self / Be'lakor")
+  #card("Great Unclean One", note: [MONSTER | PSYKER | Deep Strike | Deadly Demise D6])[
+    #stats(([GUO], [7"], [12 #linebreak() #r("13*")], [5+/4++ #linebreak() #r("5+++*")], [20], [6+], [5]))
     #v(1pt)
     #weapons((
       [Plague flail], [6"], [D6+1], [#hit([3+ #r("4+**")])], [7], [-2 #linebreak() #r("-3*")], [2], [#r("Enemy T-1*")],
@@ -109,13 +106,12 @@ table(
     ))
     - #r("Nurgle auras* 6\":") friendly Nurgle Daemons are in Shadow and have +1 T (self included; T12 / #r("13*") above).
     - #r("Enemy T-1* = Nurgle's Rot:") end of #p("YOUR", "Movement"), choose enemy within 12": #r("-1 T to that selected enemy") until start of #p("YOUR NEXT", "Movement").
-    - *Endless Gift:* #r("FNP 5+*") replaces native 6+; no extra Shadow bonus.
+    - *Endless Gift:* #r("5+++*") = FNP 5+, replaces native 6+; no extra Shadow bonus.
     - *Damaged 1-7W:* #r("Hit**") at 1-7W: -1 to Hit. Psychic may ignore; Torrent auto-hits.
   ]
   #gap
-  #card("Plaguebearers", note: "INFANTRY | BATTLELINE | NURGLE")[
+  #card("Plaguebearers", note: "INFANTRY | BATTLELINE | NURGLE | Deep Strike")[
     #stats(([All models], [5"], [5 #linebreak() #r("6*")], [7+/5++], [2], [7+ #linebreak() #r("6+*")], [2]))
-    #received("GUO / Be'lakor")
     #v(1pt)
     #weapons(([Plaguesword], [M], [2], [#hit([3+])], [4], [-1 #linebreak() #r("-2*")], [1], [Lethal]))
     - *Infected Outbreak:* end of #p("YOUR", "Command"), objective you control in range becomes sticky until opponent controls it at start/end of any turn.
@@ -123,9 +119,8 @@ table(
     - *Icon equipped:* #r("Ld6+*") while bearer alive (base 7+). *Instrument equipped:* +1 Charge while bearer alive.
   ]
 ][
-  #card("Lord of Change", note: "MONSTER | FLY | PSYKER | TZEENTCH | Everstave")[
+  #card("Lord of Change", note: "MONSTER | FLY | PSYKER | TZEENTCH | Everstave | Deep Strike | Deadly Demise D6")[
     #stats(([Lord of Change], [12"], [10], [6+/4++], [18], [6+], [5]))
-    #received("self / Be'lakor")
     #v(1pt)
     #weapons((
       [Rod of sorcery], [18" #linebreak() #r("24*")], [6], [#hit([2+])], [8 #linebreak() #r("11*")], [-1 #linebreak() #r("-2*")], [2], [Psychic],
@@ -139,9 +134,8 @@ table(
     - *Damaged 1-7W:* #r("Hit**") at 1-7W: -1 to Hit. Psychic may ignore; Torrent auto-hits.
   ]
   #gap
-  #card("Flamers", note: "INFANTRY | FLY | TZEENTCH")[
+  #card("Flamers", note: "INFANTRY | FLY | TZEENTCH | Deep Strike")[
     #stats(([All models], [9"], [4], [7+/4++], [3], [7+], [1]))
-    #received("LoC / Be'lakor")
     #v(1pt)
     #weapons((
       [Flickering Flames], [12"], [D6], [-], [4 #linebreak() #r("5*")], [-1 #linebreak() #r("-2*")], [1], [Ignores Cover, Psychic, Torrent],
@@ -152,30 +146,30 @@ table(
     - *Overwatch:* D6 auto-hits per model, 12" range. Torrent does not roll Hits or trigger Lethal/Sustained.
   ]
   #gap
-  #card("Screamers", note: "BEAST | FLY | TZEENTCH")[
+  #card("Screamers", note: "BEAST | FLY | TZEENTCH | Deep Strike")[
     #stats(([Screamer], [14"], [4], [6+/4++], [3], [7+], [1]))
-    #received("LoC / Be'lakor")
     #v(1pt)
     #weapons(([Lamprey bite], [M], [3], [#hit([3+])], [6], [-2 #linebreak() #r("-3*")], [2], [Anti-Monster 4+, Anti-Vehicle 4+]))
     - *Slashing Dive:* #p("YOUR", "Movement"), after a Normal move: select one enemy moved over; roll 1D6 per Screamer in unit, each 4+ = 1 mortal wound.
     - No dive after Advance, Fall Back or arrival. No native Devs: Anti 4+ guarantees wounds vs listed targets, not mortals.
     - #r("LoC Shadow* within 6\".") Its Strength aura is ranged only; bites unchanged.
   ]
+
   #gap
-  #card("Shared Rules & Profile Key", stroke: purple, title-fill: purple)[
-    - All units: *Deep Strike, Shadow of Chaos*. Monsters: *Deadly Demise D6*. Be'lakor must be Warlord.
-    - Attacks per model/weapon; *xN* = one weapon per model in unit. Choose one alternative profile; shoot all equipped ranged weapons.
-    - *++* invulnerable; *FNP* ignore lost wound; *Hazardous* = hazard rolls; *Devs* Devastating Wounds.
-    - #r("RR1*:") Be'lakor within 6", *Shadow Lord* chosen: re-roll Hit 1s, self included. No Hit roll for Torrent.
-    - #r("18\"*:") Be'lakor within 6", *Wreathed* chosen: only attackers within 18" can shoot that unit.
-    - #r("Choose ONE:") Shadow Lord / Wreathed / Pall are alternative battle-round modes.
-    - #r("Shadow*:") listed source within 6"; self qualifies on-board. Territory / Corrupt Realspace also apply. Arriving Monsters cannot use their own arriving aura for closer Deep Strike.
-    - #r("AP* = 1CP, ONE selected unit only") via Draught of Terror in #p("YOUR", "Shooting") / #p("EITHER PLAYER'S", "Fight"). #r("Hit** / A**") = damaged 1-7W. Starred values include named buffs; do not add twice.
+  #card("Flesh Hounds", note: "BEAST | KHORNE | Deep Strike")[
+    #stats(([All models], [12"], [4], [7+/5++ #linebreak() #r("3+++*")], [2], [7+], [1]))
+    #v(1pt)
+    #weapons((
+      [Burning roar (x1)], [12"], [D6], [-], [4], [0 #linebreak() #r("-1*")], [1], [Ignores Cover, Torrent],
+      [Gore-drenched fangs (x5)], [M], [3 #linebreak() #r("4*")], [#hit([3+])], [5], [-1 #linebreak() #r("-2*")], [1], [-],
+    ))
+    - *Collar of Khorne:* #r("3+++*") = FNP 3+ vs *Psychic Attacks only*.
+    - #r("4* / Shadow*:") Skarbrand within 6": +1 melee A and unit in Shadow. Roar unaffected.
+    - *Hunters from the Warp:* end of #text(fill: blue, weight: "bold")[THEIR turn], if unengaged, may place this unit into Strategic Reserves; no CP or Shadow required.
   ]
 ][
-  #card("Skarbrand", note: "MONSTER | KHORNE | ADVANCE AND CHARGE")[
+  #card("Skarbrand", note: "MONSTER | KHORNE | ADVANCE AND CHARGE | Deep Strike | Deadly Demise D6")[
     #stats(([Skarbrand], [10"], [11], [3+/4++], [20], [6+], [5]))
-    #received("self / Be'lakor")
     #v(1pt)
     #weapons((
       [Bellow of fury], [12"], [2D6], [-], [8], [-1 #linebreak() #r("-2*")], [1], [Ignores Cover, Torrent],
@@ -189,9 +183,8 @@ table(
   ]
   #gap
   #rect(width: 100%, stroke: 2pt + attachment-red, inset: 2pt, radius: 1pt)[
-    #card("Skullmaster", note: "MOUNTED | CHARACTER | KHORNE | Leading Bloodcrushers")[
+    #card("Skullmaster", note: "MOUNTED | CHARACTER | KHORNE | Leading Bloodcrushers | Deep Strike")[
       #stats(([Skullmaster], [10"], [7], [3+/4++], [6], [7+ #linebreak() #r("6+*")], [2]))
-      #received("Skarbrand / Be'lakor")
       #v(1pt)
       #weapons((
         [Blade of blood], [M], [5 #linebreak() #r("6*")], [#hit([2+])], [6], [-2 #linebreak() #r("-3*")], [3], [-],
@@ -203,9 +196,8 @@ table(
       - #r("Skarbrand* within 6\":") +1 melee A and Shadow. Horns: Extra Attacks alongside blade; Lance +1 Wound after charge.
     ]
     #v(2.8pt)
-    #card("Bloodcrushers", note: "MOUNTED | KHORNE | Skullmaster attached")[
+    #card("Bloodcrushers", note: "MOUNTED | KHORNE | Skullmaster attached | Deep Strike")[
       #stats(([Bloodcrusher], [10"], [7], [3+/5++], [4], [7+ #linebreak() #r("6+*")], [2]))
-      #received("Skarbrand / Be'lakor")
       #v(1pt)
       #weapons((
         [Hellblade], [M], [2 #linebreak() #r("3*")], [#hit([3+])], [5], [-2 #linebreak() #r("-3*")], [2], [-],
@@ -214,22 +206,12 @@ table(
       - *Brass Stampede:* after charge, pick one engaged enemy; roll D6 per model in this unit, #r("including attached Skullmaster"): each 4+ = D3 mortals.
       - #r("Skullmaster*:") while leading, charge gives horns #r("Devs*") until end of that turn; all engaged enemies test Battle-shock.
       - *Icon / instrument:* #r("Ld6+*") and +1 Charge while respective bearers live; includes leader.
-      - #r("Skarbrand* within 6\":") +1 melee A and Shadow. Horns: Extra Attacks alongside hellblade; Lance +1 Wound after charge.
+      - #r("Skarbrand* within 6\":") +1 melee A and Shadow.
     ]
   ]
+
   #gap
-  #card("Flesh Hounds", note: "BEAST | KHORNE")[
-    #stats(([All models], [12"], [4], [7+/5++], [2], [7+], [1]))
-    #received("Skarbrand / Be'lakor")
-    #v(1pt)
-    #weapons((
-      [Burning roar (x1)], [12"], [D6], [-], [4], [0 #linebreak() #r("-1*")], [1], [Ignores Cover, Torrent],
-      [Gore-drenched fangs (xN)], [M], [3 #linebreak() #r("4*")], [#hit([3+])], [5], [-1 #linebreak() #r("-2*")], [1], [-],
-    ))
-    - *Collar of Khorne:* every model has *FNP 3+ vs Psychic Attacks*.
-    - #r("4* / Shadow*:") Skarbrand within 6": +1 melee A and unit in Shadow. Roar unaffected.
-    - *Hunters from the Warp:* end of #text(fill: blue, weight: "bold")[THEIR turn], if unengaged, may place this unit into Strategic Reserves; no CP or Shadow required.
-  ]
+
 ]
 
 #v(5pt)
@@ -247,7 +229,7 @@ table(
     #rule("Shadow areas")[Own deployment zone always. At start of ANY #p("EITHER PLAYER'S", ""), control at least half the objectives in No Man's Land / enemy zone: that area is Shadow until end of the SAME #p("EITHER PLAYER'S", ""). No objectives there = no Shadow this way.]
     #rule("Manifestation")[Friendly Daemons in Shadow: +1 Battle-shock roll; success heals one model D3 W, or returns D3 Plaguebearers instead.]
     #rule("Terror")[Enemy in Shadow and/or within 6" of GUO/LoC/Skarbrand: -1 Battle-shock; failure causes D3 mortals.]
-    #rule("Warp Rifts")[Deep Strike #r(">6\" horizontally") from enemies if set up *wholly* in Shadow and/or wholly within 6" of a matching-god Greater Daemon; otherwise >8". These are strict distances.]
+    #rule("Warp Rifts")[Arriving Monsters cannot use their own newly arriving aura for closer placement. Deep Strike #r(">6\" horizontally") from enemies if set up *wholly* in Shadow and/or wholly within 6" of a matching-god Greater Daemon; otherwise >8". These are strict distances.]
   ]
 ][
   #grid(columns: (1fr, 1fr), gutter: 6pt, align: top)[
@@ -255,12 +237,13 @@ table(
   ][
     #strat("2. WARP SURGE - 1CP")[#p("YOUR", "Charge"): one Daemon unit *in Shadow* can charge after Advancing this turn. Lasts until end of #p("YOUR", "Charge").]
   ][
-    #strat("3. DRAUGHT OF TERROR - 1CP")[#p("YOUR", "Shooting") / #p("EITHER PLAYER'S", "Fight"). #r("ONE unit not yet selected to shoot/fight:") #r("AP*") values and full Wound re-rolls vs Battle-shocked targets until end of #p("YOUR", "Shooting") / #p("EITHER PLAYER'S", "Fight"), respectively.]
+    #strat("3. DRAUGHT OF TERROR - 1CP")[#p("YOUR", "Shooting") / #p("EITHER PLAYER'S", "Fight"). Target #r("ONE Daemon unit not yet selected to shoot/fight"). Until end of #p("YOUR", "Shooting") / #p("EITHER PLAYER'S", "Fight"), respectively: improve AP of weapons equipped by models in that unit by 1 (#r("AP -1 becomes -2")). Against Battle-shocked targets, re-roll Wound rolls.]
   ][
     #strat("4. DAEMONIC INVULNERABILITY - 1CP")[#p("THEIR", "Shooting"), just after targets selected: one targeted Daemon unit re-rolls invulnerable saves of 1 until end of #p("THEIR", "Shooting").]
   ][
     #strat("5. DENIZENS OF THE WARP - 1CP")[#p("YOUR", "Movement"): one arriving Deep Strike Daemon unit may set up >6" horizontally from enemies anywhere, without Shadow requirement.]
   ][
     #strat("6. CORRUPT REALSPACE - 1CP")[Start of #p("EITHER PLAYER'S", "Command"). One Daemon unit on controlled objective: sticky until opponent controls it at start/end of any turn; while yours, area within 6" is Shadow.]
+
   ]
 ]
