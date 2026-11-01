@@ -1,6 +1,6 @@
 # Chaos Daemons / Skullmaster reference audit - 1 November 2026
 
-The supplied New Recruit v37.8 export is preserved in `chaos_daemons_skullmaster_list`. Its ten roster entries total 1,995 points (the Great Unclean One and Lord of Change entries already include their enhancements). The sheet omits points and roster quantities per AGENTS.md. The attached leader and bodyguard share one reference card, giving nine cards for ten roster entries.
+The supplied New Recruit v37.8 export is preserved in `chaos_daemons_skullmaster_list`. Its ten roster entries total 1,995 points (the Great Unclean One and Lord of Change entries already include their enhancements). The sheet omits points and roster quantities per AGENTS.md. Skullmaster and Bloodcrushers now have separate adjacent cards enclosed by one thick red outline, giving ten unit cards for ten roster entries.
 
 This is a separate variant of the existing Monster Mash sheet. Kairos and the second Flamer squad are removed; Skullmaster, Bloodcrushers and Flesh Hounds are added. Be'lakor remains Warlord, GUO has bilesword/flail and Endless Gift, and LoC has rod and Everstave. The original roster and reference remain available.
 
@@ -30,5 +30,11 @@ Both Bolt of Change keyword cells now show bold red Sustained Hits D3*, selected
 All 24 weapon profiles show the improved AP from Draught of Terror beside base AP, explicitly conditional on spending its CP in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Damaged Be'lakor/GUO Hit values are in the affected Hit cells; Skarbrand's damaged attacks appear in its Attacks cells. Double-star markers distinguish damaged profiles, and Psychic's ability to ignore Hit modifiers is explained. Existing base values and Strength calculations were compared against the previous committed sheet. No roster export changes.
 
 Clarified the AP key, stratagem text and phase reminder to emphasize **1CP, ONE selected unit only**. The AP asterisk on every weapon records potential eligibility, not an army-wide or continuously active AP buff.
+
+### Separate attached-unit cards, Hazardous and Nurgle's Rot
+
+Split Skullmaster and Bloodcrushers into adjacent cards inside a 2pt bright red border. Each card retains its own stats and weapons, incoming auras and relevant attachment reminders. The horn profile appears on each card; there are now 25 displayed weapon profiles. Brass Stampede still counts the attached leader, and the icon/instrument and Skullmaster charge effects are marked on their recipients. Horn Devastating Wounds expires at the end of the turn in which the unit charged, including a charge during the opponent's turn.
+
+Hazardous is spelled out in bold green with a light green background, including both focused shooting profiles, the key and phase reminder. Each of GUO's four weapon profiles carries an `Enemy T-1*` reminder. The key ties this to Nurgle's Rot's selected enemy within 12 inches at the end of YOUR Movement phase, lasting until the start of YOUR NEXT Movement phase. No weapon Strength is changed, and the targeted debuff is not presented as a passive aura. This reminder is useful on GUO's card even though other friendly units can also benefit when attacking the affected enemy.
 
 Compiled with Typst 0.14.2 into `output/pdf/chaos-daemons-skullmaster-reference.pdf`. Poppler confirms one A4 portrait page. Rendered and visually inspected the final page for readable profiles, intact cards, alignment and complete army/stratagem/phase reminders. Checked extracted text for all ten roster unit names, absence of Kairos and points, equipped icons/instruments, and the three new unit abilities. This is a condensed table aid; consult the full source rules for complete wording.

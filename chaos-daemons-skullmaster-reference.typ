@@ -10,6 +10,8 @@
 #let teal = rgb("#006b78")
 #let red = rgb("#8a2634")
 #let blue = rgb("#0078aa")
+#let hazard-green = rgb("#08752b")
+#let attachment-red = rgb("#d42132")
 #let gold = rgb("#9a6500")
 #let purple = rgb("#6b3fa0")
 #let indigo = rgb("#3749a6")
@@ -22,6 +24,7 @@
 #show "Psychic": b("Psychic")
 #show "Psyker": b("Psyker")
 #show "GRENADES": r("GRENADES")
+#show "Hazardous": body => box(highlight(fill: rgb("#d7f8c8"), text(fill: hazard-green, weight: "bold", body)))
 
 #let head(title, note: none, title-fill: teal) = {
   grid(columns: (1fr, auto), gutter: 2pt, align: horizon,
@@ -82,7 +85,7 @@ table(
     #v(1pt)
     #weapons((
       [Shades - safe], [18"], [9], [#hit([2+])], [5], [-2 #linebreak() #r("-3*")], [1], [Devs, Ignores Cover, Psychic],
-      [Shades - focused], [18"], [12], [#hit([2+])], [6], [-3 #linebreak() #r("-4*")], [1], [Devs, Ignores Cover, Haz, Psychic],
+      [Shades - focused], [18"], [12], [#hit([2+])], [6], [-3 #linebreak() #r("-4*")], [1], [Devs, Ignores Cover, Hazardous, Psychic],
       [Blade - strike], [M], [7], [#damaged-hit([2+])], [14], [-4 #linebreak() #r("-5*")], [D6+1], [Devs],
       [Blade - sweep], [M], [14], [#damaged-hit([2+])], [8], [-3 #linebreak() #r("-4*")], [1], [Sustained 1],
     ))
@@ -99,13 +102,13 @@ table(
     #received("self / Be'lakor")
     #v(1pt)
     #weapons((
-      [Plague flail], [6"], [D6+1], [#hit([3+ #r("4+**")])], [7], [-2 #linebreak() #r("-3*")], [2], [-],
-      [Putrid vomit], [12"], [D6+3], [-], [5], [-2 #linebreak() #r("-3*")], [1], [Ignores Cover, Torrent],
-      [Bilesword - strike], [M], [6], [#damaged-hit([2+])], [10], [-2 #linebreak() #r("-3*")], [D6+1], [Lethal],
-      [Bilesword - sweep], [M], [12], [#damaged-hit([2+])], [7], [-1 #linebreak() #r("-2*")], [1], [Lethal],
+      [Plague flail], [6"], [D6+1], [#hit([3+ #r("4+**")])], [7], [-2 #linebreak() #r("-3*")], [2], [#r("Enemy T-1*")],
+      [Putrid vomit], [12"], [D6+3], [-], [5], [-2 #linebreak() #r("-3*")], [1], [Ignores Cover, Torrent, #r("Enemy T-1*")],
+      [Bilesword - strike], [M], [6], [#damaged-hit([2+])], [10], [-2 #linebreak() #r("-3*")], [D6+1], [Lethal, #r("Enemy T-1*")],
+      [Bilesword - sweep], [M], [12], [#damaged-hit([2+])], [7], [-1 #linebreak() #r("-2*")], [1], [Lethal, #r("Enemy T-1*")],
     ))
     - #r("Nurgle auras* 6\":") friendly Nurgle Daemons are in Shadow and have +1 T (self included; T12 / #r("13*") above).
-    - *Nurgle's Rot:* end of #p("YOUR", "Movement"), choose enemy within 12": -1 T until start of #p("YOUR NEXT", "Movement").
+    - #r("Enemy T-1* = Nurgle's Rot:") end of #p("YOUR", "Movement"), choose enemy within 12": #r("-1 T to that selected enemy") until start of #p("YOUR NEXT", "Movement").
     - *Endless Gift:* #r("FNP 5+*") replaces native 6+; no extra Shadow bonus.
     - *Damaged 1-7W:* #r("Hit**") at 1-7W: -1 to Hit. Psychic may ignore; Torrent auto-hits.
   ]
@@ -127,7 +130,7 @@ table(
     #weapons((
       [Rod of sorcery], [18" #linebreak() #r("24*")], [6], [#hit([2+])], [8 #linebreak() #r("11*")], [-1 #linebreak() #r("-2*")], [2], [Psychic],
       [Bolt - safe], [18" #linebreak() #r("24*")], [9], [#hit([2+])], [9 #linebreak() #r("12*")], [-1 #linebreak() #r("-2*")], [1], [Psychic, #r("Sustained Hits D3*")],
-      [Bolt - focused], [18" #linebreak() #r("24*")], [9], [#hit([2+])], [9 #linebreak() #r("12*")], [-2 #linebreak() #r("-3*")], [3], [Haz, Psychic, #r("Sustained Hits D3*")],
+      [Bolt - focused], [18" #linebreak() #r("24*")], [9], [#hit([2+])], [9 #linebreak() #r("12*")], [-2 #linebreak() #r("-3*")], [3], [Hazardous, Psychic, #r("Sustained Hits D3*")],
       [Staff of Tzeentch], [M], [5], [#hit([3+])], [6], [-1 #linebreak() #r("-2*")], [3], [Psychic],
     ))
     - #r("Tzeentch auras* 6\":") friendly Tzeentch Daemons are in Shadow; +1 S to their ranged attacks.
@@ -162,7 +165,7 @@ table(
   #card("Shared Rules & Profile Key", stroke: purple, title-fill: purple)[
     - All units: *Deep Strike, Shadow of Chaos*. Monsters: *Deadly Demise D6*. Be'lakor must be Warlord.
     - Attacks per model/weapon. Choose one alternative profile; shoot all equipped ranged weapons.
-    - *++* invulnerable; *FNP* ignore lost wound; *Haz* Hazardous; *Devs* Devastating Wounds.
+    - *++* invulnerable; *FNP* ignore lost wound; *Hazardous* = hazard rolls; *Devs* Devastating Wounds.
     - #r("RR1*:") Be'lakor within 6", *Shadow Lord* chosen: re-roll Hit 1s, self included. No Hit roll for Torrent.
     - #r("18\"*:") Be'lakor within 6", *Wreathed* chosen: only attackers within 18" can shoot that unit.
     - #r("Choose ONE:") Shadow Lord / Wreathed / Pall are alternative battle-round modes.
@@ -185,24 +188,34 @@ table(
     - No FLY keyword.
   ]
   #gap
-  #card("Skullmaster + Bloodcrushers", note: "MOUNTED | KHORNE | Attached unit")[
-    #stats((
-      [Skullmaster], [10"], [7], [3+/4++], [6], [7+ #linebreak() #r("6+*")], [2],
-      [Bloodcrusher], [10"], [7], [3+/5++], [4], [7+ #linebreak() #r("6+*")], [2],
-    ))
-    #received("Skarbrand / Be'lakor")
-    #v(1pt)
-    #weapons((
-      [Blade of blood], [M], [5 #linebreak() #r("6*")], [#hit([2+])], [6], [-2 #linebreak() #r("-3*")], [3], [Skullmaster],
-      [Hellblade], [M], [2 #linebreak() #r("3*")], [#hit([3+])], [5], [-2 #linebreak() #r("-3*")], [2], [Bloodcrushers],
-      [Juggernaut horn], [M], [4 #linebreak() #r("5*")], [#hit([4+])], [6], [-1 #linebreak() #r("-2*")], [1], [Extra Attacks, Lance, #r("Devs*")],
-    ))
-    - #r("A* / Shadow*:") Skarbrand within 6": +1 A to melee weapons and unit in Shadow; applies to leader and bodyguard.
-    - *Icon:* entire unit #r("Ld6+*") while bearer alive (base 7+). *Instrument:* +1 Charge while bearer alive.
-    - *Brass Stampede:* after charge, pick enemy in Engagement Range; roll 1D6 per model in this unit (including attached leader): each 4+ causes D3 mortals.
-    - *Devastating Charge:* after charge, every enemy unit in Engagement Range takes a Battle-shock test.
-    - *Skullmaster's Fury:* while leading, after unit charges, all its horns gain #r("Devs*") until end of #text(fill: blue, weight: "bold")[YOUR turn]. Lance: +1 Wound after charge.
-    - Horn profile is shared by both models. Extra Attacks: use alongside blade/hellblade. Retain respective saves; bodyguard T while attached.
+  #rect(width: 100%, stroke: 2pt + attachment-red, inset: 2pt, radius: 1pt)[
+    #card("Skullmaster", note: "MOUNTED | CHARACTER | KHORNE | Leading Bloodcrushers")[
+      #stats(([Skullmaster], [10"], [7], [3+/4++], [6], [7+ #linebreak() #r("6+*")], [2]))
+      #received("Skarbrand / Be'lakor")
+      #v(1pt)
+      #weapons((
+        [Blade of blood], [M], [5 #linebreak() #r("6*")], [#hit([2+])], [6], [-2 #linebreak() #r("-3*")], [3], [-],
+        [Juggernaut horn], [M], [4 #linebreak() #r("5*")], [#hit([4+])], [6], [-1 #linebreak() #r("-2*")], [1], [Extra Attacks, Lance, #r("Devs*")],
+      ))
+      - *Skullmaster's Fury:* while leading, after unit charges, all its horns gain #r("Devs*") until end of that turn.
+      - *Devastating Charge:* after unit charges, every enemy in its Engagement Range takes a Battle-shock test.
+      - #r("Bodyguard buffs*:") icon #r("Ld6+*"); instrument +1 Charge while bearers live. Skullmaster counts for Brass Stampede.
+      - #r("Skarbrand* within 6\":") +1 melee A and Shadow. Horns: Extra Attacks alongside blade; Lance +1 Wound after charge.
+    ]
+    #v(2.8pt)
+    #card("Bloodcrushers", note: "MOUNTED | KHORNE | Skullmaster attached")[
+      #stats(([Bloodcrusher], [10"], [7], [3+/5++], [4], [7+ #linebreak() #r("6+*")], [2]))
+      #received("Skarbrand / Be'lakor")
+      #v(1pt)
+      #weapons((
+        [Hellblade], [M], [2 #linebreak() #r("3*")], [#hit([3+])], [5], [-2 #linebreak() #r("-3*")], [2], [-],
+        [Juggernaut horn], [M], [4 #linebreak() #r("5*")], [#hit([4+])], [6], [-1 #linebreak() #r("-2*")], [1], [Extra Attacks, Lance, #r("Devs*")],
+      ))
+      - *Brass Stampede:* after charge, pick one engaged enemy; roll D6 per model in this unit, #r("including attached Skullmaster"): each 4+ = D3 mortals.
+      - #r("Skullmaster*:") while leading, charge gives horns #r("Devs*") until end of that turn; all engaged enemies test Battle-shock.
+      - *Icon / instrument:* #r("Ld6+*") and +1 Charge while respective bearers live; includes leader.
+      - #r("Skarbrand* within 6\":") +1 melee A and Shadow. Horns: Extra Attacks alongside hellblade; Lance +1 Wound after charge.
+    ]
   ]
   #gap
   #card("Flesh Hounds", note: "BEAST | KHORNE | FNP 3+ vs Psychic Attacks")[
