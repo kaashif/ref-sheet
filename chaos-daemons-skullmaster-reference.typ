@@ -114,7 +114,7 @@ table(
     #stats(([All models], [5"], [5 #linebreak() #r("6*")], [7+/5++], [2], [7+ #linebreak() #r("6+*")], [2]))
     #v(1pt)
     #weapons(([Plaguesword], [M], [2], [#hit([3+])], [4], [-1 #linebreak() #r("-2*")], [1], [Lethal]))
-    - *Infected Outbreak:* end of #p("YOUR", "Command"), objective you control in range becomes sticky until opponent controls it at start/end of any turn.
+    - *Infected Outbreak:* end of #p("YOUR", "Command"), objective you control in range stays yours until enemy control exceeds yours at end of #text(fill: blue, weight: "bold")[EITHER PLAYER'S phase].
     - #r("6* in Toughness cell:") GUO +1 T within 6"; T5 / #r("6*") above. Also in Shadow.
     - *Icon equipped:* #r("Ld6+*") while bearer alive (base 7+). *Instrument equipped:* +1 Charge while bearer alive.
   ]
@@ -190,7 +190,7 @@ table(
         [Blade of blood], [M], [5 #linebreak() #r("6*")], [#hit([2+])], [6], [-2 #linebreak() #r("-3*")], [3], [-],
         [Juggernaut horn], [M], [4 #linebreak() #r("5*")], [#hit([4+])], [6], [-1 #linebreak() #r("-2*")], [1], [Extra Attacks, Lance, #r("Devs*")],
       ))
-      - *Skullmaster's Fury:* while leading, after unit charges, all its horns gain #r("Devs*") until end of that turn.
+      - *Skullmaster's Fury:* while leading, after unit charges, all its horns gain #r("Devs*") until end of that turn; self keeps this after bodyguards die.
       - *Devastating Charge:* after unit charges, every enemy in its Engagement Range takes a Battle-shock test.
       - #r("Bodyguard buffs*:") icon #r("Ld6+*"); instrument +1 Charge while bearers live. Skullmaster counts for Brass Stampede.
       - #r("Skarbrand* within 6\":") +1 melee A and Shadow. Horns: Extra Attacks alongside blade; Lance +1 Wound after charge.
