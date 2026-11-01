@@ -164,7 +164,7 @@ table(
   #gap
   #card("Shared Rules & Profile Key", stroke: purple, title-fill: purple)[
     - All units: *Deep Strike, Shadow of Chaos*. Monsters: *Deadly Demise D6*. Be'lakor must be Warlord.
-    - Attacks per model/weapon. Choose one alternative profile; shoot all equipped ranged weapons.
+    - Attacks per model/weapon; *xN* = one weapon per model in unit. Choose one alternative profile; shoot all equipped ranged weapons.
     - *++* invulnerable; *FNP* ignore lost wound; *Hazardous* = hazard rolls; *Devs* Devastating Wounds.
     - #r("RR1*:") Be'lakor within 6", *Shadow Lord* chosen: re-roll Hit 1s, self included. No Hit roll for Torrent.
     - #r("18\"*:") Be'lakor within 6", *Wreathed* chosen: only attackers within 18" can shoot that unit.
@@ -218,15 +218,15 @@ table(
     ]
   ]
   #gap
-  #card("Flesh Hounds", note: "BEAST | KHORNE | FNP 3+ vs Psychic Attacks")[
+  #card("Flesh Hounds", note: "BEAST | KHORNE")[
     #stats(([All models], [12"], [4], [7+/5++], [2], [7+], [1]))
     #received("Skarbrand / Be'lakor")
     #v(1pt)
     #weapons((
-      [Burning roar], [12"], [D6], [-], [4], [0 #linebreak() #r("-1*")], [1], [Ignores Cover, Torrent],
-      [Gore-drenched fangs], [M], [3 #linebreak() #r("4*")], [#hit([3+])], [5], [-1 #linebreak() #r("-2*")], [1], [-],
+      [Burning roar (x1)], [12"], [D6], [-], [4], [0 #linebreak() #r("-1*")], [1], [Ignores Cover, Torrent],
+      [Gore-drenched fangs (xN)], [M], [3 #linebreak() #r("4*")], [#hit([3+])], [5], [-1 #linebreak() #r("-2*")], [1], [-],
     ))
-    - *Burning roar:* Gore Hound only. Every model has fangs and Collar of Khorne (FNP above).
+    - *Collar of Khorne:* every model has *FNP 3+ vs Psychic Attacks*.
     - #r("4* / Shadow*:") Skarbrand within 6": +1 melee A and unit in Shadow. Roar unaffected.
     - *Hunters from the Warp:* end of #text(fill: blue, weight: "bold")[THEIR turn], if unengaged, may place this unit into Strategic Reserves; no CP or Shadow required.
   ]
