@@ -14,7 +14,7 @@ typst compile sheet.typ thousand-sons-reference.pdf
 
 GitHub Pages now opens the [Chaos Daemons Warp Rifts PDF](https://kaashif.github.io/ref-sheet/output/pdf/chaos-daemons-skullmaster-reference.pdf) by default. Other PDFs remain available at their existing paths.
 
-The [Chaos Daemons Anki deck](https://kaashif.github.io/ref-sheet/output/anki/chaos-daemons-skullmaster.apkg) contains 92 cards covering this roster's abilities, army/detachment rules, six stratagems and both selected enhancements. See [deck coverage and rebuilding instructions](anki/README.md). Import the `.apkg` in Anki using **File > Import**.
+The [Chaos Daemons Anki deck](https://kaashif.github.io/ref-sheet/output/anki/chaos-daemons-skullmaster.apkg) contains 115 cards covering this roster's abilities, army/detachment rules, six stratagems, both selected enhancements, both players' primary scoring across all five Take and Hold matchups, and a buff/support checklist for each unit. See [deck coverage and rebuilding instructions](anki/README.md). Import or re-import the `.apkg` in Anki using **File > Import**.
 
 ## Additional reference sheets
 

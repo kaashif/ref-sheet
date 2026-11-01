@@ -37,6 +37,8 @@ MODEL = genanki.Model(
 .question { font-weight: bold; }
 .answer { margin-top: 20px; }
 .source { font-size: 12px; opacity: .7; margin-top: 28px; }
+.owner { color: #16808c; font-weight: bold; }
+.answer li { margin-bottom: 12px; }
 a { color: #16808c; }
 hr { border: 0; border-top: 1px solid #999; margin: 22px 0; }
 ''',
@@ -47,13 +49,29 @@ def tag(value):
     return re.sub(r'[^a-z0-9]+', '_', value.lower()).strip('_')
 
 
+def render_text(value):
+    def highlight(text):
+        escaped = html.escape(text)
+        return re.sub(
+            r"\b(?:YOUR(?: NEXT)?|THEIR|MY|EITHER PLAYER&#x27;S)\b",
+            lambda match: f'<span class="owner">{match[0]}</span>',
+            escaped,
+            flags=re.IGNORECASE,
+        )
+    lines = value.splitlines()
+    if lines and all(line.startswith('• ') for line in lines):
+        return '<ul>' + ''.join(f'<li>{highlight(line[2:])}</li>' for line in lines) + '</ul>'
+    return '<br>'.join(highlight(line) for line in lines)
+
+
 def build():
     rows = json.loads(BANK.read_text())
     ids = [row['id'] for row in rows]
     assert len(set(ids)) == len(ids), 'Duplicate stable IDs'
     assert len({row['question'] for row in rows}) == len(rows), 'Duplicate questions'
     assert all(row[key].strip() for row in rows for key in ['id', 'section', 'question', 'answer'])
-    sections = ['Army', 'Detachment', 'Stratagems', 'Enhancements', 'Units', 'Core abilities', 'Unit checklists', 'Saves']
+    # Append new sections: existing deck IDs must stay stable on re-import.
+    sections = ['Army', 'Detachment', 'Stratagems', 'Enhancements', 'Units', 'Core abilities', 'Unit checklists', 'Saves', 'Primary missions', 'Buff sources']
     assert set(row['section'] for row in rows) == set(sections)
     decks = {section: genanki.Deck(1969801821 + n, f'{NAME}::{section}') for n, section in enumerate(sections)}
     OUT.mkdir(parents=True, exist_ok=True)
@@ -68,7 +86,11 @@ def build():
             primary = 'Core Rules' if row['source'] == 'core' else 'Chaos Daemons Faction Pack v1.1'
             source = (f'{html.escape(row["ability"])} · Primary: {primary} · Checked 1 Nov 2026'
                       f'<br><a href="{FACTION}">Faction Pack v1.1</a> · <a href="{CORE}">11th-edition Core Rules</a>')
-            fields = [html.escape(row['question']), html.escape(row['answer']), source]
+            if 'sources' in row:
+                source = (f'{html.escape(row["ability"])} · {html.escape(row["source_title"])} · Checked 1 Nov 2026'
+                          f'<br>{html.escape(row["source_note"])}<br>'
+                          + ' · '.join(f'<a href="{html.escape(item["url"], quote=True)}">{html.escape(item["title"])}</a>' for item in row['sources']))
+            fields = [render_text(row['question']), render_text(row['answer']), source]
             note = genanki.Note(model=MODEL, fields=fields, tags=tags,
                                 guid=genanki.guid_for('kaashif/ref-sheet/chaos-daemons/v1', row['id']))
             decks[row['section']].add_note(note)

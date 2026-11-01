@@ -826,5 +826,368 @@
     "question": "Screamers: invulnerable save?",
     "answer": "4+. For each attack, choose an applicable armour or invulnerable save; do not roll both. AP does not worsen an invulnerable save.",
     "source": "core"
+  },
+  {
+    "id": "Primary missions/Take and Hold mirror/Your primary",
+    "section": "Primary missions",
+    "subject": "Take and Hold mirror",
+    "ability": "Your primary",
+    "question": "Take and Hold vs Take and Hold: what is MY primary, and how do I score it?",
+    "answer": "Battlefield Dominance.\nRounds 1-2, end of YOUR turn: 2VP if you hold more objectives than them.\nRounds 2-4, end of YOUR Command phase; round 5, end of YOUR turn: 3VP per objective you hold. If you hold YOUR home, add 2VP for each other objective you hold (so home 3VP, each non-home 5VP). Without YOUR home, each held objective is 3VP.\nApply the 15VP-per-battle-round and 45VP-total primary caps.",
+    "source": "missions",
+    "source_title": "Chapter Approved 2026-27 Mission Deck",
+    "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official Event Companion.",
+    "sources": [
+      {
+        "title": "Chapter Approved overview (mission system)",
+        "url": "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+      },
+      {
+        "title": "Official Event Companion (matchups, cap and FAQ)",
+        "url": "https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf"
+      }
+    ]
+  },
+  {
+    "id": "Primary missions/Take and Hold mirror/Their primary",
+    "section": "Primary missions",
+    "subject": "Take and Hold mirror",
+    "ability": "Their primary",
+    "question": "Take and Hold vs Take and Hold: what is THEIR primary, and how do THEY score it?",
+    "answer": "Battlefield Dominance.\nRounds 1-2, end of THEIR turn: 2VP if they hold more objectives than you.\nRounds 2-4, end of THEIR Command phase; round 5, end of THEIR turn: 3VP per objective they hold. If they hold THEIR home, add 2VP for each other objective they hold. Their home is your enemy home, not YOUR home.\nApply the 15VP-per-battle-round and 45VP-total primary caps.",
+    "source": "missions",
+    "source_title": "Chapter Approved 2026-27 Mission Deck",
+    "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official Event Companion.",
+    "sources": [
+      {
+        "title": "Chapter Approved overview (mission system)",
+        "url": "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+      },
+      {
+        "title": "Official Event Companion (matchups, cap and FAQ)",
+        "url": "https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf"
+      }
+    ]
+  },
+  {
+    "id": "Primary missions/Take and Hold vs Purge the Foe/Your primary",
+    "section": "Primary missions",
+    "subject": "Take and Hold vs Purge the Foe",
+    "ability": "Your primary",
+    "question": "Take and Hold vs Purge the Foe: what is MY primary, and how do I score it?",
+    "answer": "Immovable Object.\nEvery round, end of YOUR turn: 3VP if you hold at least one central objective (3VP total, not per central).\nRounds 2-4, end of YOUR Command phase; round 5, end of YOUR turn: 5VP per held objective except YOUR home.\nYOUR home scores none directly; central and expansion objectives qualify for the 5VP. The central end-turn bonus is additional. Apply primary caps.",
+    "source": "missions",
+    "source_title": "Chapter Approved 2026-27 Mission Deck",
+    "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official Event Companion.",
+    "sources": [
+      {
+        "title": "Chapter Approved overview (mission system)",
+        "url": "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+      },
+      {
+        "title": "Official Event Companion (matchups, cap and FAQ)",
+        "url": "https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf"
+      }
+    ]
+  },
+  {
+    "id": "Primary missions/Take and Hold vs Purge the Foe/Their primary",
+    "section": "Primary missions",
+    "subject": "Take and Hold vs Purge the Foe",
+    "ability": "Their primary",
+    "question": "Take and Hold vs Purge the Foe: what is THEIR primary, and how do THEY score it?",
+    "answer": "Unstoppable Force.\nEvery round, end of THEIR turn: 3VP if at least one of YOUR units was destroyed that turn, plus 4VP per objective THEY hold except THEIR home.\nRounds 2-5, end of THEIR turn: an additional 3VP if THEY hold at least one non-home objective that THEY did not hold at the start of THEIR turn (3VP total, not per newly gained objective).\nEnd of battle: 5VP if THEY hold at least one central objective. Apply primary caps.",
+    "source": "missions",
+    "source_title": "Chapter Approved 2026-27 Mission Deck",
+    "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official Event Companion.",
+    "sources": [
+      {
+        "title": "Chapter Approved overview (mission system)",
+        "url": "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+      },
+      {
+        "title": "Official Event Companion (matchups, cap and FAQ)",
+        "url": "https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf"
+      }
+    ]
+  },
+  {
+    "id": "Primary missions/Take and Hold vs Disruption/Your primary",
+    "section": "Primary missions",
+    "subject": "Take and Hold vs Disruption",
+    "ability": "Your primary",
+    "question": "Take and Hold vs Disruption: what is MY primary, and how do I score it?",
+    "answer": "Determined Acquisition.\nEvery round, end of YOUR turn: 2VP per objective you hold now but did not hold at the start of YOUR turn, excluding YOUR home.\nRounds 2-4, end of YOUR Command phase; round 5, end of YOUR turn: 3VP per held objective, plus another 3VP per such objective in THEIR territory. Thus an objective in THEIR territory is worth 6VP in this window; other held objectives are worth 3VP, including YOUR home.\nApply primary caps. Territory is the layout-defined area, not a synonym for deployment zone.",
+    "source": "missions",
+    "source_title": "Chapter Approved 2026-27 Mission Deck",
+    "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official Event Companion.",
+    "sources": [
+      {
+        "title": "Chapter Approved overview (mission system)",
+        "url": "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+      },
+      {
+        "title": "Official Event Companion (matchups, cap and FAQ)",
+        "url": "https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf"
+      }
+    ]
+  },
+  {
+    "id": "Primary missions/Take and Hold vs Disruption/Their primary",
+    "section": "Primary missions",
+    "subject": "Take and Hold vs Disruption",
+    "ability": "Their primary",
+    "question": "Take and Hold vs Disruption: what is THEIR primary, and how do THEY score it?",
+    "answer": "Death Trap.\nEvery round, end of THEIR turn: 2VP per terrain area THEY trapped that turn, plus 3VP for each of those terrain areas that is an objective (5VP total for trapping an objective).\nAlso 3VP total if one or more of YOUR units that began THEIR turn within a terrain area were destroyed, provided that terrain area is trapped when scoring. The FAQ permits trapping it after the kill in that same turn.\nRounds 2-4, end of THEIR Command phase; round 5, end of THEIR turn: 4VP total if THEY hold at least one objective except THEIR home.\nApply primary caps; use the Booby Trap action.",
+    "source": "missions",
+    "source_title": "Chapter Approved 2026-27 Mission Deck",
+    "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official Event Companion.",
+    "sources": [
+      {
+        "title": "Chapter Approved overview (mission system)",
+        "url": "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+      },
+      {
+        "title": "Official Event Companion (matchups, cap and FAQ)",
+        "url": "https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf"
+      }
+    ]
+  },
+  {
+    "id": "Primary missions/Take and Hold vs Reconnaissance/Your primary",
+    "section": "Primary missions",
+    "subject": "Take and Hold vs Reconnaissance",
+    "ability": "Your primary",
+    "question": "Take and Hold vs Reconnaissance: what is MY primary, and how do I score it?",
+    "answer": "Purge and Secure.\nEvery round, end of YOUR turn: 3VP total if at least one enemy unit was destroyed by YOUR unit while YOUR unit was in range of an objective, OR if at least one destroyed enemy unit began YOUR turn in range of an objective. These alternatives do not add to 6VP.\nRounds 2-4, end of YOUR Command phase; round 5, end of YOUR turn: 4VP per held objective except YOUR home.\nRounds 2-5, end of YOUR turn: another 3VP total if you hold at least one non-home objective you did not hold at the start of YOUR turn. Apply primary caps.",
+    "source": "missions",
+    "source_title": "Chapter Approved 2026-27 Mission Deck",
+    "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official Event Companion.",
+    "sources": [
+      {
+        "title": "Chapter Approved overview (mission system)",
+        "url": "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+      },
+      {
+        "title": "Official Event Companion (matchups, cap and FAQ)",
+        "url": "https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf"
+      }
+    ]
+  },
+  {
+    "id": "Primary missions/Take and Hold vs Reconnaissance/Their primary",
+    "section": "Primary missions",
+    "subject": "Take and Hold vs Reconnaissance",
+    "ability": "Their primary",
+    "question": "Take and Hold vs Reconnaissance: what is THEIR primary, and how do THEY score it?",
+    "answer": "Reconnaissance Sweep.\nEvery round, end of THEIR turn: 3VP for at least three of THEIR units wholly within three different table quarters and outside 6 inches of the battlefield centre; OR 6VP for at least four units in all four quarters meeting those conditions. Score one option, not both.\nAlso 1VP per YOUR unit destroyed that turn.\nRounds 2-4, end of THEIR Command phase; round 5, end of THEIR turn: 3VP total if THEY hold at least one objective except THEIR home. Apply primary caps.",
+    "source": "missions",
+    "source_title": "Chapter Approved 2026-27 Mission Deck",
+    "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official Event Companion.",
+    "sources": [
+      {
+        "title": "Chapter Approved overview (mission system)",
+        "url": "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+      },
+      {
+        "title": "Official Event Companion (matchups, cap and FAQ)",
+        "url": "https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf"
+      }
+    ]
+  },
+  {
+    "id": "Primary missions/Take and Hold vs Priority Assets/Your primary",
+    "section": "Primary missions",
+    "subject": "Take and Hold vs Priority Assets",
+    "ability": "Your primary",
+    "question": "Take and Hold vs Priority Assets: what is MY primary, and how do I score it?",
+    "answer": "Inescapable Dominion.\nEvery round, end of YOUR turn: 4VP total if you hold three or more objectives.\nRounds 2-4, end of YOUR Command phase; round 5, end of YOUR turn: 5VP if you hold two or more objectives, plus 4VP if you hold more objectives than THEM. These are separate conditions, not per-objective scoring; YOUR home counts toward the thresholds.\nEnd of battle: 5VP if you hold THEIR home objective. Apply primary caps.",
+    "source": "missions",
+    "source_title": "Chapter Approved 2026-27 Mission Deck",
+    "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official Event Companion.",
+    "sources": [
+      {
+        "title": "Chapter Approved overview (mission system)",
+        "url": "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+      },
+      {
+        "title": "Official Event Companion (matchups, cap and FAQ)",
+        "url": "https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf"
+      }
+    ]
+  },
+  {
+    "id": "Primary missions/Take and Hold vs Priority Assets/Their primary",
+    "section": "Primary missions",
+    "subject": "Take and Hold vs Priority Assets",
+    "ability": "Their primary",
+    "question": "Take and Hold vs Priority Assets: what is THEIR primary, and how do THEY score it?",
+    "answer": "Secure Asset.\nEvery round, end of THEIR turn: 4VP if THEY secured the asset through the action, plus 2VP total if at least one of YOUR units that began THEIR turn in range of a central objective was destroyed.\nRounds 2-4, end of THEIR Command phase; round 5, end of THEIR turn: 4VP total if THEY hold at least one objective except THEIR home, plus a separate 4VP if THEY hold three or more objectives. THEIR home counts toward that three-objective threshold.\nApply primary caps.",
+    "source": "missions",
+    "source_title": "Chapter Approved 2026-27 Mission Deck",
+    "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official Event Companion.",
+    "sources": [
+      {
+        "title": "Chapter Approved overview (mission system)",
+        "url": "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+      },
+      {
+        "title": "Official Event Companion (matchups, cap and FAQ)",
+        "url": "https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf"
+      }
+    ]
+  },
+  {
+    "id": "Primary missions/Take and Hold vs Disruption/Booby Trap action",
+    "section": "Primary missions",
+    "subject": "Take and Hold vs Disruption",
+    "ability": "Booby Trap action",
+    "question": "Against Disruption: how can THEY perform Booby Trap to score Death Trap?",
+    "answer": "Starts in THEIR Shooting phase and completes immediately. One eligible unit must be in range of exactly one objective other than THEIR home, or within exactly one terrain area outside THEIR deployment zone, which THEY have not yet trapped.\nNo per-turn use limit, but each unit starting it in THEIR Shooting phase must be within a different terrain area. The area becomes trapped and receives THEIR operation marker.\nTrapping a non-objective is worth 2VP; an objective is worth 5VP, at end of THEIR turn. The action card supplies no way to remove the marker; occupying the area does not automatically remove it.",
+    "source": "missions",
+    "source_title": "Chapter Approved 2026-27 Mission Deck",
+    "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official Event Companion.",
+    "sources": [
+      {
+        "title": "Chapter Approved overview (mission system)",
+        "url": "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+      },
+      {
+        "title": "Official Event Companion (matchups, cap and FAQ)",
+        "url": "https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf"
+      }
+    ]
+  },
+  {
+    "id": "Primary missions/Take and Hold vs Priority Assets/Secure Asset action",
+    "section": "Primary missions",
+    "subject": "Take and Hold vs Priority Assets",
+    "ability": "Secure Asset action",
+    "question": "Against Priority Assets: how can THEY perform the Secure Asset action?",
+    "answer": "Starts in THEIR Shooting phase. One eligible unit in range of exactly one objective other than THEIR home can start it; once per turn.\nIt completes at end of THEIR turn if that unit controls that objective. Completion secures the asset and enables the 4VP action-scoring condition.\nContest the selected objective before end of THEIR turn to prevent completion.",
+    "source": "missions",
+    "source_title": "Chapter Approved 2026-27 Mission Deck",
+    "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official Event Companion.",
+    "sources": [
+      {
+        "title": "Chapter Approved overview (mission system)",
+        "url": "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+      },
+      {
+        "title": "Official Event Companion (matchups, cap and FAQ)",
+        "url": "https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf"
+      }
+    ]
+  },
+  {
+    "id": "Primary missions/Take and Hold matchups/Primary scoring caps",
+    "section": "Primary missions",
+    "subject": "Take and Hold matchups",
+    "ability": "Primary scoring caps",
+    "question": "What primary scoring caps apply to both players in these event missions?",
+    "answer": "Each player can score at most 15 primary VP per BATTLE ROUND and 45 primary VP over the battle. This is a battle-round cap, not a separate 15VP allowance per player turn. End-of-battle awards are still subject to the relevant scoring limits. Extra scoring conditions do not let either player exceed these caps.",
+    "source": "missions",
+    "source_title": "Chapter Approved 2026-27 Mission Deck",
+    "source_note": "Scoring checked against the printed mission-card images in the existing 40k-planner reference library; matchups, scoring cap and FAQ checked against the official Event Companion.",
+    "sources": [
+      {
+        "title": "Chapter Approved overview (mission system)",
+        "url": "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+      },
+      {
+        "title": "Official Event Companion (matchups, cap and FAQ)",
+        "url": "https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf"
+      }
+    ]
+  },
+  {
+    "id": "Buff sources/Be'lakor/Complete support checklist",
+    "section": "Buff sources",
+    "subject": "Be'lakor",
+    "ability": "Complete support checklist",
+    "question": "Be'lakor: which units and abilities in this roster can buff or support it?",
+    "answer": "• SELF: Dark Master supplies Shadow within 6 inches. Choose ONE Shadow Form per battle round: Shadow Lord gives RR1 to non-Torrent Hits (except snap shooting); Wreathed limits incoming shooting to attackers within 18 inches; Pall forces enemy tests/heals Be'lakor, not a simultaneous extra mode.\n• GOD LIMIT: no god keyword, so no GUO Toughness, LoC Strength or Skarbrand Attacks aura.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): +1 AP; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• CORE CHARACTER SUPPORT: Epic Challenge (1CP, EITHER PLAYER'S Fight phase) gives a selected Character model's melee weapons Precision until end of that Fight phase. It does not grant Precision to the bodyguard models.\n• CORE MONSTER SUPPORT: Crushing Impact (1CP, YOUR Charge phase after charging) can inflict impact mortals; it also risks self-mortals.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.\n• CORE SHOOTING SUPPORT: Fire Overwatch (1CP, end of THEIR Movement phase) lets an unengaged unit snap shoot one visible eligible enemy within 24 inches; Torrent still auto-hits. Weapon range and eligibility still apply.",
+    "source": "faction"
+  },
+  {
+    "id": "Buff sources/Great Unclean One/Complete support checklist",
+    "section": "Buff sources",
+    "subject": "Great Unclean One",
+    "ability": "Complete support checklist",
+    "question": "Great Unclean One: which units and abilities in this roster can buff or support it?",
+    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to flail/sword Hits, or selected Wreathed 18-inch ranged screen. No Torrent Hit rerolls.\n• SELF: Greater Daemon of Nurgle supplies Shadow; Daemon Lord of Nurgle adds 1 Toughness (T12 -> T13). ENDLESS GIFT supplies FNP5+ instead of native 6+; it is bearer-only.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): +1 AP; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• CORE CHARACTER SUPPORT: Epic Challenge (1CP, EITHER PLAYER'S Fight phase) gives a selected Character model's melee weapons Precision until end of that Fight phase. It does not grant Precision to the bodyguard models.\n• CORE MONSTER SUPPORT: Crushing Impact (1CP, YOUR Charge phase after charging) can inflict impact mortals; it also risks self-mortals.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.\n• CORE SHOOTING SUPPORT: Fire Overwatch (1CP, end of THEIR Movement phase) lets an unengaged unit snap shoot one visible eligible enemy within 24 inches; Torrent still auto-hits. Weapon range and eligibility still apply.",
+    "source": "faction"
+  },
+  {
+    "id": "Buff sources/Lord of Change/Complete support checklist",
+    "section": "Buff sources",
+    "subject": "Lord of Change",
+    "ability": "Complete support checklist",
+    "question": "Lord of Change: which units and abilities in this roster can buff or support it?",
+    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to Hits, or selected Wreathed 18-inch ranged screen.\n• SELF: Greater Daemon of Tzeentch supplies Shadow; Daemon Lord of Tzeentch adds 1 ranged Strength. EVERSTAVE adds 2 ranged Strength/6-inch Range in Shadow, instead of its outside-Shadow +1/+3-inch tier: rod S11, Bolt S12, both 24 inches.\n• SELF: Master of Magicks selects Sustained Hits D3 for Bolt until end of YOUR Shooting phase; not rod, staff or THEIR turn.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): +1 AP; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• CORE CHARACTER SUPPORT: Epic Challenge (1CP, EITHER PLAYER'S Fight phase) gives a selected Character model's melee weapons Precision until end of that Fight phase. It does not grant Precision to the bodyguard models.\n• CORE MONSTER SUPPORT: Crushing Impact (1CP, YOUR Charge phase after charging) can inflict impact mortals; it also risks self-mortals.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.\n• CORE SHOOTING SUPPORT: Fire Overwatch (1CP, end of THEIR Movement phase) lets an unengaged unit snap shoot one visible eligible enemy within 24 inches; Torrent still auto-hits. Weapon range and eligibility still apply.",
+    "source": "faction"
+  },
+  {
+    "id": "Buff sources/Skarbrand/Complete support checklist",
+    "section": "Buff sources",
+    "subject": "Skarbrand",
+    "ability": "Complete support checklist",
+    "question": "Skarbrand: which units and abilities in this roster can buff or support it?",
+    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to melee Hits, or selected Wreathed 18-inch ranged screen. Bellow is Torrent, so no Hit reroll.\n• SELF: Greater Daemon of Khorne supplies Shadow; Rage Embodied adds 1 melee Attack. Strike A8 -> A9, sweep A16 -> A17; at 1-7W add 2 more, giving A11/A19. Murderlust permits Advance-charge without CP or Shadow.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): +1 AP; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• CORE CHARACTER SUPPORT: Epic Challenge (1CP, EITHER PLAYER'S Fight phase) gives a selected Character model's melee weapons Precision until end of that Fight phase. It does not grant Precision to the bodyguard models.\n• CORE MONSTER SUPPORT: Crushing Impact (1CP, YOUR Charge phase after charging) can inflict impact mortals; it also risks self-mortals.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.\n• CORE SHOOTING SUPPORT: Fire Overwatch (1CP, end of THEIR Movement phase) lets an unengaged unit snap shoot one visible eligible enemy within 24 inches; Torrent still auto-hits. Weapon range and eligibility still apply.",
+    "source": "faction"
+  },
+  {
+    "id": "Buff sources/Skullmaster/Complete support checklist",
+    "section": "Buff sources",
+    "subject": "Skullmaster",
+    "ability": "Complete support checklist",
+    "question": "Skullmaster: which units and abilities in this roster can buff or support it?",
+    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to Hits, or selected Wreathed 18-inch ranged screen.\n• SKARBRAND within 6 inches: Shadow and +1 melee Attack; blade A5 -> A6, horn A4 -> A5.\n• ATTACHED BLOODCRUSHERS: icon gives the leader Ld6+; instrument gives the attached unit +1 Charge, while their respective bearers survive. Brass Stampede includes the attached Skullmaster in its dice count.\n• SELF WHILE LEADING: after the unit charges, Skullmaster's Fury gives its horns (including the leader's) Devastating Wounds until end of that turn. Devastating Charge forces tests that can enable Draught's Wound rerolls.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): +1 AP; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• CORE CHARACTER SUPPORT: Epic Challenge (1CP, EITHER PLAYER'S Fight phase) gives a selected Character model's melee weapons Precision until end of that Fight phase. It does not grant Precision to the bodyguard models.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.",
+    "source": "faction"
+  },
+  {
+    "id": "Buff sources/Bloodcrushers/Complete support checklist",
+    "section": "Buff sources",
+    "subject": "Bloodcrushers",
+    "ability": "Complete support checklist",
+    "question": "Bloodcrushers: which units and abilities in this roster can buff or support it?",
+    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to Hits, or selected Wreathed 18-inch ranged screen.\n• SKARBRAND within 6 inches: Shadow and +1 melee Attack; hellblade A2 -> A3, horn A4 -> A5.\n• ATTACHED SKULLMASTER: while leading, a charge grants Devastating Wounds to horns until end of that turn; also forces every engaged enemy to test Battle-shock. The leader contributes another model for Brass Stampede.\n• OWN ICON / INSTRUMENT: Ld7+ -> 6+ and +1 Charge while the relevant bearer survives; benefits the attached leader too.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): +1 AP; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.",
+    "source": "faction"
+  },
+  {
+    "id": "Buff sources/Plaguebearers/Complete support checklist",
+    "section": "Buff sources",
+    "subject": "Plaguebearers",
+    "ability": "Complete support checklist",
+    "question": "Plaguebearers: which units and abilities in this roster can buff or support it?",
+    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to plaguesword Hits, or selected Wreathed 18-inch ranged screen.\n• GREAT UNCLEAN ONE within 6 inches: Shadow and +1 Toughness (T5 -> T6).\n• OWN ICON / INSTRUMENT: Ld7+ -> 6+ and +1 Charge while the relevant bearer survives.\n• BATTLELINE: successful Battle-shock in Shadow can return D3 destroyed Plaguebearers instead of healing one model. Their own sticky objective helps maintain territory Shadow; it does not itself create a 6-inch Shadow area.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): +1 AP; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.",
+    "source": "faction"
+  },
+  {
+    "id": "Buff sources/Flamers/Complete support checklist",
+    "section": "Buff sources",
+    "subject": "Flamers",
+    "ability": "Complete support checklist",
+    "question": "Flamers: which units and abilities in this roster can buff or support it?",
+    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to mouth Hits only, or selected Wreathed 18-inch ranged screen. Flames are Torrent: no Hit roll or Hit rerolls.\n• LORD OF CHANGE within 6 inches: Shadow and +1 ranged Strength (flames S4 -> S5); no Strength bonus to mouths. Everstave and Master of Magicks do not transfer to Flamers.\n• SELF: Bounding Leaps allows shooting after Falling Back.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): +1 AP; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.\n• CORE SHOOTING SUPPORT: Fire Overwatch (1CP, end of THEIR Movement phase) lets an unengaged unit snap shoot one visible eligible enemy within 24 inches; Torrent still auto-hits. Weapon range and eligibility still apply.",
+    "source": "faction"
+  },
+  {
+    "id": "Buff sources/Flesh Hounds/Complete support checklist",
+    "section": "Buff sources",
+    "subject": "Flesh Hounds",
+    "ability": "Complete support checklist",
+    "question": "Flesh Hounds: which units and abilities in this roster can buff or support it?",
+    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to fang Hits only, or selected Wreathed 18-inch ranged screen. Roar is Torrent: no Hit reroll.\n• SKARBRAND within 6 inches: Shadow and +1 melee Attack (fangs A3 -> A4); roar is unaffected.\n• SELF: Collar of Khorne gives each bearer FNP3+ against Psychic Attacks. Hunters from the Warp is a free end-of-THEIR-turn reserve pickup if unengaged; no Shadow needed.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): +1 AP; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.\n• CORE SHOOTING SUPPORT: Fire Overwatch (1CP, end of THEIR Movement phase) lets an unengaged unit snap shoot one visible eligible enemy within 24 inches; Torrent still auto-hits. Weapon range and eligibility still apply.",
+    "source": "faction"
+  },
+  {
+    "id": "Buff sources/Screamers/Complete support checklist",
+    "section": "Buff sources",
+    "subject": "Screamers",
+    "ability": "Complete support checklist",
+    "question": "Screamers: which units and abilities in this roster can buff or support it?",
+    "answer": "• BE'LAKOR within 6 inches: Shadow; selected Shadow Lord RR1 to bite Hits, or selected Wreathed 18-inch ranged screen.\n• LORD OF CHANGE within 6 inches: Shadow only. Its Strength aura affects ranged attacks, not lamprey bites; Everstave/Master of Magicks do not transfer.\n• ARMY / OBJECTIVES: territory Shadow from objective control, or a Corrupt Realspace objective within 6 inches. Shadow gives +1 Battle-shock and successful-test D3 healing (Plaguebearers may return D3 models).\n• INDIRECT GUO SUPPORT: Nurgle's Rot lowers a selected enemy's Toughness by 1 (enemy within 12 inches at end of YOUR Movement phase, until start of YOUR NEXT Movement phase), improving this unit's Wound comparisons against it.\n• DRAUGHT OF TERROR (1CP): +1 AP; full Wound rerolls against Battle-shocked targets, in YOUR Shooting phase or EITHER PLAYER'S Fight phase. Be'lakor's Pall or Skullmaster's charge tests can help create such targets.\n• DAEMONIC INVULNERABILITY (1CP): re-roll invulnerable saves of 1 after targeting, for THEIR Shooting phase.\n• WARP SURGE (1CP): in YOUR Charge phase, unit in Shadow can charge after Advancing. Skarbrand already has this natively.\n• ARRIVAL / MOBILITY: Warp Rifts permits >6-inch Deep Strike if wholly in Shadow or wholly within 6 inches of a matching-god Greater Daemon; Denizens (1CP, YOUR Movement phase) supplies >6-inch arrival anywhere. Realm of Chaos (1CP, end of THEIR turn) picks up unengaged units: two in Shadow or one elsewhere; mandatory ingress in YOUR NEXT Movement phase.\n• CORRUPT REALSPACE (1CP): start of EITHER PLAYER'S Command phase, unit on a controlled objective can make it sticky and create the 6-inch Shadow area. It can be another friendly unit that corrupts the supporting objective.\n• CORE SUPPORT: Command Re-roll (1CP, EITHER PLAYER'S applicable phase) can re-roll one eligible roll; Insane Bravery (1CP, once per battle, YOUR Command phase Battle-shock step) makes a test successful and can trigger Manifestation in Shadow. Rapid Ingress (1CP, end of THEIR Movement phase, round 2+) brings this unit in from reserves; Heroic Intervention and Counteroffensive can change combat opportunities/order.\n• HIT-REROLL LIMIT: snap shooting (including Fire Overwatch) does not allow Hit rerolls, so Shadow Lord cannot override that restriction.",
+    "source": "faction"
   }
 ]
