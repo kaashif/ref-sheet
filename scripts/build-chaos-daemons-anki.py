@@ -59,7 +59,7 @@ def build():
     OUT.mkdir(parents=True, exist_ok=True)
     with (OUT / 'chaos-daemons-skullmaster.tsv').open('w', newline='') as stream:
         stream.write('#separator:tab\n#html:true\n#tags column:4\n')
-        writer = csv.writer(stream, delimiter='\t')
+        writer = csv.writer(stream, delimiter='\t', lineterminator='\n')
         for row in rows:
             subject_tags = ['unit::' + tag(s) for s in row['subject'].split(' / ')]
             tags = ['chaos_daemons', 'edition::11', 'roster::skullmaster', 'category::' + tag(row['section']), *subject_tags]
